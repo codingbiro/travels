@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRUE NORTH · Tromsø → Nordkapp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Albert+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky-0:#060b13;
+    --sky-1:#0a1220;
+    --sky-2:#101b2e;
+    --line:#1c2a40;
+    --moon:#c7d4e4;
+    --moon-dim:#7d8ea4;
+    --aur-green:#6ef0a8;
+    --aur-teal:#43cfc6;
+    --aur-violet:#9b7dff;
+    --ember:#ffb27d;
+    --ice:#8fd0ff;
+    --max-w:900px;
+    --disp:'Krona One',system-ui,sans-serif;
+    --body:'Albert Sans',system-ui,sans-serif;
+    --mono:'Space Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--sky-0);
+    color:var(--moon);
+    font-family:var(--body);
+    font-weight:300;
+    font-size:16.5px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--aur-green);color:var(--sky-0)}
+  a{color:var(--aur-teal);text-decoration:none;border-bottom:1px solid rgba(67,207,198,.35)}
+  a:hover{color:var(--aur-green);border-color:var(--aur-green)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--aur-green);outline-offset:3px}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 22px}
+  strong{font-weight:600;color:#e6eef8}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:96px 0 72px;border-bottom:1px solid var(--line)}
+  .aurora{
+    position:absolute;inset:-40% -20% auto -20%;height:130%;
+    background:
+      radial-gradient(55% 42% at 22% 30%, rgba(110,240,168,.16), transparent 62%),
+      radial-gradient(45% 38% at 58% 18%, rgba(67,207,198,.13), transparent 60%),
+      radial-gradient(50% 45% at 82% 36%, rgba(155,125,255,.12), transparent 65%);
+    filter:blur(14px);
+    animation:drift 26s ease-in-out infinite alternate;
+    pointer-events:none;
+  }
+  .stars{position:absolute;inset:0;pointer-events:none;background-image:
+    radial-gradient(1px 1px at 12% 22%, #cfe3ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 34% 64%, #9fb8d8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 56% 30%, #e8f2ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 71% 70%, #cfe3ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 24%, #9fb8d8 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 45% 12%, #e8f2ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 5% 55%, #cfe3ff 50%, transparent 51%);
+    opacity:.7}
+  @keyframes drift{from{transform:translateX(-3%) skewX(-2deg)}to{transform:translateX(3%) skewX(2deg)}}
+  @media (prefers-reduced-motion: reduce){.aurora{animation:none}}
+  .hero .wrap{position:relative}
+  .kicker{font-family:var(--mono);font-size:.75rem;letter-spacing:.28em;color:var(--aur-green);text-transform:uppercase;margin-bottom:22px}
+  h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.4rem,7.6vw,4.4rem);letter-spacing:.04em;line-height:1.05;color:#eef4fb}
+  h1 .deg{background:linear-gradient(90deg,var(--aur-green),var(--aur-teal) 55%,var(--aur-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{margin-top:22px;font-size:1.05rem;color:var(--moon-dim);max-width:58ch}
+  .statline{margin-top:36px;font-family:var(--mono);font-size:.8rem;color:var(--moon-dim);display:flex;flex-wrap:wrap;gap:10px 28px}
+  .statline b{color:var(--moon);font-weight:700}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--disp);font-weight:400;font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;color:#eef4fb;margin-bottom:8px}
+  .h2sub{font-family:var(--mono);font-size:.74rem;color:var(--moon-dim);letter-spacing:.06em;margin-bottom:34px}
+  p{margin-bottom:1em;max-width:70ch}
+  p:last-child{margin-bottom:0}
+
+  /* tier chips */
+  .musts{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+  .chip{font-family:var(--mono);font-size:.73rem;letter-spacing:.03em;padding:7px 13px;border:1px solid var(--line);border-radius:100px;color:var(--moon)}
+  .chip.must{border-color:rgba(110,240,168,.5);color:var(--aur-green)}
+  .chip.cond{border-color:rgba(155,125,255,.5);color:var(--aur-violet)}
+  .chip.opt{border-color:var(--line);color:var(--moon-dim)}
+  .tiernote{font-family:var(--mono);font-size:.7rem;color:var(--moon-dim);margin-top:14px;letter-spacing:.04em}
+
+  /* ---------- CHART (SVG map) ---------- */
+  .chartbox{border:1px solid var(--line);border-radius:10px;background:var(--sky-1);overflow:hidden}
+  #chart{display:block;width:100%;height:auto}
+  #chart .pt{cursor:pointer}
+  #chart .pt circle{transition:r .12s ease}
+  #chart .pt:hover circle,#chart .pt.on circle{r:8}
+  #mapinfo{border-top:1px solid var(--line);padding:16px 20px;min-height:84px}
+  #mapinfo .mt{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;color:#eef4fb;margin-bottom:4px}
+  #mapinfo .mb{font-size:.88rem;color:var(--moon)}
+  #mapinfo .gm{font-family:var(--mono);font-size:.72rem;margin-top:8px;display:inline-block}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-family:var(--mono);font-size:.73rem;color:var(--moon-dim)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:baseline}
+
+  /* ---------- DAYS / latitude rail ---------- */
+  .day{position:relative;padding:0 0 52px 44px;border-left:2px solid transparent;
+       border-image:linear-gradient(180deg,var(--aur-teal),var(--aur-green)) 1}
+  .day:last-of-type{padding-bottom:8px}
+  .day.peak{border-image:linear-gradient(180deg,var(--aur-green),var(--aur-violet)) 1}
+  .day.south{border-image:linear-gradient(180deg,var(--aur-violet),var(--aur-teal)) 1}
+  .day::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;
+       background:var(--sky-0);border:2px solid var(--aur-green)}
+  .day.peak::before{border-color:var(--aur-violet);box-shadow:0 0 14px rgba(155,125,255,.55)}
+  .lat{font-family:var(--mono);font-size:.72rem;color:var(--moon-dim);letter-spacing:.08em}
+  .lat b{color:var(--aur-green);font-weight:700}
+  .day.peak .lat b{color:var(--aur-violet)}
+  h3{font-family:var(--disp);font-weight:400;font-size:1.05rem;letter-spacing:.05em;color:#eef4fb;margin:6px 0 4px}
+  .meta{font-family:var(--mono);font-size:.74rem;color:var(--moon-dim);margin-bottom:16px}
+  .meta em{font-style:normal;color:var(--ember)}
+  .row{display:grid;grid-template-columns:96px 1fr;gap:6px 18px;margin-bottom:8px;max-width:72ch}
+  .row .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--moon-dim);text-transform:uppercase;padding-top:3px}
+  .row .v{font-size:.95rem}
+  .tag{font-family:var(--mono);font-size:.68rem;border-radius:4px;padding:1px 7px;margin-right:8px;letter-spacing:.05em;font-weight:700;color:var(--sky-0)}
+  .tag.must{background:var(--aur-green)}
+  .tag.cond{background:var(--aur-violet)}
+  .tag.opt{background:var(--moon-dim)}
+
+  /* ---------- HIKES ---------- */
+  .hikes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .hike{border:1px solid var(--line);border-radius:10px;background:var(--sky-1);overflow:hidden;display:flex;flex-direction:column}
+  .hike figure{margin:0;border-bottom:1px solid var(--line)}
+  .hike img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--sky-2)}
+  .hike figcaption{font-family:var(--mono);font-size:.6rem;color:var(--moon-dim);text-align:right;padding:5px 12px;letter-spacing:.03em}
+  .hike figcaption a{color:var(--moon-dim);border-bottom-color:rgba(125,142,164,.35)}
+  .hike .body{padding:20px 22px 22px}
+  .hike h4{font-family:var(--disp);font-weight:400;font-size:.92rem;letter-spacing:.06em;color:#eef4fb;margin-bottom:4px}
+  .hike .stats{font-family:var(--mono);font-size:.72rem;color:var(--aur-teal);margin-bottom:12px;letter-spacing:.03em}
+  .hike p{font-size:.9rem;color:var(--moon)}
+  .hike .warn{color:var(--ember);font-size:.83rem;margin-top:10px}
+
+  /* ---------- PLAYBOOK ---------- */
+  .ritual{border:1px solid rgba(110,240,168,.35);border-radius:10px;padding:24px 26px;background:linear-gradient(180deg,rgba(110,240,168,.05),transparent);margin-bottom:34px}
+  .ritual .t{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;color:var(--aur-green);text-transform:uppercase;margin-bottom:12px}
+  .micro{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:8px}
+  .micro td{padding:10px 14px 10px 0;border-top:1px solid var(--line);vertical-align:top}
+  .micro td:first-child{font-family:var(--mono);font-size:.75rem;color:var(--aur-teal);white-space:nowrap;letter-spacing:.03em}
+  .links{margin-top:30px;font-size:.9rem;display:grid;gap:8px}
+
+  /* ---------- LISTS ---------- */
+  .plain{list-style:none;max-width:72ch}
+  .plain li{padding:11px 0;border-top:1px solid var(--line);font-size:.95rem}
+  .plain li:first-child{border-top:none}
+  .plain .k{font-family:var(--mono);font-size:.73rem;letter-spacing:.05em;color:var(--moon-dim);text-transform:uppercase;display:block;margin-bottom:3px}
+  .ember .k{color:var(--ember)}
+  .ice .k{color:var(--ice)}
+
+  footer{padding:56px 0 80px;color:var(--moon-dim);font-family:var(--mono);font-size:.73rem;letter-spacing:.05em}
+  footer .grad{background:linear-gradient(90deg,var(--aur-green),var(--aur-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  @media (max-width:640px){
+    .hero{padding:72px 0 56px}
+    section{padding:52px 0}
+    .row{grid-template-columns:1fr;gap:2px 0;margin-bottom:14px}
+    .day{padding-left:26px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kicker">Campervan · Aurora run · Tromsø ⇄ Nordkapp</div>
+    <h1>TRUE <span class="deg">NORTH</span></h1>
+    <p class="sub">Tromsø → Senja → Alta → Nordkapp → Tromsø. Six days chasing holes in the clouds, out to <strong>71°11′ — Knivskjellodden</strong>, the quiet point that out-norths the famous Nordkapp globe by 1,450 m — and back. Loose by design: anchors are fixed, everything else follows the sky.</p>
+    <div class="statline">
+      <span><b>6</b> days</span>
+      <span>~<b>1,450 km</b> driven</span>
+      <span><b>5</b> nights · <b>2</b> hookups · <b>3</b> wild</span>
+      <span><b>3</b> hikes + <b>1</b> conditional</span>
+      <span>dark <b>20:00–06:00</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SHAPE ================= -->
+<section>
+  <div class="wrap">
+    <h2>The shape</h2>
+    <div class="h2sub">rules of the plan — everything else bends</div>
+    <p>Anchors below are fixed. Times are defaults, not commitments. Each evening at <strong>18:00</strong> the sky decides where the van sleeps — the only hard walls are the two campsite nights (water, power, showers, cassette) and the <strong>11:00 handback on day 6</strong>. Day 5 is deliberately the biggest day; protect it by keeping day 4 slow.</p>
+    <p>Grey items are <strong>fillers only</strong>: bad weather, dead time, or being ahead of schedule. They never displace an anchor. Everything north of Alta is Finnmark logic: fuel when you can, shop before the weekend closes things, respect wind over ambition.</p>
+    <div class="musts">
+      <span class="chip must">Segla / Hesten</span>
+      <span class="chip must">Ersfjordstranda BBQ</span>
+      <span class="chip must">Tungeneset</span>
+      <span class="chip must">Lyngen shore stop</span>
+      <span class="chip must">Nordkapp plateau at night</span>
+      <span class="chip must">Knivskjellodden</span>
+      <span class="chip must">Skibotn sky</span>
+      <span class="chip cond">Breidtinden — weather gate</span>
+      <span class="chip opt">Alta cathedral</span>
+      <span class="chip opt">Kirkeporten arch</span>
+      <span class="chip opt">Gildetun viewpoint</span>
+      <span class="chip opt">Bergsbotn platform</span>
+    </div>
+    <div class="tiernote">green = fixed anchor · violet = weather-gated · grey = optional filler (rain / spare time only)</div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section>
+  <div class="wrap">
+    <h2>The chart</h2>
+    <div class="h2sub">schematic — solid = road · dashed = ferry · boxes = detail insets · tap any point</div>
+    <div class="chartbox">
+      <svg id="chart" viewBox="0 0 1000 640" role="img" aria-label="Schematic route chart, Tromsø to Nordkapp"></svg>
+      <div id="mapinfo">
+        <div class="mt">ROUTE CHART</div>
+        <div class="mb">Tap any point for details and a Google Maps link.</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--aur-green)"></span>anchor / aurora</span>
+      <span><span class="dot" style="background:var(--aur-violet)"></span>hike</span>
+      <span><span class="dot" style="background:var(--ice)"></span>sleep</span>
+      <span><span class="dot" style="background:var(--ember)"></span>food / BBQ</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAYS ================= -->
+<section>
+  <div class="wrap">
+    <h2>Six days</h2>
+    <div class="h2sub">the rail tracks latitude — brightest at the top of Europe</div>
+
+    <!-- D1 -->
+    <div class="day">
+      <div class="lat">DAY 1 · <b>69.65°N → 69.51°N</b></div>
+      <h3>Pickup &amp; cross</h3>
+      <div class="meta">~85 km + 45 min ferry · dark from 20:00</div>
+      <div class="row"><div class="k">16:00</div><div class="v">Van pickup, Tromsø. Straight to a big shop (Eurospar/Rema) — buy through the whole weekend: Norwegian groceries close on Sundays and Finnmark is thin anyway.</div></div>
+      <div class="row"><div class="k">17:30</div><div class="v">Out via Kvaløya to <strong>Brensholmen</strong>. Target an <strong>early-evening ferry</strong> to Botnhamn (45 min, AutoPASS-priced). Summer timetable (to ~20 Sep) sails 19:00 / 20:45 / 22:15 in the evening; the winter timetable is thinner — check svipper.no, line 181, for your dates.</div></div>
+      <div class="row"><div class="k">~20:30</div><div class="v">Roll into <strong>Mefjordvær / Fjordgård</strong>. Free lot at Fjordgård harbour with picnic + fire spot.</div></div>
+      <div class="row"><div class="k">Sleep</div><div class="v">Wild — Mefjorden shoreline layby or the harbour lot.</div></div>
+      <div class="row"><div class="k">Aurora</div><div class="v">First call from 20:30 on a north-facing shore. If clear: Segla silhouette across the water on night one.</div></div>
+      <div class="row"><div class="k">Flex</div><div class="v">Ferry doesn't fit → drive around via Finnsnes (~190 km / 3h), shop there instead.</div></div>
+    </div>
+
+    <!-- D2 -->
+    <div class="day">
+      <div class="lat">DAY 2 · <b>69.47–69.52°N</b></div>
+      <h3>Breidtinden window</h3>
+      <div class="meta">~60 km local · campsite night · <em>BBQ: Ersfjordstranda</em></div>
+      <div class="row"><div class="k">08:00</div><div class="v"><span class="tag cond">GATE</span><strong>Go / no-go:</strong> dry rock + summit visible + wind under ~10 m/s. Go → Breidtinden (details in Hikes). No-go → <strong>Hesten</strong> instead, and the day gets easy.</div></div>
+      <div class="row"><div class="k">Evening</div><div class="v"><span class="tag must">MUST</span>West-coast pair: <strong>Tungeneset</strong> (Okshornan teeth, free WC) → <strong>Ersfjordstranda</strong>: BBQ in the stone fire shelter, Devil's Teeth as backdrop. <span class="tag opt">OPT</span><strong>Bergsbotn platform</strong> on the way, only if ahead of the light.</div></div>
+      <div class="row"><div class="k">Sleep</div><div class="v"><strong>Camp Mefjord</strong>, Mefjordvær — ~400 NOK with power, shower/laundry, BBQ hut, sauna; self-service, open year-round. Fill water, empty cassette.</div></div>
+      <div class="row"><div class="k">Aurora</div><div class="v">Mefjorden reflections from the camp shore; if the outer coast is socked in, inner fjord heads (Mefjordbotn) often have the hole.</div></div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day">
+      <div class="lat">DAY 3 · <b>69.50°N → 69.97°N</b></div>
+      <h3>Segla at first light, then run east</h3>
+      <div class="meta">~400 km · 5.5–6h net driving</div>
+      <div class="row"><div class="k">Dawn</div><div class="v"><span class="tag must">MUST</span><strong>Segla</strong> (or Hesten, if Breidtinden ate yesterday) from the Fjordgård lot. First-light start = empty trail, calm air for the drone, back at the van 3–4h later.</div></div>
+      <div class="row"><div class="k">~11:00</div><div class="v">Roll: Fjordgård → Finnsnes → E6 → Nordkjosbotn → <span class="tag must">MUST</span><strong>Lyngenfjord shore</strong> (any pullout on the Oteren–Skibotn–Olderdalen stretch; the Alps sit straight across the water). <span class="tag opt">OPT</span><strong>Gildetun / Kvænangsfjellet</strong> viewpoint as a leg-stretch if the pass is clear.</div></div>
+      <div class="row"><div class="k">Evening</div><div class="v"><strong>Shop + fuel in Alta</strong> — mind Saturday early closing (~18–20) and full Sunday closure. Fill the tank; Finnmark stations are sparse.</div></div>
+      <div class="row"><div class="k">Sleep</div><div class="v">Wild around Alta / Kåfjord — or up on Kvænangsfjellet if that's where the hole is (exposed; check wind first).</div></div>
+      <div class="row"><div class="k">Aurora</div><div class="v">Alta is inland-dry — "City of the Northern Lights" for a reason. Statistically your best mainland odds so far.</div></div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day peak">
+      <div class="lat">DAY 4 · <b>69.97°N → 71.17°N</b> · top of the rail</div>
+      <h3>The Cape</h3>
+      <div class="meta">~240 km · campsite night · slow day on purpose</div>
+      <div class="row"><div class="k">Morning</div><div class="v">Roll when ready. <span class="tag opt">OPT</span><strong>Cathedral of the Northern Lights</strong>, Alta — rain-day or spare-time filler only. The titanium spiral exterior is the shot; the interior keeps weekday office hours anyway.</div></div>
+      <div class="row"><div class="k">Midday</div><div class="v">Alta → Skarsvåg, ~3h. <strong>Reindeer own the E69</strong> from Olderfjord — drive soft. Check in at <strong>Kirkeporten Camping</strong> (power, showers, laundry, cassette emptying, café; seasonal ~mid-May to mid/late Sep — confirm for your dates). Water + cassette here.</div></div>
+      <div class="row"><div class="k">Afternoon</div><div class="v"><span class="tag opt">OPT</span><strong>Kirkeporten arch walk</strong> — 45 min return from the campsite, frames the Nordkapp horn through the rock — only if there's time before the light goes. Reindeer practically guaranteed.</div></div>
+      <div class="row"><div class="k">Night</div><div class="v"><span class="tag must">MUST</span><strong>Nordkapp plateau</strong>, 13 km / 15 min from camp. Overnighting in the lot is no longer allowed (max stay ~5–6h; fee reports vary 0–165 NOK; Nordkapphallen entry 350 NOK is optional) — which suits the plan: aurora over the Arctic Ocean from the rail, ~20:30–01:00, then a bed fifteen minutes away.</div></div>
+      <div class="row"><div class="k">Flex</div><div class="v">Plateau fogged in? The Skarsvåg side often isn't — the harbour as fallback stage. Off-season (camp closed): do services in Alta instead and sleep wild on Magerøya.</div></div>
+    </div>
+
+    <!-- D5 -->
+    <div class="day south">
+      <div class="lat">DAY 5 · <b>71°11′ → 69.39°N</b></div>
+      <h3>True north, then the long road</h3>
+      <div class="meta">18 km on foot + ~510 km / 6.5–7h driving · biggest day — protected by a slow day 4</div>
+      <div class="row"><div class="k">07:00</div><div class="v"><span class="tag must">MUST</span><strong>Knivskjellodden</strong> from the E69 lot 6 km before the plateau. You end 1,450 m further north than the Nordkapp globe, looking back at the cliff from sea level. This is the trip's namesake — the true north of the whole Nordkapp story.</div></div>
+      <div class="row"><div class="k">~13:30</div><div class="v">South: Skarsvåg → <strong>Alta (fuel, mandatory)</strong> → Kvænangsfjellet → <strong>Skibotn</strong>. Arrive ~21:00 with stops.</div></div>
+      <div class="row"><div class="k">Sleep</div><div class="v">Wild in the <strong>Skibotn–Oteren corridor</strong>. Skibotn valley is statistically the driest sky in Troms — there's an observatory there for exactly that reason. Best final-night odds on the whole route.</div></div>
+      <div class="row"><div class="k">Bail</div><div class="v">Wrecked after the hike → stop near Alta instead, but day 6 becomes a very early start (305 km / 4h) against the 11:00 handback. Default: push to Skibotn.</div></div>
+    </div>
+
+    <!-- D6 -->
+    <div class="day south">
+      <div class="lat">DAY 6 · <b>69.39°N → 69.65°N</b></div>
+      <h3>The road south</h3>
+      <div class="meta">~120 km · 1h45</div>
+      <div class="row"><div class="k">08:15</div><div class="v">Out. Skibotn → Tromsø along the fjord. One last Lyngen layby coffee if ahead of the clock.</div></div>
+      <div class="row"><div class="k">By 10:30</div><div class="v">Fuel at the city edge; dump/water if the depot requires it.</div></div>
+      <div class="row"><div class="k">11:00</div><div class="v">Handback.</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= HIKES ================= -->
+<section>
+  <div class="wrap">
+    <h2>Hikes</h2>
+    <div class="h2sub">stats are round numbers — trust the mountain, not the plan</div>
+    <div class="hikes">
+
+      <div class="hike">
+        <figure>
+          <img src="images/segla-fjordgard.jpg" alt="Segla rising behind Fjordgård, seen across the water" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Ximonic (S. Räsänen) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Fjordg%C3%A5rd_and_Segla_behind_Keipneset_in_Senja,_Troms_og_Finnmark,_Norway,_2022_August.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Segla</h4>
+          <div class="stats">~5 km RT · ~600 m · 3–4h · Fjordgård</div>
+          <p>The blade itself — this is the wall you'll see across the water on night one. Steep, honest path to a summit with a vertical drop into Mefjorden. Paid lot in Fjordgård (EasyPark, per-15-min); free lot at the harbour end of the village.</p>
+        </div>
+      </div>
+
+      <div class="hike">
+        <figure>
+          <img src="images/segla-hesten.jpg" alt="The classic view of Segla's blade from the Hesten ridge" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Ximonic (S. Räsänen) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:View_towards_Segla_from_ridge_at_Hesten_in_Senja,_Troms_og_Finnmark,_Norway,_2022_August.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Hesten</h4>
+          <div class="stats">~5 km RT · ~560 m · 2.5–3h · same trailhead</div>
+          <p>The postcard — this exact view. Easier than Segla, bigger payoff per meter. Doubles as the no-go alternative to Breidtinden. Superb drone amphitheatre in calm air.</p>
+        </div>
+      </div>
+
+      <div class="hike">
+        <figure>
+          <img src="images/breidtinden.jpg" alt="Breidtinden massif seen from Hesten" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Ximonic (S. Räsänen) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Breidtinden_from_Hesten_in_Senja,_Troms_og_Finnmark,_Norway,_2022_August.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Breidtinden — conditional</h4>
+          <div class="stats">~8 km RT · ~950 m · 6–8h · roadside lot, Senjahopen↔Mefjordbotn</div>
+          <p>Senja's highest (1,001 m) — the wall in this photo — 360° over the whole island from the top. Blue-dot marked through boulder fields, then a genuinely exposed class-3 scramble with fixed aids near the top. Many turn around just below the summit — a normal outcome, not a failure.</p>
+          <p class="warn">Gate: dry rock, visible summit, wind &lt;10 m/s. Wet autumn rock = automatic no. The mountain stays.</p>
+        </div>
+      </div>
+
+      <div class="hike">
+        <figure>
+          <img src="images/knivskjellodden.jpg" alt="Knivskjellodden headland reaching into the Arctic Ocean" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Diego Delso · CC BY-SA · <a href="https://commons.wikimedia.org/wiki/File:Cabo_Knivskjelodden,_Noruega,_2019-09-03,_DD_23.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Knivskjellodden</h4>
+          <div class="stats">~18 km RT · ~350 m rolling · 4.5–6h · E69 lot, km 6 before plateau</div>
+          <p>The northernmost point of the North Cape island — 71°11′, a quiet 1,450 m further north than the globe everyone photographs. Red-T marked, rocky underfoot the entire way — proper boots, not trail runners. Flat-ish but long; wind is the variable, not gradient.</p>
+          <p class="warn">Don't miss the marked right turn a couple of km in.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= AURORA ================= -->
+<section>
+  <div class="wrap">
+    <h2>Aurora playbook</h2>
+    <div class="h2sub">at 69–71°N the oval is overhead at Kp 1–2 — clouds are the only enemy</div>
+
+    <div class="ritual">
+      <div class="t">The 18:00 ritual — every evening</div>
+      <p>Yr cloud map + Windy (low / mid / high layers separately). Find the hole reachable within ~60 min, biased toward tomorrow's direction. Commit by 20:00 — it's dark from then until 06:00. Park facing north over water if you can; reflections double the show. Statistical peak sits around magnetic midnight, ≈ 22:30 local. Booking tip: aim the trip at a <strong>new-moon week</strong> — moonlight washes out the faint arcs.</p>
+    </div>
+
+    <table class="micro">
+      <tr><td>Skibotn</td><td>Driest microclimate in Troms — rain-shadow valley, home to an optical observatory. If Troms is patchy, Skibotn is the bet.</td></tr>
+      <tr><td>Alta</td><td>Inland-dry Finnmark. When the coast is grey, Alta often isn't.</td></tr>
+      <tr><td>Senja</td><td>Outer coast catches the weather; inner fjord heads (Mefjordbotn, Bergsbotn) hold the gaps.</td></tr>
+      <tr><td>Nordkapp</td><td>Clean Arctic air but fog-and-wind roulette. Plateau socked in ≠ Skarsvåg socked in — check both sides.</td></tr>
+    </table>
+
+    <div class="links">
+      <span><a href="https://www.yr.no/en" rel="noopener">Yr — cloud cover map</a> · the primary tool</span>
+      <span><a href="https://www.windy.com" rel="noopener">Windy</a> · low/mid/high cloud layers, wind for the plateau</span>
+      <span><a href="https://www.spaceweatherlive.com/en/auroral-activity.html" rel="noopener">SpaceWeatherLive</a> · OVATION 30-min nowcast, solar wind</span>
+      <span><a href="https://flux.phys.uit.no/stackplot/" rel="noopener">Tromsø magnetometer stackplot</a> · sharp drop = substorm happening now, go outside</span>
+      <span><a href="https://www.norway-lights.com" rel="noopener">NorwayLights</a> · sanity-check app</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOD & FIRE ================= -->
+<section>
+  <div class="wrap">
+    <h2>Food &amp; fire</h2>
+    <div class="h2sub">self-catered · BBQ at the scenic spots</div>
+    <ul class="plain ember">
+      <li><span class="k">Shop schedule</span>Day 1 Tromsø: the big one, through any weekend in the window (Sunday = closed nationwide). Day 3 Alta: top-up + fuel. Honningsvåg has a Rema 1000 from ~07:00 for a day-5 rescue.</li>
+      <li><span class="k">Fire rule</span>National open-fire ban runs 15 Apr – 15 Sep. Inside it: established pits (Ersfjordstranda's stone shelter), bare rock/shoreline with sense, gas or engangsgrill. Outside it: freer — but wind will veto more evenings than the law does.</li>
+      <li><span class="k">BBQ shortlist</span>D2 Ersfjordstranda fire shelter (the headline act) · D3 any Lyngenfjord layby bench · D4 Storvannet shore at Kirkeporten Camping · D5 Skibotn shoreline.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= VAN OPS ================= -->
+<section>
+  <div class="wrap">
+    <h2>Van ops</h2>
+    <div class="h2sub">the boring stuff that keeps the trip loose</div>
+    <ul class="plain ice">
+      <li><span class="k">Water / cassette</span>Camp Mefjord (night 2) and Kirkeporten (night 4) — the every-second-day cadence covers services exactly. Off-season northern fallback: services in Alta.</li>
+      <li><span class="k">Heat</span>Diesel heater overnight is normal practice. Expect cold nights; frost possible on Kvænangsfjellet and the plateau any month.</li>
+      <li><span class="k">Fuel</span>Full tank in Alta both directions; top up Honningsvåg. The Olderfjord–Honningsvåg and Sennalandet stretches are long and empty.</li>
+      <li><span class="k">Wildlife</span>Reindeer on the E69 and Sennalandet, constantly, especially at dusk. They do not yield.</li>
+      <li><span class="k">Wind</span>Plateau gusts are violent — park nose-to-wind, mind the doors. Above ~15 m/s, skip exposed overnight spots.</li>
+      <li><span class="k">Wild nights</span>Allemannsretten covers tents, not vans — use laybys, rest areas and trailhead lots without no-camping signs, keep it low-profile, leave nothing. park4night for vetted spots.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTINGENCIES ================= -->
+<section>
+  <div class="wrap">
+    <h2>If, then</h2>
+    <div class="h2sub">the plan is the thing you deviate from</div>
+    <ul class="plain">
+      <li><span class="k">Breidtinden no-go</span>Hesten. Zero hesitation — the postcard beats the grinder in marginal weather.</li>
+      <li><span class="k">Finnmark washout (seen day-3 evening)</span>Second night at Camp Mefjord, then day 4 becomes Senja → Skarsvåg direct (~650 km). Emergency lever only — the Cape is the spine of the trip.</li>
+      <li><span class="k">Troms washout (days 1–2)</span>Cut Senja to Segla-only, run to Alta a day early, buy yourself a slow Nordkapp day and better Finnmark odds.</li>
+      <li><span class="k">Storm at the Cape</span>The plateau can close in extreme weather. Skarsvåg harbour is the sheltered stage; Honningsvåg for food and walls.</li>
+      <li><span class="k">Ferry doesn't fit day 1</span>Finnsnes loop, +45 min over waiting. Non-event.</li>
+      <li><span class="k">Behind the clock day 6</span>Nothing on day 6 is optional except the coffee. Skip the coffee.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    TRUE NORTH · <span class="grad">69.65°N → 71°11′ → home</span><br>
+    verify for your dates: ferry timetable (svipper.no, line 181) · Kirkeporten Camping season · plateau parking rules (nordkapphallen.no) · fire-ban window
+  </div>
+</footer>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('chart');
+  var info=document.getElementById('mapinfo');
+  var C={anchor:'#6ef0a8',hike:'#9b7dff',sleep:'#8fd0ff',food:'#ffb27d'};
+  var DIM='#7d8ea4',LINE='#1c2a40',TEAL='#43cfc6',VIOLET='#9b7dff';
+
+  function el(name,attrs,parent){
+    var e=document.createElementNS(NS,name);
+    for(var k in attrs) e.setAttribute(k,attrs[k]);
+    (parent||svg).appendChild(e);
+    return e;
+  }
+  function txt(x,y,s,attrs,parent){
+    var a={x:x,y:y,fill:DIM,'font-family':"'Space Mono',monospace",'font-size':'10','letter-spacing':'1.5'};
+    for(var k in (attrs||{})) a[k]=attrs[k];
+    var t=el('text',a,parent); t.textContent=s; return t;
+  }
+
+  /* ---- projections ---- */
+  function mkProj(lng0,lng1,lat0,lat1,x0,x1,y0,y1){
+    return function(lat,lng){
+      return [ x0+(lng-lng0)*(x1-x0)/(lng1-lng0),
+               y1-(lat-lat0)*(y1-y0)/(lat1-lat0) ];
+    };
+  }
+  var MAIN =mkProj(16.6,26.6, 69.0,71.45, 40,960, 40,600);
+  var SENJA=mkProj(17.15,17.98, 69.36,69.56, 52,348, 66,292);   /* box 40..360 x 40..300 */
+  var MAG  =mkProj(25.50,26.10, 70.95,71.24, 800,972, 392,612); /* box 790..980 x 380..620 */
+
+  /* ---- graticule (main) ---- */
+  [69.5,70,70.5,71].forEach(function(la){
+    var y=MAIN(la,16.6)[1];
+    el('line',{x1:40,y1:y,x2:960,y2:y,stroke:LINE,'stroke-width':1});
+    txt(46,y-5,la.toFixed(1)+'°N');
+  });
+  [18,20,22,24,26].forEach(function(lo){
+    var x=MAIN(69,lo)[0];
+    el('line',{x1:x,y1:40,x2:x,y2:600,stroke:LINE,'stroke-width':1});
+    txt(x+5,594,lo+'°E');
+  });
+  /* 71°11' line */
+  var yTN=MAIN(71.1833,16.6)[1];
+  el('line',{x1:40,y1:yTN,x2:960,y2:yTN,stroke:VIOLET,'stroke-width':1,'stroke-dasharray':'2 6',opacity:.8});
+  txt(956,yTN-6,'71°11′ — TRUE NORTH',{'text-anchor':'end',fill:VIOLET});
+
+  txt(200,352,'N O R W E G I A N   S E A',{opacity:.55});
+  txt(520,72,'B A R E N T S   S E A',{opacity:.55});
+  txt(46,626,'ROUTE CHART · SCHEMATIC · NOT FOR NAVIGATION',{opacity:.6,'font-size':'9'});
+
+  /* ---- route paths ---- */
+  function path(points,proj,dashed,parent){
+    var d=points.map(function(p,i){var xy=proj(p[0],p[1]);return (i?'L':'M')+xy[0].toFixed(1)+' '+xy[1].toFixed(1);}).join(' ');
+    var a={d:d,fill:'none',stroke:TEAL,'stroke-width':2.2,'stroke-linejoin':'round','stroke-linecap':'round',opacity:.8};
+    if(dashed) a['stroke-dasharray']='5 7';
+    return el('path',a,parent);
+  }
+  var roadMain=[
+    [69.5072,17.9028],[69.4950,17.6800],[69.5050,17.6266],[69.5158,17.4427],[69.4870,17.3331],
+    [69.4800,17.3955],[69.4230,17.5044],[69.2300,17.9810],[69.0600,18.5300],[69.2216,19.5450],
+    [69.2490,19.8700],[69.3891,20.2710],[69.6050,20.5330],[69.7690,21.0280],[69.8982,21.6049],
+    [69.9400,22.0500],[69.9651,23.2667],[70.4270,24.5070],[70.4800,25.0430],[70.9821,25.9700],
+    [71.1000,25.7800],[71.1709,25.7833]
+  ];
+  path(roadMain,MAIN,false);
+  path([[69.6492,18.9553],[69.6000,18.0500],[69.5072,17.9028]],MAIN,true);
+
+  /* ---- insets ---- */
+  function insetBox(x,y,w,h,label,clipId){
+    var cp=document.createElementNS(NS,'clipPath'); cp.setAttribute('id',clipId);
+    var r=document.createElementNS(NS,'rect');
+    r.setAttribute('x',x);r.setAttribute('y',y);r.setAttribute('width',w);r.setAttribute('height',h);
+    cp.appendChild(r); svg.appendChild(cp);
+    el('rect',{x:x,y:y,width:w,height:h,fill:'#0d1626',stroke:LINE,'stroke-width':1,rx:6});
+    txt(x+10,y+18,label,{fill:'#c7d4e4'});
+    var g=el('g',{'clip-path':'url(#'+clipId+')'});
+    return g;
+  }
+  /* leader lines from true location to inset */
+  function leader(x1,y1,x2,y2){
+    el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:DIM,'stroke-width':1,'stroke-dasharray':'2 5',opacity:.5});
+  }
+  var senjaLoc=MAIN(69.48,17.45), magLoc=MAIN(71.12,25.79);
+  leader(senjaLoc[0],senjaLoc[1],360,290);
+  leader(magLoc[0],magLoc[1],885,380);
+
+  var gS=insetBox(40,40,320,260,'SENJA — DETAIL','clipS');
+  var gM=insetBox(790,380,190,240,'MAGERØYA — DETAIL','clipM');
+
+  path([[69.5072,17.9028],[69.4950,17.6800],[69.5050,17.6266],[69.5100,17.5900],[69.5158,17.4427],
+        [69.4950,17.4600],[69.4870,17.3331],[69.4800,17.3955],[69.4230,17.5044],[69.3700,17.6500]],SENJA,false,gS);
+  path([[70.9821,25.9700],[71.0300,25.8600],[71.1000,25.7800],[71.1709,25.7833]],MAG,false,gM);
+  path([[71.1000,25.7800],[71.1100,25.8060]],MAG,false,gM);
+  path([[71.0900,25.7500],[71.1220,25.7079]],MAG,false,gM);
+
+  /* ---- points ---- */
+  var pts=[
+    /* main */
+    {s:MAIN,lat:69.6492,lng:18.9553,t:'anchor',lab:'TROMSØ',ti:'TROMSØ',b:'Day 1 16:00 pickup + big shop · Day 6 11:00 handback.'},
+    {s:MAIN,lat:69.5960,lng:18.0300,t:'anchor',ti:'BRENSHOLMEN FERRY',b:'Early-evening sailing to Botnhamn, 45 min. Summer timetable (to ~20 Sep) has evening departures; winter is thinner — svipper.no line 181.'},
+    {s:MAIN,lat:69.4500,lng:20.4000,t:'anchor',lab:'LYNGEN',ti:'LYNGENFJORD SHORE — MUST',b:'Any E6 pullout Oteren–Olderdalen: the Lyngen Alps straight across the water. Day 3 stop, repeats day 6.'},
+    {s:MAIN,lat:69.3891,lng:20.2710,t:'anchor',lab:'SKIBOTN',ti:'SKIBOTN — MUST',b:'Driest sky in Troms (observatory valley). Final-night aurora bet.'},
+    {s:MAIN,lat:69.3300,lng:20.1000,t:'sleep',ti:'NIGHT 5 — WILD',b:'Skibotn–Oteren corridor. 1h45 from the handback.'},
+    {s:MAIN,lat:69.8982,lng:21.6049,t:'anchor',ti:'GILDETUN / KVÆNANGSFJELLET — OPT',b:'Big-sky viewpoint on the pass, leg-stretch if clear. Exposed but a serious aurora stage in calm weather.'},
+    {s:MAIN,lat:69.9651,lng:23.2667,t:'anchor',lab:'ALTA',ti:'ALTA',b:'Shop + fuel both directions (mind Sat early closing / Sun closure). OPT: Cathedral of the Northern Lights — titanium spiral exterior; rain-day filler.'},
+    {s:MAIN,lat:69.9200,lng:23.0500,t:'sleep',ti:'NIGHT 3 — WILD',b:'Alta / Kåfjord area — or up on Kvænangsfjellet if that is where the hole is.'},
+    /* senja inset */
+    {s:SENJA,lat:69.5072,lng:17.9028,t:'anchor',ti:'BOTNHAMN',b:'Ferry arrival from Brensholmen. 30–40 min to Fjordgård / Mefjordvær.'},
+    {s:SENJA,lat:69.5050,lng:17.6266,t:'hike',lab:'SEGLA·HESTEN',ti:'SEGLA / HESTEN TRAILHEAD',b:'Fjordgård lot (EasyPark; free lot at the harbour). Segla ~5 km/600 m · Hesten = the Segla postcard.'},
+    {s:SENJA,lat:69.5100,lng:17.5750,t:'sleep',ti:'NIGHT 1 — WILD',b:'Mefjorden shoreline / Fjordgård harbour lot (free, picnic + fire spot).'},
+    {s:SENJA,lat:69.5158,lng:17.4427,t:'sleep',lab:'CAMP',ti:'CAMP MEFJORD — NIGHT 2',b:'~400 NOK · power, shower, laundry, sauna, BBQ hut. Self-service, year-round. Water + cassette.'},
+    {s:SENJA,lat:69.4950,lng:17.4600,t:'hike',ti:'BREIDTINDEN TRAILHEAD',b:'Roadside lot Senjahopen↔Mefjordbotn, blue dots. 8 km RT, 950 m, class-3 finish. Weather gate applies.'},
+    {s:SENJA,lat:69.4870,lng:17.3331,t:'anchor',lab:'TUNGENESET',ti:'TUNGENESET — MUST',b:'Okshornan "Devil\u2019s Teeth", walkway to the rocks, free WC. Slippery when wet.'},
+    {s:SENJA,lat:69.4800,lng:17.3955,t:'food',ti:'ERSFJORDSTRANDA — MUST BBQ',b:'White-sand beach, stone fire shelter + pits, WC. Day 2 golden hour.'},
+    {s:SENJA,lat:69.4230,lng:17.5044,t:'anchor',ti:'BERGSBOTN PLATFORM — OPT',b:'44 m viewing platform over Bergsfjorden — only if ahead of the light on day 2.'},
+    /* mageroya inset */
+    {s:MAG,lat:70.9821,lng:25.9700,t:'food',lab:'HONNINGSVÅG',ti:'HONNINGSVÅG',b:'Last groceries + fuel before the Cape. Rema 1000 from ~07:00.'},
+    {s:MAG,lat:71.1220,lng:25.7079,t:'hike',lab:'KNIVSKJ.',ti:'KNIVSKJELLODDEN — MUST',b:'E69 lot, 6 km before the plateau. 18 km RT to 71°11′ — out-norths the Nordkapp globe by 1,450 m. Rocky, red-T marked.'},
+    {s:MAG,lat:71.1100,lng:25.8060,t:'sleep',lab:'SKARSVÅG',ti:'SKARSVÅG — NIGHT 4',b:'Kirkeporten Camping: power, showers, laundry, emptying, café (seasonal — confirm). OPT: Kirkeporten arch walk, 45 min, frames the Cape horn.'},
+    {s:MAG,lat:71.1709,lng:25.7833,t:'anchor',lab:'NORDKAPP',ti:'NORDKAPP PLATEAU — MUST',b:'Night session ~20:30–01:00 over the Arctic Ocean. No overnighting (max ~5–6h); Nordkapphallen 350 NOK optional.'}
+  ];
+
+  var current=null;
+  pts.forEach(function(p){
+    var xy=p.s(p.lat,p.lng);
+    var g=el('g',{'class':'pt',tabindex:'0',role:'button','aria-label':p.ti});
+    el('circle',{cx:xy[0],cy:xy[1],r:6,fill:C[p.t],'fill-opacity':.45,stroke:C[p.t],'stroke-width':2},g);
+    if(p.lab) txt(xy[0]+10,xy[1]+4,p.lab,{'font-size':'9',fill:'#c7d4e4'},g);
+    function show(){
+      if(current) current.classList.remove('on');
+      current=g; g.classList.add('on');
+      info.innerHTML='<div class="mt">'+p.ti+'</div><div class="mb">'+p.b+'</div>'+
+        '<a class="gm" href="https://www.google.com/maps/search/?api=1&query='+p.lat+','+p.lng+'" rel="noopener">Open in Google Maps →</a>';
+    }
+    g.addEventListener('click',show);
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});
+  });
+})();
+</script>
+</body>
+</html>
