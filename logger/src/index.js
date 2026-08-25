@@ -106,6 +106,23 @@ export default {
       });
     }
 
+    if (url.pathname === '/clear' && request.method === 'GET') {
+      if (url.searchParams.get('key') !== env.LOG_KEY) {
+        return new Response('forbidden', { status: 403 });
+      }
+      let deleted = 0;
+      let cursor;
+      do {
+        const page = await env.VISITS.list({ cursor });
+        await Promise.all(page.keys.map(k => env.VISITS.delete(k.name)));
+        deleted += page.keys.length;
+        cursor = page.list_complete ? null : page.cursor;
+      } while (cursor);
+      return new Response(JSON.stringify({ deleted }), {
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
     return new Response('not found', { status: 404 });
   },
 };
