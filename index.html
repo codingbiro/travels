@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TRUE NORTH · Tromsø → Nordkapp</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="TRUE NORTH · Tromsø → Nordkapp">
+<meta property="og:description" content="Six days chasing holes in the clouds — Senja, Alta, Nordkapp, Knivskjellodden. Aurora hunt all nights.">
+<meta property="og:image" content="https://images.ctfassets.net/7mmwp5vb96tc/97231/a30c64a60e37f2e8f3adf32305472254/north-cape-norway-hgr-146678-photo_getty_images.jpg?q=60&amp;w=1200">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TRUE NORTH · Tromsø → Nordkapp">
+<meta name="twitter:image" content="https://images.ctfassets.net/7mmwp5vb96tc/97231/a30c64a60e37f2e8f3adf32305472254/north-cape-norway-hgr-146678-photo_getty_images.jpg?q=60&amp;w=1200">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Albert+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -45,6 +52,11 @@
 
   /* ---------- HERO ---------- */
   .hero{position:relative;overflow:hidden;padding:96px 0 72px;border-bottom:1px solid var(--line)}
+  .cover{position:absolute;inset:0;pointer-events:none;
+    background:url("https://images.ctfassets.net/7mmwp5vb96tc/97231/a30c64a60e37f2e8f3adf32305472254/north-cape-norway-hgr-146678-photo_getty_images.jpg?q=40&w=1600&fm=webp") center 38%/cover no-repeat;
+    opacity:.55}
+  .scrim{position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(6,11,19,.5) 0%,rgba(6,11,19,.66) 55%,#060b13 100%)}
   .aurora{
     position:absolute;inset:-40% -20% auto -20%;height:130%;
     background:
@@ -138,6 +150,12 @@
   .hike p{font-size:.9rem;color:var(--moon)}
   .hike .warn{color:var(--ember);font-size:.83rem;margin-top:10px}
 
+  /* ---------- PHOTO FIGURE ---------- */
+  .photo{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:30px;background:var(--sky-1)}
+  .photo img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;background:var(--sky-2)}
+  .photo figcaption{font-family:var(--mono);font-size:.6rem;color:var(--moon-dim);text-align:right;padding:5px 12px;letter-spacing:.03em}
+  @media (max-width:640px){.photo img{aspect-ratio:3/2}}
+
   /* ---------- PLAYBOOK ---------- */
   .ritual{border:1px solid rgba(110,240,168,.35);border-radius:10px;padding:24px 26px;background:linear-gradient(180deg,rgba(110,240,168,.05),transparent);margin-bottom:34px}
   .ritual .t{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;color:var(--aur-green);text-transform:uppercase;margin-bottom:12px}
@@ -169,6 +187,8 @@
 
 <!-- ================= HERO ================= -->
 <header class="hero">
+  <div class="cover" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
   <div class="aurora" aria-hidden="true"></div>
   <div class="stars" aria-hidden="true"></div>
   <div class="wrap">
@@ -178,7 +198,7 @@
     <div class="statline">
       <span><b>6</b> days</span>
       <span>~<b>1,450 km</b> driven</span>
-      <span>aurora hunt all nights</span>
+      <span><b>aurora hunt</b> all nights</span>
       <span><b>3</b> hikes + <b>1</b> conditional</span>
       <span>dark <b>20:00–06:00</b></span>
     </div>
@@ -200,6 +220,7 @@
       <span class="chip must">Nordkapp plateau at night</span>
       <span class="chip must">Knivskjellodden</span>
       <span class="chip must">Skibotn sky</span>
+      <span class="chip must">Pust sauna finish</span>
       <span class="chip cond">Breidtinden — weather gate</span>
       <span class="chip opt">Alta cathedral</span>
       <span class="chip opt">Kirkeporten arch</span>
@@ -304,6 +325,7 @@
       <div class="row"><div class="k">08:15</div><div class="v">Out. Skibotn → Tromsø along the fjord. One last Lyngen layby coffee if ahead of the clock.</div></div>
       <div class="row"><div class="k">By 10:30</div><div class="v">Fuel at the city edge; dump/water if the depot requires it.</div></div>
       <div class="row"><div class="k">11:00</div><div class="v">Handback.</div></div>
+      <div class="row"><div class="k">12:00</div><div class="v"><span class="tag must">MUST</span><strong>Pust</strong> — floating sauna on the Tromsø waterfront, minutes from the depot. Three rounds of heat with sea dips between, and the first proper warm-up since night 4. Book a slot in advance at pust.io — they sell out.</div></div>
     </div>
 
   </div>
@@ -395,6 +417,24 @@
       <span><a href="https://flux.phys.uit.no/stackplot/" rel="noopener">Tromsø magnetometer stackplot</a> · sharp drop = substorm happening now, go outside</span>
       <span><a href="https://www.norway-lights.com" rel="noopener">NorwayLights</a> · sanity-check app</span>
     </div>
+  </div>
+</section>
+
+<!-- ================= SAUNA ================= -->
+<section>
+  <div class="wrap">
+    <h2>Sauna</h2>
+    <div class="h2sub">heat + arctic water — the counterweight to five cold nights</div>
+    <figure class="photo">
+      <img src="images/pust-sauna.jpg" alt="Pust floating sauna on the Tromsø waterfront" loading="lazy" onerror="this.closest('figure').style.display='none'">
+      <figcaption>Pust · Tromsø harbour · pust.io</figcaption>
+    </figure>
+    <ul class="plain">
+      <li><span class="k">Day 6 · Tromsø — the finish</span><strong>Pust</strong>, floating sauna in the central harbour, minutes from the depot. Handback 11:00, in the heat by 12:00, Arctic dip between rounds. Book ahead — slots sell out.</li>
+      <li><span class="k">Night 2 · Senja</span><strong>Camp Mefjord</strong> rents its own small shoreside sauna — and you're sleeping there anyway. Post-BBQ heat, Mefjorden dip, then straight into the aurora watch.</li>
+      <li><span class="k">Tromsø upgrade</span><strong>Vulkana</strong> — a converted vessel with a wood-fired sauna onboard that actually sails during the session. The premium swap for Pust if the trip deserves a bigger finish.</li>
+      <li><span class="k">Wildcard · Skjervøy</span><strong>Áhpi flytende badstue</strong> — floating sauna out in Skjervøy, a detour off the E6 at Langslett (fits day 3 or 5). Only if the sky and the clock both point that way.</li>
+    </ul>
   </div>
 </section>
 
@@ -549,7 +589,7 @@
   /* ---- points ---- */
   var pts=[
     /* main */
-    {s:MAIN,lat:69.6492,lng:18.9553,t:'anchor',lab:'TROMSØ',ti:'TROMSØ',b:'Day 1 16:00 pickup + big shop · Day 6 11:00 handback.'},
+    {s:MAIN,lat:69.6492,lng:18.9553,t:'anchor',lab:'TROMSØ',ti:'TROMSØ',b:'Day 1 16:00 pickup + big shop · Day 6 11:00 handback, then Pust floating sauna at 12:00.'},
     {s:MAIN,lat:69.5960,lng:18.0300,t:'anchor',ti:'BRENSHOLMEN FERRY',b:'Early-evening sailing to Botnhamn, 45 min. Summer timetable (to ~20 Sep) has evening departures; winter is thinner — svipper.no line 181.'},
     {s:MAIN,lat:69.4500,lng:20.4000,t:'anchor',lab:'LYNGEN',ti:'LYNGENFJORD SHORE — MUST',b:'Any E6 pullout Oteren–Olderdalen: the Lyngen Alps straight across the water. Day 3 stop, repeats day 6.'},
     {s:MAIN,lat:69.3891,lng:20.2710,t:'anchor',lab:'SKIBOTN',ti:'SKIBOTN — MUST',b:'Driest sky in Troms (observatory valley). Final-night aurora bet.'},
