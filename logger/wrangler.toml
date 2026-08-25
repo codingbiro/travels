@@ -1,0 +1,7 @@
+name = "travels-logger"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+[[kv_namespaces]]
+binding = "VISITS"
+id = "b88db35704d94557afcf047b6891c9f1"

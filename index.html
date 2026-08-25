@@ -637,5 +637,16 @@
   });
 })();
 </script>
+<script>
+(function(){
+  try{
+    var data = JSON.stringify({ref: document.referrer, screen: screen.width + 'x' + screen.height});
+    var u = 'https://travels-logger.birovince.workers.dev/log?p=' + encodeURIComponent(location.pathname);
+    if(!(navigator.sendBeacon && navigator.sendBeacon(u, new Blob([data], {type:'text/plain'})))){
+      fetch(u, {method:'POST', body: data, keepalive: true}).catch(function(){});
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
