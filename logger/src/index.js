@@ -2,12 +2,15 @@
 // POST /log        — records one visit (called by a beacon on the page)
 // GET  /logs?key=… — returns recent visits as JSON (key must match LOG_KEY secret)
 
-const SITE_ORIGIN = 'https://travels.birovince.com';
+const ALLOWED_ORIGINS = [
+  'https://travels.birovince.com',
+  'https://austria.birovince.com',
+];
 
 function corsHeaders(request) {
   const origin = request.headers.get('Origin');
   return {
-    'Access-Control-Allow-Origin': origin === SITE_ORIGIN ? origin : SITE_ORIGIN,
+    'Access-Control-Allow-Origin': ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type',
   };
@@ -69,6 +72,7 @@ export default {
         country: cf.country || '',
         city: cf.city || '',
         region: cf.region || '',
+        site: (request.headers.get('Origin') || '').replace('https://', ''),
         path: url.searchParams.get('p') || '',
         referrer: typeof client.ref === 'string' ? client.ref.slice(0, 200) : '',
         screen: typeof client.screen === 'string' ? client.screen.slice(0, 20) : '',
