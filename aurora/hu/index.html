@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
+<title>VALÓDI ÉSZAK · Tromsø → Nordkapp</title>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:title" content="VALÓDI ÉSZAK · Tromsø → Nordkapp">
+<meta property="og:description" content="Hat nap felhőlyuk-vadászat — Senja, Alta, Nordkapp, Knivskjellodden. Sarkifény-vadászat minden éjjel.">
+<meta property="og:url" content="https://travels.birovince.com/aurora/hu/">
+<link rel="alternate" hreflang="en" href="https://travels.birovince.com/aurora/">
+<link rel="alternate" hreflang="hu" href="https://travels.birovince.com/aurora/hu/">
+<meta property="og:image" content="https://travels.birovince.com/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="726">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VALÓDI ÉSZAK · Tromsø → Nordkapp">
+<meta name="twitter:image" content="https://travels.birovince.com/images/og-cover.jpg">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Albert+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky-0:#060b13;
+    --sky-1:#0a1220;
+    --sky-2:#101b2e;
+    --line:#1c2a40;
+    --moon:#c7d4e4;
+    --moon-dim:#7d8ea4;
+    --aur-green:#6ef0a8;
+    --aur-teal:#43cfc6;
+    --aur-violet:#9b7dff;
+    --ember:#ffb27d;
+    --ice:#8fd0ff;
+    --max-w:900px;
+    --disp:'Krona One',system-ui,sans-serif;
+    --body:'Albert Sans',system-ui,sans-serif;
+    --mono:'Space Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--sky-0);
+    color:var(--moon);
+    font-family:var(--body);
+    font-weight:300;
+    font-size:16.5px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--aur-green);color:var(--sky-0)}
+  a{color:var(--aur-teal);text-decoration:none;border-bottom:1px solid rgba(67,207,198,.35)}
+  a:hover{color:var(--aur-green);border-color:var(--aur-green)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--aur-green);outline-offset:3px}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 22px}
+  strong{font-weight:600;color:#e6eef8}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:96px 0 72px;border-bottom:1px solid var(--line)}
+  .cover{position:absolute;inset:0;pointer-events:none;
+    background:url("https://images.ctfassets.net/7mmwp5vb96tc/97231/a30c64a60e37f2e8f3adf32305472254/north-cape-norway-hgr-146678-photo_getty_images.jpg?q=40&w=1600&fm=webp") center 38%/cover no-repeat;
+    opacity:.55}
+  .scrim{position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(6,11,19,.5) 0%,rgba(6,11,19,.66) 55%,#060b13 100%)}
+  .aurora{
+    position:absolute;inset:-40% -20% auto -20%;height:130%;
+    background:
+      radial-gradient(55% 42% at 22% 30%, rgba(110,240,168,.16), transparent 62%),
+      radial-gradient(45% 38% at 58% 18%, rgba(67,207,198,.13), transparent 60%),
+      radial-gradient(50% 45% at 82% 36%, rgba(155,125,255,.12), transparent 65%);
+    filter:blur(14px);
+    animation:drift 26s ease-in-out infinite alternate;
+    pointer-events:none;
+  }
+  .stars{position:absolute;inset:0;pointer-events:none;background-image:
+    radial-gradient(1px 1px at 12% 22%, #cfe3ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 34% 64%, #9fb8d8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 56% 30%, #e8f2ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 71% 70%, #cfe3ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 24%, #9fb8d8 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 45% 12%, #e8f2ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 5% 55%, #cfe3ff 50%, transparent 51%);
+    opacity:.7}
+  @keyframes drift{from{transform:translateX(-3%) skewX(-2deg)}to{transform:translateX(3%) skewX(2deg)}}
+  @media (prefers-reduced-motion: reduce){.aurora{animation:none}}
+  .hero .wrap{position:relative}
+  .lang{position:absolute;top:22px;right:22px;z-index:2;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 14px;border:1px solid rgba(199,212,228,.35);border-radius:100px;color:var(--moon);background:rgba(6,11,19,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  .lang:hover{border-color:var(--aur-green);color:var(--aur-green);background:rgba(6,11,19,.7)}
+  .lang small{font-size:inherit;color:var(--moon-dim);margin-right:8px}
+  .kicker{font-family:var(--mono);font-size:.75rem;letter-spacing:.28em;color:var(--aur-green);text-transform:uppercase;margin-bottom:22px}
+  h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.4rem,7.6vw,4.4rem);letter-spacing:.04em;line-height:1.05;color:#eef4fb}
+  h1 .deg{background:linear-gradient(90deg,var(--aur-green),var(--aur-teal) 55%,var(--aur-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{margin-top:22px;font-size:1.05rem;color:var(--moon-dim);max-width:58ch}
+  .statline{margin-top:36px;font-family:var(--mono);font-size:.8rem;color:var(--moon-dim);display:flex;flex-wrap:wrap;gap:10px 28px}
+  .statline b{color:var(--moon);font-weight:700}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--disp);font-weight:400;font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;color:#eef4fb;margin-bottom:8px}
+  .h2sub{font-family:var(--mono);font-size:.74rem;color:var(--moon-dim);letter-spacing:.06em;margin-bottom:34px}
+  p{margin-bottom:1em;max-width:70ch}
+  p:last-child{margin-bottom:0}
+
+  /* tier chips */
+  .musts{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+  .chip{font-family:var(--mono);font-size:.73rem;letter-spacing:.03em;padding:7px 13px;border:1px solid var(--line);border-radius:100px;color:var(--moon)}
+  .chip.must{border-color:rgba(110,240,168,.5);color:var(--aur-green)}
+  .chip.cond{border-color:rgba(155,125,255,.5);color:var(--aur-violet)}
+  .chip.opt{border-color:var(--line);color:var(--moon-dim)}
+  .tiernote{font-family:var(--mono);font-size:.7rem;color:var(--moon-dim);margin-top:14px;letter-spacing:.04em}
+
+  /* ---------- CHART (SVG map) ---------- */
+  .chartbox{border:1px solid var(--line);border-radius:10px;background:var(--sky-1);overflow:hidden}
+  #chart{display:block;width:100%;height:auto}
+  #chart .pt{cursor:pointer}
+  #chart .pt circle{transition:r .12s ease}
+  #chart .pt:hover circle,#chart .pt.on circle{r:8}
+  #mapinfo{border-top:1px solid var(--line);padding:16px 20px;min-height:84px}
+  #mapinfo .mt{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;color:#eef4fb;margin-bottom:4px}
+  #mapinfo .mb{font-size:.88rem;color:var(--moon)}
+  #mapinfo .gm{font-family:var(--mono);font-size:.72rem;margin-top:8px;display:inline-block}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px;font-family:var(--mono);font-size:.73rem;color:var(--moon-dim)}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:baseline}
+
+  /* ---------- DAYS / latitude rail ---------- */
+  .day{position:relative;padding:0 0 52px 44px;border-left:2px solid transparent;
+       border-image:linear-gradient(180deg,var(--aur-teal),var(--aur-green)) 1}
+  .day:last-of-type{padding-bottom:8px}
+  .day.peak{border-image:linear-gradient(180deg,var(--aur-green),var(--aur-violet)) 1}
+  .day.south{border-image:linear-gradient(180deg,var(--aur-violet),var(--aur-teal)) 1}
+  .day::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;
+       background:var(--sky-0);border:2px solid var(--aur-green)}
+  .day.peak::before{border-color:var(--aur-violet);box-shadow:0 0 14px rgba(155,125,255,.55)}
+  .lat{font-family:var(--mono);font-size:.72rem;color:var(--moon-dim);letter-spacing:.08em}
+  .lat b{color:var(--aur-green);font-weight:700}
+  .day.peak .lat b{color:var(--aur-violet)}
+  h3{font-family:var(--disp);font-weight:400;font-size:1.05rem;letter-spacing:.05em;color:#eef4fb;margin:6px 0 4px}
+  .meta{font-family:var(--mono);font-size:.74rem;color:var(--moon-dim);margin-bottom:16px}
+  .meta em{font-style:normal;color:var(--ember)}
+  .row{display:grid;grid-template-columns:96px 1fr;gap:6px 18px;margin-bottom:8px;max-width:72ch}
+  .row .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--moon-dim);text-transform:uppercase;padding-top:3px}
+  .row .v{font-size:.95rem}
+  .tag{font-family:var(--mono);font-size:.68rem;border-radius:4px;padding:1px 7px;margin-right:8px;letter-spacing:.05em;font-weight:700;color:var(--sky-0)}
+  .tag.must{background:var(--aur-green)}
+  .tag.cond{background:var(--aur-violet)}
+  .tag.opt{background:var(--moon-dim)}
+
+  /* ---------- HIKES ---------- */
+  .hikes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .hike{border:1px solid var(--line);border-radius:10px;background:var(--sky-1);overflow:hidden;display:flex;flex-direction:column}
+  .hike figure{margin:0;border-bottom:1px solid var(--line)}
+  .hike img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:var(--sky-2)}
+  .hike figcaption{font-family:var(--mono);font-size:.6rem;color:var(--moon-dim);text-align:right;padding:5px 12px;letter-spacing:.03em}
+  .hike figcaption a{color:var(--moon-dim);border-bottom-color:rgba(125,142,164,.35)}
+  .hike .body{padding:20px 22px 22px}
+  .hike h4{font-family:var(--disp);font-weight:400;font-size:.92rem;letter-spacing:.06em;color:#eef4fb;margin-bottom:4px}
+  .hike .stats{font-family:var(--mono);font-size:.72rem;color:var(--aur-teal);margin-bottom:12px;letter-spacing:.03em}
+  .hike p{font-size:.9rem;color:var(--moon)}
+  .hike .warn{color:var(--ember);font-size:.83rem;margin-top:10px}
+
+  /* ---------- PHOTO FIGURE ---------- */
+  .photo{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:30px;background:var(--sky-1)}
+  .photo img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;background:var(--sky-2)}
+  .photo figcaption{font-family:var(--mono);font-size:.6rem;color:var(--moon-dim);text-align:right;padding:5px 12px;letter-spacing:.03em}
+  @media (max-width:640px){.photo img{aspect-ratio:3/2}}
+
+  /* ---------- PLAYBOOK ---------- */
+  .ritual{border:1px solid rgba(110,240,168,.35);border-radius:10px;padding:24px 26px;background:linear-gradient(180deg,rgba(110,240,168,.05),transparent);margin-bottom:34px}
+  .ritual .t{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;color:var(--aur-green);text-transform:uppercase;margin-bottom:12px}
+  .micro{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:8px}
+  .micro td{padding:10px 14px 10px 0;border-top:1px solid var(--line);vertical-align:top}
+  .micro td:first-child{font-family:var(--mono);font-size:.75rem;color:var(--aur-teal);white-space:nowrap;letter-spacing:.03em}
+  .links{margin-top:30px;font-size:.9rem;display:grid;gap:8px}
+
+  /* ---------- LISTS ---------- */
+  .plain{list-style:none;max-width:72ch}
+  .plain li{padding:11px 0;border-top:1px solid var(--line);font-size:.95rem}
+  .plain li:first-child{border-top:none}
+  .plain .k{font-family:var(--mono);font-size:.73rem;letter-spacing:.05em;color:var(--moon-dim);text-transform:uppercase;display:block;margin-bottom:3px}
+  .ember .k{color:var(--ember)}
+  .ice .k{color:var(--ice)}
+
+  footer{padding:56px 0 80px;color:var(--moon-dim);font-family:var(--mono);font-size:.73rem;letter-spacing:.05em}
+  footer .grad{background:linear-gradient(90deg,var(--aur-green),var(--aur-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  @media (max-width:640px){
+    .hero{padding:72px 0 56px}
+    section{padding:52px 0}
+    .row{grid-template-columns:1fr;gap:2px 0;margin-bottom:14px}
+    .day{padding-left:26px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="cover" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <a class="lang" href="/aurora/" lang="en" hreflang="en" title="English version"><small>EN</small>English</a>
+  <div class="wrap">
+    <div class="kicker">Lakóautó · Sarkifény-túra · Tromsø ⇄ Nordkapp</div>
+    <h1>VALÓDI <span class="deg">ÉSZAK</span></h1>
+    <p class="sub">Tromsø → Senja → Alta → Nordkapp → Tromsø. Hat nap felhőlyukakat kergetve, ki egészen a <strong>71°11′-ig — Knivskjellodden</strong>, a csendes fokig, amely 1450 méterrel északabbra fekszik a híres Nordkapp-földgömbnél — és vissza. Szándékosan laza: a horgonypontok fixek, minden más az égboltot követi.</p>
+    <div class="statline">
+      <span><b>6</b> nap</span>
+      <span>~<b>1450 km</b> vezetés</span>
+      <span><b>sarkifény-vadászat</b> minden éjjel</span>
+      <span><b>3</b> túra + <b>1</b> feltételes</span>
+      <span>sötét <b>20:00–06:00</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= SHAPE ================= -->
+<section>
+  <div class="wrap">
+    <h2>A váz</h2>
+    <div class="h2sub">a terv szabályai — minden más hajlik</div>
+    <p>Az alábbi horgonypontok fixek. Az időpontok alapértelmezések, nem kötelezettségek. Minden este <strong>18:00</strong>-kor az ég dönti el, hol alszik a lakóautó — az egyetlen kemény falak a két kempinges éjszaka (víz, áram, zuhany, kazetta) és a <strong>6. napi 11:00-s leadás</strong>. Az 5. nap szándékosan a legnagyobb; védd azzal, hogy a 4. napot lassúra veszed.</p>
+    <p>A szürke elemek <strong>csak kitöltők</strong>: rossz idő, üresjárat vagy ha előrébb járunk a tervnél. Soha nem szorítanak ki horgonypontot. Altától északra minden Finnmark-logika: tankolj, amikor lehet, vásárolj be, mielőtt a hétvége bezár mindent, és a szelet tiszteld jobban, mint az ambíciót.</p>
+    <div class="musts">
+      <span class="chip must">Segla / Hesten</span>
+      <span class="chip must">Ersfjordstranda grillezés</span>
+      <span class="chip must">Tungeneset</span>
+      <span class="chip must">Lyngen-parti megálló</span>
+      <span class="chip must">Nordkapp-fennsík éjjel</span>
+      <span class="chip must">Knivskjellodden</span>
+      <span class="chip must">Skibotni égbolt</span>
+      <span class="chip must">Pust szauna zárásként</span>
+      <span class="chip cond">Breidtinden — időjárás-kapu</span>
+      <span class="chip opt">Altai székesegyház</span>
+      <span class="chip opt">Kirkeporten sziklakapu</span>
+      <span class="chip opt">Gildetun kilátó</span>
+      <span class="chip opt">Bergsbotn kilátóplatform</span>
+    </div>
+    <div class="tiernote">zöld = fix horgonypont · lila = időjárásfüggő · szürke = opcionális kitöltő (csak eső / szabad idő esetén)</div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section>
+  <div class="wrap">
+    <h2>A térkép</h2>
+    <div class="h2sub">sematikus — folytonos = út · szaggatott = komp · dobozok = részlet-kivágatok · koppints bármelyik pontra</div>
+    <div class="chartbox">
+      <svg id="chart" viewBox="0 0 1000 640" role="img" aria-label="Sematikus útvonaltérkép, Tromsøtől Nordkappig"></svg>
+      <div id="mapinfo">
+        <div class="mt">ÚTVONALTÉRKÉP</div>
+        <div class="mb">Koppints bármelyik pontra a részletekért és a Google Maps linkért.</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--aur-green)"></span>horgonypont / sarki fény</span>
+      <span><span class="dot" style="background:var(--aur-violet)"></span>túra</span>
+      <span><span class="dot" style="background:var(--ice)"></span>alvás</span>
+      <span><span class="dot" style="background:var(--ember)"></span>étel / grill</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAYS ================= -->
+<section>
+  <div class="wrap">
+    <h2>Hat nap</h2>
+    <div class="h2sub">a sín a szélességi fokot követi — Európa tetején a legfényesebb</div>
+
+    <!-- D1 -->
+    <div class="day">
+      <div class="lat">1. NAP · <b>69,65°É → 69,51°É</b></div>
+      <h3>Átvétel és átkelés</h3>
+      <div class="meta">~85 km + 45 perc komp · sötét 20:00-tól</div>
+      <div class="row"><div class="k">16:00</div><div class="v">Lakóautó átvétele, Tromsø. Egyenesen egy nagy bevásárlásra (Eurospar/Rema) — vásárolj be az egész hétvégére: a norvég boltok vasárnap zárva, Finnmarkban pedig amúgy is ritkák.</div></div>
+      <div class="row"><div class="k">17:30</div><div class="v">Ki Kvaløyán át <strong>Brensholmenbe</strong>. Cél egy <strong>korai esti komp</strong> Botnhamnba (45 perc, AutoPASS-díjszabás). A nyári menetrend (~szept. 20-ig) este 19:00 / 20:45 / 22:15-kor indul; a téli menetrend ritkább — nézd meg a svipper.no-n (181-es vonal) a saját dátumaidra.</div></div>
+      <div class="row"><div class="k">~20:30</div><div class="v">Begurulás <strong>Mefjordvær / Fjordgård</strong> felé. Ingyenes parkoló a fjordgårdi kikötőben, piknik- és tűzrakóhellyel.</div></div>
+      <div class="row"><div class="k">Alvás</div><div class="v">Vadkemping — Mefjorden-parti pihenő vagy a kikötői parkoló.</div></div>
+      <div class="row"><div class="k">Sarki fény</div><div class="v">Első kör 20:30-tól egy északra néző parton. Ha tiszta: Segla sziluettje a víz túloldalán, már az első éjjel.</div></div>
+      <div class="row"><div class="k">Rugalmas</div><div class="v">Nem jön ki a komp → kerülő Finnsnesen át (~190 km / 3 óra), bevásárlás ott.</div></div>
+    </div>
+
+    <!-- D2 -->
+    <div class="day">
+      <div class="lat">2. NAP · <b>69,47–69,52°É</b></div>
+      <h3>Breidtinden-ablak</h3>
+      <div class="meta">~60 km helyben · kempinges éjszaka · <em>Grill: Ersfjordstranda</em></div>
+      <div class="row"><div class="k">08:00</div><div class="v"><span class="tag cond">KAPU</span><strong>Megy / nem megy:</strong> száraz szikla + látható csúcs + szél ~10 m/s alatt. Megy → Breidtinden (részletek a Túráknál). Nem megy → <strong>Hesten</strong> helyette, és a nap könnyűvé válik.</div></div>
+      <div class="row"><div class="k">Este</div><div class="v"><span class="tag must">FIX</span>Nyugati parti páros: <strong>Tungeneset</strong> (Okshornan-fogak, ingyenes WC) → <strong>Ersfjordstranda</strong>: grillezés a kő tűzrakó-menedékben, háttérben az Ördögfogak. <span class="tag opt">OPCIÓ</span><strong>Bergsbotn-platform</strong> útközben, csak ha megelőzzük a fényt.</div></div>
+      <div class="row"><div class="k">Alvás</div><div class="v"><strong>Camp Mefjord</strong>, Mefjordvær — ~400 NOK árammal, zuhany/mosoda, grillkunyhó, szauna; önkiszolgáló, egész évben nyitva. Víz feltöltése, kazetta ürítése.</div></div>
+      <div class="row"><div class="k">Sarki fény</div><div class="v">Mefjorden-tükröződések a kemping partjáról; ha a külső part be van borulva, a belső fjordvégeken (Mefjordbotn) gyakran van lyuk.</div></div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day">
+      <div class="lat">3. NAP · <b>69,50°É → 69,97°É</b></div>
+      <h3>Segla első fénynél, aztán irány kelet</h3>
+      <div class="meta">~400 km · 5,5–6 óra nettó vezetés</div>
+      <div class="row"><div class="k">Hajnal</div><div class="v"><span class="tag must">FIX</span><strong>Segla</strong> (vagy Hesten, ha a Breidtinden felfalta a tegnapot) a fjordgårdi parkolóból. Első fénynél indulás = üres ösvény, nyugodt levegő a drónnak, 3–4 óra múlva vissza a kocsinál.</div></div>
+      <div class="row"><div class="k">~11:00</div><div class="v">Indulás: Fjordgård → Finnsnes → E6 → Nordkjosbotn → <span class="tag must">FIX</span><strong>Lyngenfjord partja</strong> (bármelyik kiálló az Oteren–Skibotn–Olderdalen szakaszon; az Alpok pont a víz túloldalán ülnek). <span class="tag opt">OPCIÓ</span><strong>Gildetun / Kvænangsfjellet</strong> kilátó lábnyújtóztatásként, ha a hágó tiszta.</div></div>
+      <div class="row"><div class="k">Este</div><div class="v"><strong>Bevásárlás + tankolás Altában</strong> — figyelj a szombati korai zárásra (~18–20) és a teljes vasárnapi zárvatartásra. Tele tank; a finnmarki kutak ritkák.</div></div>
+      <div class="row"><div class="k">Alvás</div><div class="v">Vadkemping Alta / Kåfjord környékén — vagy fent a Kvænangsfjelleten, ha ott a lyuk (kitett hely; előbb nézd a szelet).</div></div>
+      <div class="row"><div class="k">Sarki fény</div><div class="v">Alta szárazföldi, száraz klímájú — nem véletlenül „a sarki fény városa”. Statisztikailag eddig a legjobb szárazföldi esély.</div></div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day peak">
+      <div class="lat">4. NAP · <b>69,97°É → 71,17°É</b> · a sín teteje</div>
+      <h3>A Fok</h3>
+      <div class="meta">~240 km · kempinges éjszaka · szándékosan lassú nap</div>
+      <div class="row"><div class="k">Reggel</div><div class="v">Indulás, amikor készen állunk. <span class="tag opt">OPCIÓ</span><strong>Sarki Fény Katedrálisa</strong>, Alta — csak esős napra vagy üresjáratra. A titán spirál külseje a fotó; a belső tér amúgy is hétköznapi irodai nyitvatartással üzemel.</div></div>
+      <div class="row"><div class="k">Dél</div><div class="v">Alta → Skarsvåg, ~3 óra. <strong>Olderfjordtól a rénszarvasok uralják az E69-et</strong> — vezess lágyan. Bejelentkezés a <strong>Kirkeporten Campingbe</strong> (áram, zuhany, mosoda, kazettaürítés, kávézó; szezonális, ~május közepétől szeptember közepéig/végéig — ellenőrizd a saját dátumaidra). Víz + kazetta itt.</div></div>
+      <div class="row"><div class="k">Délután</div><div class="v"><span class="tag opt">OPCIÓ</span><strong>Kirkeporten sziklakapu-séta</strong> — 45 perc oda-vissza a kempingből, a sziklán át keretezi a Nordkapp-szarvat — csak ha van idő, mielőtt elmegy a fény. Rénszarvas gyakorlatilag garantált.</div></div>
+      <div class="row"><div class="k">Éjjel</div><div class="v"><span class="tag must">FIX</span><strong>Nordkapp-fennsík</strong>, 13 km / 15 perc a kempingtől. Éjszakázni a parkolóban már nem lehet (max. ~5–6 óra tartózkodás; a díjról szóló beszámolók 0–165 NOK között szórnak; a Nordkapphallen 350 NOK-os belépője opcionális) — ami pont illik a tervhez: sarki fény a Jeges-tenger fölött a korlátnál, ~20:30–01:00, aztán ágy tizenöt percre.</div></div>
+      <div class="row"><div class="k">Rugalmas</div><div class="v">Ködbe burkolózott a fennsík? A skarsvågi oldal gyakran nem — a kikötő a tartalék színpad. Szezonon kívül (zárt kemping): a szervizt Altában intézd, és aludj vadkempingben Magerøyán.</div></div>
+    </div>
+
+    <!-- D5 -->
+    <div class="day south">
+      <div class="lat">5. NAP · <b>71°11′ → 69,39°É</b></div>
+      <h3>Valódi észak, aztán a hosszú út</h3>
+      <div class="meta">18 km gyalog + ~510 km / 6,5–7 óra vezetés · a legnagyobb nap — a lassú 4. nap védi</div>
+      <div class="row"><div class="k">07:00</div><div class="v"><span class="tag must">FIX</span><strong>Knivskjellodden</strong> az E69-es parkolóból, 6 km-rel a fennsík előtt. 1450 méterrel északabbra végzel a Nordkapp-földgömbnél, és tengerszintről nézel vissza a sziklafalra. Ez az út névadója — az egész Nordkapp-történet valódi északa.</div></div>
+      <div class="row"><div class="k">~13:30</div><div class="v">Dél felé: Skarsvåg → <strong>Alta (tankolás, kötelező)</strong> → Kvænangsfjellet → <strong>Skibotn</strong>. Érkezés ~21:00 megállókkal.</div></div>
+      <div class="row"><div class="k">Alvás</div><div class="v">Vadkemping a <strong>Skibotn–Oteren folyosóban</strong>. A Skibotn-völgy statisztikailag Troms legszárazabb égboltja — pont ezért van ott obszervatórium. A legjobb utolsó-éjszakai esély az egész útvonalon.</div></div>
+      <div class="row"><div class="k">B terv</div><div class="v">Kikészültél a túra után → állj meg Alta közelében, de a 6. nap nagyon korai indulás lesz (305 km / 4 óra) a 11:00-s leadás ellen. Alapértelmezés: nyomás Skibotnig.</div></div>
+    </div>
+
+    <!-- D6 -->
+    <div class="day south">
+      <div class="lat">6. NAP · <b>69,39°É → 69,65°É</b></div>
+      <h3>Az út dél felé</h3>
+      <div class="meta">~120 km · 1 óra 45 perc</div>
+      <div class="row"><div class="k">08:15</div><div class="v">Indulás. Skibotn → Tromsø a fjord mentén. Egy utolsó lyngeni pihenőhelyi kávé, ha jól állunk az idővel.</div></div>
+      <div class="row"><div class="k">10:30-ig</div><div class="v">Tankolás a város szélén; ürítés/víz, ha a bázis megköveteli.</div></div>
+      <div class="row"><div class="k">11:00</div><div class="v">Leadás.</div></div>
+      <div class="row"><div class="k">12:00</div><div class="v"><span class="tag must">FIX</span><strong>Pust</strong> — úszó szauna a tromsøi vízparton, percekre a bázistól. Három kör hőség tengeri mártózásokkal közben, és az első igazi átmelegedés a 4. éjszaka óta. Foglalj előre a pust.io-n — elfogynak a helyek.</div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= HIKES ================= -->
+<section>
+  <div class="wrap">
+    <h2>Túrák</h2>
+    <div class="h2sub">a számok kerekítettek — a hegynek higgy, ne a tervnek</div>
+    <div class="hikes">
+
+      <div class="hike">
+        <figure>
+          <img src="/images/segla-fjordgard.jpg" alt="Segla emelkedik Fjordgård mögött, a víz túloldaláról nézve" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Ximonic (S. Räsänen) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Fjordg%C3%A5rd_and_Segla_behind_Keipneset_in_Senja,_Troms_og_Finnmark,_Norway,_2022_August.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Segla</h4>
+          <div class="stats">~5 km oda-vissza · ~600 m · 3–4 óra · Fjordgård</div>
+          <p>Maga a penge — ez az a fal, amit az első éjjel látsz a víz túloldalán. Meredek, becsületes ösvény egy csúcsra, amely függőlegesen szakad a Mefjordenbe. Fizetős parkoló Fjordgårdban (EasyPark, 15 percenként); ingyenes parkoló a falu kikötői végén.</p>
+        </div>
+      </div>
+
+      <div class="hike">
+        <figure>
+          <img src="/images/segla-hesten.jpg" alt="A klasszikus kilátás Segla pengéjére a Hesten-gerincről" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Ximonic (S. Räsänen) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:View_towards_Segla_from_ridge_at_Hesten_in_Senja,_Troms_og_Finnmark,_Norway,_2022_August.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Hesten</h4>
+          <div class="stats">~5 km oda-vissza · ~560 m · 2,5–3 óra · ugyanaz a kiindulópont</div>
+          <p>A képeslap — pontosan ez a kilátás. Könnyebb Seglánál, méterenként nagyobb jutalommal. Egyben a Breidtinden „nem megy” alternatívája. Nyugodt levegőben kiváló drón-amfiteátrum.</p>
+        </div>
+      </div>
+
+      <div class="hike">
+        <figure>
+          <img src="/images/breidtinden.jpg" alt="A Breidtinden-masszívum a Hestenről nézve" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Ximonic (S. Räsänen) · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Breidtinden_from_Hesten_in_Senja,_Troms_og_Finnmark,_Norway,_2022_August.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Breidtinden — feltételes</h4>
+          <div class="stats">~8 km oda-vissza · ~950 m · 6–8 óra · útmenti parkoló, Senjahopen↔Mefjordbotn</div>
+          <p>Senja legmagasabb csúcsa (1001 m) — a fal ezen a fotón — 360°-os kilátás az egész szigetre a tetejéről. Kék pöttyökkel jelölt út kőmezőkön át, majd egy valóban kitett, hármas nehézségű mászás rögzített segédeszközökkel a csúcs közelében. Sokan a csúcs alatt fordulnak vissza — ez normális kimenet, nem kudarc.</p>
+          <p class="warn">Kapu: száraz szikla, látható csúcs, szél &lt;10 m/s. Nedves őszi szikla = automatikus nem. A hegy nem megy sehova.</p>
+        </div>
+      </div>
+
+      <div class="hike">
+        <figure>
+          <img src="/images/knivskjellodden.jpg" alt="A Knivskjellodden-fok a Jeges-tengerbe nyúlik" loading="lazy" onerror="this.closest('figure').style.display='none'">
+          <figcaption>© Diego Delso · CC BY-SA · <a href="https://commons.wikimedia.org/wiki/File:Cabo_Knivskjelodden,_Noruega,_2019-09-03,_DD_23.jpg" rel="noopener">Commons</a></figcaption>
+        </figure>
+        <div class="body">
+          <h4>Knivskjellodden</h4>
+          <div class="stats">~18 km oda-vissza · ~350 m hullámzó · 4,5–6 óra · E69-es parkoló, 6 km a fennsík előtt</div>
+          <p>Az Északi-fok szigetének legészakibb pontja — 71°11′, csendes 1450 méterrel északabbra a földgömbnél, amit mindenki fotóz. Piros T-vel jelölt, végig köves talaj — rendes bakancs, nem terepfutó cipő. Viszonylag sík, de hosszú; a szél a változó, nem a meredekség.</p>
+          <p class="warn">Ne hagyd ki a jelzett jobb kanyart pár km után.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= AURORA ================= -->
+<section>
+  <div class="wrap">
+    <h2>Sarkifény-kézikönyv</h2>
+    <div class="h2sub">69–71°É-en az ovál már Kp 1–2-nél a fejünk fölött van — az egyetlen ellenség a felhő</div>
+
+    <div class="ritual">
+      <div class="t">A 18:00-s rituálé — minden este</div>
+      <p>Yr felhőtérkép + Windy (alsó / középső / felső réteg külön-külön). Keresd meg a ~60 percen belül elérhető lyukat, a holnapi irány felé súlyozva. Dönts 20:00-ig — onnantól 06:00-ig sötét van. Ha tudsz, parkolj északnak, víz fölé nézve; a tükröződés megduplázza a műsort. A statisztikai csúcs a mágneses éjfél körül van, ≈ 22:30 helyi idő. Foglalási tipp: célozd az utat egy <strong>újhold-hétre</strong> — a holdfény kimossa a halvány íveket.</p>
+    </div>
+
+    <table class="micro">
+      <tr><td>Skibotn</td><td>Troms legszárazabb mikroklímája — esőárnyékos völgy, egy optikai obszervatórium otthona. Ha Troms foltos, Skibotn a tipp.</td></tr>
+      <tr><td>Alta</td><td>Szárazföldi, száraz Finnmark. Amikor a part szürke, Alta gyakran nem.</td></tr>
+      <tr><td>Senja</td><td>A külső part fogja az időjárást; a belső fjordvégek (Mefjordbotn, Bergsbotn) tartják a réseket.</td></tr>
+      <tr><td>Nordkapp</td><td>Tiszta sarkvidéki levegő, de köd-és-szél rulett. Ködös fennsík ≠ ködös Skarsvåg — nézd meg mindkét oldalt.</td></tr>
+    </table>
+
+    <div class="links">
+      <span><a href="https://www.yr.no/en" rel="noopener">Yr — felhőtérkép</a> · az elsődleges eszköz</span>
+      <span><a href="https://www.windy.com" rel="noopener">Windy</a> · alsó/középső/felső felhőrétegek, szél a fennsíkra</span>
+      <span><a href="https://www.spaceweatherlive.com/en/auroral-activity.html" rel="noopener">SpaceWeatherLive</a> · OVATION 30 perces előrejelzés, napszél</span>
+      <span><a href="https://flux.phys.uit.no/stackplot/" rel="noopener">Tromsøi magnetométer-diagram</a> · éles esés = épp most zajlik a szubvihar, menj ki</span>
+      <span><a href="https://www.norway-lights.com" rel="noopener">NorwayLights</a> · ellenőrző app</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SAUNA ================= -->
+<section>
+  <div class="wrap">
+    <h2>Szauna</h2>
+    <div class="h2sub">hőség + sarkvidéki víz — az ellensúly öt hideg éjszakára</div>
+    <figure class="photo">
+      <img src="/images/pust-sauna.jpg" alt="A Pust úszó szauna a tromsøi vízparton" loading="lazy" onerror="this.closest('figure').style.display='none'">
+      <figcaption>Pust · Tromsø kikötő · pust.io</figcaption>
+    </figure>
+    <ul class="plain">
+      <li><span class="k">6. nap · Tromsø — a zárás</span><strong>Pust</strong>, úszó szauna a központi kikötőben, percekre a bázistól. Leadás 11:00, 12:00-ra a hőségben, sarkvidéki mártózás a körök között. Foglalj előre — a helyek elfogynak.</li>
+      <li><span class="k">2. éjszaka · Senja</span>A <strong>Camp Mefjord</strong> saját kis parti szaunát ad bérbe — és amúgy is ott alszol. Grill utáni hőség, Mefjorden-mártózás, aztán egyenesen a sarkifény-lesbe.</li>
+      <li><span class="k">Tromsøi felsőfok</span><strong>Vulkana</strong> — átalakított hajó fatüzelésű szaunával a fedélzeten, amely tényleg kifut a szeánsz alatt. A prémium csere a Pust helyett, ha az út nagyobb finálét érdemel.</li>
+      <li><span class="k">Joker · Skjervøy</span><strong>Áhpi flytende badstue</strong> — úszó szauna kint Skjervøyben, kitérő az E6-ról Langslettnél (a 3. vagy 5. napba illik). Csak ha az ég és az óra is arra mutat.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= FOOD & FIRE ================= -->
+<section>
+  <div class="wrap">
+    <h2>Étel és tűz</h2>
+    <div class="h2sub">önellátás · grillezés a szép helyeken</div>
+    <ul class="plain ember">
+      <li><span class="k">Bevásárlási menetrend</span>1. nap Tromsø: a nagy bevásárlás, az ablakba eső bármelyik hétvégére (vasárnap = országosan zárva). 3. nap Alta: feltöltés + tankolás. Honningsvågban van Rema 1000 ~07:00-tól egy 5. napi mentőakcióra.</li>
+      <li><span class="k">Tűzszabály</span>Országos nyílttűz-tilalom április 15. – szeptember 15. között. Ezen belül: kialakított tűzrakóhelyek (Ersfjordstranda kőmenedéke), csupasz szikla/tengerpart józan ésszel, gáz vagy eldobható grill (engangsgrill). Kívül: szabadabb — de a szél több estét fog megvétózni, mint a törvény.</li>
+      <li><span class="k">Grill-rövidlista</span>2. nap Ersfjordstranda tűzrakó-menedék (a főattrakció) · 3. nap bármelyik Lyngenfjord-parti pihenőhely padja · 4. nap Storvannet partja a Kirkeporten Campingnél · 5. nap Skibotn tengerpartja.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= VAN OPS ================= -->
+<section>
+  <div class="wrap">
+    <h2>Lakóautó-üzem</h2>
+    <div class="h2sub">az unalmas dolgok, amik lazán tartják az utat</div>
+    <ul class="plain ice">
+      <li><span class="k">Víz / kazetta</span>Camp Mefjord (2. éjszaka) és Kirkeporten (4. éjszaka) — a másnaponkénti ritmus pont lefedi a szervizt. Szezonon kívüli északi tartalék: szerviz Altában.</li>
+      <li><span class="k">Fűtés</span>A dízelfűtés éjszakára bevett gyakorlat. Számíts hideg éjszakákra; fagy bármelyik hónapban lehet a Kvænangsfjelleten és a fennsíkon.</li>
+      <li><span class="k">Üzemanyag</span>Tele tank Altában mindkét irányban; töltés Honningsvågban. Az Olderfjord–Honningsvåg és a Sennalandet szakasz hosszú és üres.</li>
+      <li><span class="k">Vadvilág</span>Rénszarvasok az E69-en és a Sennalandeten, folyamatosan, főleg szürkületben. Nem adnak elsőbbséget.</li>
+      <li><span class="k">Szél</span>A fennsíki széllökések brutálisak — parkolj orral a szélnek, vigyázz az ajtókra. ~15 m/s fölött hagyd ki a kitett éjszakázóhelyeket.</li>
+      <li><span class="k">Vad éjszakák</span>Az allemannsretten (a norvég közjog) a sátrakra vonatkozik, nem a lakóautókra — használj pihenőhelyeket, parkolókat és túra-kiindulópontokat, ahol nincs kempingtilalom-tábla, maradj észrevétlen, ne hagyj semmit. park4night az ellenőrzött helyekhez.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTINGENCIES ================= -->
+<section>
+  <div class="wrap">
+    <h2>Ha, akkor</h2>
+    <div class="h2sub">a terv az, amitől eltérsz</div>
+    <ul class="plain">
+      <li><span class="k">Breidtinden nem megy</span>Hesten. Nulla hezitálás — a képeslap veri a darálót bizonytalan időben.</li>
+      <li><span class="k">Finnmark elázik (a 3. nap estéjén látszik)</span>Második éjszaka a Camp Mefjordban, aztán a 4. nap Senja → Skarsvåg lesz közvetlenül (~650 km). Csak vészkar — a Fok az út gerince.</li>
+      <li><span class="k">Troms elázik (1–2. nap)</span>Senját vágd vissza csak Seglára, fuss Altába egy nappal korábban, és vegyél magadnak egy lassú Nordkapp-napot és jobb finnmarki esélyeket.</li>
+      <li><span class="k">Vihar a Fokon</span>A fennsík extrém időben lezárhat. A skarsvågi kikötő a védett színpad; Honningsvåg az ételhez és a falakhoz.</li>
+      <li><span class="k">Nem jön ki a komp az 1. napon</span>Finnsnes-kerülő, +45 perc a várakozáshoz képest. Nem esemény.</li>
+      <li><span class="k">Csúszásban a 6. napon</span>A 6. napon semmi nem opcionális, kivéve a kávét. Hagyd ki a kávét.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    VALÓDI ÉSZAK · <span class="grad">69,65°É → 71°11′ → haza</span><br>
+    ellenőrizd a saját dátumaidra: kompmenetrend (svipper.no, 181-es vonal) · Kirkeporten Camping szezon · fennsíki parkolási szabályok (nordkapphallen.no) · tűzgyújtási tilalom időszaka
+  </div>
+</footer>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('chart');
+  var info=document.getElementById('mapinfo');
+  var C={anchor:'#6ef0a8',hike:'#9b7dff',sleep:'#8fd0ff',food:'#ffb27d'};
+  var DIM='#7d8ea4',LINE='#1c2a40',TEAL='#43cfc6',VIOLET='#9b7dff';
+
+  function el(name,attrs,parent){
+    var e=document.createElementNS(NS,name);
+    for(var k in attrs) e.setAttribute(k,attrs[k]);
+    (parent||svg).appendChild(e);
+    return e;
+  }
+  function txt(x,y,s,attrs,parent){
+    var a={x:x,y:y,fill:DIM,'font-family':"'Space Mono',monospace",'font-size':'10','letter-spacing':'1.5'};
+    for(var k in (attrs||{})) a[k]=attrs[k];
+    var t=el('text',a,parent); t.textContent=s; return t;
+  }
+
+  /* ---- projections ---- */
+  function mkProj(lng0,lng1,lat0,lat1,x0,x1,y0,y1){
+    return function(lat,lng){
+      return [ x0+(lng-lng0)*(x1-x0)/(lng1-lng0),
+               y1-(lat-lat0)*(y1-y0)/(lat1-lat0) ];
+    };
+  }
+  var MAIN =mkProj(16.6,26.6, 69.0,71.45, 40,960, 40,600);
+  var SENJA=mkProj(17.15,17.98, 69.36,69.56, 52,348, 66,292);   /* box 40..360 x 40..300 */
+  var MAG  =mkProj(25.50,26.10, 70.95,71.24, 800,972, 392,612); /* box 790..980 x 380..620 */
+
+  /* ---- graticule (main) ---- */
+  [69.5,70,70.5,71].forEach(function(la){
+    var y=MAIN(la,16.6)[1];
+    el('line',{x1:40,y1:y,x2:960,y2:y,stroke:LINE,'stroke-width':1});
+    txt(46,y-5,la.toFixed(1).replace('.',',')+'°É');
+  });
+  [18,20,22,24,26].forEach(function(lo){
+    var x=MAIN(69,lo)[0];
+    el('line',{x1:x,y1:40,x2:x,y2:600,stroke:LINE,'stroke-width':1});
+    txt(x+5,594,lo+'°K');
+  });
+  /* 71°11' line */
+  var yTN=MAIN(71.1833,16.6)[1];
+  el('line',{x1:40,y1:yTN,x2:960,y2:yTN,stroke:VIOLET,'stroke-width':1,'stroke-dasharray':'2 6',opacity:.8});
+  txt(956,yTN-6,'71°11′ — VALÓDI ÉSZAK',{'text-anchor':'end',fill:VIOLET});
+
+  txt(200,352,'N O R V É G - T E N G E R',{opacity:.55});
+  txt(520,72,'B A R E N T S - T E N G E R',{opacity:.55});
+  txt(46,626,'ÚTVONALTÉRKÉP · SEMATIKUS · NAVIGÁCIÓRA NEM ALKALMAS',{opacity:.6,'font-size':'9'});
+
+  /* ---- route paths ---- */
+  function path(points,proj,dashed,parent){
+    var d=points.map(function(p,i){var xy=proj(p[0],p[1]);return (i?'L':'M')+xy[0].toFixed(1)+' '+xy[1].toFixed(1);}).join(' ');
+    var a={d:d,fill:'none',stroke:TEAL,'stroke-width':2.2,'stroke-linejoin':'round','stroke-linecap':'round',opacity:.8};
+    if(dashed) a['stroke-dasharray']='5 7';
+    return el('path',a,parent);
+  }
+  var roadMain=[
+    [69.5072,17.9028],[69.4950,17.6800],[69.5050,17.6266],[69.5158,17.4427],[69.4870,17.3331],
+    [69.4800,17.3955],[69.4230,17.5044],[69.2300,17.9810],[69.0600,18.5300],[69.2216,19.5450],
+    [69.2490,19.8700],[69.3891,20.2710],[69.6050,20.5330],[69.7690,21.0280],[69.8982,21.6049],
+    [69.9400,22.0500],[69.9651,23.2667],[70.4270,24.5070],[70.4800,25.0430],[70.9821,25.9700],
+    [71.1000,25.7800],[71.1709,25.7833]
+  ];
+  path(roadMain,MAIN,false);
+  path([[69.6492,18.9553],[69.6000,18.0500],[69.5072,17.9028]],MAIN,true);
+
+  /* ---- insets ---- */
+  function insetBox(x,y,w,h,label,clipId){
+    var cp=document.createElementNS(NS,'clipPath'); cp.setAttribute('id',clipId);
+    var r=document.createElementNS(NS,'rect');
+    r.setAttribute('x',x);r.setAttribute('y',y);r.setAttribute('width',w);r.setAttribute('height',h);
+    cp.appendChild(r); svg.appendChild(cp);
+    el('rect',{x:x,y:y,width:w,height:h,fill:'#0d1626',stroke:LINE,'stroke-width':1,rx:6});
+    txt(x+10,y+18,label,{fill:'#c7d4e4'});
+    var g=el('g',{'clip-path':'url(#'+clipId+')'});
+    return g;
+  }
+  /* leader lines from true location to inset */
+  function leader(x1,y1,x2,y2){
+    el('line',{x1:x1,y1:y1,x2:x2,y2:y2,stroke:DIM,'stroke-width':1,'stroke-dasharray':'2 5',opacity:.5});
+  }
+  var senjaLoc=MAIN(69.48,17.45), magLoc=MAIN(71.12,25.79);
+  leader(senjaLoc[0],senjaLoc[1],360,290);
+  leader(magLoc[0],magLoc[1],885,380);
+
+  var gS=insetBox(40,40,320,260,'SENJA — RÉSZLET','clipS');
+  var gM=insetBox(790,380,190,240,'MAGERØYA — RÉSZLET','clipM');
+
+  path([[69.5072,17.9028],[69.4950,17.6800],[69.5050,17.6266],[69.5100,17.5900],[69.5158,17.4427],
+        [69.4950,17.4600],[69.4870,17.3331],[69.4800,17.3955],[69.4230,17.5044],[69.3700,17.6500]],SENJA,false,gS);
+  path([[70.9821,25.9700],[71.0300,25.8600],[71.1000,25.7800],[71.1709,25.7833]],MAG,false,gM);
+  path([[71.1000,25.7800],[71.1100,25.8060]],MAG,false,gM);
+  path([[71.0900,25.7500],[71.1220,25.7079]],MAG,false,gM);
+
+  /* ---- points ---- */
+  var pts=[
+    /* main */
+    {s:MAIN,lat:69.6492,lng:18.9553,t:'anchor',lab:'TROMSØ',ti:'TROMSØ',b:'1. nap 16:00 átvétel + nagy bevásárlás · 6. nap 11:00 leadás, aztán Pust úszó szauna 12:00-kor.'},
+    {s:MAIN,lat:69.5960,lng:18.0300,t:'anchor',ti:'BRENSHOLMEN KOMP',b:'Korai esti indulás Botnhamnba, 45 perc. A nyári menetrendben (~szept. 20-ig) vannak esti indulások; télen ritkább — svipper.no, 181-es vonal.'},
+    {s:MAIN,lat:69.4500,lng:20.4000,t:'anchor',lab:'LYNGEN',ti:'LYNGENFJORD PARTJA — FIX',b:'Bármelyik E6-os kiálló Oteren–Olderdalen között: a Lyngeni-Alpok pont a víz túloldalán. 3. napi megálló, a 6. napon ismétlődik.'},
+    {s:MAIN,lat:69.3891,lng:20.2710,t:'anchor',lab:'SKIBOTN',ti:'SKIBOTN — FIX',b:'Troms legszárazabb égboltja (obszervatórium-völgy). Utolsó éjszakai sarkifény-tipp.'},
+    {s:MAIN,lat:69.3300,lng:20.1000,t:'sleep',ti:'5. ÉJSZAKA — VADKEMPING',b:'Skibotn–Oteren folyosó. 1 óra 45 perc a leadástól.'},
+    {s:MAIN,lat:69.8982,lng:21.6049,t:'anchor',ti:'GILDETUN / KVÆNANGSFJELLET — OPCIÓ',b:'Tágas kilátó a hágón, lábnyújtóztatás, ha tiszta. Kitett hely, de nyugodt időben komoly sarkifény-színpad.'},
+    {s:MAIN,lat:69.9651,lng:23.2667,t:'anchor',lab:'ALTA',ti:'ALTA',b:'Bevásárlás + tankolás mindkét irányban (figyelj a szombati korai zárásra / vasárnapi zárvatartásra). OPCIÓ: Sarki Fény Katedrálisa — titán spirál külső; esős napi kitöltő.'},
+    {s:MAIN,lat:69.9200,lng:23.0500,t:'sleep',ti:'3. ÉJSZAKA — VADKEMPING',b:'Alta / Kåfjord környéke — vagy fent a Kvænangsfjelleten, ha ott a lyuk.'},
+    /* senja inset */
+    {s:SENJA,lat:69.5072,lng:17.9028,t:'anchor',ti:'BOTNHAMN',b:'Kompérkezés Brensholmenből. 30–40 perc Fjordgårdig / Mefjordværig.'},
+    {s:SENJA,lat:69.5050,lng:17.6266,t:'hike',lab:'SEGLA·HESTEN',ti:'SEGLA / HESTEN KIINDULÓPONT',b:'Fjordgårdi parkoló (EasyPark; ingyenes parkoló a kikötőnél). Segla ~5 km/600 m · Hesten = a Segla-képeslap.'},
+    {s:SENJA,lat:69.5100,lng:17.5750,t:'sleep',ti:'1. ÉJSZAKA — VADKEMPING',b:'Mefjorden partja / fjordgårdi kikötői parkoló (ingyenes, piknik- + tűzrakóhely).'},
+    {s:SENJA,lat:69.5158,lng:17.4427,t:'sleep',lab:'CAMP',ti:'CAMP MEFJORD — 2. ÉJSZAKA',b:'~400 NOK · áram, zuhany, mosoda, szauna, grillkunyhó. Önkiszolgáló, egész évben. Víz + kazetta.'},
+    {s:SENJA,lat:69.4950,lng:17.4600,t:'hike',ti:'BREIDTINDEN KIINDULÓPONT',b:'Útmenti parkoló Senjahopen↔Mefjordbotn, kék pöttyök. 8 km oda-vissza, 950 m, hármas nehézségű befejezés. Időjárás-kapu érvényes.'},
+    {s:SENJA,lat:69.4870,lng:17.3331,t:'anchor',lab:'TUNGENESET',ti:'TUNGENESET — FIX',b:'Okshornan, az „Ördögfogak”, sétány a sziklákhoz, ingyenes WC. Nedvesen csúszós.'},
+    {s:SENJA,lat:69.4800,lng:17.3955,t:'food',ti:'ERSFJORDSTRANDA — FIX GRILL',b:'Fehér homokos strand, kő tűzrakó-menedék + tűzhelyek, WC. 2. napi aranyóra.'},
+    {s:SENJA,lat:69.4230,lng:17.5044,t:'anchor',ti:'BERGSBOTN-PLATFORM — OPCIÓ',b:'44 m-es kilátóplatform a Bergsfjorden fölött — csak ha a 2. napon megelőzzük a fényt.'},
+    /* mageroya inset */
+    {s:MAG,lat:70.9821,lng:25.9700,t:'food',lab:'HONNINGSVÅG',ti:'HONNINGSVÅG',b:'Utolsó bevásárlás + tankolás a Fok előtt. Rema 1000 ~07:00-tól.'},
+    {s:MAG,lat:71.1220,lng:25.7079,t:'hike',lab:'KNIVSKJ.',ti:'KNIVSKJELLODDEN — FIX',b:'E69-es parkoló, 6 km a fennsík előtt. 18 km oda-vissza a 71°11′-ig — 1450 méterrel északabbra a Nordkapp-földgömbnél. Köves, piros T-vel jelölt.'},
+    {s:MAG,lat:71.1100,lng:25.8060,t:'sleep',lab:'SKARSVÅG',ti:'SKARSVÅG — 4. ÉJSZAKA',b:'Kirkeporten Camping: áram, zuhany, mosoda, ürítés, kávézó (szezonális — ellenőrizd). OPCIÓ: Kirkeporten sziklakapu-séta, 45 perc, keretezi a Fok szarvát.'},
+    {s:MAG,lat:71.1709,lng:25.7833,t:'anchor',lab:'NORDKAPP',ti:'NORDKAPP-FENNSÍK — FIX',b:'Éjszakai szeánsz ~20:30–01:00 a Jeges-tenger fölött. Éjszakázás tilos (max. ~5–6 óra); Nordkapphallen 350 NOK opcionális.'}
+  ];
+
+  var current=null;
+  pts.forEach(function(p){
+    var xy=p.s(p.lat,p.lng);
+    var g=el('g',{'class':'pt',tabindex:'0',role:'button','aria-label':p.ti});
+    el('circle',{cx:xy[0],cy:xy[1],r:6,fill:C[p.t],'fill-opacity':.45,stroke:C[p.t],'stroke-width':2},g);
+    if(p.lab) txt(xy[0]+10,xy[1]+4,p.lab,{'font-size':'9',fill:'#c7d4e4'},g);
+    function show(){
+      if(current) current.classList.remove('on');
+      current=g; g.classList.add('on');
+      info.innerHTML='<div class="mt">'+p.ti+'</div><div class="mb">'+p.b+'</div>'+
+        '<a class="gm" href="https://www.google.com/maps/search/?api=1&query='+p.lat+','+p.lng+'" rel="noopener">Megnyitás a Google Mapsben →</a>';
+    }
+    g.addEventListener('click',show);
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});
+  });
+})();
+</script>
+<script>
+(function(){
+  try{
+    var data = JSON.stringify({ref: document.referrer, screen: screen.width + 'x' + screen.height});
+    var u = 'https://travels-logger.birovince.workers.dev/log?p=' + encodeURIComponent(location.pathname);
+    if(!(navigator.sendBeacon && navigator.sendBeacon(u, new Blob([data], {type:'text/plain'})))){
+      fetch(u, {method:'POST', body: data, keepalive: true}).catch(function(){});
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
