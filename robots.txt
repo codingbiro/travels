@@ -2,6 +2,33 @@
 User-agent: *
 Disallow: /
 
+# Allow link-preview fetchers (Facebook/Messenger/Instagram, WhatsApp, X, LinkedIn,
+# Slack, Discord, Telegram) so shared links get a thumbnail. These only fetch
+# the page + og:image when someone shares a URL; they don't index or train.
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
 # AI / LLM training and scraping bots (explicit, in case they ignore *)
 User-agent: GPTBot
 Disallow: /
