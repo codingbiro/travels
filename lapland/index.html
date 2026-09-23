@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b13">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
+<title>THREE LAPLANDS · Rovaniemi / Kittilä / Ivalo</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="THREE LAPLANDS · Rovaniemi / Kittilä / Ivalo">
+<meta property="og:description" content="Four nights, five people, a car and a cabin with a sauna. What each area lets you do in the first week of November, and ten Airbnb cabins compared — 31 Oct → 4 Nov 2026.">
+<meta property="og:url" content="https://travels.birovince.com/lapland/">
+<meta property="og:image" content="https://travels.birovince.com/images/lapland/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THREE LAPLANDS · Rovaniemi / Kittilä / Ivalo">
+<meta name="twitter:image" content="https://travels.birovince.com/images/lapland/og-cover.jpg">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Albert+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sky-0:#060b13; --sky-1:#0a1220; --sky-2:#101b2e; --line:#1c2a40;
+    --moon:#c7d4e4; --moon-dim:#7d8ea4;
+    --aur-green:#6ef0a8; --aur-teal:#43cfc6; --aur-violet:#9b7dff; --ember:#ffb27d; --ice:#8fd0ff;
+    --max-w:900px;
+    --disp:'Krona One',system-ui,sans-serif; --body:'Albert Sans',system-ui,sans-serif; --mono:'Space Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--sky-0);color:var(--moon);font-family:var(--body);font-weight:300;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--aur-green);color:var(--sky-0)}
+  a{color:var(--aur-teal);text-decoration:none;border-bottom:1px solid rgba(67,207,198,.35)}
+  a:hover{color:var(--aur-green);border-color:var(--aur-green)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--aur-green);outline-offset:3px}
+  .wrap{max-width:var(--max-w);margin:0 auto;padding:0 22px}
+  strong{font-weight:600;color:#e6eef8}
+  small{font-size:.86em;color:var(--moon-dim)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:104px 0 76px;border-bottom:1px solid var(--line)}
+  .cover{position:absolute;inset:0;pointer-events:none;background:url("/images/lapland/kiilopaa-villa-1.jpg") center 42%/cover no-repeat;opacity:.5}
+  .scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(6,11,19,.45) 0%,rgba(6,11,19,.62) 55%,#060b13 100%)}
+  .aurora{position:absolute;inset:-40% -20% auto -20%;height:130%;
+    background:radial-gradient(55% 42% at 22% 30%, rgba(110,240,168,.16), transparent 62%),
+      radial-gradient(45% 38% at 58% 18%, rgba(67,207,198,.13), transparent 60%),
+      radial-gradient(50% 45% at 82% 36%, rgba(155,125,255,.12), transparent 65%);
+    filter:blur(14px);animation:drift 26s ease-in-out infinite alternate;pointer-events:none}
+  .stars{position:absolute;inset:0;pointer-events:none;background-image:
+    radial-gradient(1px 1px at 12% 22%, #cfe3ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 34% 64%, #9fb8d8 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 56% 30%, #e8f2ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 71% 70%, #cfe3ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 24%, #9fb8d8 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 45% 12%, #e8f2ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 5% 55%, #cfe3ff 50%, transparent 51%);opacity:.7}
+  @keyframes drift{from{transform:translateX(-3%) skewX(-2deg)}to{transform:translateX(3%) skewX(2deg)}}
+  @media (prefers-reduced-motion: reduce){.aurora{animation:none}}
+  .hero .wrap{position:relative}
+  .kicker{font-family:var(--mono);font-size:.75rem;letter-spacing:.28em;color:var(--aur-green);text-transform:uppercase;margin-bottom:22px}
+  h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.3rem,7.4vw,4.3rem);letter-spacing:.04em;line-height:1.05;color:#eef4fb}
+  h1 .deg{background:linear-gradient(90deg,var(--aur-green),var(--aur-teal) 55%,var(--aur-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{margin-top:22px;font-size:1.05rem;color:var(--moon-dim);max-width:60ch}
+  .statline{margin-top:36px;font-family:var(--mono);font-size:.8rem;color:var(--moon-dim);display:flex;flex-wrap:wrap;gap:10px 28px}
+  .statline b{color:var(--moon);font-weight:700}
+  .jump{margin-top:30px;display:flex;flex-wrap:wrap;gap:9px}
+  .jump a{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding:8px 13px;border-radius:100px;border:1px solid var(--line);color:var(--moon);background:rgba(6,11,19,.45);backdrop-filter:blur(6px)}
+  .jump a:hover{border-color:var(--c);color:var(--c)}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  h2{font-family:var(--disp);font-weight:400;font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;color:#eef4fb;margin-bottom:8px}
+  .h2sub{font-family:var(--mono);font-size:.74rem;color:var(--moon-dim);letter-spacing:.06em;margin-bottom:34px}
+  p{margin-bottom:1em;max-width:70ch}
+  p:last-child{margin-bottom:0}
+  .areasec h2{display:inline-block;border-bottom:2px solid var(--c);padding-bottom:6px}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:baseline;background:var(--c)}
+
+  /* ---------- AREA CARDS ---------- */
+  .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+  .area{border:1px solid var(--line);border-radius:10px;background:var(--sky-1);padding:22px 22px 20px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .area::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--c)}
+  .area .lat{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--c);text-transform:uppercase}
+  .area h3{font-family:var(--disp);font-weight:400;font-size:1.1rem;letter-spacing:.06em;color:#eef4fb;margin:6px 0 12px}
+  .area p{font-size:.9rem;margin-bottom:14px}
+  .area .pc{list-style:none;font-size:.85rem;margin-top:auto}
+  .area .pc li{padding:5px 0 5px 18px;position:relative;border-top:1px solid var(--line)}
+  .area .pc li::before{position:absolute;left:0;top:5px;font-family:var(--mono);font-size:.8rem}
+  .area .pc li.p::before{content:"+";color:var(--aur-green)}
+  .area .pc li.m::before{content:"–";color:var(--ember)}
+  .area .links{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 18px}
+  .area .go{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c);border-bottom-color:transparent}
+  .area .go.dim{color:var(--moon-dim)}
+  @media (max-width:760px){.areas{grid-template-columns:1fr}}
+  .ritual{border:1px solid rgba(110,240,168,.35);border-radius:10px;padding:24px 26px;background:linear-gradient(180deg,rgba(110,240,168,.05),transparent);margin-top:26px}
+  .ritual .t{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;color:var(--aur-green);text-transform:uppercase;margin-bottom:12px}
+  .ritual p{font-size:.95rem;max-width:none}
+
+  /* ---------- TABLES (shared) ---------- */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--sky-1);-webkit-overflow-scrolling:touch}
+  .tnote{font-family:var(--mono);font-size:.68rem;color:var(--moon-dim);margin-top:12px;letter-spacing:.03em;line-height:1.7}
+
+  /* activities matrix */
+  .act{width:100%;border-collapse:collapse;font-size:.86rem}
+  .act th,.act td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  .act thead th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#eef4fb;font-weight:400;white-space:nowrap}
+  .act tbody th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--aur-green);font-weight:400;width:15%;min-width:130px;line-height:1.5}
+  .act tbody th small{display:block;text-transform:none;letter-spacing:0;font-size:.62rem;color:var(--moon-dim);margin-top:4px;line-height:1.4}
+  .act td{color:var(--moon);width:28%;line-height:1.55}
+  .act td.best{background:rgba(110,240,168,.07);box-shadow:inset 3px 0 0 var(--aur-green);color:#eef4fb}
+  .act tbody tr:last-child th,.act tbody tr:last-child td{border-bottom:0}
+  .act td::before{display:none}
+  @media (max-width:700px){
+    .act,.act tbody,.act tr,.act th,.act td{display:block;width:auto;min-width:0}
+    .act thead{display:none}
+    .act tr{padding:14px 14px 6px;border-bottom:1px solid var(--line)}
+    .act tbody tr:last-child{border-bottom:0}
+    .act th,.act td{border:0;padding:0}
+    .act tbody th{margin-bottom:8px;font-size:.7rem}
+    .act td{padding:8px 0 8px 12px;border-left:2px solid var(--c);margin:0 0 8px;font-size:.86rem}
+    .act td.best{box-shadow:none;background:rgba(110,240,168,.07);border-left-color:var(--aur-green);border-radius:0 6px 6px 0}
+    .act td::before{display:block;content:attr(data-a);font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin-bottom:2px}
+  }
+
+  /* conditions */
+  .cond{width:100%;border-collapse:collapse;font-size:.88rem;min-width:620px}
+  .cond th,.cond td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  .cond thead th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#eef4fb;font-weight:400;white-space:nowrap}
+  .cond tbody th{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--moon-dim);font-weight:400;width:26%}
+  .cond td.mono{font-family:var(--mono);font-size:.8rem;color:var(--moon);white-space:nowrap}
+  .cond td.best{color:var(--aur-green)}
+  .cond tbody tr:last-child th,.cond tbody tr:last-child td{border-bottom:0}
+
+  /* ---------- CHART ---------- */
+  .chartbox{border:1px solid var(--line);border-radius:10px;background:var(--sky-1);overflow:hidden;display:grid;grid-template-columns:minmax(0,470px) minmax(0,1fr)}
+  .chartbox>*{min-width:0}
+  #chart{display:block;width:100%;max-width:100%;height:auto;background:#0b1424}
+  #chart .pt{cursor:pointer}
+  #chart .pt circle,#chart .pt rect{transition:r .12s ease,transform .12s ease}
+  #chart .pt:hover circle.c,#chart .pt.on circle.c{r:8}
+  #chart .pt.town circle.c{r:2.5} #chart .pt.town:hover circle.c,#chart .pt.town.on circle.c{r:4.5}
+  #mapside{border-left:1px solid var(--line);padding:20px 22px;display:flex;flex-direction:column}
+  #mapinfo{min-height:150px}
+  #mapinfo .mt{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;color:#eef4fb;margin-bottom:6px}
+  #mapinfo .mb{font-size:.88rem;color:var(--moon)}
+  #mapinfo .gm{font-family:var(--mono);font-size:.72rem;margin-top:10px;margin-right:16px;display:inline-block}
+  .legend{display:grid;gap:8px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:.7rem;color:var(--moon-dim)}
+  .legend .sq{display:inline-block;width:8px;height:8px;margin-right:9px;background:var(--aur-green);transform:rotate(45deg);vertical-align:baseline}
+  .hubs{margin-top:auto;padding-top:18px;font-family:var(--mono);font-size:.68rem;color:var(--moon-dim);letter-spacing:.03em}
+  .hubs .t{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ice);margin:14px 0 4px}
+  .hubs .t:first-child{margin-top:0}
+  .hubs div.r{display:flex;justify-content:space-between;gap:12px;padding:4px 0;border-top:1px solid var(--line)}
+  .hubs div.r b{color:var(--moon);font-weight:400}
+  @media (max-width:760px){.chartbox{grid-template-columns:minmax(0,1fr)}#mapside{border-left:0;border-top:1px solid var(--line)}#mapinfo{min-height:0}.hubs{margin-top:18px}}
+
+  /* ---------- STAY CARDS ---------- */
+  .intro{margin-bottom:34px}
+  .do{margin-top:14px;font-family:var(--mono);font-size:.72rem;line-height:1.9;color:var(--moon);letter-spacing:.02em;max-width:78ch}
+  .do .k{display:inline-block;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c);border:1px solid var(--c);border-radius:4px;padding:1px 7px;margin-right:10px;vertical-align:middle}
+  .do a{color:var(--moon-dim);border-bottom-color:rgba(125,142,164,.35);white-space:nowrap} .do a:hover{color:var(--aur-green)}
+  .stay{border:1px solid var(--line);border-radius:12px;background:var(--sky-1);overflow:hidden;margin-bottom:30px}
+  .stay .gal{position:relative;background:var(--sky-2)}
+  .stay .main{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;cursor:zoom-in;background:var(--sky-2)}
+  @media (max-width:640px){.stay .main{aspect-ratio:4/3}}
+  .stay .badge,.stay .price{position:absolute;top:14px;font-family:var(--mono);background:rgba(6,11,19,.72);border:1px solid rgba(199,212,228,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:8px}
+  .stay .badge{left:14px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 11px;color:#eef4fb;border-left:3px solid var(--c)}
+  .stay .price{right:14px;text-align:right;padding:8px 12px 7px}
+  .stay .price b{display:block;font-size:1.1rem;color:#fff;font-weight:700;line-height:1.2}
+  .stay .price span{font-size:.64rem;color:var(--moon-dim);letter-spacing:.06em}
+  .stay .cap{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 10px;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;color:#dfe8f3;background:linear-gradient(180deg,transparent,rgba(6,11,19,.78));pointer-events:none}
+  .stay .thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;padding:4px;background:var(--sky-0)}
+  .stay .thumbs button{padding:0;border:0;background:var(--sky-2);cursor:pointer;border-radius:4px;overflow:hidden;opacity:.55;transition:opacity .15s;position:relative}
+  .stay .thumbs button:hover{opacity:.9}
+  .stay .thumbs button.on{opacity:1}
+  .stay .thumbs button.on::after{content:"";position:absolute;inset:0;border:2px solid var(--c);border-radius:4px}
+  .stay .thumbs img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+  .stay .body{padding:22px 24px 24px}
+  .stay .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 18px;align-items:baseline}
+  .stay h3{font-family:var(--disp);font-weight:400;font-size:1.1rem;letter-spacing:.04em;color:#eef4fb;margin:0;line-height:1.3}
+  .stay .rating{font-family:var(--mono);font-size:.72rem;color:var(--moon-dim);line-height:1.9}
+  .stay .rating b{white-space:nowrap}
+  .stay .rating b{color:#fff;font-weight:700}
+  .pill{display:inline-block;white-space:nowrap;line-height:1.5;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(110,240,168,.45);color:var(--aur-green);border-radius:100px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+  .stay .sub{font-family:var(--mono);font-size:.7rem;color:var(--moon-dim);letter-spacing:.04em;margin:8px 0 18px;max-width:none}
+  .stay .cols{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px 32px}
+  @media (max-width:700px){.stay .cols{grid-template-columns:minmax(0,1fr)}}
+  .stay p{font-size:.92rem}
+  .stay .five{margin-top:16px;padding:12px 14px;border-left:2px solid var(--c);background:rgba(255,255,255,.025);font-size:.86rem;border-radius:0 6px 6px 0}
+  .stay .five .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c);display:block;margin-bottom:4px}
+  .stay .five.sofa{border-left-color:var(--ember)} .stay .five.sofa .k{color:var(--ember)}
+  .stay .five.real{border-left-color:var(--aur-green)} .stay .five.real .k{color:var(--aur-green)}
+  .stay .note{font-size:.82rem;color:var(--ember);margin-top:14px;max-width:none}
+  .stay .facts{list-style:none;font-size:.86rem}
+  .stay .facts li{display:grid;grid-template-columns:82px minmax(0,1fr);gap:12px;padding:8px 0;border-top:1px solid var(--line)}
+  .stay .facts li:first-child{border-top:0;padding-top:0}
+  .stay .facts .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--moon-dim);padding-top:3px}
+  .stay .facts b{color:#eef4fb;font-weight:600}
+  .stay .facts .ok{color:var(--aur-green)} .stay .facts .warn{color:var(--ember)}
+  .stay .facts .trips .t{white-space:nowrap}
+  .stay .feat{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+  .stay .feat span{font-family:var(--mono);font-size:.66rem;padding:5px 10px;border-radius:100px;border:1px solid var(--line);color:var(--moon)}
+  .stay .feat .yes{border-color:rgba(110,240,168,.45);color:var(--aur-green)}
+  .stay .feat .no{color:var(--moon-dim);text-decoration:line-through;opacity:.65}
+  .stay .cta{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:22px;align-items:center}
+  .btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:10px 16px;border-radius:8px;border:1px solid var(--c);color:var(--c);background:transparent}
+  .btn:hover{background:var(--c);color:var(--sky-0);border-color:var(--c)}
+  .gm{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em}
+  .gm.dim{color:var(--moon-dim);border:0}
+
+  /* ---------- COMPARE TABLE ---------- */
+  .cmp{width:100%;border-collapse:collapse;font-size:.84rem}
+  .cmp th{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--moon-dim);font-weight:400;text-align:left;padding:12px 7px;border-bottom:1px solid var(--line);white-space:nowrap}
+  .cmp td{padding:11px 7px;border-bottom:1px solid var(--line);vertical-align:middle;white-space:nowrap}
+  .cmp th:first-child,.cmp td:first-child{padding-left:14px} .cmp th:last-child,.cmp td:last-child{padding-right:14px}
+  .cmp tr:last-child td{border-bottom:0}
+  .cmp tbody tr:hover td{background:rgba(255,255,255,.025)}
+  .cmp .ar{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--moon-dim)}
+  .cmp .nm a{color:#eef4fb;border-bottom-color:rgba(199,212,228,.25)}
+  .cmp .nm a:hover{color:var(--aur-green)}
+  .cmp .num{font-family:var(--mono);font-size:.78rem}
+  .cmp .y{color:var(--aur-green)} .cmp .n{color:var(--moon-dim)} .cmp .w{color:var(--ember);font-size:.76rem;font-family:var(--mono)}
+
+  /* ---------- LISTS ---------- */
+  .plain{list-style:none;max-width:72ch}
+  .plain li{padding:11px 0;border-top:1px solid var(--line);font-size:.95rem}
+  .plain li:first-child{border-top:none}
+  .plain .k{font-family:var(--mono);font-size:.73rem;letter-spacing:.05em;color:var(--moon-dim);text-transform:uppercase;display:block;margin-bottom:3px}
+  .plain.picks .k{color:var(--aur-green)}
+
+  footer{padding:56px 0 80px;color:var(--moon-dim);font-family:var(--mono);font-size:.73rem;letter-spacing:.05em;line-height:1.9}
+  footer .grad{background:linear-gradient(90deg,var(--aur-green),var(--aur-violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+  footer a{color:var(--moon-dim);border-bottom-color:rgba(125,142,164,.35)}
+
+  /* ---------- LIGHTBOX ---------- */
+  .lb{position:fixed;inset:0;background:rgba(3,6,11,.95);display:none;z-index:50;align-items:center;justify-content:center;flex-direction:column;padding:60px 70px 40px}
+  .lb.open{display:flex}
+  .lb img{max-width:100%;max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);object-fit:contain;border-radius:6px;box-shadow:0 20px 80px rgba(0,0,0,.6);background:var(--sky-2)}
+  .lb .lbcap{margin-top:16px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--moon);text-align:center}
+  .lb .lbcap b{color:#fff;font-weight:700;margin-right:12px}
+  .lb button{position:absolute;background:rgba(6,11,19,.7);border:1px solid var(--line);color:#fff;width:46px;height:46px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:var(--body)}
+  .lb button:hover{border-color:var(--aur-green);color:var(--aur-green)}
+  .lb .x{top:16px;right:16px} .lb .prev{left:12px;top:50%;transform:translateY(-50%)} .lb .next{right:12px;top:50%;transform:translateY(-50%)}
+  @media (max-width:640px){.lb{padding:70px 10px 30px}.lb .prev,.lb .next{top:auto;bottom:18px;transform:none}.lb .prev{left:calc(50% - 60px)}.lb .next{right:calc(50% - 60px)}.lb img{max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px)}}
+  body.noscroll{overflow:hidden}
+
+  @media (max-width:640px){
+    .hero{padding:80px 0 56px}
+    section{padding:52px 0}
+    .stay .body{padding:18px 16px 20px}
+    .stay .badge{font-size:.6rem;padding:6px 9px;left:10px;top:10px}
+    .stay .price{padding:6px 10px 5px;top:auto;bottom:44px;right:10px} .stay .price b{font-size:.95rem}
+    .stay .facts li{grid-template-columns:74px minmax(0,1fr)}
+    .cond th,.cond td{padding:10px 10px}
+  }
+
+  /* ---------- FLIGHTS ---------- */
+  :root{--bar-rov:#ce7a3b;--bar-kit:#03a8a0;--bar-iva:#9071f2;--bar-cph:#5d6e86}
+  .flegend{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:.7rem;color:var(--moon);margin:-16px 0 24px}
+  .fsum{border:1px solid var(--line);border-radius:10px;background:var(--sky-1);overflow:hidden;margin-bottom:30px}
+  .fs-row{display:grid;grid-template-columns:132px repeat(4,minmax(0,1fr));align-items:center;border-top:1px solid var(--line)}
+  .fs-row:first-child{border-top:0}
+  .fs-row>span{padding:12px 14px;min-width:0}
+  .fs-head>span{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--moon-dim);line-height:1.5}
+  .fs-a{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:#eef4fb;white-space:nowrap}
+  .fs-a small{color:var(--moon-dim);margin-left:6px;font-size:.62rem}
+  .fs-c b{display:block;font-family:var(--mono);font-size:.92rem;color:#eef4fb;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .fs-c small{font-family:var(--mono);font-size:.6rem;color:var(--moon-dim);letter-spacing:.04em}
+  .fs-foot{grid-template-columns:minmax(0,1fr)}
+  .fs-foot>span{font-family:var(--mono);font-size:.72rem;color:var(--moon);letter-spacing:.02em}
+  .fs-foot b{color:#eef4fb}
+  .fblock{border:1px solid var(--line);border-radius:12px;background:var(--sky-1);margin-bottom:20px;overflow:hidden}
+  .fb-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:16px 16px 10px}
+  .fb-head .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--aur-green)}
+  .fb-head h3{font-family:var(--disp);font-weight:400;font-size:.95rem;letter-spacing:.05em;color:#eef4fb;margin:0}
+  .fb-head .r{font-family:var(--mono);font-size:.66rem;color:var(--moon-dim);letter-spacing:.04em;margin-left:auto}
+  .fl{display:grid;grid-template-columns:minmax(0,1.1fr) 132px minmax(0,1.5fr) 92px;grid-template-areas:"air time track price" "tags time track price";column-gap:18px;row-gap:5px;align-items:center;padding:10px 16px;border-top:1px solid rgba(28,42,64,.7)}
+  .fl-axisrow{grid-template-areas:"air time track price";border-top:0;padding-top:0;padding-bottom:2px}
+  .fgroup>.fl:first-child,.fg-title+.fl{border-top:0}
+  .fl-air{grid-area:air;font-size:.9rem;color:#eef4fb;line-height:1.35;min-width:0}
+  .fl-tags{grid-area:tags;display:flex;flex-wrap:wrap;gap:5px;min-width:0}
+  .ftag{font-family:var(--mono);font-size:.6rem;letter-spacing:.03em;padding:2px 8px;border-radius:100px;border:1px solid var(--line);color:var(--moon);white-space:nowrap}
+  .ftag.eta{border-color:rgba(255,178,125,.55);color:#ffc9a3}
+  .fl-time{grid-area:time;font-family:var(--mono);font-size:.8rem;color:#eef4fb;line-height:1.4}
+  .fl-time b{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .fl-time sup{font-size:.58rem;color:var(--moon-dim);margin-left:3px}
+  .fl-time span{display:block;font-size:.64rem;color:var(--moon-dim);letter-spacing:.03em}
+  .fl-track{grid-area:track;position:relative;height:24px;min-width:0;background:repeating-linear-gradient(90deg,transparent 0 calc(5% - .5px),var(--line) calc(5% - .5px) calc(5% + .5px),transparent calc(5% + .5px) 15%)}
+  .fl-track::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
+  .fl-track i{position:absolute;top:50%;height:10px;margin-top:-5px;border-radius:4px;background:var(--b);min-width:8px}
+  .fl-axis{grid-area:track;position:relative;height:14px;min-width:0}
+  .fl-axis span{position:absolute;top:0;transform:translateX(-50%);font-family:var(--mono);font-size:.56rem;color:var(--moon-dim);letter-spacing:.06em;line-height:14px}
+  .fl-price{grid-area:price;text-align:right;font-family:var(--mono);font-size:1rem;font-weight:700;color:#fff;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .fl-price small{font-size:.56rem;color:var(--moon-dim);font-weight:400;margin-left:4px;letter-spacing:.06em}
+  .fgroup{border-top:1px solid var(--line);padding-bottom:4px}
+  .fg-title{padding:12px 16px 2px;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#eef4fb}
+  .fg-title small{color:var(--moon-dim);margin-left:8px;font-size:inherit;letter-spacing:.1em}
+
+  /* ---------- PHONES: side-by-side table becomes cards ---------- */
+  @media (max-width:880px){
+    .cmp thead{display:none}
+    .cmp,.cmp tbody,.cmp tr,.cmp td{display:block}
+    .cmp tr{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:10px 12px;padding:14px;border-bottom:1px solid var(--line)}
+    .cmp tbody tr:last-child{border-bottom:0}
+    .cmp td,.cmp td:first-child,.cmp td:last-child{padding:0;border:0;white-space:normal}
+    .cmp td.ar,.cmp td.nm{grid-column:1/-1}
+    .cmp td.nm{font-size:1rem;margin-top:-4px}
+    .cmp td[data-label]::before{content:attr(data-label);display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--moon-dim);margin-bottom:2px}
+    .cmp tbody tr:hover td{background:none}
+  }
+
+  /* ---------- NARROW: flight rows stack below 760px ---------- */
+  @media (max-width:760px){
+    .fb-head{padding:14px 14px 8px}
+    .fb-head .r{margin-left:0;flex-basis:100%}
+    .fl{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"air price" "time time" "track track" "tags tags";row-gap:6px;padding:12px 14px}
+    .fl-axisrow{grid-template-areas:"track track";padding:0 14px}
+    .fl-time{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline}
+    .fl-time span{display:inline}
+    .fg-title{padding:12px 14px 0}
+  }
+
+  /* ---------- PHONES: conditions, flights, map ---------- */
+  @media (max-width:640px){
+    .cond{min-width:0}
+    .cond thead{display:none}
+    .cond,.cond tbody,.cond tr,.cond th,.cond td{display:block}
+    .cond tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px 10px;padding:12px 14px;border-bottom:1px solid var(--line)}
+    .cond tbody tr:last-child{border-bottom:0}
+    .cond tr.long{grid-template-columns:minmax(0,1fr)}
+    .cond tbody th{grid-column:1/-1;width:auto;padding:0 0 4px;border:0}
+    .cond td{padding:0;border:0}
+    .cond tr.long td{padding:2px 0 4px}
+    .cond td.mono{white-space:normal;font-size:.74rem}
+    .cond td::before{content:attr(data-a);display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c);margin-bottom:1px}
+    .cond td[colspan]{grid-column:1/-1}
+    .cond td[colspan]::before{content:none}
+
+    .flegend{margin:-18px 0 20px;gap:6px 16px}
+    .fs-head{display:none}
+    .fs-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;padding:12px 14px}
+    .fs-row>span{padding:0}
+    .fs-a{grid-column:1/-1}
+    .fs-c::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:.54rem;letter-spacing:.08em;text-transform:uppercase;color:var(--moon-dim);margin-bottom:2px}
+    .fs-foot{grid-template-columns:minmax(0,1fr)}
+
+    #chart .lab-cabin,#chart .lab-minor,#chart .g-lon,#chart .np,#chart .note{display:none}
+    #chart .lab-key{font-size:13.5px}
+    #chart .g-lat,#chart .ac,#chart .lake{font-size:11px}
+  }
+  @media (max-width:380px){.stay .facts .trips .t{white-space:normal}}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="cover" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="kicker">Aurora base camp · 31 Oct → 4 Nov 2026 · five of us · a car</div>
+    <h1>THREE <span class="deg">LAPLANDS</span></h1>
+    <p class="sub">Rovaniemi, Kittilä or Ivalo. Four nights, five people, a rental car and one cabin with a sauna. First what each area lets you do in the first week of November — fell walks, huskies and reindeer, Sámi culture, saunas, lakes, slopes, food — then ten Airbnb cabins with the pictures that matter, drive times and who sleeps where.</p>
+    <div class="statline">
+      <span><b>4</b> nights</span>
+      <span><b>5</b> people</span>
+      <span><b>3</b> areas</span>
+      <span><b>10</b> cabins</span>
+      <span><b>6,000–12,200</b> DKK total</span>
+      <span>sun down by <b>15:45</b></span>
+    </div>
+    <div class="jump">
+      <a href="#areas" style="--c:var(--aur-green)">The areas</a>
+      <a href="#do" style="--c:var(--aur-green)">What you can do</a>
+      <a href="#map" style="--c:var(--ice)">Chart</a>
+      <a href="#rov" style="--c:var(--ember)">Rovaniemi · 3</a>
+      <a href="#kit" style="--c:var(--aur-teal)">Kittilä · 3</a>
+      <a href="#iva" style="--c:var(--aur-violet)">Ivalo · 4</a>
+      <a href="#compare" style="--c:var(--aur-green)">Side by side</a>
+      <a href="#flights" style="--c:var(--ice)">Flights</a>
+      <a href="/lapland/report/" style="--c:var(--ice)">The report →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= THE AREAS ================= -->
+<section id="areas">
+  <div class="wrap">
+    <h2>The areas</h2>
+    <div class="h2sub">three latitudes, three vibes — pick the area first, the cabin second</div>
+    <div class="areas">
+      <div class="area" style="--c:var(--ember)">
+        <div class="lat">66.5°N · RVN · Arctic Circle</div>
+        <h3>Rovaniemi</h3>
+        <p>A real city with Santa Claus Village beside the runway: the busiest, most commercial base, with the widest menu of tours and restaurants. The three cabins here are 35–65 min from the centre on lakes, so town becomes a service stop and Ranua a long half-day.</p>
+        <ul class="pc">
+          <li class="p">Ranua Wildlife Park — the only moose, lynx and polar bears</li>
+          <li class="p">Most husky kennels · Santa Claus Village · Arktikum</li>
+          <li class="p">Restaurant variety for five people over four nights</li>
+          <li class="m">Snow on 31 Oct is a coin toss; the hikes are smaller and 1–1.5 h away</li>
+          <li class="m">Lowest aurora odds of the three (66.5°N)</li>
+        </ul>
+        <div class="links"><a class="go" href="#rov">3 cabins · 6.9k–12.2k DKK ↓</a><a class="go dim" href="/lapland/report/#rovaniemi">report →</a></div>
+      </div>
+      <div class="area" style="--c:var(--aur-teal)">
+        <div class="lat">67.6–67.8°N · KTT · Levi &amp; Ylläs</div>
+        <h3>Kittilä</h3>
+        <p>Resort country in its quiet pre-season week. Levi is a compact, walkable ski village with a gondola and a spa; Äkäslompolo, an hour west, is the calmer Ylläs side with Pallas-Yllästunturi National Park at the door.</p>
+        <ul class="pc">
+          <li class="p">Stored-snow slopes already open · gondola · Levi Spa</li>
+          <li class="p">Kätkätunturi 503 m and the Pallas fells for hikes with elevation</li>
+          <li class="p">Husky and reindeer farms open for visits in November</li>
+          <li class="m">Resort feel; excursions run on thin pre-season schedules</li>
+          <li class="m">Sámi culture is a hotel exhibition; the lake is small</li>
+        </ul>
+        <div class="links"><a class="go" href="#kit">3 cabins · 7.6k–9.5k DKK ↓</a><a class="go dim" href="/lapland/report/#levi">report →</a></div>
+      </div>
+      <div class="area" style="--c:var(--aur-violet)">
+        <div class="lat">68.3–68.4°N · IVL · Saariselkä &amp; Inari</div>
+        <h3>Ivalo</h3>
+        <p>A compact fell village at the gate of Urho Kekkonen National Park, dead quiet before December — "touristy but not a tourist factory". Kiilopää fell centre is 15 min south; Lake Inari starts 40 min north, and Inari village, the Sámi heart of Finland, is 70 min.</p>
+        <ul class="pc">
+          <li class="p">Easy fell summits within 25 min of every cabin — Kaunispää's tower, Kiilopää's stair path</li>
+          <li class="p">Siida museum and the Sámi Parliament · Lake Inari</li>
+          <li class="p">Kuurakaltio smoke sauna · best aurora odds (68.4°N) · snow most likely</li>
+          <li class="m">No zoo, fewer commercial tours; some services reduced until mid-Nov</li>
+          <li class="m">Shortest days — sun down before 15:30</li>
+        </ul>
+        <div class="links"><a class="go" href="#iva">4 cabins · 6.0k–11.2k DKK ↓</a><a class="go dim" href="/lapland/report/#saariselka">report →</a></div>
+      </div>
+    </div>
+    <div class="ritual">
+      <div class="t">The report's call</div>
+      <p><strong>Saariselkä (fly to Ivalo), four nights, leaving 4 November.</strong> It comes first or joint-first on seven of the ten criteria the research scored — nature, easy hikes with elevation, chill, sauna, northern lights, lakes and Sámi culture. Rovaniemi takes animals and food variety; Levi is a comfortable middle that never comes first. Trails, restaurants, conditions and a four-night sketch per area are in <a href="/lapland/report/">the full report →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT YOU CAN DO ================= -->
+<section id="do">
+  <div class="wrap">
+    <h2>What you can do</h2>
+    <div class="h2sub">the decider — first week of November, five people, a car · highlighted cell = the report's pick for that row</div>
+    
+<div class="tablewrap act-wrap">
+<table class="act">
+<thead><tr><th></th><th style="--c:var(--ember)"><span class="dot"></span>Rovaniemi</th><th style="--c:var(--aur-teal)"><span class="dot"></span>Kittilä · Levi &amp; Ylläs</th><th style="--c:var(--aur-violet)"><span class="dot"></span>Ivalo · Saariselkä &amp; Inari</th></tr></thead>
+<tbody><tr><th>Fell walks with a view</th><td data-a="Rovaniemi" style="--c:var(--ember)">Ounasvaara loops of 4–8.6 km with a tower (~160 m) in town. Auttiköngäs waterfall trail 1 h from town, Korouoma canyon 1.5 h — spikes once snow falls.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Immeljärvi lake loop 4 km · Kätkätunturi 503 m (~10 km) straight from Levi centre · Levi summit by gondola. From Äkäslompolo the Ylläs and Pallas fells start at the village.</td><td data-a="Ivalo" style="--c:var(--aur-violet)" class="best">Kaunispää 438 m with a tower — walk or drive · Aurorapolku 2.1 km · Iisakkipää 3 or 7 km · Kiilopää 546 m via a 2 km stair path. Free, theme-marked, no map needed.</td></tr><tr><th>National park</th><td data-a="Rovaniemi" style="--c:var(--ember)">Arctic Circle Hiking Area 23 km out — boardwalks, rapids, fire shelters. Pyhä-Luosto 1.5 h.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Pallas-Yllästunturi: 2 km from Äkäslompolo; the Pallas fells ~1 h from each of the three cabins.</td><td data-a="Ivalo" style="--c:var(--aur-violet)" class="best">Urho Kekkonen starts at the village edge — open fells, no roads.</td></tr><tr><th>Huskies <small>early Nov = kennel visits and cart rides everywhere, no sled runs yet</small></th><td data-a="Rovaniemi" style="--c:var(--ember)" class="best">Densest in Lapland: Bearhill, Apukka, Korvala, the Santa Village husky park (touristy). Cart rides from ~€50 in Ranua.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Several farms open in November for visits and trolley-cart rides (carts don't run above +7 °C).</td><td data-a="Ivalo" style="--c:var(--aur-violet)">Husky &amp; Co, 10 min from Saariselkä: 200 dogs, kennel visit with a hot drink in a kota, ~€60.</td></tr><tr><th>Reindeer</th><td data-a="Rovaniemi" style="--c:var(--ember)">Farm visits from ~€129; Santa Claus Village.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Farms such as Sammuntupa open early November; free reindeer in the K5 hotel yard.</td><td data-a="Ivalo" style="--c:var(--aur-violet)">Farm visits €60–89; wild reindeer on the E75 every single day.</td></tr><tr><th>Wildlife park</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="best">Ranua Wildlife Park, 1 h south of town — 1 h 40 from Mustikkakumpu, ~2 h from Uppana and the Pello gem: polar bears, moose, lynx, wolves, wolverines, musk ox, daily 10–16 on a 3 km route. The only guaranteed moose of the three.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">—</td><td data-a="Ivalo" style="--c:var(--aur-violet)">—</td></tr><tr><th>Sámi culture</th><td data-a="Rovaniemi" style="--c:var(--ember)">Arktikum — a broad Arctic museum with a Sámi section; outside the Sámi homeland.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Samiland exhibition on top of Levi fell (hotel-run, by gondola); Saamen Kammi kota restaurant.</td><td data-a="Ivalo" style="--c:var(--aur-violet)" class="best">Siida Sámi museum and the Sámi Parliament in Inari, ~70 min north — inside the homeland. Mon–Sat 10–17, €15.</td></tr><tr><th>Sauna beyond your cabin</th><td data-a="Rovaniemi" style="--c:var(--ember)">WNTR riverside sauna with a swimming hole, 5 min from the centre — €24, Wed–Sun 15–21, book a slot.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Levi Spa / Water World (pools, slides) open to the public; private "Arctic spa" kota packages.</td><td data-a="Ivalo" style="--c:var(--aur-violet)" class="best">Kuurakaltio smoke sauna at Kiilopää with a dip in the fell stream — ~€21, sessions from 15:00; confirm the early-November schedule.</td></tr><tr><th>Lakes &amp; water</th><td data-a="Rovaniemi" style="--c:var(--ember)">River town; lakes 30–50 km out — though Uppana and Mustikkakumpu each sit on their own lake.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Immeljärvi (small) by Levi; Äkäslompolo's lake 50 m from Villa Priddy.</td><td data-a="Ivalo" style="--c:var(--aur-violet)" class="best">Lake Inari, Finland's third largest with 3,000 islands: its southern tip is ~40 min north past Ivalo, Inari village on its shore ~70 min.</td></tr><tr><th>Slopes &amp; skiing</th><td data-a="Rovaniemi" style="--c:var(--ember)">Ounasvaara, small; opening depends on snow.</td><td data-a="Kittilä" style="--c:var(--aur-teal)" class="best">Levi — 43 pistes, stored-snow runs open since October, ski school, gondola. Ylläs 4 km from Äkäslompolo.</td><td data-a="Ivalo" style="--c:var(--aur-violet)">Kaunispää slopes and sled hill; groomed ski trails from late October / early November.</td></tr><tr><th>Family attractions</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="best">Santa Claus Village beside the airport; Ranua.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Gondola, spa, ski school, sled hill.</td><td data-a="Ivalo" style="--c:var(--aur-violet)">Sled hill 100 m from the Copper Nest, kota evenings, reindeer farms.</td></tr><tr><th>Eating out for five</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="best">Widest choice — Nili, Gustav, Roka, Taiga, plus Korean, Italian, Mexican.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">NiliPoro 4.5, Saamen Kammi, Utsu, Pihvipirtti — 15–20 places in Levi, fewer in Äkäslompolo.</td><td data-a="Ivalo" style="--c:var(--aur-violet)">Small and high quality — Laanilan Kievari 4.7, Petronella 4.5, Pirkon Pirtti; Aanaar in Inari 4.6. Book.</td></tr><tr><th>Aurora</th><td data-a="Rovaniemi" style="--c:var(--ember)">66.5°N — ~35% on a clear dark night. All three cabins sit on dark lakes well out of town.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">67.8°N — ~50%. From the cabin door, up the fell or out at Immeljärvi.</td><td data-a="Ivalo" style="--c:var(--aur-violet)" class="best">68.4°N — ~55–60%. Kaunispää and Kiilopää tops 5–25 min from every cabin.</td></tr><tr><th>Quiet</th><td data-a="Rovaniemi" style="--c:var(--ember)">The busiest base; Santa season ramps up from early November — the cabins are 35–65 min out for a reason.</td><td data-a="Kittilä" style="--c:var(--aur-teal)">Levi's quiet pre-season week, just before the World Cup crowd; Äkäslompolo quieter still.</td><td data-a="Ivalo" style="--c:var(--aur-violet)" class="best">Dead quiet before December; some services run reduced until mid-November.</td></tr></tbody>
+</table>
+</div>
+    <div class="tnote">huskies: before the snow is deep every farm in Lapland offers kennel visits and wheeled-cart rides, not sled runs — this is true in all three areas · prices and opening hours from the report (Sep 2026), re-confirm for early November</div>
+  </div>
+</section>
+
+<!-- ================= CONDITIONS ================= -->
+<section id="conditions">
+  <div class="wrap">
+    <h2>Conditions that week</h2>
+    <div class="h2sub">cloud is the equaliser (~80% overcast everywhere) — latitude is what changes the odds</div>
+    <div class="tablewrap"><table class="cond"><thead><tr><th></th><th style="--c:var(--ember)"><span class="dot"></span>Rovaniemi</th><th style="--c:var(--aur-teal)"><span class="dot"></span>Levi / Ylläs</th><th style="--c:var(--aur-violet)"><span class="dot"></span>Saariselkä</th></tr></thead><tbody><tr><th>Sun · 31 Oct</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="mono">08:15 – 15:45</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)" class="mono">08:29 – 15:38</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="mono">08:24 – 15:22</td></tr><tr><th>Sun · 4 Nov</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="mono">08:31 – 15:30</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)" class="mono">08:46 – 15:21</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="mono">08:42 – 15:05</td></tr><tr><th>Properly dark</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="mono">~17:40 → ~06:20</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)" class="mono">~17:40 → ~06:25</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="mono">~17:30 → ~06:15</td></tr><tr><th>Aurora on a clear dark night</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="mono">~35%</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)" class="mono">~50%</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="mono best">~55–60%</td></tr><tr><th>Chance of at least one show in 4 nights</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="mono">~30–35%</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)" class="mono">~40–48%</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="mono best">~50–55%</td></tr><tr><th>Sky overcast or mostly cloudy</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="mono">~75–80%</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)" class="mono">~80%</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="mono">~80%</td></tr><tr><th>Typical temperatures, 1 Nov</th><td data-a="Rovaniemi" style="--c:var(--ember)" class="mono">0 / −4 °C</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)" class="mono">−1 / −7 °C</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="mono">−2 / −8 °C</td></tr><tr class="long"><th>Precipitation</th><td data-a="Rovaniemi" style="--c:var(--ember)">rain, sleet or snow</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)">mostly snow or mixed</td><td data-a="Saariselkä" style="--c:var(--aur-violet)">mostly snow</td></tr><tr class="long"><th>Snow on the ground</th><td data-a="Rovaniemi" style="--c:var(--ember)">patchy — permanent cover usually arrives in the first week of November</td><td data-a="Levi / Ylläs" style="--c:var(--aur-teal)">likely — stored-snow slopes already open</td><td data-a="Saariselkä" style="--c:var(--aur-violet)" class="best">likely — trails groomed from late October</td></tr><tr class="long"><th>Moon</th><td colspan="3">waning half moon, rising around 21:00 on 1 Nov and later each night; the evenings of 3 and 4 November are moon-free — the darkest of the trip</td></tr></tbody></table></div>
+    <div class="tnote">"properly dark" = nautical twilight ends / begins · Finland is UTC+2 after 25 Oct · aurora and cloud odds are the report's estimates from Finnish Meteorological Institute figures · with a car you can chase a hole in the clouds from any of the three</div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section id="map">
+  <div class="wrap">
+    <h2>The chart</h2>
+    <div class="h2sub">schematic — three hubs, ten cabins, the day-trip targets · tap any point</div>
+    <div class="chartbox">
+      <svg id="chart" viewBox="0 0 540 770" role="img" aria-label="Schematic map of Finnish Lapland with the three airports, the ten cabins and the main activity destinations"></svg>
+      <div id="mapside">
+        <div id="mapinfo">
+          <div class="mt">FINNISH LAPLAND</div>
+          <div class="mb">Rovaniemi sits on the Arctic Circle; Saariselkä is 250 km further north. Tap an airport, a cabin, a village or a green diamond for details.</div>
+        </div>
+        <div class="legend">
+          <span><span class="dot" style="--c:var(--ice)"></span>airport</span>
+          <span><span class="dot" style="--c:var(--ember)"></span>Rovaniemi cabins</span>
+          <span><span class="dot" style="--c:var(--aur-teal)"></span>Kittilä cabins</span>
+          <span><span class="dot" style="--c:var(--aur-violet)"></span>Ivalo cabins</span>
+          <span><span class="sq"></span>day-trip target (zoo, waterfall, canyon, Pallas fells)</span>
+          <span><span class="dot" style="--c:var(--moon-dim)"></span>village / landmark</span>
+        </div>
+        <div class="hubs">
+          <div class="t">Between hubs</div>
+          <div class="r"><span>RVN → KTT</span><b>161 km · 2 h 10</b></div>
+          <div class="r"><span>RVN → IVL</span><b>284 km · 4 h 00</b></div>
+          <div class="r"><span>KTT → IVL</span><b>251 km · 3 h 40</b></div>
+          <div class="t">Airport → base</div>
+          <div class="r"><span>RVN → Rovaniemi centre</span><b>9 km · 10 min</b></div>
+          <div class="r"><span>KTT → Levi</span><b>13 km · 15 min</b></div>
+          <div class="r"><span>KTT → Äkäslompolo</span><b>51 km · 50 min</b></div>
+          <div class="r"><span>IVL → Saariselkä</span><b>30 km · 35 min</b></div>
+          <div class="r"><span>IVL → Kiilopää</span><b>47 km · 50 min</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="rov" class="areasec" style="--c:var(--ember)">
+  <div class="wrap">
+    <h2>Rovaniemi</h2>
+    <div class="h2sub">66.5°N · RVN · 3 cabins · 40–70 min from the airport · city · Santa · wildlife park</div>
+    <div class="intro">
+      <p>The capital of Lapland: a real city with Santa Claus Village beside the runway, the widest choice of tours and restaurants — and the busiest, most commercial feel of the three. The good nature is a drive away: Ranua Wildlife Park an hour south of town, the Auttiköngäs waterfall an hour east, Korouoma canyon an hour and a half. On 31 October the ground may or may not be white yet. The three cabins here trade town for lakes, 35–65 min from the centre.</p>
+      <div class="do"><span class="k">Do</span>Ranua Wildlife Park (1 h from town) · Ounasvaara loops &amp; tower · Arktikum · WNTR riverside sauna · Auttiköngäs waterfall (1 h) · Santa Claus Village · husky kennels (cart rides) · Nili · Gustav · Roka · <a href="/lapland/report/#rovaniemi">report notes →</a></div>
+    </div>
+    
+    <article class="stay" id="mustikkakumpu" style="--c:var(--ember)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/mustikkakumpu-1.jpg" alt="Northern lights over the cottage — Luxurious Villa Mustikkakumpu by the lake" loading="eager" width="1200" height="800">
+        <div class="badge">Villa · ~40 min from RVN</div>
+        <div class="price"><b>7,200 DKK</b><span>4 nights · ≈1,440 pp</span></div>
+        <div class="cap">Northern lights over the cottage · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/mustikkakumpu-1.jpg" data-cap="Northern lights over the cottage" aria-label="Photo 1: Northern lights over the cottage"><img src="/images/lapland/mustikkakumpu-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/mustikkakumpu-2.jpg" data-cap="Aerial, winter" aria-label="Photo 2: Aerial, winter"><img src="/images/lapland/mustikkakumpu-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/mustikkakumpu-3.jpg" data-cap="Living room" aria-label="Photo 3: Living room"><img src="/images/lapland/mustikkakumpu-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/mustikkakumpu-4.jpg" data-cap="Sauna" aria-label="Photo 4: Sauna"><img src="/images/lapland/mustikkakumpu-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/mustikkakumpu-5.jpg" data-cap="Grill hut (kota) in the snow" aria-label="Photo 5: Grill hut (kota) in the snow"><img src="/images/lapland/mustikkakumpu-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/mustikkakumpu-6.jpg" data-cap="Bedroom 1 — king" aria-label="Photo 6: Bedroom 1 — king"><img src="/images/lapland/mustikkakumpu-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Luxurious Villa Mustikkakumpu by the lake</h3>
+          <div class="rating"><b>★ 4.93</b> · 92 reviews <span class="pill">Guest favourite</span></div>
+        </div>
+        <div class="sub">Entire villa in Rovaniemi, Finland · 6 guests · 2 bedrooms · 3 beds · 1.5 baths</div>
+        <div class="cols">
+          <div>
+            <p>A 2007 wooden cottage on Lake Sonkajärvi at Sinettä, 76 m² with an electric sauna, fireplace, a Laplander&#x27;s grill hut and a private beach with a rowing boat. Renovated in stages since 2022. Not a design object — the honest, well-reviewed budget pick half an hour from town, with a host who greets you in person and 92 reviews at 4.93.</p>
+            <div class="five sofa"><span class="k">Five of you · one on a sofa bed</span>King bed + 2 singles + a sofa bed for two in the living room → one on the sofa bed. 1.5 bathrooms; 76 m² is snug for five.</div>
+            <p class="note">No self check-in — the host meets you (agree a time). Car essential.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>41 km · <b>~40 min</b> from Rovaniemi airport (RVN)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Rovaniemi centre <b>35 min</b></span> · <span class="t">Santa Claus Village <b>40 min</b></span> · <span class="t">Ranua Wildlife Park <b>1 h 40</b></span> · <span class="t">Auttiköngäs <b>1 h 50</b></span></span></li>
+              <li><span class="k">Per night</span><span>1,800 DKK · 360 per person</span></li>
+              <li><span class="k">Linen</span><span class="ok">included</span></li>
+              <li><span class="k">Check-in</span><span>in from 16:00 · out by 12:00</span></li>
+              <li><span class="k">Host</span><span>Ari · Superhost · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>cleanliness (43), view (30), location (51)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="yes">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="no">EV charger</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/10227379?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=66.62735,25.24289" rel="noopener">Google Maps</a>
+          <span class="gm dim">66.627°N 25.243°E · approx. pin</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="stay" id="uppana" style="--c:var(--ember)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/uppana-1.jpg" alt="Exterior, winter — Welcome to Uppana" loading="lazy" width="1200" height="800">
+        <div class="badge">Cabin · ~55 min from RVN</div>
+        <div class="price"><b>12,200 DKK</b><span>4 nights · ≈2,440 pp</span></div>
+        <div class="cap">Exterior, winter · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/uppana-1.jpg" data-cap="Exterior, winter" aria-label="Photo 1: Exterior, winter"><img src="/images/lapland/uppana-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/uppana-2.jpg" data-cap="Aurora over the cabin" aria-label="Photo 2: Aurora over the cabin"><img src="/images/lapland/uppana-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/uppana-3.jpg" data-cap="Sauna with a lake window" aria-label="Photo 3: Sauna with a lake window"><img src="/images/lapland/uppana-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/uppana-4.jpg" data-cap="Deck on Lake Marrasjärvi" aria-label="Photo 4: Deck on Lake Marrasjärvi"><img src="/images/lapland/uppana-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/uppana-5.jpg" data-cap="Living room &amp; wood stove" aria-label="Photo 5: Living room &amp; wood stove"><img src="/images/lapland/uppana-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/uppana-6.jpg" data-cap="Lake Marrasjärvi from above" aria-label="Photo 6: Lake Marrasjärvi from above"><img src="/images/lapland/uppana-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Welcome to Uppana</h3>
+          <div class="rating"><b>★ 4.98</b> · 63 reviews <span class="pill">Guest favourite</span><span class="pill">Top 5%</span></div>
+        </div>
+        <div class="sub">Entire cabin in Rovaniemi, Finland · 6 guests · 2 bedrooms · 4 beds · 2 baths</div>
+        <div class="cols">
+          <div>
+            <p>Built in 2024 where a 1901 crown-forest croft once stood, on the shore of Lake Marrasjärvi north-west of Rovaniemi, on the Kittilä road. Black-timber cabin with floor-to-ceiling glass, a wood stove and a sauna with a picture window onto the lake; reindeer wander the yard. Top 5% of homes on Airbnb, 63 reviews at 4.98 — and the highest price of the ten. Town is 50 min, so Ranua, Arktikum and the restaurants become half-day trips.</p>
+            <div class="five sofa"><span class="k">Five of you · one on a sofa bed</span>Double bed + 2 singles + a sofa bed in the living room → one of you sleeps on the sofa bed. Two bathrooms.</div>
+            <p class="note">Your note said 30 min — routing puts it at ~55 min from the airport and ~50 from the centre (Marrasjärvi, on the Kittilä road). Checkout is 10:00.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>62 km · <b>~55 min</b> from Rovaniemi airport (RVN)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Rovaniemi centre <b>50 min</b></span> · <span class="t">Santa Claus Village <b>55 min</b></span> · <span class="t">Ranua Wildlife Park <b>1 h 55</b></span> · <span class="t">Auttiköngäs <b>2 h 05</b></span></span></li>
+              <li><span class="k">Per night</span><span>3,050 DKK · 610 per person</span></li>
+              <li><span class="k">Linen</span><span class="ok">included</span></li>
+              <li><span class="k">Check-in</span><span>in from 15:00 · out by 10:00</span></li>
+              <li><span class="k">Host</span><span>Harri · Superhost · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>location (27), view (23), hospitality (28)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="yes">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="yes">EV charger</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/1265767470441033267?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=66.8862,25.1367" rel="noopener">Google Maps</a>
+          <span class="gm dim">66.886°N 25.137°E</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="stay" id="pello-gem" style="--c:var(--ember)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/pello-gem-1.jpg" alt="Winter at Lake Romakka — A small gem by the lake for two or for a family." loading="lazy" width="1200" height="800">
+        <div class="badge">Cabin + annex · ~70 min from RVN</div>
+        <div class="price"><b>6,900 DKK</b><span>4 nights · ≈1,380 pp</span></div>
+        <div class="cap">Winter at Lake Romakka · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/pello-gem-1.jpg" data-cap="Winter at Lake Romakka" aria-label="Photo 1: Winter at Lake Romakka"><img src="/images/lapland/pello-gem-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/pello-gem-2.jpg" data-cap="Sunset from the shore" aria-label="Photo 2: Sunset from the shore"><img src="/images/lapland/pello-gem-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/pello-gem-3.jpg" data-cap="Cabin &amp; annex from the lake" aria-label="Photo 3: Cabin &amp; annex from the lake"><img src="/images/lapland/pello-gem-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/pello-gem-4.jpg" data-cap="Covered patio" aria-label="Photo 4: Covered patio"><img src="/images/lapland/pello-gem-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/pello-gem-5.jpg" data-cap="Main cabin — king bed" aria-label="Photo 5: Main cabin — king bed"><img src="/images/lapland/pello-gem-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/pello-gem-6.jpg" data-cap="Shower &amp; sauna" aria-label="Photo 6: Shower &amp; sauna"><img src="/images/lapland/pello-gem-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>A small gem by the lake for two or for a family.</h3>
+          <div class="rating"><b>★ 5.0</b> · 4 reviews </div>
+        </div>
+        <div class="sub">Entire cabin in Pello, Finland · 6 guests · 3 bedrooms · 4 beds · 1 bath</div>
+        <div class="cols">
+          <div>
+            <p>A log cabin plus a guest annex on the sandy shore of Lake Romakka near Pello, in Torne-valley border country an hour west of Rovaniemi. Wood-fired sauna, fire pit and smoke-house on the beach, summer kitchen with a gas grill, boat and canoe. The most &#x27;own lake&#x27; of the ten — the tópart option — but the furthest from any activity hub, the sleeping is split across two buildings, and there is no wifi or TV. Four reviews so far, all 5★.</p>
+            <div class="five sofa"><span class="k">Five of you · one on a sofa bed</span>Main cabin: king bed for two. Annex: one room with 2 singles, one with a sofa bed → the fifth sleeps on the annex sofa bed, and three of you cross the yard at night. One bathroom.</div>
+            <p class="note">Bed linen is €10 per person and a €150 cleaning fee is charged on top — check what your 6.9k total includes. Pets allowed.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>76 km · <b>~70 min</b> from Rovaniemi airport (RVN)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Rovaniemi centre <b>1 h 05</b></span> · <span class="t">Santa Claus Village <b>1 h 10</b></span> · <span class="t">Ranua Wildlife Park <b>2 h 10</b></span> · <span class="t">Auttiköngäs <b>2 h 20</b></span></span></li>
+              <li><span class="k">Per night</span><span>1,725 DKK · 345 per person</span></li>
+              <li><span class="k">Linen</span><span class="warn">€10 pp extra + €150 cleaning</span></li>
+              <li><span class="k">Check-in</span><span>in from 15:00 · out by 12:00</span></li>
+              <li><span class="k">Host</span><span>Janne · responds within a few hours</span></li>
+              <li><span class="k">Guests say</span><span>—</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="yes">Lake</span><span class="no">Wifi</span><span class="no">Washer</span><span class="no">Dishwasher</span><span class="no">EV charger</span><span class="yes">Pets ok</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/1685696290155594752?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=66.7051,24.5995" rel="noopener">Google Maps</a>
+          <span class="gm dim">66.705°N 24.599°E</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="kit" class="areasec" style="--c:var(--aur-teal)">
+  <div class="wrap">
+    <h2>Kittilä</h2>
+    <div class="h2sub">67.6–67.8°N · KTT · 3 cabins · 15–50 min from the airport · resort · slopes · spa · two national-park fells</div>
+    <div class="intro">
+      <p>Levi is Finland's biggest ski resort, 15 min from Kittilä airport, in its quiet pre-season week: stored-snow runs have been open since October, the gondola climbs to the Samiland exhibition and the Panorama restaurant, and the World Cup slalom crowd only arrives in mid-November. Äkäslompolo, 50 min west at the foot of Ylläs, is the calmer village alternative with Pallas-Yllästunturi National Park starting 2 km away. Restaurants and rentals are in walking distance in both villages, and husky and reindeer farms open for visits in November.</p>
+      <div class="do"><span class="k">Do</span>Kätkätunturi 503 m from Levi centre · Immeljärvi loop 4 km · gondola + Samiland · Levi Spa · a ski lesson on stored snow · Pallas / Särkitunturi day hike · husky cart ride · reindeer farm · NiliPoro · Saamen Kammi · <a href="/lapland/report/#levi">report notes →</a></div>
+    </div>
+    
+    <article class="stay" id="levi-frame-b" style="--c:var(--aur-teal)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/levi-frame-b-1.jpg" alt="Exterior at sunset — Levi utsuvaara frame b" loading="eager" width="1200" height="800">
+        <div class="badge">Villa · ~15 min from KTT</div>
+        <div class="price"><b>9,500 DKK</b><span>4 nights · ≈1,900 pp</span></div>
+        <div class="cap">Exterior at sunset · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/levi-frame-b-1.jpg" data-cap="Exterior at sunset" aria-label="Photo 1: Exterior at sunset"><img src="/images/lapland/levi-frame-b-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/levi-frame-b-2.jpg" data-cap="Kitchen &amp; dining" aria-label="Photo 2: Kitchen &amp; dining"><img src="/images/lapland/levi-frame-b-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/levi-frame-b-3.jpg" data-cap="Wood stove &amp; the winter view" aria-label="Photo 3: Wood stove &amp; the winter view"><img src="/images/lapland/levi-frame-b-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/levi-frame-b-4.jpg" data-cap="Living room window" aria-label="Photo 4: Living room window"><img src="/images/lapland/levi-frame-b-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/levi-frame-b-5.jpg" data-cap="Sauna" aria-label="Photo 5: Sauna"><img src="/images/lapland/levi-frame-b-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/levi-frame-b-6.jpg" data-cap="Bedroom 1 — double" aria-label="Photo 6: Bedroom 1 — double"><img src="/images/lapland/levi-frame-b-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Levi utsuvaara frame b</h3>
+          <div class="rating"><b>★ 5.0</b> · 7 reviews <span class="pill">Guest favourite</span></div>
+        </div>
+        <div class="sub">Entire villa in Kittilä, Finland · 10 guests · 3 bedrooms · 6 beds · 1 bath</div>
+        <div class="cols">
+          <div>
+            <p>Eco log villa (January 2024) in the quiet Utsuvaara area, 10 min from Levi centre and 15 from the airport. Dark interiors, a wall of glass, wood stove, sauna, EV charger — and the rental includes two lift tickets in winter. Sleeps up to ten. Levi&#x27;s gondola, spa, restaurants and rentals are a short drive; Kätkätunturi starts from the centre.</p>
+            <div class="five real"><span class="k">Five of you · real beds for all</span>Double / double + bunk bed / double + 2 singles → real beds for five, several ways. One bathroom plus a second WC.</div>
+            <p class="note">Bed linen and towels are NOT included — bring or rent. Exterior security cameras on the property. 7 reviews so far. Pets welcome.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>13 km · <b>~15 min</b> from Kittilä airport (KTT)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Levi centre <b>10 min</b></span> · <span class="t">Äkäslompolo <b>1 h 05</b></span> · <span class="t">Pallas fells <b>1 h</b></span></span></li>
+              <li><span class="k">Per night</span><span>2,375 DKK · 475 per person</span></li>
+              <li><span class="k">Linen</span><span class="warn">not included — bring or rent</span></li>
+              <li><span class="k">Check-in</span><span>in from 15:00 · out by 11:00</span></li>
+              <li><span class="k">Host</span><span>Teemu · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>amenities (2), location (2), hospitality (2)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="no">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="yes">EV charger</span><span class="yes">Pets ok</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/1568219532747415322?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=67.78374384653777,24.903376374913158" rel="noopener">Google Maps</a>
+          <span class="gm dim">67.784°N 24.903°E · approx. pin</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="stay" id="villa-priddy" style="--c:var(--aur-teal)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/villa-priddy-1.jpg" alt="Aurora over the villa — Villa Priddy-Luxury with a whirlpool and sauna" loading="lazy" width="1200" height="800">
+        <div class="badge">House · ~50 min from KTT</div>
+        <div class="price"><b>7,600 DKK</b><span>4 nights · ≈1,520 pp</span></div>
+        <div class="cap">Aurora over the villa · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/villa-priddy-1.jpg" data-cap="Aurora over the villa" aria-label="Photo 1: Aurora over the villa"><img src="/images/lapland/villa-priddy-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/villa-priddy-2.jpg" data-cap="The villas in winter" aria-label="Photo 2: The villas in winter"><img src="/images/lapland/villa-priddy-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/villa-priddy-3.jpg" data-cap="Lake jetty and the bookable lakeside sauna" aria-label="Photo 3: Lake jetty and the bookable lakeside sauna"><img src="/images/lapland/villa-priddy-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/villa-priddy-4.jpg" data-cap="Living room" aria-label="Photo 4: Living room"><img src="/images/lapland/villa-priddy-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/villa-priddy-5.jpg" data-cap="Dining &amp; kitchen" aria-label="Photo 5: Dining &amp; kitchen"><img src="/images/lapland/villa-priddy-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/villa-priddy-6.jpg" data-cap="Sauna" aria-label="Photo 6: Sauna"><img src="/images/lapland/villa-priddy-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Villa Priddy-Luxury with a whirlpool and sauna</h3>
+          <div class="rating"><b>★ 4.85</b> · 20 reviews <span class="pill">Guest favourite</span></div>
+        </div>
+        <div class="sub">Entire home in Kolari, Finland · 8 guests · 3 bedrooms · 4 beds · 2 baths</div>
+        <div class="cols">
+          <div>
+            <p>Brand-new (2025) 103 m² villa in Äkäslompolo village: nearly 6 m ceilings, a fireplace and an electric sauna. Lake 50 m, shops and restaurants 150 m, ski track 20 m, Pallas-Yllästunturi National Park 2 km, Ylläs slopes 4 km. AEG kitchen with an island, EV charger and carport. Fresh linen and towels included; a lakeside sauna on the jetty can be booked for an extra fee.</p>
+            <div class="five real"><span class="k">Five of you · real beds for all</span>Three 160 cm doubles + a quality sofa bed → two pairs share and the fifth takes the third double, or the sofa bed. Two bathrooms.</div>
+            <p class="note">Newest of the set: 20 reviews at 4.85 — the lowest rating here, still high. Pets on request.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>51 km · <b>~50 min</b> from Kittilä airport (KTT)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Levi centre <b>1 h 05</b></span> · <span class="t">Äkäslompolo <b>next door</b></span> · <span class="t">Pallas fells <b>1 h</b></span></span></li>
+              <li><span class="k">Per night</span><span>1,900 DKK · 380 per person</span></li>
+              <li><span class="k">Linen</span><span class="ok">included</span></li>
+              <li><span class="k">Check-in</span><span>in from 17:00 · out by 11:00</span></li>
+              <li><span class="k">Host</span><span>Petra · Superhost · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>skiing (4), location (11), hospitality (12)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="yes">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="yes">EV charger</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/1540703754065798215?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=67.6064,24.1556" rel="noopener">Google Maps</a>
+          <span class="gm dim">67.606°N 24.156°E</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="stay" id="yllas-ukko" style="--c:var(--aur-teal)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/yllas-ukko-1.jpg" alt="Living room &amp; wood stove — Ylläs-Ukko" loading="lazy" width="1200" height="800">
+        <div class="badge">House · ~50 min from KTT</div>
+        <div class="price"><b>7,900 DKK</b><span>4 nights · ≈1,580 pp</span></div>
+        <div class="cap">Living room &amp; wood stove · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/yllas-ukko-1.jpg" data-cap="Living room &amp; wood stove" aria-label="Photo 1: Living room &amp; wood stove"><img src="/images/lapland/yllas-ukko-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/yllas-ukko-2.jpg" data-cap="Exterior, evening" aria-label="Photo 2: Exterior, evening"><img src="/images/lapland/yllas-ukko-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/yllas-ukko-3.jpg" data-cap="Exterior, winter" aria-label="Photo 3: Exterior, winter"><img src="/images/lapland/yllas-ukko-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/yllas-ukko-4.jpg" data-cap="Sauna" aria-label="Photo 4: Sauna"><img src="/images/lapland/yllas-ukko-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/yllas-ukko-5.jpg" data-cap="Kitchen" aria-label="Photo 5: Kitchen"><img src="/images/lapland/yllas-ukko-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/yllas-ukko-6.jpg" data-cap="Bedroom 1 — double" aria-label="Photo 6: Bedroom 1 — double"><img src="/images/lapland/yllas-ukko-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Ylläs-Ukko</h3>
+          <div class="rating"><b>★ 4.96</b> · 26 reviews <span class="pill">Guest favourite</span><span class="pill">Top 10%</span></div>
+        </div>
+        <div class="sub">Entire home in Kolari, Finland · 8 guests · 4 bedrooms · 6 beds · 2 baths</div>
+        <div class="cols">
+          <div>
+            <p>Single-storey villa completed in spring 2024 in Äkäslompolo, the village at the foot of Ylläs, with four bedrooms, two bathrooms, a sauna and a big glass wall to the forest. Walking distance to the village cafés, the ski bus and the illuminated trails; Pallas-Yllästunturi National Park trails and the Ylläs slopes are minutes away. The most bedrooms per krone on this list. Top 10%, 26 reviews at 4.96.</p>
+            <div class="five real"><span class="k">Five of you · real beds for all</span>Double + double + 2 singles + 2 singles across four bedrooms → real beds for five and a spare room. Two bathrooms.</div>
+            <p class="note">Airbnb&#x27;s &#x27;Essentials&#x27; (towels, sheets, soap) aren&#x27;t ticked on the listing — ask the host what&#x27;s included. Host answers 90% of messages, not a Superhost.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>54 km · <b>~50 min</b> from Kittilä airport (KTT)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Levi centre <b>1 h</b></span> · <span class="t">Äkäslompolo <b>5 min</b></span> · <span class="t">Pallas fells <b>55 min</b></span></span></li>
+              <li><span class="k">Per night</span><span>1,975 DKK · 395 per person</span></li>
+              <li><span class="k">Linen</span><span class="warn">ask — essentials not ticked</span></li>
+              <li><span class="k">Check-in</span><span>in from 17:00 · out by 10:00</span></li>
+              <li><span class="k">Host</span><span>Suvi · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>view (7), indoor spaces (8), hospitality (11)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="no">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="no">EV charger</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/1103011223753008563?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=67.6201,24.1649" rel="noopener">Google Maps</a>
+          <span class="gm dim">67.620°N 24.165°E</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="iva" class="areasec" style="--c:var(--aur-violet)">
+  <div class="wrap">
+    <h2>Ivalo</h2>
+    <div class="h2sub">68.3–68.4°N · IVL · 4 cabins · 35–50 min from the airport · fell village · Sámi Inari · silence</div>
+    <div class="intro">
+      <p>The northernmost of the three. Saariselkä, 35 min south of Ivalo airport, is a compact fell village at the edge of Urho Kekkonen National Park — free entry, theme-marked trails, two easy summits with towers. Kiilopää fell centre, 15 min further, has the smoke sauna and the rentals; Inari, 70 min north on the shore of Finland's third-largest lake, is the Sámi cultural capital with the Siida museum. Snow is most likely here, the sun sets before 15:30, and some services run reduced until mid-November.</p>
+      <div class="do"><span class="k">Do</span>Kaunispää tower (438 m) · Kiilopää stairs (546 m) + Kuurakaltio smoke sauna · Aurorapolku / Iisakkipää loops · Siida &amp; Sajos in Inari · Lake Inari shore · Husky &amp; Co kennel · reindeer farm · Laanilan Kievari · Petronella · <a href="/lapland/report/#saariselka">report notes →</a></div>
+    </div>
+    
+    <article class="stay" id="copper-nest" style="--c:var(--aur-violet)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/copper-nest-1.jpg" alt="Exterior at sunset — The Copper Nest by Hilla Villas" loading="eager" width="1200" height="800">
+        <div class="badge">House · ~35 min from IVL</div>
+        <div class="price"><b>6,000 DKK</b><span>4 nights · ≈1,200 pp</span></div>
+        <div class="cap">Exterior at sunset · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/copper-nest-1.jpg" data-cap="Exterior at sunset" aria-label="Photo 1: Exterior at sunset"><img src="/images/lapland/copper-nest-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/copper-nest-2.jpg" data-cap="Snowy forest at sunset" aria-label="Photo 2: Snowy forest at sunset"><img src="/images/lapland/copper-nest-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/copper-nest-3.jpg" data-cap="Kitchen &amp; dining" aria-label="Photo 3: Kitchen &amp; dining"><img src="/images/lapland/copper-nest-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/copper-nest-4.jpg" data-cap="Living room" aria-label="Photo 4: Living room"><img src="/images/lapland/copper-nest-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/copper-nest-5.jpg" data-cap="Sauna" aria-label="Photo 5: Sauna"><img src="/images/lapland/copper-nest-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/copper-nest-6.jpg" data-cap="Bedroom 1 — 2 singles" aria-label="Photo 6: Bedroom 1 — 2 singles"><img src="/images/lapland/copper-nest-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>The Copper Nest by Hilla Villas</h3>
+          <div class="rating"><b>★ 5.0</b> · 6 reviews <span class="pill">Guest favourite</span></div>
+        </div>
+        <div class="sub">Entire home in Inari, Finland · 8 guests · 3 bedrooms · 1 bath</div>
+        <div class="cols">
+          <div>
+            <p>Brand-new modern villa in Saariselkä village itself, by the slopes and the ski trail: the Kaunispää sled hill is 100 m away, the restaurants and the shop a short walk. Sauna, EV charger, smart lock; linen, towels and cleaning included. Sleeps eight, so five spread out. The cheapest of the ten.</p>
+            <div class="five real"><span class="k">Five of you · real beds for all</span>2 singles + a double (with a sofa bed) + 2 singles → real beds for five with room to spare. One bathroom for eight beds, though.</div>
+            <p class="note">New listing: 6 reviews so far, all 5★. Only one bathroom.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>31 km · <b>~35 min</b> from Ivalo airport (IVL)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Saariselkä centre <b>5 min</b></span> · <span class="t">Kaunispää top <b>5 min</b></span> · <span class="t">Kiilopää fell centre <b>20 min</b></span> · <span class="t">Inari &amp; Siida <b>1 h 10</b></span></span></li>
+              <li><span class="k">Per night</span><span>1,500 DKK · 300 per person</span></li>
+              <li><span class="k">Linen</span><span class="ok">included</span></li>
+              <li><span class="k">Check-in</span><span>in from 16:00 · out by 11:00</span></li>
+              <li><span class="k">Host</span><span>Hilla Villas · Superhost · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>location (5), cleanliness (3), view (2)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="no">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="yes">EV charger</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/1437507242153831079?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=68.4261,27.4313" rel="noopener">Google Maps</a>
+          <span class="gm dim">68.426°N 27.431°E</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="stay" id="guolbba" style="--c:var(--aur-violet)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/guolbba-1.jpg" alt="Exterior, winter — Villa Guolbba / Saariselkä Skaidicottage" loading="lazy" width="1200" height="800">
+        <div class="badge">Cabin · ~35 min from IVL</div>
+        <div class="price"><b>6,400 DKK</b><span>4 nights · ≈1,280 pp</span></div>
+        <div class="cap">Exterior, winter · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/guolbba-1.jpg" data-cap="Exterior, winter" aria-label="Photo 1: Exterior, winter"><img src="/images/lapland/guolbba-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/guolbba-2.jpg" data-cap="Laanila from above" aria-label="Photo 2: Laanila from above"><img src="/images/lapland/guolbba-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/guolbba-3.jpg" data-cap="Living room &amp; loft stair" aria-label="Photo 3: Living room &amp; loft stair"><img src="/images/lapland/guolbba-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/guolbba-4.jpg" data-cap="Sauna" aria-label="Photo 4: Sauna"><img src="/images/lapland/guolbba-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/guolbba-5.jpg" data-cap="Fireplace" aria-label="Photo 5: Fireplace"><img src="/images/lapland/guolbba-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/guolbba-6.jpg" data-cap="Aurora over the cabin" aria-label="Photo 6: Aurora over the cabin"><img src="/images/lapland/guolbba-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Villa Guolbba / Saariselkä Skaidicottage</h3>
+          <div class="rating"><b>★ 5.0</b> · 25 reviews <span class="pill">Guest favourite</span><span class="pill">Top 5%</span></div>
+        </div>
+        <div class="sub">Entire cabin in Inari, Finland · 6 guests · 3 bedrooms · 4 beds · 2 baths</div>
+        <div class="cols">
+          <div>
+            <p>Spacious 2012 log cabin on Laanipalo hill, 2 km from Saariselkä centre, with two downstairs bedrooms, a sleeping loft, a wood-burning fireplace and a private sauna. Firewood, final cleaning and linen are included; Siemens kitchen, dishwasher, kick sled and sleds in the shed. The illuminated ski track is 450 m away, and OpenStreetMap puts Laanilan Kievari — the report&#x27;s top-rated restaurant — about 1 km down the road. Superhosts Olli and Eeva also run Skaidi I next door. Top 5%, 25 reviews at 5.0.</p>
+            <div class="five real"><span class="k">Five of you · real beds for all</span>Two double beds downstairs + 2 singles in the loft → real beds for all five. Two bathrooms (one full, one WC).</div>
+            <p class="note">EV / plug-in charging at the cabin is prohibited (fire-safety rule). No pets.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>32 km · <b>~35 min</b> from Ivalo airport (IVL)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Saariselkä centre <b>5 min</b></span> · <span class="t">Kaunispää top <b>10 min</b></span> · <span class="t">Kiilopää fell centre <b>15 min</b></span> · <span class="t">Inari &amp; Siida <b>1 h 10</b></span></span></li>
+              <li><span class="k">Per night</span><span>1,600 DKK · 320 per person</span></li>
+              <li><span class="k">Linen</span><span class="ok">included</span></li>
+              <li><span class="k">Check-in</span><span>in from 16:00 · out by 11:00</span></li>
+              <li><span class="k">Host</span><span>Olli · Superhost · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>location (13), hiking (2), kitchen (6)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="no">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="no">EV charger</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/40410465?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=68.402,27.4038" rel="noopener">Google Maps</a>
+          <span class="gm dim">68.402°N 27.404°E</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="stay" id="skaidi" style="--c:var(--aur-violet)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/skaidi-1.jpg" alt="Exterior, winter — Villa Skaidi I  Saariselkä Skaidi cottage" loading="lazy" width="1200" height="800">
+        <div class="badge">Cabin · ~35 min from IVL</div>
+        <div class="price"><b>6,700 DKK</b><span>4 nights · ≈1,340 pp</span></div>
+        <div class="cap">Exterior, winter · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/skaidi-1.jpg" data-cap="Exterior, winter" aria-label="Photo 1: Exterior, winter"><img src="/images/lapland/skaidi-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/skaidi-2.jpg" data-cap="Laanipalo from above" aria-label="Photo 2: Laanipalo from above"><img src="/images/lapland/skaidi-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/skaidi-3.jpg" data-cap="Living room" aria-label="Photo 3: Living room"><img src="/images/lapland/skaidi-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/skaidi-4.jpg" data-cap="Sauna" aria-label="Photo 4: Sauna"><img src="/images/lapland/skaidi-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/skaidi-5.jpg" data-cap="Fireplace" aria-label="Photo 5: Fireplace"><img src="/images/lapland/skaidi-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/skaidi-6.jpg" data-cap="Aurora" aria-label="Photo 6: Aurora"><img src="/images/lapland/skaidi-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Villa Skaidi I  Saariselkä Skaidi cottage</h3>
+          <div class="rating"><b>★ 5.0</b> · 21 reviews <span class="pill">Guest favourite</span><span class="pill">Top 5%</span></div>
+        </div>
+        <div class="sub">Entire cabin in Saariselkä, Finland · 6 guests · 3 bedrooms · 4 beds · 1.5 baths</div>
+        <div class="cols">
+          <div>
+            <p>Sister cabin to Guolbba, almost at the top of Laanipalo hill: a high living room with big triangular windows, two downstairs doubles that split into singles, a loft with two beds and a TV corner, a fireplace and a private sauna. Fully refreshed in 2023, eco-wool insulated. Ski track 150 m, Saariselkä centre 2.5 km, Laanilan Kievari about 1.5 km. Top 5%, 21 reviews at 5.0.</p>
+            <div class="five real"><span class="k">Five of you · real beds for all</span>Two doubles (each splittable into 2 singles) + 2 singles in the loft → real beds for all five. 1.5 bathrooms.</div>
+            <p class="note">Loft via a spiral stair. No dryer; EV charging prohibited; no pets.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>33 km · <b>~35 min</b> from Ivalo airport (IVL)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Saariselkä centre <b>5 min</b></span> · <span class="t">Kaunispää top <b>10 min</b></span> · <span class="t">Kiilopää fell centre <b>15 min</b></span> · <span class="t">Inari &amp; Siida <b>1 h 10</b></span></span></li>
+              <li><span class="k">Per night</span><span>1,675 DKK · 335 per person</span></li>
+              <li><span class="k">Linen</span><span class="ok">included</span></li>
+              <li><span class="k">Check-in</span><span>in from 16:00 · out by 11:00</span></li>
+              <li><span class="k">Host</span><span>Eeva Marjatta · Superhost · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>location (13), hospitality (10), view (5)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="no">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="no">EV charger</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/1089668303636405332?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=68.3976,27.4078" rel="noopener">Google Maps</a>
+          <span class="gm dim">68.398°N 27.408°E</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="stay" id="kiilopaa-villa" style="--c:var(--aur-violet)">
+      <div class="gal">
+        <img class="main" src="/images/lapland/kiilopaa-villa-1.jpg" alt="Aurora over the villa — Design villa with sauna and forest views" loading="lazy" width="1200" height="800">
+        <div class="badge">Cottage · ~50 min from IVL</div>
+        <div class="price"><b>11,200 DKK</b><span>4 nights · ≈2,240 pp</span></div>
+        <div class="cap">Aurora over the villa · tap to enlarge</div>
+      </div>
+      <div class="thumbs"><button type="button" class="on" data-src="/images/lapland/kiilopaa-villa-1.jpg" data-cap="Aurora over the villa" aria-label="Photo 1: Aurora over the villa"><img src="/images/lapland/kiilopaa-villa-1-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/kiilopaa-villa-2.jpg" data-cap="Living room — the window is aimed at the sky" aria-label="Photo 2: Living room — the window is aimed at the sky"><img src="/images/lapland/kiilopaa-villa-2-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/kiilopaa-villa-3.jpg" data-cap="Glass front, winter" aria-label="Photo 3: Glass front, winter"><img src="/images/lapland/kiilopaa-villa-3-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/kiilopaa-villa-4.jpg" data-cap="Sauna" aria-label="Photo 4: Sauna"><img src="/images/lapland/kiilopaa-villa-4-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/kiilopaa-villa-5.jpg" data-cap="Wood stove" aria-label="Photo 5: Wood stove"><img src="/images/lapland/kiilopaa-villa-5-s.jpg" alt="" loading="lazy"></button><button type="button" data-src="/images/lapland/kiilopaa-villa-6.jpg" data-cap="Loft beds" aria-label="Photo 6: Loft beds"><img src="/images/lapland/kiilopaa-villa-6-s.jpg" alt="" loading="lazy"></button></div>
+      <div class="body">
+        <div class="top">
+          <h3>Design villa with sauna and forest views</h3>
+          <div class="rating"><b>★ 4.98</b> · 104 reviews <span class="pill">Guest favourite</span><span class="pill">Top 10%</span></div>
+        </div>
+        <div class="sub">Entire cottage in Sodankylä, Finland · 6 guests · 3 bedrooms · 5 beds · 1 bath</div>
+        <div class="cols">
+          <div>
+            <p>Glass-fronted architect villa at Kiilopää, on the edge of Urho Kekkonen National Park and a short walk from the Suomen Latu fell centre: the 2 km stair path to the 546 m summit, the Kuurakaltio smoke sauna, ski and snowshoe rental, trails straight into the park. The living room&#x27;s floor-to-ceiling window is pointed at the night sky. Own sauna with wood and electric stoves, washer and drying cabinet. Top 10%, 104 reviews at 4.98.</p>
+            <div class="five real"><span class="k">Five of you · real beds for all</span>Double bed + 2 singles + 2 singles in the loft → a real bed for everyone. One bathroom.</div>
+            <p class="note">You filed this under Rovaniemi at 1.5 h — it is 250 km / 3 h 20 from Rovaniemi. From Ivalo airport it&#x27;s ~50 min; Saariselkä&#x27;s restaurants and slopes are 15 min. No pets.</p>
+          </div>
+          <div>
+            <ul class="facts">
+              <li><span class="k">Drive</span><span>47 km · <b>~50 min</b> from Ivalo airport (IVL)</span></li>
+              <li><span class="k">Day trips</span><span class="trips"><span class="t">Saariselkä centre <b>15 min</b></span> · <span class="t">Kaunispää top <b>25 min</b></span> · <span class="t">Kiilopää fell centre <b>next door</b></span> · <span class="t">Inari &amp; Siida <b>1 h 25</b></span></span></li>
+              <li><span class="k">Per night</span><span>2,800 DKK · 560 per person</span></li>
+              <li><span class="k">Linen</span><span class="ok">included</span></li>
+              <li><span class="k">Check-in</span><span>in 16:00–24:00 · out by 12:00</span></li>
+              <li><span class="k">Host</span><span>Risto · Superhost · responds within an hour</span></li>
+              <li><span class="k">Guests say</span><span>view (59), skiing (13), location (38)</span></li>
+            </ul>
+            <div class="feat"><span class="yes">Sauna</span><span class="yes">Fireplace</span><span class="no">Lake</span><span class="yes">Wifi</span><span class="yes">Washer</span><span class="yes">Dishwasher</span><span class="no">EV charger</span><span class="yes">Self check-in</span></div>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="https://www.airbnb.com/rooms/52510224?adults=5&check_in=2026-10-31&check_out=2026-11-04" rel="noopener">Open on Airbnb →</a>
+          <a class="gm" href="https://www.google.com/maps/search/?api=1&query=68.34627,27.45904" rel="noopener">Google Maps</a>
+          <span class="gm dim">68.346°N 27.459°E · approx. pin</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section id="compare">
+  <div class="wrap">
+    <h2>Side by side</h2>
+    <div class="h2sub">all ten · totals as you noted them for 5 adults, 31 Oct → 4 Nov · sorted by area, then price</div>
+    
+<div class="tablewrap">
+<table class="cmp">
+<thead><tr><th>Area</th><th>Cabin</th><th>Total DKK</th><th>Per person</th><th>Airport</th><th>Sleeps</th><th>Beds for 5</th><th>Wifi</th><th>Linen</th><th>Rating</th></tr></thead>
+<tbody><tr style="--c:var(--ember)"><td class="ar"><span class="dot"></span>Rovaniemi</td><td class="nm"><a href="#pello-gem">Pello gem</a></td><td class="num" data-label="Total DKK">6,900</td><td class="num" data-label="Per person">1,380</td><td class="num" data-label="Airport">~70 min</td><td class="num" data-label="Sleeps">6</td><td class="w" data-label="Beds for 5">sofa bed</td><td class="n" data-label="Wifi">—</td><td class="w" data-label="Linen">€10 pp extra</td><td class="num" data-label="Rating">5.0 <small>(4)</small></td></tr><tr style="--c:var(--ember)"><td class="ar"><span class="dot"></span>Rovaniemi</td><td class="nm"><a href="#mustikkakumpu">Mustikkakumpu</a></td><td class="num" data-label="Total DKK">7,200</td><td class="num" data-label="Per person">1,440</td><td class="num" data-label="Airport">~40 min</td><td class="num" data-label="Sleeps">6</td><td class="w" data-label="Beds for 5">sofa bed</td><td class="y" data-label="Wifi">✓</td><td class="y" data-label="Linen">✓</td><td class="num" data-label="Rating">4.93 <small>(92)</small></td></tr><tr style="--c:var(--ember)"><td class="ar"><span class="dot"></span>Rovaniemi</td><td class="nm"><a href="#uppana">Uppana</a></td><td class="num" data-label="Total DKK">12,200</td><td class="num" data-label="Per person">2,440</td><td class="num" data-label="Airport">~55 min</td><td class="num" data-label="Sleeps">6</td><td class="w" data-label="Beds for 5">sofa bed</td><td class="y" data-label="Wifi">✓</td><td class="y" data-label="Linen">✓</td><td class="num" data-label="Rating">4.98 <small>(63)</small></td></tr><tr style="--c:var(--aur-teal)"><td class="ar"><span class="dot"></span>Kittilä</td><td class="nm"><a href="#villa-priddy">Villa Priddy</a></td><td class="num" data-label="Total DKK">7,600</td><td class="num" data-label="Per person">1,520</td><td class="num" data-label="Airport">~50 min</td><td class="num" data-label="Sleeps">8</td><td class="y" data-label="Beds for 5">✓ real beds</td><td class="y" data-label="Wifi">✓</td><td class="y" data-label="Linen">✓</td><td class="num" data-label="Rating">4.85 <small>(20)</small></td></tr><tr style="--c:var(--aur-teal)"><td class="ar"><span class="dot"></span>Kittilä</td><td class="nm"><a href="#yllas-ukko">Ylläs-Ukko</a></td><td class="num" data-label="Total DKK">7,900</td><td class="num" data-label="Per person">1,580</td><td class="num" data-label="Airport">~50 min</td><td class="num" data-label="Sleeps">8</td><td class="y" data-label="Beds for 5">✓ real beds</td><td class="y" data-label="Wifi">✓</td><td class="w" data-label="Linen">ask host</td><td class="num" data-label="Rating">4.96 <small>(26)</small></td></tr><tr style="--c:var(--aur-teal)"><td class="ar"><span class="dot"></span>Kittilä</td><td class="nm"><a href="#levi-frame-b">Levi Frame B</a></td><td class="num" data-label="Total DKK">9,500</td><td class="num" data-label="Per person">1,900</td><td class="num" data-label="Airport">~15 min</td><td class="num" data-label="Sleeps">10</td><td class="y" data-label="Beds for 5">✓ real beds</td><td class="y" data-label="Wifi">✓</td><td class="w" data-label="Linen">not included</td><td class="num" data-label="Rating">5.0 <small>(7)</small></td></tr><tr style="--c:var(--aur-violet)"><td class="ar"><span class="dot"></span>Ivalo</td><td class="nm"><a href="#copper-nest">Copper Nest</a></td><td class="num" data-label="Total DKK">6,000</td><td class="num" data-label="Per person">1,200</td><td class="num" data-label="Airport">~35 min</td><td class="num" data-label="Sleeps">8</td><td class="y" data-label="Beds for 5">✓ real beds</td><td class="y" data-label="Wifi">✓</td><td class="y" data-label="Linen">✓</td><td class="num" data-label="Rating">5.0 <small>(6)</small></td></tr><tr style="--c:var(--aur-violet)"><td class="ar"><span class="dot"></span>Ivalo</td><td class="nm"><a href="#guolbba">Guolbba</a></td><td class="num" data-label="Total DKK">6,400</td><td class="num" data-label="Per person">1,280</td><td class="num" data-label="Airport">~35 min</td><td class="num" data-label="Sleeps">6</td><td class="y" data-label="Beds for 5">✓ real beds</td><td class="y" data-label="Wifi">✓</td><td class="y" data-label="Linen">✓</td><td class="num" data-label="Rating">5.0 <small>(25)</small></td></tr><tr style="--c:var(--aur-violet)"><td class="ar"><span class="dot"></span>Ivalo</td><td class="nm"><a href="#skaidi">Skaidi I</a></td><td class="num" data-label="Total DKK">6,700</td><td class="num" data-label="Per person">1,340</td><td class="num" data-label="Airport">~35 min</td><td class="num" data-label="Sleeps">6</td><td class="y" data-label="Beds for 5">✓ real beds</td><td class="y" data-label="Wifi">✓</td><td class="y" data-label="Linen">✓</td><td class="num" data-label="Rating">5.0 <small>(21)</small></td></tr><tr style="--c:var(--aur-violet)"><td class="ar"><span class="dot"></span>Ivalo</td><td class="nm"><a href="#kiilopaa-villa">Kiilopää villa</a></td><td class="num" data-label="Total DKK">11,200</td><td class="num" data-label="Per person">2,240</td><td class="num" data-label="Airport">~50 min</td><td class="num" data-label="Sleeps">6</td><td class="y" data-label="Beds for 5">✓ real beds</td><td class="y" data-label="Wifi">✓</td><td class="y" data-label="Linen">✓</td><td class="num" data-label="Rating">4.98 <small>(104)</small></td></tr></tbody>
+</table>
+</div>
+    <div class="tnote">every cabin has its own sauna · airport = driving time from that area's airport (routing estimate — add margin for winter roads) · linen: Pello gem charges €10 pp plus a €150 cleaning fee; Levi Frame B does not include linen or towels; Ylläs-Ukko hasn't ticked Airbnb's "essentials" — ask · lake access: Mustikkakumpu, Uppana, Pello gem, Villa Priddy · ratings and review counts as of 23 Sep 2026</div>
+  </div>
+</section>
+
+<!-- ================= QUICK READS ================= -->
+<section>
+  <div class="wrap">
+    <h2>Quick reads</h2>
+    <div class="h2sub">if this matters most, then</div>
+    <ul class="plain picks">
+      <li><span class="k">Animals are the point</span>Rovaniemi. Ranua Wildlife Park has the polar bears, moose, lynx and wolves (1 h south of town, daily 10–16) and the region has the densest husky scene. In early November huskies everywhere are kennel visits and cart rides, not sled runs.</li>
+      <li><span class="k">Fells at the door, real Sámi culture, a lake like a sea</span>Ivalo. Kaunispää and Kiilopää summits with towers, Urho Kekkonen National Park from the village edge, Siida and the Sámi Parliament in Inari, Lake Inari. The report's pick — and all four cabins put five people in real beds.</li>
+      <li><span class="k">A ski day, a spa, a gondola</span>Kittilä. Levi's stored-snow runs are open, the gondola climbs to Samiland, Levi Spa is in the centre; Kätkätunturi (503 m) starts from the village. Äkäslompolo for the quieter Ylläs side with the national park 2 km away.</li>
+      <li><span class="k">The sauna experience</span>Kuurakaltio smoke sauna at Kiilopää with a dip in the fell stream is the one to travel for; Rovaniemi's WNTR riverside sauna is a good second; Levi Spa is the pool version. Every cabin here has its own sauna.</li>
+      <li><span class="k">Eating out for five, four nights</span>Rovaniemi has the only real variety. Saariselkä (Laanilan Kievari 4.7, Petronella) and Levi (NiliPoro 4.5, Saamen Kammi) are small, high-quality scenes — book ahead.</li>
+      <li><span class="k">Aurora odds</span>Latitude is the difference, clouds are the same: ~35% on a clear night in Rovaniemi, ~50% at Levi, ~55–60% at Saariselkä. With a car you chase holes in the cloud from any of them; the moon-free evenings are 3 and 4 November.</li>
+      <li><span class="k">Bed linen</span>Included everywhere except the Pello gem (€10 pp plus €150 cleaning) and Levi Frame B (bring or rent). Ylläs-Ukko hasn't ticked it — ask.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ================= FLIGHTS ================= -->
+<section id="flights">
+  <div class="wrap">
+    <h2>Flights</h2>
+    <div class="h2sub">Budapest ⇄ Lapland · one-way fares in DKK as noted on 23 Sep · local times</div>
+    <div class="flegend"><span><span class="dot" style="--c:var(--bar-rov)"></span>Rovaniemi · RVN</span><span><span class="dot" style="--c:var(--bar-kit)"></span>Kittilä · KTT</span><span><span class="dot" style="--c:var(--bar-iva)"></span>Ivalo · IVL</span><span><span class="dot" style="--c:var(--bar-cph)"></span>Copenhagen → Budapest</span></div>
+    <div class="fsum"><div class="fs-row fs-head"><span></span><span>Out · Sat 31 Oct</span><span>Back · Tue 3 Nov</span><span>Back · Wed 4 Nov</span><span>To Copenhagen · 3 or 4 Nov</span></div><div class="fs-row"><span class="fs-a"><span class="dot" style="--c:var(--bar-rov)"></span>Rovaniemi<small>RVN</small></span><span class="fs-c" data-l="Out · Sat 31 Oct"><b>889–1,935</b><small>3 options</small></span><span class="fs-c" data-l="Back · Tue 3 Nov"><b>1,036–1,072</b><small>2 options</small></span><span class="fs-c" data-l="Back · Wed 4 Nov"><b>437–1,036</b><small>2 options</small></span><span class="fs-c" data-l="To Copenhagen · 3 or 4 Nov"><b>1,040</b><small>1 option</small></span></div><div class="fs-row"><span class="fs-a"><span class="dot" style="--c:var(--bar-kit)"></span>Kittilä<small>KTT</small></span><span class="fs-c" data-l="Out · Sat 31 Oct"><b>1,392–1,538</b><small>2 options</small></span><span class="fs-c" data-l="Back · Tue 3 Nov"><b>1,065–1,394</b><small>2 options</small></span><span class="fs-c" data-l="Back · Wed 4 Nov"><b>1,394</b><small>1 option</small></span><span class="fs-c" data-l="To Copenhagen · 3 or 4 Nov"><b>1,215</b><small>1 option</small></span></div><div class="fs-row"><span class="fs-a"><span class="dot" style="--c:var(--bar-iva)"></span>Ivalo<small>IVL</small></span><span class="fs-c" data-l="Out · Sat 31 Oct"><b>1,332–1,499</b><small>2 options</small></span><span class="fs-c" data-l="Back · Tue 3 Nov"><b>1,110–1,328</b><small>2 options</small></span><span class="fs-c" data-l="Back · Wed 4 Nov"><b>1,499</b><small>1 option</small></span><span class="fs-c" data-l="To Copenhagen · 3 or 4 Nov"><b>1,280</b><small>1 option</small></span></div><div class="fs-row fs-foot"><span><span class="dot" style="--c:var(--bar-cph)"></span>Copenhagen → Budapest · Wed 4 Nov · 11:40 → 13:40 · <b>240 DKK</b></span></div></div>
+    <div class="fblock" id="fl-out"><div class="fb-head"><span class="k">Out</span><h3>Saturday 31 October</h3><span class="r">Budapest → Lapland</span></div><div class="fl fl-axisrow" aria-hidden="true"><div class="fl-axis"><span style="left:5%">06</span><span style="left:20%">09</span><span style="left:35%">12</span><span style="left:50%">15</span><span style="left:65%">18</span><span style="left:80%">21</span><span style="left:95%">00</span></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-rov)"></span>Rovaniemi<small>RVN</small></div><div class="fl"><div class="fl-air">Wizz Air + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Warsaw</span></div><div class="fl-time"><b>06:20 → 13:45</b><span>6 h 25</span></div><div class="fl-track" role="img" aria-label="Wizz Air + Finnair · 06:20 → 13:45 · 6 h 25 · 1,312 DKK" title="Wizz Air + Finnair · 06:20 → 13:45 · 6 h 25 · 1,312 DKK"><i style="left:6.67%;width:37.08%;--b:var(--bar-rov)"></i></div><div class="fl-price">1,312<small>DKK</small></div></div><div class="fl"><div class="fl-air">Ryanair</div><div class="fl-tags"><span class="ftag">self-transfer · Birmingham</span><span class="ftag eta">UK ETA required</span></div><div class="fl-time"><b>10:15 → 20:15</b><span>9 h</span></div><div class="fl-track" role="img" aria-label="Ryanair · 10:15 → 20:15 · 9 h · 889 DKK" title="Ryanair · 10:15 → 20:15 · 9 h · 889 DKK"><i style="left:26.25%;width:50.00%;--b:var(--bar-rov)"></i></div><div class="fl-price">889<small>DKK</small></div></div><div class="fl"><div class="fl-air">Finnair</div><div class="fl-time"><b>19:10 → 01:00</b><sup>+1</sup><span>4 h 50</span></div><div class="fl-track" role="img" aria-label="Finnair · 19:10 → 01:00 +1 · 4 h 50 · 1,935 DKK" title="Finnair · 19:10 → 01:00 +1 · 4 h 50 · 1,935 DKK"><i style="left:70.83%;width:29.17%;--b:var(--bar-rov)"></i></div><div class="fl-price">1,935<small>DKK</small></div></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-kit)"></span>Kittilä<small>KTT</small></div><div class="fl"><div class="fl-air">Wizz Air + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Stockholm</span></div><div class="fl-time"><b>05:30 → 17:50</b><span>11 h 20</span></div><div class="fl-track" role="img" aria-label="Wizz Air + Finnair · 05:30 → 17:50 · 11 h 20 · 1,392 DKK" title="Wizz Air + Finnair · 05:30 → 17:50 · 11 h 20 · 1,392 DKK"><i style="left:2.50%;width:61.67%;--b:var(--bar-kit)"></i></div><div class="fl-price">1,392<small>DKK</small></div></div><div class="fl"><div class="fl-air">Ryanair + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Stockholm</span></div><div class="fl-time"><b>07:00 → 17:50</b><span>9 h 50</span></div><div class="fl-track" role="img" aria-label="Ryanair + Finnair · 07:00 → 17:50 · 9 h 50 · 1,538 DKK" title="Ryanair + Finnair · 07:00 → 17:50 · 9 h 50 · 1,538 DKK"><i style="left:10.00%;width:54.17%;--b:var(--bar-kit)"></i></div><div class="fl-price">1,538<small>DKK</small></div></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-iva)"></span>Ivalo<small>IVL</small></div><div class="fl"><div class="fl-air">Wizz Air + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Warsaw</span></div><div class="fl-time"><b>06:20 → 17:55</b><span>10 h 35</span></div><div class="fl-track" role="img" aria-label="Wizz Air + Finnair · 06:20 → 17:55 · 10 h 35 · 1,332 DKK" title="Wizz Air + Finnair · 06:20 → 17:55 · 10 h 35 · 1,332 DKK"><i style="left:6.67%;width:57.92%;--b:var(--bar-iva)"></i></div><div class="fl-price">1,332<small>DKK</small></div></div><div class="fl"><div class="fl-air">Ryanair + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Stockholm</span></div><div class="fl-time"><b>07:00 → 17:55</b><span>9 h 55</span></div><div class="fl-track" role="img" aria-label="Ryanair + Finnair · 07:00 → 17:55 · 9 h 55 · 1,499 DKK" title="Ryanair + Finnair · 07:00 → 17:55 · 9 h 55 · 1,499 DKK"><i style="left:10.00%;width:54.58%;--b:var(--bar-iva)"></i></div><div class="fl-price">1,499<small>DKK</small></div></div></div></div>
+    <div class="fblock" id="fl-b3"><div class="fb-head"><span class="k">Back</span><h3>Tuesday 3 November</h3><span class="r">Lapland → Budapest</span></div><div class="fl fl-axisrow" aria-hidden="true"><div class="fl-axis"><span style="left:5%">06</span><span style="left:20%">09</span><span style="left:35%">12</span><span style="left:50%">15</span><span style="left:65%">18</span><span style="left:80%">21</span><span style="left:95%">00</span></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-rov)"></span>Rovaniemi<small>RVN</small></div><div class="fl"><div class="fl-air">Finnair</div><div class="fl-time"><b>05:20 → 10:50</b><span>6 h 30</span></div><div class="fl-track" role="img" aria-label="Finnair · 05:20 → 10:50 · 6 h 30 · 1,036 DKK" title="Finnair · 05:20 → 10:50 · 6 h 30 · 1,036 DKK"><i style="left:1.67%;width:27.50%;--b:var(--bar-rov)"></i></div><div class="fl-price">1,036<small>DKK</small></div></div><div class="fl"><div class="fl-air">Wizz Air + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Warsaw</span></div><div class="fl-time"><b>13:15 → 22:50</b><span>10 h 35</span></div><div class="fl-track" role="img" aria-label="Wizz Air + Finnair · 13:15 → 22:50 · 10 h 35 · 1,072 DKK" title="Wizz Air + Finnair · 13:15 → 22:50 · 10 h 35 · 1,072 DKK"><i style="left:41.25%;width:47.92%;--b:var(--bar-rov)"></i></div><div class="fl-price">1,072<small>DKK</small></div></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-kit)"></span>Kittilä<small>KTT</small></div><div class="fl"><div class="fl-air">Ryanair + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Milan</span></div><div class="fl-time"><b>13:30 → 23:45</b><span>11 h 15</span></div><div class="fl-track" role="img" aria-label="Ryanair + Finnair · 13:30 → 23:45 · 11 h 15 · 1,394 DKK" title="Ryanair + Finnair · 13:30 → 23:45 · 11 h 15 · 1,394 DKK"><i style="left:42.50%;width:51.25%;--b:var(--bar-kit)"></i></div><div class="fl-price">1,394<small>DKK</small></div></div><div class="fl"><div class="fl-air">Finnair</div><div class="fl-time"><b>overnight</b><span>in Helsinki · times not noted</span></div><div class="fl-track" aria-hidden="true"></div><div class="fl-price">1,065<small>DKK</small></div></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-iva)"></span>Ivalo<small>IVL</small></div><div class="fl"><div class="fl-air">Wizz Air + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Tallinn</span></div><div class="fl-time"><b>13:15 → 22:55</b><span>10 h 40</span></div><div class="fl-track" role="img" aria-label="Wizz Air + Finnair · 13:15 → 22:55 · 10 h 40 · 1,328 DKK" title="Wizz Air + Finnair · 13:15 → 22:55 · 10 h 40 · 1,328 DKK"><i style="left:41.25%;width:48.33%;--b:var(--bar-iva)"></i></div><div class="fl-price">1,328<small>DKK</small></div></div><div class="fl"><div class="fl-air">Finnair</div><div class="fl-time"><b>overnight</b><span>in Helsinki · times not noted</span></div><div class="fl-track" aria-hidden="true"></div><div class="fl-price">1,110<small>DKK</small></div></div></div></div>
+    <div class="fblock" id="fl-b4"><div class="fb-head"><span class="k">Back</span><h3>Wednesday 4 November</h3><span class="r">Lapland → Budapest</span></div><div class="fl fl-axisrow" aria-hidden="true"><div class="fl-axis"><span style="left:5%">06</span><span style="left:20%">09</span><span style="left:35%">12</span><span style="left:50%">15</span><span style="left:65%">18</span><span style="left:80%">21</span><span style="left:95%">00</span></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-rov)"></span>Rovaniemi<small>RVN</small></div><div class="fl"><div class="fl-air">Finnair</div><div class="fl-time"><b>05:20 → 10:50</b><span>6 h 30</span></div><div class="fl-track" role="img" aria-label="Finnair · 05:20 → 10:50 · 6 h 30 · 1,036 DKK" title="Finnair · 05:20 → 10:50 · 6 h 30 · 1,036 DKK"><i style="left:1.67%;width:27.50%;--b:var(--bar-rov)"></i></div><div class="fl-price">1,036<small>DKK</small></div></div><div class="fl"><div class="fl-air">Ryanair + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · London</span><span class="ftag eta">UK ETA required</span></div><div class="fl-time"><b>12:45 → 20:25</b><span>8 h 40</span></div><div class="fl-track" role="img" aria-label="Ryanair + Finnair · 12:45 → 20:25 · 8 h 40 · 437 DKK" title="Ryanair + Finnair · 12:45 → 20:25 · 8 h 40 · 437 DKK"><i style="left:38.75%;width:38.33%;--b:var(--bar-rov)"></i></div><div class="fl-price">437<small>DKK</small></div></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-kit)"></span>Kittilä<small>KTT</small></div><div class="fl"><div class="fl-air">Wizz Air + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Stockholm</span></div><div class="fl-time"><b>13:30 → 22:50</b><span>10 h 20</span></div><div class="fl-track" role="img" aria-label="Wizz Air + Finnair · 13:30 → 22:50 · 10 h 20 · 1,394 DKK" title="Wizz Air + Finnair · 13:30 → 22:50 · 10 h 20 · 1,394 DKK"><i style="left:42.50%;width:46.67%;--b:var(--bar-kit)"></i></div><div class="fl-price">1,394<small>DKK</small></div></div></div><div class="fgroup"><div class="fg-title"><span class="dot" style="--c:var(--bar-iva)"></span>Ivalo<small>IVL</small></div><div class="fl"><div class="fl-air">Wizz Air + Finnair</div><div class="fl-tags"><span class="ftag">self-transfer · Stockholm</span></div><div class="fl-time"><b>13:15 → 22:50</b><span>10 h 35</span></div><div class="fl-track" role="img" aria-label="Wizz Air + Finnair · 13:15 → 22:50 · 10 h 35 · 1,499 DKK" title="Wizz Air + Finnair · 13:15 → 22:50 · 10 h 35 · 1,499 DKK"><i style="left:41.25%;width:47.92%;--b:var(--bar-iva)"></i></div><div class="fl-price">1,499<small>DKK</small></div></div></div></div>
+    <div class="fblock" id="fl-cph"><div class="fb-head"><span class="k">Via Copenhagen</span><h3>Tuesday 3 or Wednesday 4 November</h3><span class="r">Lapland → Copenhagen → Budapest</span></div><div class="fl fl-axisrow" aria-hidden="true"><div class="fl-axis"><span style="left:5%">06</span><span style="left:20%">09</span><span style="left:35%">12</span><span style="left:50%">15</span><span style="left:65%">18</span><span style="left:80%">21</span><span style="left:95%">00</span></div></div><div class="fgroup"><div class="fl"><div class="fl-air"><span class="dot" style="--c:var(--bar-rov)"></span>Rovaniemi → Copenhagen</div><div class="fl-tags"><span class="ftag">Tue 3 or Wed 4 Nov</span></div><div class="fl-time"><b>15:05 → 18:35</b><span>4 h 30</span></div><div class="fl-track" role="img" aria-label="Rovaniemi → Copenhagen · 15:05 → 18:35 · 4 h 30 · 1,040 DKK" title="Rovaniemi → Copenhagen · 15:05 → 18:35 · 4 h 30 · 1,040 DKK"><i style="left:50.42%;width:17.50%;--b:var(--bar-rov)"></i></div><div class="fl-price">1,040<small>DKK</small></div></div><div class="fl"><div class="fl-air"><span class="dot" style="--c:var(--bar-kit)"></span>Kittilä → Copenhagen</div><div class="fl-tags"><span class="ftag">Tue 3 or Wed 4 Nov</span></div><div class="fl-time"><b>13:30 → 18:30</b><span>6 h</span></div><div class="fl-track" role="img" aria-label="Kittilä → Copenhagen · 13:30 → 18:30 · 6 h · 1,215 DKK" title="Kittilä → Copenhagen · 13:30 → 18:30 · 6 h · 1,215 DKK"><i style="left:42.50%;width:25.00%;--b:var(--bar-kit)"></i></div><div class="fl-price">1,215<small>DKK</small></div></div><div class="fl"><div class="fl-air"><span class="dot" style="--c:var(--bar-iva)"></span>Ivalo → Copenhagen</div><div class="fl-tags"><span class="ftag">Tue 3 or Wed 4 Nov</span></div><div class="fl-time"><b>13:15 → 18:35</b><span>6 h 20</span></div><div class="fl-track" role="img" aria-label="Ivalo → Copenhagen · 13:15 → 18:35 · 6 h 20 · 1,280 DKK" title="Ivalo → Copenhagen · 13:15 → 18:35 · 6 h 20 · 1,280 DKK"><i style="left:41.25%;width:26.67%;--b:var(--bar-iva)"></i></div><div class="fl-price">1,280<small>DKK</small></div></div><div class="fl"><div class="fl-air"><span class="dot" style="--c:var(--bar-cph)"></span>Copenhagen → Budapest</div><div class="fl-tags"><span class="ftag">Wed 4 Nov</span></div><div class="fl-time"><b>11:40 → 13:40</b><span>2 h</span></div><div class="fl-track" role="img" aria-label="Copenhagen → Budapest · 11:40 → 13:40 · 2 h · 240 DKK" title="Copenhagen → Budapest · 11:40 → 13:40 · 2 h · 240 DKK"><i style="left:33.33%;width:10.00%;--b:var(--bar-cph)"></i></div><div class="fl-price">240<small>DKK</small></div></div></div></div>
+    <div class="tnote">bars run from departure to arrival on a 05:00 → 01:00 local-time scale · journey times allow for the time difference: Finland is one hour ahead of Budapest and Copenhagen</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    THREE LAPLANDS · <span class="grad">66.5°N → 67.8°N → 68.4°N</span><br>
+    prices = your notes (Airbnb totals in DKK for 5 adults, 31 Oct → 4 Nov 2026, as of 23 Sep) · availability changes daily — re-check before deciding · drive times are routing estimates in summer conditions · activities, odds and opening hours from <a href="/lapland/report/">the research report</a> (Sep 2026) — re-confirm early-November schedules · listing details, ratings and photos © the hosts via Airbnb, captured 23 Sep 2026 · <a href="/">TRUE NORTH →</a>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="x" aria-label="Close">×</button>
+  <button type="button" class="prev" aria-label="Previous photo">‹</button>
+  <img src="" alt="">
+  <div class="lbcap"></div>
+  <button type="button" class="next" aria-label="Next photo">›</button>
+</div>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  var svg=document.getElementById('chart');
+  var info=document.getElementById('mapinfo');
+  var C={rov:'#ffb27d',kit:'#43cfc6',iva:'#9b7dff',air:'#8fd0ff',town:'#7d8ea4',poi:'#6ef0a8'};
+  var DIM='#7d8ea4',LINE='#1c2a40',ROAD='#2a3c58',WATER='#13253d';
+  function el(name,attrs,parent){var e=document.createElementNS(NS,name);for(var k in attrs)e.setAttribute(k,attrs[k]);(parent||svg).appendChild(e);return e;}
+  function txt(x,y,s,attrs,parent){var a={x:x,y:y,fill:DIM,'font-family':"'Space Mono',monospace",'font-size':'10','letter-spacing':'1.5'};for(var k in (attrs||{}))a[k]=attrs[k];var t=el('text',a,parent);t.textContent=s;return t;}
+  /* projection: lon 22.9–29.1 -> x 40..500 ; lat 65.8–69.45 -> y 737..40 (≈conformal at 67.7°N) */
+  var X0=40,X1=500,Y0=40,Y1=737,LO0=22.9,LO1=29.1,LA0=65.8,LA1=69.45;
+  function P(lat,lng){return [X0+(lng-LO0)*(X1-X0)/(LO1-LO0), Y1-(lat-LA0)*(Y1-Y0)/(LA1-LA0)];}
+  function path(points,attrs,parent){var d=points.map(function(p,i){var xy=P(p[0],p[1]);return (i?'L':'M')+xy[0].toFixed(1)+' '+xy[1].toFixed(1);}).join(' ');var a={d:d,fill:'none',stroke:ROAD,'stroke-width':1.6,'stroke-linejoin':'round','stroke-linecap':'round'};for(var k in (attrs||{}))a[k]=attrs[k];return el('path',a,parent);}
+  [66,66.5,67,67.5,68,68.5,69].forEach(function(la){var y=P(la,LO0)[1];el('line',{x1:X0,y1:y,x2:X1,y2:y,stroke:LINE,'stroke-width':1});txt(X0+4,y-4,la.toFixed(1)+'°N',{'font-size':'9','class':'g-lat'});});
+  [24,25,26,27,28,29].forEach(function(lo){var x=P(LA0,lo)[0];el('line',{x1:x,y1:Y0,x2:x,y2:Y1,stroke:LINE,'stroke-width':1});txt(x+4,Y1-6,lo+'°E',{'font-size':'9','class':'g-lon'});});
+  path([[69.15,27.35],[69.3,27.7],[69.32,28.3],[69.18,28.75],[68.95,28.7],[68.82,28.2],[68.85,27.6],[68.98,27.3],[69.15,27.35]],{fill:WATER,stroke:'#1c3350','stroke-width':1});
+  txt(P(69.05,27.85)[0],P(69.05,27.85)[1],'INARIJÄRVI',{'class':'lake','text-anchor':'middle','font-size':'8',opacity:.8});
+  path([[65.8,24.15],[66.05,24.05],[66.4,23.8],[66.78,23.95],[67.2,23.65],[67.5,23.6],[67.95,23.67],[68.2,23.4],[68.4,22.9]],{stroke:DIM,'stroke-width':1,'stroke-dasharray':'3 5',opacity:.6});
+  path([[68.75,22.9],[68.85,24.0],[69.0,24.8],[69.2,25.4],[69.45,25.95]],{stroke:DIM,'stroke-width':1,'stroke-dasharray':'3 5',opacity:.6});
+  txt(P(67.55,23.05)[0],P(67.55,23.05)[1],'SWEDEN',{'class':'np','font-size':'9',opacity:.55,transform:'rotate(-90 '+P(67.55,23.05)[0]+' '+P(67.55,23.05)[1]+')','text-anchor':'middle'});
+  txt(P(69.32,24.5)[0],P(69.32,24.5)[1],'NORWAY',{'class':'np','font-size':'9',opacity:.55});
+  var yAC=P(66.5622,LO0)[1];
+  el('line',{x1:X0,y1:yAC,x2:X1,y2:yAC,stroke:'#9b7dff','stroke-width':1,'stroke-dasharray':'2 6',opacity:.8});
+  txt(X1-6,yAC-6,'ARCTIC CIRCLE · 66°33′',{'class':'ac','text-anchor':'end',fill:'#9b7dff','font-size':'9'});
+  txt(P(68.2,28.0)[0],P(68.2,28.0)[1],'URHO KEKKONEN N.P.',{'class':'np','font-size':'8',opacity:.55,'text-anchor':'middle'});
+  txt(P(67.85,24.1)[0],P(67.85,24.1)[1],'PALLAS-YLLÄS N.P.',{'class':'np','font-size':'8',opacity:.55,'text-anchor':'middle'});
+  path([[66.50,25.73],[66.62,26.18],[66.83,26.35],[67.42,26.59],[67.75,26.85],[68.09,27.12],[68.33,27.35],[68.42,27.41],[68.61,27.42],[68.66,27.54],[68.91,27.03],[69.1,27.0]]);
+  path([[66.50,25.73],[66.62,25.36],[66.89,25.14],[67.15,24.95],[67.65,24.90],[67.70,24.85],[67.81,24.81],[68.1,24.5]]);
+  path([[67.65,24.90],[67.56,24.55],[67.60,24.16],[67.65,24.0]]);
+  path([[66.50,25.73],[66.62,25.36],[66.63,25.20],[66.70,24.60],[66.78,23.97]]);
+  path([[68.33,27.35],[68.348,27.46]]);
+  path([[66.50,25.73],[66.36,25.98],[66.15,26.25],[65.9409,26.4634]]);                 /* Rt 78 → Ranua */
+  path([[66.50,25.73],[66.43,26.35],[66.33,26.85],[66.2881,27.203],[66.1695,27.4881]]);    /* Rt 81 → Autti → Korouoma */
+  path([[67.60,24.16],[67.8,24.1],[68.046,24.0625]]);                               /* Äkäslompolo → Pallas */
+  txt(46,Y1+24,'SCHEMATIC · NOT FOR NAVIGATION',{'class':'note',opacity:.6,'font-size':'8'});
+  var pts=[{"lat": 66.5648, "lng": 25.8304, "t": "air", "lab": "RVN", "dy": 4, "la": "start", "ti": "ROVANIEMI AIRPORT · RVN", "b": "Hub for the Rovaniemi cabins. Between hubs: RVN–KTT 161 km / 2 h 10, RVN–IVL 284 km / 4 h, KTT–IVL 251 km / 3 h 40."}, {"lat": 66.62735, "lng": 25.24289, "t": "rov", "lab": "MUSTIKKAKUMPU", "dy": 4, "la": "end", "ti": "VILLA MUSTIKKAKUMPU · 7,200 DKK", "href": "#mustikkakumpu", "b": "Entire villa · 6 guests · 2 bedrooms · 3 beds · ~40 min from RVN · ★ 4.93 (92)"}, {"lat": 66.8862, "lng": 25.1367, "t": "rov", "lab": "UPPANA", "dy": 4, "la": "start", "ti": "UPPANA · 12,200 DKK", "href": "#uppana", "b": "Entire cabin · 6 guests · 2 bedrooms · 4 beds · ~55 min from RVN · ★ 4.98 (63)"}, {"lat": 66.7051, "lng": 24.5995, "t": "rov", "lab": "PELLO GEM", "dy": -8, "la": "start", "ti": "LAKESIDE GEM, PELLO · 6,900 DKK", "href": "#pello-gem", "b": "Entire cabin · 6 guests · 3 bedrooms · 4 beds · ~70 min from RVN · ★ 5.0 (4)"}, {"lat": 67.701, "lng": 24.8468, "t": "air", "lab": "KTT", "dy": 4, "la": "start", "ti": "KITTILÄ AIRPORT · KTT", "b": "Hub for the Kittilä cabins. Between hubs: RVN–KTT 161 km / 2 h 10, RVN–IVL 284 km / 4 h, KTT–IVL 251 km / 3 h 40."}, {"lat": 67.78374384653777, "lng": 24.903376374913158, "t": "kit", "lab": "FRAME B", "dy": -6, "la": "start", "ti": "LEVI UTSUVAARA FRAME B · 9,500 DKK", "href": "#levi-frame-b", "b": "Entire villa · 10 guests · 3 bedrooms · 6 beds · ~15 min from KTT · ★ 5.0 (7)"}, {"lat": 67.6064, "lng": 24.1556, "t": "kit", "lab": "", "dy": 4, "la": "start", "ti": "VILLA PRIDDY · 7,600 DKK", "href": "#villa-priddy", "b": "Entire home · 8 guests · 3 bedrooms · 4 beds · ~50 min from KTT · ★ 4.85 (20)"}, {"lat": 67.6201, "lng": 24.1649, "t": "kit", "lab": "", "dy": 4, "la": "start", "ti": "YLLÄS-UKKO · 7,900 DKK", "href": "#yllas-ukko", "b": "Entire home · 8 guests · 4 bedrooms · 6 beds · ~50 min from KTT · ★ 4.96 (26)"}, {"lat": 68.6073, "lng": 27.4053, "t": "air", "lab": "IVL", "dy": 4, "la": "start", "ti": "IVALO AIRPORT · IVL", "b": "Hub for the Ivalo cabins. Between hubs: RVN–KTT 161 km / 2 h 10, RVN–IVL 284 km / 4 h, KTT–IVL 251 km / 3 h 40."}, {"lat": 68.4261, "lng": 27.4313, "t": "iva", "lab": "", "dy": 4, "la": "start", "ti": "THE COPPER NEST · 6,000 DKK", "href": "#copper-nest", "b": "Entire home · 8 guests · 3 bedrooms · 1 bath · ~35 min from IVL · ★ 5.0 (6)"}, {"lat": 68.402, "lng": 27.4038, "t": "iva", "lab": "", "dy": 4, "la": "start", "ti": "VILLA GUOLBBA · 6,400 DKK", "href": "#guolbba", "b": "Entire cabin · 6 guests · 3 bedrooms · 4 beds · ~35 min from IVL · ★ 5.0 (25)"}, {"lat": 68.3976, "lng": 27.4078, "t": "iva", "lab": "", "dy": 4, "la": "start", "ti": "VILLA SKAIDI I · 6,700 DKK", "href": "#skaidi", "b": "Entire cabin · 6 guests · 3 bedrooms · 4 beds · ~35 min from IVL · ★ 5.0 (21)"}, {"lat": 68.34627, "lng": 27.45904, "t": "iva", "lab": "KIILOPÄÄ VILLA", "dy": 4, "la": "start", "ti": "DESIGN VILLA, KIILOPÄÄ · 11,200 DKK", "href": "#kiilopaa-villa", "b": "Entire cottage · 6 guests · 3 bedrooms · 5 beds · ~50 min from IVL · ★ 4.98 (104)"}, {"key": true, "lat": 66.5039, "lng": 25.7294, "lab": "ROVANIEMI", "la": "end", "dy": 10, "ti": "ROVANIEMI", "b": "Capital of Lapland, ~65,000 people, on the Arctic Circle. Arktikum museum, WNTR riverside sauna, Ounasvaara trails, the widest restaurant choice in Lapland; Santa Claus Village 8 km north by the airport.", "t": "town"}, {"key": true, "lat": 67.8052, "lng": 24.8085, "lab": "LEVI", "la": "end", "dy": -4, "ti": "LEVI (SIRKKA)", "b": "Finland's biggest ski resort village: stored-snow runs open from October, gondola to Samiland, Levi Spa, restaurants, husky and reindeer farms. Kätkätunturi (503 m) and the Immeljärvi loop start from the centre. 13 km from Kittilä airport.", "t": "town"}, {"key": true, "lat": 67.605, "lng": 24.156, "lab": "ÄKÄSLOMPOLO", "la": "start", "dy": 14, "ti": "ÄKÄSLOMPOLO · YLLÄS", "b": "Village at the foot of Ylläs fell, 2 km from Pallas-Yllästunturi National Park. Quieter than Levi; ski trails, cafés, small shops, Ylläs slopes 4 km. 51 km from Kittilä airport.", "t": "town"}, {"key": true, "lat": 68.4194, "lng": 27.4111, "lab": "SAARISELKÄ", "la": "start", "dy": 4, "ti": "SAARISELKÄ", "b": "Compact fell village at the edge of Urho Kekkonen National Park: Kaunispää tower and slopes, Aurorapolku and Iisakkipää loops, sled hill, restaurants (Petronella, Pirkon Pirtti, Teerenpesä), a grocery store, safari operators. 30 km from Ivalo airport.", "t": "town"}, {"lat": 68.348, "lng": 27.46, "lab": "", "ti": "KIILOPÄÄ FELL CENTRE", "b": "Suomen Latu fell centre: 2 km stair path to the 546 m summit, Kuurakaltio smoke sauna with a stream dip, ski and snowshoe rental, restaurant, trails into the national park. Reduced services until mid-November. 17 min south of Saariselkä.", "t": "town"}, {"lat": 68.658, "lng": 27.539, "lab": "IVALO", "la": "start", "dy": -6, "ti": "IVALO VILLAGE", "b": "Municipal centre of Inari: supermarkets, fuel, a few restaurants. 11 km north of the airport.", "t": "town"}, {"key": true, "lat": 68.906, "lng": 27.028, "lab": "INARI · SIIDA", "la": "end", "dy": 4, "ti": "INARI · SIIDA", "b": "Sámi cultural capital on the shore of Lake Inari: Siida Sámi museum and nature centre (Mon–Sat 10–17, €15), the Sámi Parliament at Sajos, Aanaar restaurant. ~70 min north of Saariselkä.", "t": "town"}, {"lat": 67.416, "lng": 26.59, "lab": "SODANKYLÄ", "la": "start", "dy": 4, "ti": "SODANKYLÄ", "b": "Halfway town on the E75 between Rovaniemi and Saariselkä. Fuel and food stop.", "t": "town"}, {"lat": 66.775, "lng": 23.97, "lab": "PELLO", "la": "start", "dy": -6, "ti": "PELLO", "b": "Small town on the Swedish border (Torne river), ~1 h 15 west of Rovaniemi.", "t": "town"}, {"lat": 66.5436, "lng": 25.8471, "lab": "", "ti": "SANTA CLAUS VILLAGE", "b": "On the Arctic Circle next to Rovaniemi airport. Tourist village: Santa, the post office, reindeer and husky rides (kennel visits and cart rides before the snow).", "t": "town"}, {"lat": 65.9409, "lng": 26.4634, "lab": "RANUA WILDLIFE PARK", "la": "start", "dy": 4, "ti": "RANUA WILDLIFE PARK", "b": "1 h south of Rovaniemi (~2 h from Uppana): Finland's only polar bears plus moose, lynx, wolves, wolverines, musk ox and Arctic foxes along a 3 km forest route. Daily 10–16 in autumn and winter; the only guaranteed moose of the three areas.", "t": "poi"}, {"lat": 66.2881, "lng": 27.203, "lab": "AUTTIKÖNGÄS", "la": "start", "dy": 4, "ti": "AUTTIKÖNGÄS WATERFALL", "b": "1 h east of Rovaniemi: 3.1–3.6 km nature trail, ~125 m of elevation, a 16 m waterfall with an 1889 log flume. Spikes once snow falls.", "t": "poi"}, {"lat": 66.1695, "lng": 27.4881, "lab": "KOROUOMA", "la": "start", "dy": 4, "ti": "KOROUOMA CANYON", "b": "~100 km / 1.5 h from Rovaniemi: ~5 km hike below cliffs up to 100 m high; famous for frozen waterfalls later in winter.", "t": "poi"}, {"lat": 68.046, "lng": 24.0625, "lab": "PALLAS", "la": "end", "dy": -6, "ti": "PALLASTUNTURI · PALLAS-YLLÄSTUNTURI N.P.", "b": "Pallas fells visitor centre: Pallas / Särkitunturi day hikes of 6–10 km with 250–400 m of gain — the best scenery in the Kittilä area. ~1 h from each of the three Kittilä cabins.", "t": "poi"}];
+  var current=null;
+  var order={town:0,poi:1,rov:2,kit:2,iva:2,air:3};
+  pts.sort(function(a,b){return order[a.t]-order[b.t];});
+  pts.forEach(function(p){
+    var xy=P(p.lat,p.lng);
+    var g=el('g',{'class':'pt'+(p.t==='town'?' town':''),tabindex:'0',role:'button','aria-label':p.ti});
+    el('circle',{cx:xy[0],cy:xy[1],r:16,fill:'transparent','class':'hit'},g);
+    if(p.t==='air'){
+      el('circle',{cx:xy[0],cy:xy[1],r:11,fill:'none',stroke:C.air,'stroke-width':1,opacity:.5},g);
+      el('circle',{cx:xy[0],cy:xy[1],r:6,'class':'c',fill:C.air,'fill-opacity':.35,stroke:C.air,'stroke-width':2},g);
+    } else if(p.t==='town'){
+      el('circle',{cx:xy[0],cy:xy[1],r:2.5,'class':'c',fill:C.town},g);
+    } else if(p.t==='poi'){
+      el('rect',{x:xy[0]-4.5,y:xy[1]-4.5,width:9,height:9,fill:C.poi,'fill-opacity':.85,transform:'rotate(45 '+xy[0]+' '+xy[1]+')'},g);
+    } else {
+      el('circle',{cx:xy[0],cy:xy[1],r:6,'class':'c',fill:C[p.t],'fill-opacity':.45,stroke:C[p.t],'stroke-width':2},g);
+    }
+    if(p.lab){var lx=xy[0]+(p.t==='air'?14:9),anchor='start';if(p.la==='end'){lx=xy[0]-(p.t==='air'?14:9);anchor='end';}
+      var fill=p.t==='town'?'#7d8ea4':(p.t==='poi'?'#6ef0a8':'#c7d4e4');
+      txt(lx,xy[1]+(p.dy||4),p.lab,{'class':(p.t==='air'||p.t==='poi'||p.key)?'lab-key':(p.t==='town'?'lab-minor':'lab-cabin'),'font-size':(p.t==='town'||p.t==='poi')?'8':'9',fill:fill,'text-anchor':anchor},g);}
+    function show(){
+      if(current)current.classList.remove('on');current=g;g.classList.add('on');
+      var links='<a class="gm" href="https://www.google.com/maps/search/?api=1&query='+p.lat+','+p.lng+'" rel="noopener">Google Maps →</a>';
+      if(p.href)links='<a class="gm" href="'+p.href+'">Jump to the cabin ↓</a>'+links;
+      info.innerHTML='<div class="mt">'+p.ti+'</div><div class="mb">'+p.b+'</div>'+links;
+      if(window.matchMedia('(max-width:760px)').matches){var r=info.getBoundingClientRect();if(r.top>window.innerHeight-40||r.bottom<0)info.scrollIntoView({behavior:'smooth',block:'nearest'});}
+    }
+    g.addEventListener('click',show);
+    g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});
+  });
+})();
+</script>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),lbimg=lb.querySelector('img'),lbcap=lb.querySelector('.lbcap');
+  var set=[],idx=0;
+  function openLB(photos,i){set=photos;idx=i;render();lb.classList.add('open');document.body.classList.add('noscroll');}
+  function closeLB(){lb.classList.remove('open');document.body.classList.remove('noscroll');}
+  function render(){var p=set[idx];lbimg.src=p.src;lbimg.alt=p.cap;lbcap.innerHTML='<b>'+(idx+1)+' / '+set.length+'</b>'+p.cap;}
+  function step(d){idx=(idx+d+set.length)%set.length;render();}
+  lb.querySelector('.x').addEventListener('click',closeLB);
+  lb.querySelector('.prev').addEventListener('click',function(){step(-1);});
+  lb.querySelector('.next').addEventListener('click',function(){step(1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLB();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
+  var tx=null;lb.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40)step(dx<0?1:-1);tx=null;},{passive:true});
+  document.querySelectorAll('.stay').forEach(function(card){
+    var main=card.querySelector('.main'),cap=card.querySelector('.cap'),btns=[].slice.call(card.querySelectorAll('.thumbs button'));
+    var photos=btns.map(function(b){return {src:b.getAttribute('data-src'),cap:b.getAttribute('data-cap')};});
+    var cur=0;
+    btns.forEach(function(b,i){b.addEventListener('click',function(){cur=i;btns.forEach(function(x){x.classList.remove('on');});b.classList.add('on');main.src=photos[i].src;main.alt=photos[i].cap;cap.textContent=photos[i].cap+' · tap to enlarge';});});
+    main.addEventListener('click',function(){openLB(photos,cur);});
+  });
+})();
+</script>
+<script>
+(function(){
+  try{
+    var data = JSON.stringify({ref: document.referrer, screen: screen.width + 'x' + screen.height});
+    var u = 'https://travels-logger.birovince.workers.dev/log?p=' + encodeURIComponent(location.pathname);
+    if(!(navigator.sendBeacon && navigator.sendBeacon(u, new Blob([data], {type:'text/plain'})))){
+      fetch(u, {method:'POST', body: data, keepalive: true}).catch(function(){});
+    }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
