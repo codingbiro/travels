@@ -120,9 +120,6 @@ h4{font-family:var(--body);font-weight:600;font-size:1rem;margin:4px 0 6px}
 .note{display:block;font-size:.86rem;line-height:1.5;color:var(--ink-dim);margin-top:5px}
 .note .nk{font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:7px}
 p.note{margin:6px 0 12px}
-.fl{display:flex;flex-wrap:wrap;gap:0 8px;margin-top:4px}
-.fl>span{white-space:nowrap}
-.ph{display:inline-block;min-width:3.2em;font-family:var(--mono);font-size:.8rem;color:var(--ink-dim);border:1px dashed var(--ink-dim);border-radius:4px;padding:0 6px;text-align:center}
 
 /* how it works */
 .tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
@@ -385,7 +382,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 <nav class="toc" aria-label="Fejezetek">
   <div class="wrap">
     <a id="todaylink" class="today-link" href="#days" hidden><span>Ma</span></a>
-    <div class="links"><a href="#how">Működés</a><a href="#choices">Döntések</a><a href="#days">Napok</a><a href="#sky">Égbolt</a><a href="#map">Térkép</a><a href="#photos">Fotók</a><a href="#sami">Számik</a><a href="#food">Konyha</a><a href="#sauna">Szauna</a><a href="#logistics">Logisztika</a><a href="#sources">Források</a></div>
+    <div class="links"><a href="#how">Működés</a><a href="#choices">Döntések</a><a href="#days">Napok</a><a href="#sky">Égbolt</a><a href="#map">Térkép</a><a href="#sami">Számik</a><a href="#food">Konyha</a><a href="#sauna">Szauna</a><a href="#logistics">Logisztika</a><a href="#photos">Fotók</a><a href="#sources">Források</a></div>
     <a class="lang" href="/lapland/plan/" lang="en" hreflang="en" title="English version"><span>EN</span></a>
   </div>
 </nav>
@@ -418,7 +415,6 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <li>Husky &amp; Co kennellátogatás, kedd, nov. 3. 10:00, öt főre</li>
       <li>Rének: Lapland Safaris farmlátogatás kedden 12:00‑kor, vagy számi családi látogatás hétfőn (a limit fölött)</li>
       <li>Asztal a Laanilan Kievariban, hétfő, nov. 2. 18:30, öt főre</li>
-      <li>Bérautó az IVL‑en téli gumival, lehetőleg szögessel</li>
       <li>EasyPark app az egyik telefonon, a kiilopääi parkoláshoz</li>
       <li>A boltok zárási ideje okt. 31‑én, szombat este (mindenszentek)</li>
     </ul>
@@ -431,12 +427,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 <section id="choices">
  <div class="wrap">
   <h2>Döntések</h2>
-  <p class="h2sub">Tíz döntés nyitott a tervben: négy minden foglalás előtt, három az indulás előtti héten és három az adott napon. Mindegyiknek van alapterve, így ha nem döntötök, az út akkor is működik.</p>
-  <p class="small">A még ellenőrizendő tények — hogy a foglalás tényleg a Villa Skaidi I, a szaunája, a bejutás és a járatidők — a <a href="#open">Nyitott kérdések</a> alatt vannak, nem itt.</p>
+  <p class="h2sub">Kilenc döntés nyitott a tervben: három minden foglalás előtt, három az indulás előtti héten és három az adott napon. Mindegyiknek van alapterve, így ha nem döntötök, az út akkor is működik.</p>
+  <p class="small">A még ellenőrizendő tények a <a href="#open">Nyitott kérdések</a> alatt vannak, nem itt.</p>
 
   <div class="chgroup">
    <h3>Foglalás előtt döntsétek el</h3>
-   <p>Ez a négy határozza meg, mit foglaltok, ezért ezeket rendezzétek először. A rénlátogatás az egyetlen, amely érinti az egyórás limitet.</p>
+   <p>Ez a három határozza meg, mit foglaltok, ezért ezeket rendezzétek először. A rénlátogatás az egyetlen, amely érinti az egyórás limitet.</p>
    <div class="choices">
     <article class="choice">
      <h4>Rénlátogatás</h4>
@@ -456,18 +452,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <div><span class="ck">Mérlegelés</span><p>A kennellátogatás biztos. A szafari a nagyobb élmény, de lehet, hogy nov. 3‑ig nem lesz elég hó.</p></div>
      <div class="def"><span class="ck">Alapterv</span><p>Foglaljátok le a kennellátogatást; kérjétek meg a Husky &amp; Co-t, hogy szóljon, ha a szános túrák még az időpontotok előtt elindulnak.</p></div>
     </article>
-    <article class="choice">
-     <h4>Autó</h4>
-     <div><span class="ck">Lehetőségek</span><p><b>7 személyes vagy nagy kombi</b>, vagy egy átlagos 5 személyes autó.</p></div>
-     <div><span class="ck">Mérlegelés</span><p>Öt felnőtt, a téli csomagok, az állvány és a fotóstáskák nem férnek be egy kisautóba; a nagyobb autó drágább.</p></div>
-     <div class="def"><span class="ck">Alapterv</span><p>Nagy kombi vagy 7 személyes, szöges gumival. Ha már le van foglalva, nézzétek meg, befér-e öt táska a csomagtartóba.</p></div>
-    </article>
    </div>
   </div>
 
   <div class="chgroup">
    <h3>Az indulás előtti héten döntsétek el</h3>
-   <p>Ezek az előrejelzéstől, a járatidőktől és attól függenek, hogy biztosan van-e szauna a kabinban.</p>
+   <p>Ezek az előrejelzéstől függenek.</p>
    <div class="choices">
     <article class="choice">
      <h4>A napok sorrendje</h4>
@@ -485,7 +475,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <h4>Szaunaextrák</h4>
      <div><span class="ck">Lehetőségek</span><p><b>Csak az otthoni szauna</b>; vagy mellé a <b>Laanilan Kievari szaunái</b> (kültéri dézsa, léklyuk) a hétfői vacsorával; vagy a <b>Kuurakaltio füstszauna</b> Kiilopäänél.</p></div>
      <div><span class="ck">Mérlegelés</span><p>Az otthoni ingyenes és privát. A Laanilan 1 km‑re van, és jól megy a vacsorához. A füstszauna a leghagyományosabb; a nyilvános alkalmai hétfőtől szombatig vannak kiírva, így a vasárnapi kiilopääi napon nem.</p></div>
-     <div class="def"><span class="ck">Alapterv</span><p>Csak az otthoni. Ha kiderül, hogy a kabinban nincs szauna, foglaljátok le a Laanilanét.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Csak az otthoni.</p></div>
     </article>
    </div>
   </div>
@@ -530,10 +520,10 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <p class="light">Sötét, amikor leszálltok. A hold 62%‑os, egész éjjel fent van, kb. 21:00‑ig alacsonyan északon.</p>
    </div>
    <dl class="rows">
-     <div class="row"><dt class="k">Este</dt><dd class="v">Leszállás Ivalóban (IVL), autóátvétel: téli gumi, jégkaparó.<span class="note"><span class="nk">Ellenőrizni</span>Járatszámok és időpontok, oda-vissza.</span></dd></div>
+     <div class="row"><dt class="k">Este</dt><dd class="v">Leszállás Ivalóban (IVL), autóátvétel.</dd></div>
      <div class="row"><dt class="k">Bolt</dt><dd class="v"><span class="tag must">FIX</span>Mindenszentek, finn munkaszüneti nap: nézzétek meg a zárási időket még indulás előtt. A Supermarket Kuukkeli Saariselkä faluban van; az ivalói K‑Supermarket (hal- és húspult) 10 km‑re van a reptértől, a másik irányba.<span class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este.</span></dd></div>
-     <div class="row"><dt class="k">Autóút</dt><dd class="v">Reptér–kabin: 26 km, kb. 25 perc.<span class="note"><span class="nk">Ellenőrizni</span>A bejutás módja és ideje szombat esti érkezésnél.</span></dd></div>
-     <div class="row"><dt class="k">Otthon</dt><dd class="v"><span class="tag must">FIX</span>Kapcsoljátok be a szaunát, mielőtt kipakoltok (45–60 perc, mire felfűt). Egyszerű első vacsora.<span class="note"><span class="nk">Ellenőrizni</span>A kabin szaunája és típusa: elektromos vagy fatüzelésű.</span></dd></div>
+     <div class="row"><dt class="k">Autóút</dt><dd class="v">Reptér–kabin: 26 km, kb. 25 perc. Önálló bejelentkezés, 16:00‑tól.</dd></div>
+     <div class="row"><dt class="k">Otthon</dt><dd class="v"><span class="tag must">FIX</span>Kapcsoljátok be a szaunát, mielőtt kipakoltok (45–60 perc, mire felfűt). Egyszerű első vacsora.</dd></div>
      <div class="row"><dt class="k">21:00–23:00</dt><dd class="v"><span class="tag if">HA</span>Tiszta ég: nézzetek északra az udvar egy sötét sarkából a szaunakörök között. Ma este nincs sarkifény-autózás: első éjszaka, sötét utak, rének.</dd></div>
    </dl>
   </article>
@@ -607,7 +597,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
    <dl class="rows">
      <div class="row"><dt class="k">07:30</dt><dd class="v">Kávé kint a kék fényben.</dd></div>
      <div class="row"><dt class="k">Pakolás</dt><dd class="v">Ürítsétek ki a hűtőt, hagyjátok tisztán a szaunát, nézzétek át a konnektorokat a töltők és kameraakkuk miatt.</dd></div>
-     <div class="row"><dt class="k">Autóút</dt><dd class="v">Kabin–IVL: kb. 25 perc. Hagyjatok rá időt a jeges szélvédő és a rének miatt.<span class="note"><span class="nk">Ellenőrizni</span>Járatszám és indulási idő.</span></dd></div>
+     <div class="row"><dt class="k">Autóút</dt><dd class="v">Kabin–IVL: kb. 25 perc. Hagyjatok rá időt a jeges szélvédő és a rének miatt.</dd></div>
    </dl>
   </article>
  </div>
@@ -729,58 +719,6 @@ footer .back{margin:18px 0 0;font-size:.9rem}
  </div>
 </section>
 
-<!-- ================= PHOTOS ================= -->
-<section id="photos">
- <div class="wrap">
-  <h2>Fotózás</h2>
-  <p class="h2sub">Nappal a 70–350, éjjel a 12 mm.</p>
-  <p>A nap sosem megy kb. 7° fölé, így minden tiszta nappali óra alacsony, súroló fény — naponta kb. hat és fél ilyen óra van. Nappal a Sony 70–350 G dolgozik (az a6100‑on 105–525 mm‑nek felel meg), éjjel a Samyang 12 mm f/2. Az a6100‑ban nincs beépített stabilizátor, így a stabilizálást teljes egészében az objektív OSS‑e végzi.</p>
-  <div class="cards">
-    <div class="card">
-      <h3>Nappal: a6100 + 70–350 G</h3>
-      <dl class="kv">
-        <dt>Mód</dt><dd>A vagy M, Auto ISO 6400‑as felső határral; 350 mm‑en az objektív f/6,3, ezért inkább az ISO menjen fel, mint hogy lassuljon a zár.</dd>
-        <dt>Expozíció</dt><dd>1/250 tájhoz, 1/500 emberekhez és álló rénekhez, 1/1000–1/2000 futó huskykhoz és repülő szajkókhoz.</dd>
-        <dt>Fókusz</dt><dd>AF‑C, Zone vagy Tracking; Animal Eye AF a kutyákhoz; sorozat Hi+-on.</dd>
-        <dt>Hó</dt><dd>+0,7 és +1,3 EV között, különben szürke lesz a hó.</dd>
-        <dt>Stabilizálás</dt><dd>OSS kézből be, állványon ki.</dd>
-        <dt>Egyéb</dt><dd>A minimális fókusztávolság 1,1–1,5 m: lépjetek hátra, ha közel száll le egy szajkó.</dd>
-      </dl>
-    </div>
-    <div class="card">
-      <h3>Éjszaka: a6100 + Samyang 12 mm f/2</h3>
-      <dl class="kv">
-        <dt>Mód</dt><dd>M; a felső tárcsa a rekesz, a hátsó kerék a zár.</dd>
-        <dt>Expozíció</dt><dd>f/2, ISO 1600–3200; 3–6 s fényes, gyors függönyökhöz, 8–15 s halvány ívhez (a csillagok kb. 15 s‑ig élesek maradnak).</dd>
-        <dt>Fókusz</dt><dd>Nincs AF/MF kapcsoló: állítsátok MF‑re a menüben, nagyítsatok rá egy fényes csillagra, és tekerjétek a fókuszgyűrűt, amíg a csillag a legkisebb nem lesz. Elektronikus fókuszú, ezért ellenőrizzétek újra, ha a gép elaludt, vagy akkut cseréltetek.</dd>
-        <dt>Stabilizálás</dt><dd>Mindig állvány.</dd>
-        <dt>Egyéb</dt><dd>RAW, fehéregyensúly kb. 3800 K, 2 s önkioldó, hosszú expozíciós zajcsökkentés ki.</dd>
-      </dl>
-    </div>
-  </div>
-
-  <h3>Ahol megéri cipelni a 70–350‑et</h3>
-  <ul class="spots">
-    <li><span class="when">K 14:00–15:13</span><div><strong>Kaunispää-torony.</strong> Rétegezzétek a nemzeti park tunturijait 200–350 mm‑en, az alacsony nappal mögöttük.</div></li>
-    <li><span class="when">K 10:00</span><div><strong>Husky &amp; Co.</strong> Kutyaszemmagasság, 1/1000 vagy gyorsabb; kérdezzétek meg, mielőtt a vezetőket fotózzátok.</div></li>
-    <li><span class="when">Bármelyik erdei megálló</span><div><strong>Szibériai szajkók.</strong> Üljetek mozdulatlanul, kész objektívvel; gyorsan érkeznek, szóval 1/2000.</div></li>
-    <li><span class="when">Útszélek, keddi farm</span><div><strong>Rének.</strong> A 350 mm‑rel elég messze maradhattok ahhoz, hogy ne zavarjátok el őket; autóból csak rendes pihenőben fotózzatok; a farmon előbb kérdezzétek meg a vendéglátókat.</div></li>
-    <li><span class="when">H 13:00</span><div><strong>A Juutua zúgói.</strong> Ha jég képződik a széleken: állvány, 1/4–1 s a sima vízhez, vagy 1/1000 a permet kimerevítéséhez.</div></li>
-    <li><span class="when">V, Kiilopää</span><div><strong>Csúcsgerincek.</strong> Távoli tunturik túrázókkal léptéknek 150–250 mm‑en.</div></li>
-    <li><span class="when">H 15:14</span><div><strong>Inari-tó.</strong> Pasztell rétegek napnyugta után; a kék óra kb. egy órán át tart.</div></li>
-    <li><span class="when">H 22:37</span><div><strong>Északkeleti horizont.</strong> Bónusz holdkelte a tunturik mögött: 350 mm, állvány, induljatok 1/250 s, f/6,3, ISO 400‑ról.</div></li>
-  </ul>
-
-  <h3>Fogások hidegben</h3>
-  <ul class="plain">
-    <li>Az NP‑FW50 akkuk hidegben gyorsan merülnek, és az OSS meg a folyamatos AF még többet fogyaszt. Vigyetek hármat vagy többet egy belső zsebben, és cserélgessétek őket.</li>
-    <li>Mielőtt bementek, zárjátok a gépet egy zip-zacskóba, és hagyjátok felmelegedni, mielőtt kinyitjátok, hogy ne csapódjon le benne pára.</li>
-    <li>Napellenző egész nap fent: 7°‑on a nap mindig a képkivágás közelében jár.</li>
-    <li>Telefonok: az éjszakai mód jól elkapja a sarki fényt, ha valami szilárdhoz támasztjátok.</li>
-  </ul>
- </div>
-</section>
-
 <!-- ================= SAMI ================= -->
 <section id="sami">
  <div class="wrap">
@@ -868,7 +806,6 @@ footer .back{margin:18px 0 0;font-size:.9rem}
  <div class="wrap">
   <h2>Szauna</h2>
   <p class="h2sub">Minden este szauna a kabinban, és minden lehűlés egyben égbolt-ellenőrzés.</p>
-  <p class="note" style="margin-top:-14px;margin-bottom:22px"><span class="nk">Ellenőrizni</span>A kabin szaunája még nincs megerősítve: nézzétek meg, és hogy elektromos vagy fatüzelésű-e.</p>
   <ol class="steps">
     <li><strong>Fűtés.</strong> 45–60 perccel előbb kapcsoljátok be; a cél 70–80 °C.</li>
     <li><strong>Löyly.</strong> Egy merőkanál víz a kövekre; 10–15 perces körök. Kezdőknek az alsó pad.</li>
@@ -890,29 +827,26 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 <section id="logistics">
  <div class="wrap">
   <h2>Logisztika</h2>
-  <p class="h2sub">Az indulás előtt lefoglalandó vagy ellenőrizendő hat dolog a <a href="#how">Működés</a> alatt van; a kabintól mért menetidők a <a href="#map">térképen</a>.</p>
+  <p class="h2sub">Az indulás előtt lefoglalandó vagy ellenőrizendő dolgok a <a href="#how">Működés</a> alatt vannak; a kabintól mért menetidők a <a href="#map">térképen</a>.</p>
 
   <h3>Alapadatok</h3>
   <div class="card">
     <dl class="kv facts">
       <dt>Dátumok</dt><dd>Érkezés okt. 31‑én, szombaton (este), indulás nov. 4‑én, szerdán (reggel): 4 éjszaka, 3 teljes nap.</dd>
       <dt>Résztvevők</dt><dd>5 felnőtt: egy pár és három egyedülálló.</dd>
-      <dt>Járatok</dt><dd>Ivalóba (IVL) és vissza.<span class="fl"><span>Oda, szo, okt. 31.:</span><span>járat <span class="ph">—</span> érkezik <span class="ph">—:—</span></span></span><span class="fl"><span>Vissza, sze, nov. 4.:</span><span>járat <span class="ph">—</span> indul <span class="ph">—:—</span></span></span><span class="note"><span class="nk">Ellenőrizni</span>Járatszámok és időpontok, oda-vissza.</span></dd>
-      <dt>Autó</dt><dd>Bérautó az IVL‑ről, téli gumival (szögessel, ha van).</dd>
-      <dt>Kabin</dt><dd>Villa Skaidi I, Jäkälätie 14, 99830 Saariselkä (<a href="https://www.nettimokki.com/en/saariselka/villa-skaidi-i/50416/" target="_blank" rel="noopener">a szállásadó hirdetése</a>); Airbnb-n foglalva, hirdetésszám: <a href="https://www.airbnb.com/rooms/1089668303636405332" target="_blank" rel="noopener">1089668303636405332</a>.<span class="note"><span class="nk">Ellenőrizni</span>Hogy az Airbnb-foglalás tényleg a Villa Skaidi I, Jäkälätie 14. Az Airbnb nem volt olvasható; a hirdetésszám ugyanannak a szállásadónak a Villa Skaidi II‑je mellett szerepel. Ha mégis a Copper Nest, a bázis kb. 3 km‑rel északabbra, a Kaunispää közelébe kerül, a menetidők alig változnak.</span><span class="note"><span class="nk">Ellenőrizni</span>A bejutás módja és ideje szombat esti érkezésnél.</span></dd>
-      <dt>Elrendezés</dt><dd>102 m²; két földszinti hálószoba franciaággyal, amely két külön ágyra szedhető szét; galéria két ággyal, csigalépcsőn; két WC; kandalló (a tűzifa benne van az árban); Wi-Fi; beépítetlen erdőre néző, déli fekvésű hátsó terasz; kocsibeálló autófűtő csatlakozóval.</dd>
+      <dt>Kabin</dt><dd>Villa Skaidi I, Jäkälätie 14, 99830 Saariselkä (<a href="https://www.nettimokki.com/en/saariselka/villa-skaidi-i/50416/" target="_blank" rel="noopener">a szállásadó hirdetése</a>); Airbnb-n foglalva, hirdetésszám: <a href="https://www.airbnb.com/rooms/1089668303636405332" target="_blank" rel="noopener">1089668303636405332</a>.</dd>
+      <dt>Bejelentkezés</dt><dd>Önálló bejelentkezés 16:00‑tól; kijelentkezés 11:00‑ig.</dd>
+      <dt>Elrendezés</dt><dd>102 m²; két földszinti hálószoba franciaággyal, amely két külön ágyra szedhető szét; galéria két ággyal, csigalépcsőn; két WC; kandalló (a tűzifa benne van az árban); saját szauna; Wi-Fi; beépítetlen erdőre néző, déli fekvésű hátsó terasz; kocsibeálló autófűtő csatlakozóval.</dd>
       <dt>Alvás öt főre</dt><dd>A pár az egyik franciaágyban, a másik szétszedve két külön ágyra, a galéria a maradék egy vagy két főnek.</dd>
       <dt>Elhelyezkedés</dt><dd>Laanipalo, kb. 2,5 km‑re délre Saariselkä központjától; kivilágított sí- és szabadidőpálya 150 m‑re; bolt 2,5 km; reptér 26 km.</dd>
       <dt>Koordináta</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=68.3975%2C27.4076" target="_blank" rel="noopener">68,3975 É, 27,4076 K</a> (Google Maps)</dd>
       <dt>Autós sugár</dt><dd>Legfeljebb 1 óra egy irányba. Inari és a Siida (kb. 1 óra) a legtávolabbi pont.</dd>
       <dt>Időzóna</dt><dd>Finn téli idő, UTC+2 (az órákat okt. 25‑én állították vissza).</dd>
     </dl>
-    <p class="small">Az Airbnb tiltja a gépi olvasást, ezért a kabin adatai ugyanannak a szállásadónak a Nettimökki-hirdetéséből vannak erről a házról. A szaunát nem említi.<span class="note"><span class="nk">Ellenőrizni</span>A kabin szaunája és típusa, az Airbnb-foglaláson.</span></p>
   </div>
 
   <div class="cards three" style="margin-top:16px">
     <div class="card"><h3>Vezetés</h3><ul class="plain">
-      <li>Finnországban decembertől februárig kötelező a téli gumi, és bármikor, ha a körülmények megkívánják; Lappföldön novemberben meg is kívánják.<span class="note"><span class="nk">Ellenőrizni</span>Hogy a bérautón rajta van-e.</span></li>
       <li>A rének az úton állnak, és nem mozdulnak az autók elől. Lassítsatok lépésre, és nagy ívben kerüljétek ki őket. Ha elüttök egyet, hívjátok a 112‑t, hogy a rendőrség szólhasson a gazdának.</li>
       <li>A kabin kocsibeállójában van autófűtő csatlakozó; kb. −10 °C alatti éjszakákon dugjátok be.</li>
       <li>A sarkifény-autózás szándékosan rövid, minden este egy józan sofőrrel.</li>
@@ -939,12 +873,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   </div>
 
   <h3 id="open">Nyitott kérdések</h3>
-  <p class="small">Az első kettő a kabinról szól, ezeket tisztázzátok először; a többit az indulás előtti héten nézzétek meg.</p>
   <ul class="checks">
-    <li>Hogy az Airbnb-foglalás tényleg a Villa Skaidi I, Jäkälätie 14 (ha a Copper Nest, a bázis kb. 3 km‑rel északabbra, a Kaunispää közelébe kerül)</li>
-    <li>A kabin szaunája és típusa (elektromos vagy fatüzelésű)</li>
-    <li>A bejutás módja és ideje szombat esti érkezésnél</li>
-    <li>Járatszámok és időpontok, oda-vissza</li>
     <li>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este</li>
     <li>Hogy a Lapland Safaris rénfarm-látogatás november elején is megy-e, vagy melyik számi családi farmot foglaljátok, és mi a címe</li>
     <li>A Husky &amp; Co találkozási pontja: a falubeli iroda vagy a kennel</li>
@@ -952,6 +881,58 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li>A kiilopääi tunturiközpont és a Kuurakaltio füstszauna nyitvatartása azon a héten</li>
     <li>Hóhelyzet az indulás előtti héten: elindultak-e már a kutyaszános szafarik?</li>
     <li>A pontos koordináta a nemzeti parki kapuhoz, ahonnan az Aurorapolku és az Iisakkipää indul</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ================= PHOTOS ================= -->
+<section id="photos">
+ <div class="wrap">
+  <h2>Fotózás</h2>
+  <p class="h2sub">Nappal a 70–350, éjjel a 12 mm.</p>
+  <p>A nap sosem megy kb. 7° fölé, így minden tiszta nappali óra alacsony, súroló fény — naponta kb. hat és fél ilyen óra van. Nappal a Sony 70–350 G dolgozik (az a6100‑on 105–525 mm‑nek felel meg), éjjel a Samyang 12 mm f/2. Az a6100‑ban nincs beépített stabilizátor, így a stabilizálást teljes egészében az objektív OSS‑e végzi.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Nappal: a6100 + 70–350 G</h3>
+      <dl class="kv">
+        <dt>Mód</dt><dd>A vagy M, Auto ISO 6400‑as felső határral; 350 mm‑en az objektív f/6,3, ezért inkább az ISO menjen fel, mint hogy lassuljon a zár.</dd>
+        <dt>Expozíció</dt><dd>1/250 tájhoz, 1/500 emberekhez és álló rénekhez, 1/1000–1/2000 futó huskykhoz és repülő szajkókhoz.</dd>
+        <dt>Fókusz</dt><dd>AF‑C, Zone vagy Tracking; Animal Eye AF a kutyákhoz; sorozat Hi+-on.</dd>
+        <dt>Hó</dt><dd>+0,7 és +1,3 EV között, különben szürke lesz a hó.</dd>
+        <dt>Stabilizálás</dt><dd>OSS kézből be, állványon ki.</dd>
+        <dt>Egyéb</dt><dd>A minimális fókusztávolság 1,1–1,5 m: lépjetek hátra, ha közel száll le egy szajkó.</dd>
+      </dl>
+    </div>
+    <div class="card">
+      <h3>Éjszaka: a6100 + Samyang 12 mm f/2</h3>
+      <dl class="kv">
+        <dt>Mód</dt><dd>M; a felső tárcsa a rekesz, a hátsó kerék a zár.</dd>
+        <dt>Expozíció</dt><dd>f/2, ISO 1600–3200; 3–6 s fényes, gyors függönyökhöz, 8–15 s halvány ívhez (a csillagok kb. 15 s‑ig élesek maradnak).</dd>
+        <dt>Fókusz</dt><dd>Nincs AF/MF kapcsoló: állítsátok MF‑re a menüben, nagyítsatok rá egy fényes csillagra, és tekerjétek a fókuszgyűrűt, amíg a csillag a legkisebb nem lesz. Elektronikus fókuszú, ezért ellenőrizzétek újra, ha a gép elaludt, vagy akkut cseréltetek.</dd>
+        <dt>Stabilizálás</dt><dd>Mindig állvány.</dd>
+        <dt>Egyéb</dt><dd>RAW, fehéregyensúly kb. 3800 K, 2 s önkioldó, hosszú expozíciós zajcsökkentés ki.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <h3>Ahol megéri cipelni a 70–350‑et</h3>
+  <ul class="spots">
+    <li><span class="when">K 14:00–15:13</span><div><strong>Kaunispää-torony.</strong> Rétegezzétek a nemzeti park tunturijait 200–350 mm‑en, az alacsony nappal mögöttük.</div></li>
+    <li><span class="when">K 10:00</span><div><strong>Husky &amp; Co.</strong> Kutyaszemmagasság, 1/1000 vagy gyorsabb; kérdezzétek meg, mielőtt a vezetőket fotózzátok.</div></li>
+    <li><span class="when">Bármelyik erdei megálló</span><div><strong>Szibériai szajkók.</strong> Üljetek mozdulatlanul, kész objektívvel; gyorsan érkeznek, szóval 1/2000.</div></li>
+    <li><span class="when">Útszélek, keddi farm</span><div><strong>Rének.</strong> A 350 mm‑rel elég messze maradhattok ahhoz, hogy ne zavarjátok el őket; autóból csak rendes pihenőben fotózzatok; a farmon előbb kérdezzétek meg a vendéglátókat.</div></li>
+    <li><span class="when">H 13:00</span><div><strong>A Juutua zúgói.</strong> Ha jég képződik a széleken: állvány, 1/4–1 s a sima vízhez, vagy 1/1000 a permet kimerevítéséhez.</div></li>
+    <li><span class="when">V, Kiilopää</span><div><strong>Csúcsgerincek.</strong> Távoli tunturik túrázókkal léptéknek 150–250 mm‑en.</div></li>
+    <li><span class="when">H 15:14</span><div><strong>Inari-tó.</strong> Pasztell rétegek napnyugta után; a kék óra kb. egy órán át tart.</div></li>
+    <li><span class="when">H 22:37</span><div><strong>Északkeleti horizont.</strong> Bónusz holdkelte a tunturik mögött: 350 mm, állvány, induljatok 1/250 s, f/6,3, ISO 400‑ról.</div></li>
+  </ul>
+
+  <h3>Fogások hidegben</h3>
+  <ul class="plain">
+    <li>Az NP‑FW50 akkuk hidegben gyorsan merülnek, és az OSS meg a folyamatos AF még többet fogyaszt. Vigyetek hármat vagy többet egy belső zsebben, és cserélgessétek őket.</li>
+    <li>Mielőtt bementek, zárjátok a gépet egy zip-zacskóba, és hagyjátok felmelegedni, mielőtt kinyitjátok, hogy ne csapódjon le benne pára.</li>
+    <li>Napellenző egész nap fent: 7°‑on a nap mindig a képkivágás közelében jár.</li>
+    <li>Telefonok: az éjszakai mód jól elkapja a sarki fényt, ha valami szilárdhoz támasztjátok.</li>
   </ul>
  </div>
 </section>
@@ -993,8 +974,8 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   // (térképegység, kb. 110 m), ahol két hely egymásra kerülne.
   // Feliratok helye: at/atm = asztali/telefonos oldal (r, l, t, b, tr, br, tl, bl).
   var PLACES=[
-    {id:'cabin',name:'Villa Skaidi I',tier:'base',tag:'BÁZIS',lat:68.3975,lon:27.4076,from:'',text:'Négy éjszakára az otthonotok Laanipalón, 2,5 km-re délre a falutól.',q:'Jäkälätie 14, 99830 Saariselkä',note:'Hogy az Airbnb-foglalás tényleg a Villa Skaidi I, Jäkälätie 14. Ha mégis a Copper Nest, a bázis kb. 3 km-rel északabbra, a Kaunispää közelébe kerül, a menetidők alig változnak.',z:1,lab:'Villa Skaidi I',labm:'Kabin',at:'r',atm:'r'},
-    {id:'ivl',name:'Ivalói repülőtér',tier:'log',tag:'ÉRKEZÉS',lat:68.6085,lon:27.4197,from:'26 km, 25 perc',text:'Leszállás szombat este, indulás szerda reggel.',q:'Ivalo Airport',note:'Járatszámok és időpontok, oda-vissza.',lab:'Ivalói reptér',labm:'Reptér',at:'l',atm:'l'},
+    {id:'cabin',name:'Villa Skaidi I',tier:'base',tag:'BÁZIS',lat:68.3975,lon:27.4076,from:'',text:'Négy éjszakára az otthonotok Laanipalón, 2,5 km-re délre a falutól.',q:'Jäkälätie 14, 99830 Saariselkä',z:1,lab:'Villa Skaidi I',labm:'Kabin',at:'r',atm:'r'},
+    {id:'ivl',name:'Ivalói repülőtér',tier:'log',tag:'ÉRKEZÉS',lat:68.6085,lon:27.4197,from:'26 km, 25 perc',text:'Leszállás szombat este, indulás szerda reggel.',q:'Ivalo Airport',lab:'Ivalói reptér',labm:'Reptér',at:'l',atm:'l'},
     {id:'kuukkeli',name:'Kuukkeli központ',tier:'log',tag:'BOLT',lat:68.4199,lon:27.4095,from:'2,5 km, 5 perc',text:'Saariselkä élelmiszerboltja, pékség és Alko.',q:'Kuukkeli Shopping Center Saariselkä',note:'Nyitvatartás okt. 31-én, szombat este (mindenszentek).',z:1,lab:'Kuukkeli',labm:'Kuukkeli',at:'l',atm:'l'},
     {id:'ksm',name:'K-Supermarket Ivalo',tier:'log',tag:'BOLT',lat:68.6555,lon:27.5416,from:'33 km, 30 perc',text:'A környék hal- és húspultja; menjetek korán.',q:'K-Supermarket Ivalo',note:'Nyitvatartás okt. 31-én, szombat este (mindenszentek).',lab:'K-Supermarket Ivalo',labm:'Ivalói bolt',at:'r',atm:'r'},
     {id:'laa',name:'Laanilan Kievari',tier:'must',tag:'FIX',lat:68.4027,lon:27.3916,from:'1 km, 3 perc',text:'Helyi konyhás vacsora, H–Szo 16–22; szaunák előfoglalással.',q:'Laanilan Kievari',z:1,lab:'Laanilan Kievari',labm:'Laanilan',at:'b',atm:'b'},
