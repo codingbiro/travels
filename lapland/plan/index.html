@@ -200,6 +200,18 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem}
 .tbl .note{font-size:.84rem}
 .after{margin:12px 0 0}
 
+/* choices */
+.chgroup{margin:36px 0 0}
+.chgroup>h3{margin:0 0 6px}
+.chgroup>p{color:var(--ink-dim);margin:0 0 14px;font-size:.95rem}
+.choices{display:grid;gap:12px}
+.choice{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 10px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:4px 22px}
+.choice h4{grid-column:1/-1;margin:0 0 6px;font-size:1.05rem}
+.choice .ck{display:block;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);margin:0 0 4px}
+.choice p{margin:0 0 8px;font-size:.93rem;line-height:1.55}
+.choice .def{border-left:2px solid var(--aur);padding-left:12px}
+.choice .def .ck{color:var(--aur)}
+
 /* map */
 .mapgrid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:20px;align-items:start}
 .mapbox{background:var(--land);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -305,6 +317,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   .day.today{outline-offset:4px}
   .row{grid-template-columns:76px minmax(0,1fr);gap:10px}
   .mapgrid{grid-template-columns:1fr}
+  .choice{grid-template-columns:1fr;gap:6px;padding:14px 16px 8px}
   .mapbox{margin:0 -16px;border-radius:0;border-left:0;border-right:0}
   .mapside{position:static}
   .nrow,.naxis{grid-template-columns:58px minmax(0,1fr)}
@@ -353,7 +366,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   </svg>
   <div class="wrap hero-in">
     <p class="crumb"><a href="/lapland/">← Three Laplands</a></p>
-    <p class="when">Villa Skaidi I, Saariselkä — 31 Oct to 4 Nov 2026</p>
+    <p class="when">Villa Skaidi I, Saariselkä — 31 Oct to 4 Nov 2026</p>
     <h1>STILL NORTH</h1>
     <p class="lede">Fells on Sunday, Inari on Monday, huskies and reindeer on Tuesday, and every evening a cloud check, sauna and the sky.</p>
     <div class="statline"><span><b>4</b> nights</span><span><b>3</b> full days</span><span><b>5</b> people</span><span><b>≤ 1 h</b> drive</span><span><b>aurora hunt</b> all nights</span></div>
@@ -363,7 +376,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 <nav class="toc" aria-label="Sections">
   <div class="wrap">
     <a id="todaylink" class="today-link" href="#days" hidden><span>Today</span></a>
-    <div class="links"><a href="#how">How it works</a><a href="#days">Days</a><a href="#sky">Sky</a><a href="#map">Map</a><a href="#photos">Photos</a><a href="#sami">Sámi</a><a href="#food">Food</a><a href="#sauna">Sauna</a><a href="#logistics">Logistics</a><a href="#sources">Sources</a></div>
+    <div class="links"><a href="#how">How it works</a><a href="#choices">Choices</a><a href="#days">Days</a><a href="#sky">Sky</a><a href="#map">Map</a><a href="#photos">Photos</a><a href="#sami">Sámi</a><a href="#food">Food</a><a href="#sauna">Sauna</a><a href="#logistics">Logistics</a><a href="#sources">Sources</a></div>
     <a class="lang" href="/lapland/plan/hu/" lang="hu" hreflang="hu" title="Magyar változat"><span>HU</span></a>
   </div>
 </nav>
@@ -393,13 +406,103 @@ footer .back{margin:18px 0 0;font-size:.9rem}
    <div>
     <h3>Book before you fly</h3>
     <ul class="checks">
-      <li>Husky &amp; Co kennel visit, Tue 3 Nov 10:00, five people</li>
+      <li>Husky &amp; Co kennel visit, Tue 3 Nov 10:00, five people</li>
       <li>Reindeer: Lapland Safaris farm visit Tue 12:00, or a Sámi family visit on Monday (over the cap)</li>
-      <li>Laanilan Kievari table, Mon 2 Nov 18:30, five people</li>
+      <li>Laanilan Kievari table, Mon 2 Nov 18:30, five people</li>
       <li>Rental car at IVL with winter tyres, studded if possible</li>
       <li>EasyPark app on one phone, for Kiilopää parking</li>
-      <li>Shop closing times for the evening of Sat 31 Oct (All Saints' Day)</li>
+      <li>Shop closing times for the evening of Sat 31 Oct (All Saints' Day)</li>
     </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= CHOICES ================= -->
+<section id="choices">
+ <div class="wrap">
+  <h2>Choices to make</h2>
+  <p class="h2sub">Ten choices are open in the plan: four before you book anything, three the week before and three on the day. Each has a default, so doing nothing still gives a working trip.</p>
+  <p class="small">Facts still to confirm — that the booking is Villa Skaidi I, its sauna, check-in and flight times — are under <a href="#open">Still to confirm</a>, not here.</p>
+
+  <div class="chgroup">
+   <h3>Decide before you book</h3>
+   <p>These four drive what you book, so settle them first. The reindeer visit is the only one that touches your one-hour cap.</p>
+   <div class="choices">
+    <article class="choice">
+     <h4>Reindeer visit</h4>
+     <div><span class="ck">Options</span><p><b>A.</b> A Sámi herding family near Inari on Monday afternoon: <a href="https://laplandnorth.fi/en/company/angeli-reindeer-farm" target="_blank" rel="noopener">Angeli</a> (private, 2 h, from €100), <a href="https://visitfinland.com/en/product/adf3b81b-f374-4deb-8246-68af4e4b12ab/home-visit-at-local-reindeer-herder-family" target="_blank" rel="noopener">Renniina</a> (home visit, 2 h, from €60) or Inari Reindeer Farm.</p><p><b>B.</b> <a href="https://laplandsafaris.com/activitypage?id=94273" target="_blank" rel="noopener">Lapland Safaris' farm visit</a> from Saariselkä on Tuesday (1.5 h).</p></div>
+     <div><span class="ck">Trade-off</span><p>A is real time with Sámi herders, but the drive home is about 1 h 5 – 1 h 15 (over the cap) and it replaces Monday's lake afternoon. B is 5 min away and keeps Monday free; its listing doesn't describe the hosts as Sámi.</p></div>
+     <div class="def"><span class="ck">Default</span><p>A with Angeli if the address they give is within about an hour of the cabin; otherwise B.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Local-food dinner night</h4>
+     <div><span class="ck">Options</span><p>Laanilan Kievari on <b>Monday</b> or <b>Tuesday</b> (closed Sundays).</p></div>
+     <div><span class="ck">Trade-off</span><p>Monday makes one full local-food day with Sarrit's lunch. Tuesday is the darkest night, and dinner 18:30–20:30 eats into its best window.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Monday 18:30, five people; book now.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Huskies</h4>
+     <div><span class="ck">Options</span><p><b>Kennel visit</b> (about 1 h, runs without snow) or the <b>10 km self-drive sled safari</b> (2.5 h, needs snow).</p></div>
+     <div><span class="ck">Trade-off</span><p>The kennel visit is certain. The safari is the bigger experience, but snow may not be down by 3 Nov.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Book the kennel visit; ask Husky &amp; Co to tell you if sled runs start before your date.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Car</h4>
+     <div><span class="ck">Options</span><p><b>7‑seater or large estate</b>, or a standard 5‑seat car.</p></div>
+     <div><span class="ck">Trade-off</span><p>Five adults, winter luggage, tripod and camera bags won't fit a compact; the bigger car costs more.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Large estate or 7‑seater with studded tyres. If already booked, check the boot holds five bags.</p></div>
+    </article>
+   </div>
+  </div>
+
+  <div class="chgroup">
+   <h3>Decide the week before</h3>
+   <p>These depend on the forecast, your flight times and whether the cabin's sauna is confirmed.</p>
+   <div class="choices">
+    <article class="choice">
+     <h4>Day order</h4>
+     <div><span class="ck">Options</span><p>Keep <b>Mon = Inari, Tue = huskies</b>, or <b>swap</b> them on the forecast.</p></div>
+     <div><span class="ck">Trade-off</span><p>Swapping puts indoor Siida on the greyer day and Kaunispää's sunset on the clearer one, but the husky and reindeer bookings must be movable. Tuesday has the best aurora window either way.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Keep the order; swap only if the forecast on Sat 31 Oct shows Monday clearly brighter.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Arrival-night shopping</h4>
+     <div><span class="ck">Options</span><p><b>Kuukkeli</b> in Saariselkä, 5 min from the cabin, or <b>K‑Supermarket Ivalo</b>, 10 km the other way from the airport.</p></div>
+     <div><span class="ck">Trade-off</span><p>Kuukkeli is on your way and enough for breakfast and an easy dinner. Ivalo has the fish and meat counter but adds about 20 min. Both may keep holiday hours on All Saints' Day.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Kuukkeli on arrival; the big shop with fish at K‑Supermarket Ivalo on Monday's drive home. If you land late, bring breakfast basics.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Sauna extras</h4>
+     <div><span class="ck">Options</span><p><b>Home sauna only</b>, add <b>Laanilan Kievari's saunas</b> (outdoor hot tub, ice hole) with Monday's dinner, or the <b>Kuurakaltio smoke sauna</b> at Kiilopää.</p></div>
+     <div><span class="ck">Trade-off</span><p>Home is free and private. Laanilan is 1 km away and pairs with dinner. The smoke sauna is the most traditional; its public sessions are listed Mon–Sat, so not on Sunday's Kiilopää day.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Home only. If the cabin turns out to have no sauna, book Laanilan's.</p></div>
+    </article>
+   </div>
+  </div>
+
+  <div class="chgroup">
+   <h3>Decide on the day</h3>
+   <p>These are weather calls; the plan already holds both options.</p>
+   <div class="choices">
+    <article class="choice">
+     <h4>Sunday hike</h4>
+     <div><span class="ck">Options</span><p><b>Kiilopää summit</b> (546 m, about 2 km each way, stairs) or the <b>forest loops</b> from Saariselkä (Iisakkipää 3 km, lit Aurorapolku 2.1 km).</p></div>
+     <div><span class="ck">Trade-off</span><p>The summit gives the big fell view but is pointless in cloud and hard in strong wind; the loops stay sheltered among trees.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Summit if the top is out of the cloud at 09:30; otherwise the loops.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Monday afternoon</h4>
+     <div><span class="ck">Options</span><p><b>Juutua rapids and Lake Inari shore</b>, <b>Sajos</b> (weekdays; Duodji Shop), or <b>Tuulispää's lean-to</b> with a lake view.</p></div>
+     <div><span class="ck">Trade-off</span><p>Juutua and the shore are the lake-and-river nature. Sajos is indoors Sámi culture. Tuulispää's parking isn't ploughed until mid-February, so it depends on the gravel road.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Juutua and the shore; Sajos if it's sleeting; Tuulispää only if the road is clear and there's light left. Skip all three if you chose the Sámi farm.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Aurora nights</h4>
+     <div><span class="ck">Options</span><p><b>Stay at the cabin</b> or <b>drive to a clear patch</b> (Kaunispää 12 min, Kiilopää 15 min, Ukonjärvi 40 min).</p></div>
+     <div><span class="ck">Trade-off</span><p>Driving finds clear sky under patchy cloud but needs a sober driver on dark roads with reindeer.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Stay home unless it's cloudy overhead and clear nearby. On Tuesday, the best night, drive up to 45 min. Agree tonight's driver at dinner.</p></div>
+    </article>
    </div>
   </div>
  </div>
@@ -413,13 +516,13 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-sat">
    <div class="rail">
-     <p class="date">Sat 31 Oct</p>
+     <p class="date">Sat 31 Oct</p>
      <h3 class="word"><span class="sr-only">Saturday 31 October: </span>Land</h3>
      <p class="light">Dark when you land. Moon 62%, up all night, low in the north until about 21:00.</p>
    </div>
    <dl class="rows">
      <div class="row"><dt class="k">Evening</dt><dd class="v">Land at Ivalo (IVL), pick up the car: winter tyres, ice scraper.<span class="note"><span class="nk">To confirm</span>Flight numbers and times, both ways.</span></dd></div>
-     <div class="row"><dt class="k">Shop</dt><dd class="v"><span class="tag must">MUST</span>All Saints' Day, a Finnish public holiday: check closing times before you fly. Supermarket Kuukkeli is in Saariselkä village; K‑Supermarket Ivalo (fish and meat counter) is 10 km the other way from the airport.<span class="note"><span class="nk">To confirm</span>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct.</span></dd></div>
+     <div class="row"><dt class="k">Shop</dt><dd class="v"><span class="tag must">MUST</span>All Saints' Day, a Finnish public holiday: check closing times before you fly. Supermarket Kuukkeli is in Saariselkä village; K‑Supermarket Ivalo (fish and meat counter) is 10 km the other way from the airport.<span class="note"><span class="nk">To confirm</span>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct.</span></dd></div>
      <div class="row"><dt class="k">Drive</dt><dd class="v">Airport to cabin: 26 km, about 25 min.<span class="note"><span class="nk">To confirm</span>Check-in method and time for a Saturday-evening arrival.</span></dd></div>
      <div class="row"><dt class="k">Home</dt><dd class="v"><span class="tag must">MUST</span>Switch the sauna on before unpacking (45–60 min to heat). Easy first dinner.<span class="note"><span class="nk">To confirm</span>The cabin's sauna and its type, electric or wood-fired.</span></dd></div>
      <div class="row"><dt class="k">21:00–23:00</dt><dd class="v"><span class="tag if">IF</span>Clear sky: look north from a dark corner of the yard between sauna rounds. No aurora drives tonight: first night, dark roads, reindeer.</dd></div>
@@ -428,7 +531,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-sun">
    <div class="rail">
-     <p class="date">Sun 1 Nov</p>
+     <p class="date">Sun 1 Nov</p>
      <h3 class="word"><span class="sr-only">Sunday 1 November: </span>Fells</h3>
      <p class="light">Sun 08:24–15:22, never higher than about 7°. Dark from 18:45; half moon rises 20:05.</p>
    </div>
@@ -446,7 +549,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-mon">
    <div class="rail">
-     <p class="date">Mon 2 Nov</p>
+     <p class="date">Mon 2 Nov</p>
      <h3 class="word"><span class="sr-only">Monday 2 November: </span>Inari<span class="sr-only">, lakes and local food</span></h3>
      <p class="light">Sun 08:35–15:14 in Inari. Dark from 18:40; moon rises 22:37.</p>
    </div>
@@ -469,7 +572,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-tue">
    <div class="rail">
-     <p class="date">Tue 3 Nov</p>
+     <p class="date">Tue 3 Nov</p>
      <h3 class="word"><span class="sr-only">Tuesday 3 November: </span>Huskies<span class="sr-only"> and reindeer</span></h3>
      <p class="light">Sun 08:33–15:13. Dark from 18:36; moon rises 00:43 — the darkest night of the trip.</p>
    </div>
@@ -488,7 +591,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-wed">
    <div class="rail">
-     <p class="date">Wed 4 Nov</p>
+     <p class="date">Wed 4 Nov</p>
      <h3 class="word"><span class="sr-only">Wednesday 4 November: </span>Home</h3>
      <p class="light">Blue light from about 07:30; sunrise 08:37.</p>
    </div>
@@ -505,12 +608,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 <section id="sky" class="night-band">
  <div class="wrap">
   <h2>Sky</h2>
-  <p class="h2sub"><strong>Tuesday 3 Nov is the best aurora night:</strong> six moon-free dark hours, 18:36–00:43. Monday is good (four hours), Sunday short, and Saturday is moonlit.</p>
+  <p class="h2sub"><strong>Tuesday 3 Nov is the best aurora night:</strong> six moon-free dark hours, 18:36–00:43. Monday is good (four hours), Sunday short, and Saturday is moonlit.</p>
   <div class="nights" role="list">
-<div class="nrow" role="listitem" id="n-sat"><div class="nlabel">Sat 31 Oct</div><div class="bar" role="img" aria-label="Sunset 15:26, civil dusk 16:32, dark from 18:45. Moon 62%, up all night. No moon-free dark window. Moonlit: look, don&#x27;t drive."><span class="seg s-day" style="left:0.00%;width:3.61%"></span><span class="seg s-tw" style="left:3.61%;width:27.64%"></span><span class="seg s-night" style="left:31.25%;width:68.75%"></span><span class="moon" style="left:0.00%;width:100.00%" title="Moon up all night"></span></div><div class="nnote"><b>Moonlit:</b> look, don't drive. Moon 62%, up all night, under 10° in the NNE until 21:00.</div></div>
-<div class="nrow" role="listitem" id="n-sun"><div class="nlabel">Sun 1 Nov</div><div class="bar" role="img" aria-label="Sunset 15:22, civil dusk 16:28, dark from 18:42. Moon 50%, rises 20:05. Moon-free dark window 18:42 to about 20:30. Short."><span class="seg s-day" style="left:0.00%;width:3.06%"></span><span class="seg s-tw" style="left:3.06%;width:27.78%"></span><span class="seg s-night" style="left:30.83%;width:69.17%"></span><span class="moon" style="left:42.36%;width:57.64%" title="Moon up from 20:05"></span><span class="win narrow" style="left:30.83%;width:15.00%">18:42–20:30</span></div><div class="nnote"><b>Short.</b> <span class="m-only">18:42 – about 20:30. </span>Moon 50%, rises 20:05 in the NNE.</div></div>
-<div class="nrow" role="listitem" id="n-mon"><div class="nlabel">Mon 2 Nov</div><div class="bar" role="img" aria-label="Sunset 15:17, civil dusk 16:25, dark from 18:39. Moon 39%, rises 22:37. Moon-free dark window 18:39 to 22:37. Good."><span class="seg s-day" style="left:0.00%;width:2.36%"></span><span class="seg s-tw" style="left:2.36%;width:28.06%"></span><span class="seg s-night" style="left:30.42%;width:69.58%"></span><span class="moon" style="left:63.47%;width:36.53%" title="Moon up from 22:37"></span><span class="win" style="left:30.42%;width:33.06%">18:39–22:37</span></div><div class="nnote"><b>Good.</b> Moon 39%, rises 22:37 in the NE.</div></div>
-<div class="nrow" role="listitem" id="n-tue"><div class="nlabel">Tue 3 Nov</div><div class="bar" role="img" aria-label="Sunset 15:13, civil dusk 16:21, dark from 18:36. Moon 29%, rises 00:43. Moon-free dark window 18:36 to 00:43. Best."><span class="seg s-day" style="left:0.00%;width:1.81%"></span><span class="seg s-tw" style="left:1.81%;width:28.19%"></span><span class="seg s-night" style="left:30.00%;width:70.00%"></span><span class="moon" style="left:80.97%;width:19.03%" title="Moon up from 00:43"></span><span class="win" style="left:30.00%;width:50.97%">18:36–00:43</span></div><div class="nnote"><b>Best.</b> Moon 29%, rises 00:43.</div></div>
+<div class="nrow" role="listitem" id="n-sat"><div class="nlabel">Sat 31 Oct</div><div class="bar" role="img" aria-label="Sunset 15:26, civil dusk 16:32, dark from 18:45. Moon 62%, up all night. No moon-free dark window. Moonlit: look, don&#x27;t drive."><span class="seg s-day" style="left:0.00%;width:3.61%"></span><span class="seg s-tw" style="left:3.61%;width:27.64%"></span><span class="seg s-night" style="left:31.25%;width:68.75%"></span><span class="moon" style="left:0.00%;width:100.00%" title="Moon up all night"></span></div><div class="nnote"><b>Moonlit:</b> look, don't drive. Moon 62%, up all night, under 10° in the NNE until 21:00.</div></div>
+<div class="nrow" role="listitem" id="n-sun"><div class="nlabel">Sun 1 Nov</div><div class="bar" role="img" aria-label="Sunset 15:22, civil dusk 16:28, dark from 18:42. Moon 50%, rises 20:05. Moon-free dark window 18:42 to about 20:30. Short."><span class="seg s-day" style="left:0.00%;width:3.06%"></span><span class="seg s-tw" style="left:3.06%;width:27.78%"></span><span class="seg s-night" style="left:30.83%;width:69.17%"></span><span class="moon" style="left:42.36%;width:57.64%" title="Moon up from 20:05"></span><span class="win narrow" style="left:30.83%;width:15.00%">18:42–20:30</span></div><div class="nnote"><b>Short.</b> <span class="m-only">18:42 – about 20:30. </span>Moon 50%, rises 20:05 in the NNE.</div></div>
+<div class="nrow" role="listitem" id="n-mon"><div class="nlabel">Mon 2 Nov</div><div class="bar" role="img" aria-label="Sunset 15:17, civil dusk 16:25, dark from 18:39. Moon 39%, rises 22:37. Moon-free dark window 18:39 to 22:37. Good."><span class="seg s-day" style="left:0.00%;width:2.36%"></span><span class="seg s-tw" style="left:2.36%;width:28.06%"></span><span class="seg s-night" style="left:30.42%;width:69.58%"></span><span class="moon" style="left:63.47%;width:36.53%" title="Moon up from 22:37"></span><span class="win" style="left:30.42%;width:33.06%">18:39–22:37</span></div><div class="nnote"><b>Good.</b> Moon 39%, rises 22:37 in the NE.</div></div>
+<div class="nrow" role="listitem" id="n-tue"><div class="nlabel">Tue 3 Nov</div><div class="bar" role="img" aria-label="Sunset 15:13, civil dusk 16:21, dark from 18:36. Moon 29%, rises 00:43. Moon-free dark window 18:36 to 00:43. Best."><span class="seg s-day" style="left:0.00%;width:1.81%"></span><span class="seg s-tw" style="left:1.81%;width:28.19%"></span><span class="seg s-night" style="left:30.00%;width:70.00%"></span><span class="moon" style="left:80.97%;width:19.03%" title="Moon up from 00:43"></span><span class="win" style="left:30.00%;width:50.97%">18:36–00:43</span></div><div class="nnote"><b>Best.</b> Moon 29%, rises 00:43.</div></div>
 <div class="naxis" aria-hidden="true"><div></div><div class="ticks"><span style="left:0.00%">15:00</span><span style="left:16.67%">17:00</span><span style="left:33.33%">19:00</span><span style="left:50.00%">21:00</span><span style="left:66.67%">23:00</span><span style="left:83.33%">01:00</span><span style="left:100.00%">03:00</span></div><div></div></div>
   </div>
   <div class="legend"><span><i class="l-day"></i>Daylight</span><span><i class="l-tw"></i>Twilight</span><span><i class="l-night"></i>Dark (sun below −18°)</span><span><i class="l-moon"></i>Moon up</span><span><i class="l-win"></i>Moon-free dark window</span></div>
@@ -519,14 +622,14 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <div class="tblwrap"><table class="tbl">
       <thead><tr><th>Night</th><th>Sunset</th><th>Civil dusk</th><th>Dark (sun −18°)</th><th>Moon</th><th>Moon-free dark window</th><th>Verdict</th></tr></thead>
       <tbody>
-        <tr><td class="lead nw">Sat 31 Oct</td><td data-label="Sunset">15:26</td><td data-label="Civil dusk">16:32</td><td data-label="Dark (sun −18°)">18:45</td><td data-label="Moon">62%, up all night, under 10° in the north–north-east until 21:00</td><td data-label="Moon-free dark window">none</td><td data-label="Verdict">Moonlit: look, don't drive</td></tr>
-        <tr><td class="lead nw">Sun 1 Nov</td><td data-label="Sunset">15:22</td><td data-label="Civil dusk">16:28</td><td data-label="Dark (sun −18°)">18:42</td><td data-label="Moon">50%, rises 20:05 in the north-north-east</td><td class="nw" data-label="Moon-free dark window">18:42 – about 20:30</td><td data-label="Verdict">Short</td></tr>
-        <tr><td class="lead nw">Mon 2 Nov</td><td data-label="Sunset">15:17</td><td data-label="Civil dusk">16:25</td><td data-label="Dark (sun −18°)">18:39</td><td data-label="Moon">39%, rises 22:37 in the north-east</td><td class="nw" data-label="Moon-free dark window">18:39 – 22:37</td><td data-label="Verdict">Good</td></tr>
-        <tr><td class="lead nw">Tue 3 Nov</td><td data-label="Sunset">15:13</td><td data-label="Civil dusk">16:21</td><td data-label="Dark (sun −18°)">18:36</td><td data-label="Moon">29%, rises 00:43</td><td class="nw" data-label="Moon-free dark window">18:36 – 00:43</td><td data-label="Verdict">Best</td></tr>
+        <tr><td class="lead nw">Sat 31 Oct</td><td data-label="Sunset">15:26</td><td data-label="Civil dusk">16:32</td><td data-label="Dark (sun −18°)">18:45</td><td data-label="Moon">62%, up all night, under 10° in the north–north-east until 21:00</td><td data-label="Moon-free dark window">none</td><td data-label="Verdict">Moonlit: look, don't drive</td></tr>
+        <tr><td class="lead nw">Sun 1 Nov</td><td data-label="Sunset">15:22</td><td data-label="Civil dusk">16:28</td><td data-label="Dark (sun −18°)">18:42</td><td data-label="Moon">50%, rises 20:05 in the north-north-east</td><td class="nw" data-label="Moon-free dark window">18:42 – about 20:30</td><td data-label="Verdict">Short</td></tr>
+        <tr><td class="lead nw">Mon 2 Nov</td><td data-label="Sunset">15:17</td><td data-label="Civil dusk">16:25</td><td data-label="Dark (sun −18°)">18:39</td><td data-label="Moon">39%, rises 22:37 in the north-east</td><td class="nw" data-label="Moon-free dark window">18:39 – 22:37</td><td data-label="Verdict">Good</td></tr>
+        <tr><td class="lead nw">Tue 3 Nov</td><td data-label="Sunset">15:13</td><td data-label="Civil dusk">16:21</td><td data-label="Dark (sun −18°)">18:36</td><td data-label="Moon">29%, rises 00:43</td><td class="nw" data-label="Moon-free dark window">18:36 – 00:43</td><td data-label="Verdict">Best</td></tr>
       </tbody>
     </table></div>
   </details>
-  <p class="small skynote">Times are computed for Saariselkä in UTC+2; Inari is within about five minutes. Wed 4 Nov morning: civil dawn 07:28, sunrise 08:37. All trip, the sun peaks at about 7° around 11:55, due south, and sets in the south-west.</p>
+  <p class="small skynote">Times are computed for Saariselkä in UTC+2; Inari is within about five minutes. Wed 4 Nov morning: civil dawn 07:28, sunrise 08:37. All trip, the sun peaks at about 7° around 11:55, due south, and sets in the south-west.</p>
 
   <h3>The evening ritual</h3>
   <ol class="ritual">
@@ -715,7 +818,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <tr><td class="lead">Lunch</td><td data-label="Where"><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Sarrit</a>, inside Siida, Inari</td><td data-label="When">Mon 12:00; buffet 11–15</td><td data-label="What to know">Warm main, salad table, in-house baking, dessert and coffee; no museum ticket needed.<span class="note"><span class="nk">To confirm</span>Sarrit's winter lunch days.</span></td></tr>
       <tr><td class="lead">Dinner</td><td data-label="Where"><a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">Laanilan Kievari</a>, Sateenkaarenpääntie 9</td><td data-label="When">Mon 18:30; open Mon–Sat 16–22, closed Sunday</td><td data-label="What to know">Lappish ingredients with French and Karelian touches; the fire-roasted reindeer shoulder for two is the signature. Book.</td></tr>
       <tr><td class="lead">Coffee or lunch</td><td data-label="Where">Kaunispään Huippu, top of Kaunispää</td><td data-label="When">Tue, if open</td><td data-label="What to know">Lappish kitchen: reindeer, whitefish, salmon, cloudberries.</td></tr>
-      <tr><td class="lead">Not this trip</td><td data-label="Where">Aanaar, Wilderness Hotel Juutua, Inari</td><td class="empty" data-label="When">—</td><td data-label="What to know">Closed for renovation 15 Oct – 22 Nov 2026.</td></tr>
+      <tr><td class="lead">Not this trip</td><td data-label="Where">Aanaar, Wilderness Hotel Juutua, Inari</td><td class="empty" data-label="When">—</td><td data-label="What to know">Closed for renovation 15 Oct – 22 Nov 2026.</td></tr>
     </tbody>
   </table></div>
 
@@ -723,10 +826,10 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <div class="card">
       <h3>Home menu</h3>
       <dl class="kv">
-        <dt>Sat 31 Oct</dt><dd>Something easy after the flight.</dd>
-        <dt>Sun 1 Nov</dt><dd><strong lang="fi">Poronkäristys:</strong> frozen shaved reindeer fried in butter with onion, simmered 30–40 min; buttery mash, lingonberries, pickled cucumber.</dd>
-        <dt>Mon 2 Nov</dt><dd>Out (Laanilan Kievari).</dd>
-        <dt>Tue 3 Nov</dt><dd><strong lang="fi">Lohikeitto</strong> (salmon soup with potato, leek, cream and dill) or whitefish / Arctic char pan-fried in butter; warm <span lang="fi">leipäjuusto</span> with cloudberry jam.</dd>
+        <dt>Sat 31 Oct</dt><dd>Something easy after the flight.</dd>
+        <dt>Sun 1 Nov</dt><dd><strong lang="fi">Poronkäristys:</strong> frozen shaved reindeer fried in butter with onion, simmered 30–40 min; buttery mash, lingonberries, pickled cucumber.</dd>
+        <dt>Mon 2 Nov</dt><dd>Out (Laanilan Kievari).</dd>
+        <dt>Tue 3 Nov</dt><dd><strong lang="fi">Lohikeitto</strong> (salmon soup with potato, leek, cream and dill) or whitefish / Arctic char pan-fried in butter; warm <span lang="fi">leipäjuusto</span> with cloudberry jam.</dd>
       </dl>
     </div>
     <div class="card">
@@ -746,8 +849,8 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <tr><td class="lead">K‑Supermarket Ivalo, Ivalontie 17</td><td data-label="Hours on Google Maps">Mon–Fri 7–22, Sat–Sun 8–22</td><td data-label="Note">Fish and meat counter; go early, fish can sell out.</td></tr>
     </tbody>
   </table></div>
-  <p class="after">Sat 31 Oct is All Saints' Day, so either shop may keep holiday hours that evening.</p>
-  <p class="note"><span class="nk">To confirm</span>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct.</p>
+  <p class="after">Sat 31 Oct is All Saints' Day, so either shop may keep holiday hours that evening.</p>
+  <p class="note"><span class="nk">To confirm</span>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct.</p>
  </div>
 </section>
 
@@ -783,9 +886,9 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   <h3>Trip facts</h3>
   <div class="card">
     <dl class="kv facts">
-      <dt>Dates</dt><dd>Arrive Sat 31 Oct (evening), leave Wed 4 Nov (morning): 4 nights, 3 full days.</dd>
+      <dt>Dates</dt><dd>Arrive Sat 31 Oct (evening), leave Wed 4 Nov (morning): 4 nights, 3 full days.</dd>
       <dt>People</dt><dd>5 adults: a couple and three singles.</dd>
-      <dt>Flights</dt><dd>Into and out of Ivalo (IVL).<span class="fl"><span>In, Sat 31 Oct:</span><span>flight <span class="ph">—</span> lands <span class="ph">—:—</span></span></span><span class="fl"><span>Out, Wed 4 Nov:</span><span>flight <span class="ph">—</span> departs <span class="ph">—:—</span></span></span><span class="note"><span class="nk">To confirm</span>Flight numbers and times, both ways.</span></dd>
+      <dt>Flights</dt><dd>Into and out of Ivalo (IVL).<span class="fl"><span>In, Sat 31 Oct:</span><span>flight <span class="ph">—</span> lands <span class="ph">—:—</span></span></span><span class="fl"><span>Out, Wed 4 Nov:</span><span>flight <span class="ph">—</span> departs <span class="ph">—:—</span></span></span><span class="note"><span class="nk">To confirm</span>Flight numbers and times, both ways.</span></dd>
       <dt>Car</dt><dd>Rental from IVL, winter tyres (studded if available).</dd>
       <dt>Cabin</dt><dd>Villa Skaidi I, Jäkälätie 14, 99830 Saariselkä (<a href="https://www.nettimokki.com/en/saariselka/villa-skaidi-i/50416/" target="_blank" rel="noopener">host listing</a>); booked on Airbnb as listing <a href="https://www.airbnb.com/rooms/1089668303636405332" target="_blank" rel="noopener">1089668303636405332</a>.<span class="note"><span class="nk">To confirm</span>That the Airbnb booking is Villa Skaidi I at Jäkälätie 14. Airbnb couldn't be read; the listing number sits next to the same host's Villa Skaidi II. If it is Copper Nest instead, the base moves about 3 km north, near Kaunispää, and drive times barely change.</span><span class="note"><span class="nk">To confirm</span>Check-in method and time for a Saturday-evening arrival.</span></dd>
       <dt>Layout</dt><dd>102 m²; two downstairs bedrooms with double beds that split into singles; a loft with two beds up a spiral stair; two toilets; fireplace (firewood included); Wi-Fi; south-facing rear terrace on unbuilt woodland; carport with a car-heating socket.</dd>
@@ -793,7 +896,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <dt>Location</dt><dd>Laanipalo, about 2.5 km south of Saariselkä centre; lit ski and outdoor trail 150 m away; shop 2.5 km; airport 26 km.</dd>
       <dt>Pin</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=68.3975%2C27.4076" target="_blank" rel="noopener">68.3975 N, 27.4076 E</a> (Google Maps)</dd>
       <dt>Drive radius</dt><dd>Max 1 h one way. Inari and Siida (about 1 h) are the far edge.</dd>
-      <dt>Time zone</dt><dd>Finnish winter time, UTC+2 (clocks went back 25 Oct).</dd>
+      <dt>Time zone</dt><dd>Finnish winter time, UTC+2 (clocks went back 25 Oct).</dd>
     </dl>
     <p class="small">Airbnb blocks automated reading, so the cabin details come from the same host's Nettimökki listing for this cottage. It does not mention the sauna.<span class="note"><span class="nk">To confirm</span>The cabin's sauna and its type, on the Airbnb booking.</span></p>
   </div>
@@ -806,9 +909,9 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <li>Aurora drives stay short on purpose, with one sober driver every night.</li>
     </ul></div>
     <div class="card"><h3>Calendar traps</h3><dl class="kv">
-      <dt>Sat 31 Oct</dt><dd>All Saints' Day, a public holiday: shops may keep holiday hours.</dd>
-      <dt>Sun 1 Nov</dt><dd>Siida and Laanilan Kievari closed.</dd>
-      <dt>Whole trip</dt><dd>Aanaar in Inari closed for renovation until 22 Nov.</dd>
+      <dt>Sat 31 Oct</dt><dd>All Saints' Day, a public holiday: shops may keep holiday hours.</dd>
+      <dt>Sun 1 Nov</dt><dd>Siida and Laanilan Kievari closed.</dd>
+      <dt>Whole trip</dt><dd>Aanaar in Inari closed for renovation until 22 Nov.</dd>
       <dt>Whole trip</dt><dd>Kiilopää parking paid 9–18 via EasyPark.</dd>
     </dl></div>
     <div class="card"><h3>Weather and safety</h3><ul class="plain">
@@ -826,14 +929,14 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <div class="card"><h3>Camera</h3><p>a6100, Samyang 12 mm f/2, Sony 70–350 G, tripod, three or more NP‑FW50, spare cards, zip bags, lens cloth.</p></div>
   </div>
 
-  <h3>Still to confirm</h3>
+  <h3 id="open">Still to confirm</h3>
   <p class="small">The first two are cabin facts to settle first; the rest are week-before checks.</p>
   <ul class="checks">
     <li>That the Airbnb booking is Villa Skaidi I at Jäkälätie 14 (if it is Copper Nest, the base moves about 3 km north, near Kaunispää)</li>
     <li>The cabin's sauna and its type (electric or wood-fired)</li>
     <li>Check-in method and time for a Saturday-evening arrival</li>
     <li>Flight numbers and times, both ways</li>
-    <li>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct</li>
+    <li>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct</li>
     <li>Whether the Lapland Safaris reindeer farm visit runs in early November, or which Sámi family farm you book and its address</li>
     <li>Husky &amp; Co meeting point: village office or the kennel</li>
     <li>Sarrit's winter lunch days</li>

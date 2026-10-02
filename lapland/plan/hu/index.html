@@ -200,6 +200,18 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem}
 .tbl .note{font-size:.84rem}
 .after{margin:12px 0 0}
 
+/* choices */
+.chgroup{margin:36px 0 0}
+.chgroup>h3{margin:0 0 6px}
+.chgroup>p{color:var(--ink-dim);margin:0 0 14px;font-size:.95rem}
+.choices{display:grid;gap:12px}
+.choice{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 10px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:4px 22px}
+.choice h4{grid-column:1/-1;margin:0 0 6px;font-size:1.05rem}
+.choice .ck{display:block;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);margin:0 0 4px}
+.choice p{margin:0 0 8px;font-size:.93rem;line-height:1.55}
+.choice .def{border-left:2px solid var(--aur);padding-left:12px}
+.choice .def .ck{color:var(--aur)}
+
 /* map */
 .mapgrid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:20px;align-items:start}
 .mapbox{background:var(--land);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -305,6 +317,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   .day.today{outline-offset:4px}
   .row{grid-template-columns:76px minmax(0,1fr);gap:10px}
   .mapgrid{grid-template-columns:1fr}
+  .choice{grid-template-columns:1fr;gap:6px;padding:14px 16px 8px}
   .mapbox{margin:0 -16px;border-radius:0;border-left:0;border-right:0}
   .mapside{position:static}
   .nrow,.naxis{grid-template-columns:58px minmax(0,1fr)}
@@ -372,7 +385,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 <nav class="toc" aria-label="Fejezetek">
   <div class="wrap">
     <a id="todaylink" class="today-link" href="#days" hidden><span>Ma</span></a>
-    <div class="links"><a href="#how">Működés</a><a href="#days">Napok</a><a href="#sky">Égbolt</a><a href="#map">Térkép</a><a href="#photos">Fotók</a><a href="#sami">Számik</a><a href="#food">Konyha</a><a href="#sauna">Szauna</a><a href="#logistics">Logisztika</a><a href="#sources">Források</a></div>
+    <div class="links"><a href="#how">Működés</a><a href="#choices">Döntések</a><a href="#days">Napok</a><a href="#sky">Égbolt</a><a href="#map">Térkép</a><a href="#photos">Fotók</a><a href="#sami">Számik</a><a href="#food">Konyha</a><a href="#sauna">Szauna</a><a href="#logistics">Logisztika</a><a href="#sources">Források</a></div>
     <a class="lang" href="/lapland/plan/" lang="en" hreflang="en" title="English version"><span>EN</span></a>
   </div>
 </nav>
@@ -402,13 +415,103 @@ footer .back{margin:18px 0 0;font-size:.9rem}
    <div>
     <h3>Foglaljátok le indulás előtt</h3>
     <ul class="checks">
-      <li>Husky &amp; Co kennellátogatás, kedd, nov. 3. 10:00, öt főre</li>
+      <li>Husky &amp; Co kennellátogatás, kedd, nov. 3. 10:00, öt főre</li>
       <li>Rének: Lapland Safaris farmlátogatás kedden 12:00‑kor, vagy számi családi látogatás hétfőn (a limit fölött)</li>
-      <li>Asztal a Laanilan Kievariban, hétfő, nov. 2. 18:30, öt főre</li>
+      <li>Asztal a Laanilan Kievariban, hétfő, nov. 2. 18:30, öt főre</li>
       <li>Bérautó az IVL‑en téli gumival, lehetőleg szögessel</li>
       <li>EasyPark app az egyik telefonon, a kiilopääi parkoláshoz</li>
-      <li>A boltok zárási ideje okt. 31‑én, szombat este (mindenszentek)</li>
+      <li>A boltok zárási ideje okt. 31‑én, szombat este (mindenszentek)</li>
     </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ================= CHOICES ================= -->
+<section id="choices">
+ <div class="wrap">
+  <h2>Döntések</h2>
+  <p class="h2sub">Tíz döntés nyitott a tervben: négy minden foglalás előtt, három az indulás előtti héten és három az adott napon. Mindegyiknek van alapterve, így ha nem döntötök, az út akkor is működik.</p>
+  <p class="small">A még ellenőrizendő tények — hogy a foglalás tényleg a Villa Skaidi I, a szaunája, a bejutás és a járatidők — a <a href="#open">Nyitott kérdések</a> alatt vannak, nem itt.</p>
+
+  <div class="chgroup">
+   <h3>Foglalás előtt döntsétek el</h3>
+   <p>Ez a négy határozza meg, mit foglaltok, ezért ezeket rendezzétek először. A rénlátogatás az egyetlen, amely érinti az egyórás limitet.</p>
+   <div class="choices">
+    <article class="choice">
+     <h4>Rénlátogatás</h4>
+     <div><span class="ck">Lehetőségek</span><p><b>A.</b> Egy Inari környéki számi réntartó család hétfő délután: <a href="https://laplandnorth.fi/en/company/angeli-reindeer-farm" target="_blank" rel="noopener">Angeli</a> (privát, 2 óra, 100 €‑tól), <a href="https://visitfinland.com/en/product/adf3b81b-f374-4deb-8246-68af4e4b12ab/home-visit-at-local-reindeer-herder-family" target="_blank" rel="noopener">Renniina</a> (otthoni látogatás, 2 óra, 60 €‑tól) vagy az Inari Reindeer Farm.</p><p><b>B.</b> <a href="https://laplandsafaris.com/activitypage?id=94273" target="_blank" rel="noopener">A Lapland Safaris farmlátogatása</a> Saariselkäből, kedden (1,5 óra).</p></div>
+     <div><span class="ck">Mérlegelés</span><p>Az A‑val valódi időt töltötök számi réntartókkal, de hazafelé kb. 1 óra 5–15 perc az út (a limit fölött), és kiváltja a hétfő délutáni tavas programot. A B 5 percre van, és szabadon hagyja a hétfőt; a leírása nem mondja, hogy a vendéglátók számik.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Az A lehetőség az Angelivel, ha az általuk megadott cím kb. egyórás autóúton belül van a kabintól; különben a B.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Helyi konyhás vacsora: melyik este</h4>
+     <div><span class="ck">Lehetőségek</span><p>Laanilan Kievari <b>hétfőn</b> vagy <b>kedden</b> (vasárnap zárva).</p></div>
+     <div><span class="ck">Mérlegelés</span><p>A hétfő a Sarrit ebédjével együtt egy teljes helyi konyhás napot ad. A kedd a legsötétebb éjszaka, és a 18:30–20:30‑as vacsora belevág a legjobb ablakába.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Hétfő 18:30, öt főre; foglaljatok most.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Huskyk</h4>
+     <div><span class="ck">Lehetőségek</span><p><b>Kennellátogatás</b> (kb. 1 óra, hó nélkül is megy) vagy a <b>10 km‑es, saját vezetésű kutyaszános szafari</b> (2,5 óra, hó kell hozzá).</p></div>
+     <div><span class="ck">Mérlegelés</span><p>A kennellátogatás biztos. A szafari a nagyobb élmény, de lehet, hogy nov. 3‑ig nem lesz elég hó.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Foglaljátok le a kennellátogatást; kérjétek meg a Husky &amp; Co-t, hogy szóljon, ha a szános túrák még az időpontotok előtt elindulnak.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Autó</h4>
+     <div><span class="ck">Lehetőségek</span><p><b>7 személyes vagy nagy kombi</b>, vagy egy átlagos 5 személyes autó.</p></div>
+     <div><span class="ck">Mérlegelés</span><p>Öt felnőtt, a téli csomagok, az állvány és a fotóstáskák nem férnek be egy kisautóba; a nagyobb autó drágább.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Nagy kombi vagy 7 személyes, szöges gumival. Ha már le van foglalva, nézzétek meg, befér-e öt táska a csomagtartóba.</p></div>
+    </article>
+   </div>
+  </div>
+
+  <div class="chgroup">
+   <h3>Az indulás előtti héten döntsétek el</h3>
+   <p>Ezek az előrejelzéstől, a járatidőktől és attól függenek, hogy biztosan van-e szauna a kabinban.</p>
+   <div class="choices">
+    <article class="choice">
+     <h4>A napok sorrendje</h4>
+     <div><span class="ck">Lehetőségek</span><p>Marad a <b>hétfő = Inari, kedd = huskyk</b>, vagy <b>csere</b> az előrejelzés alapján.</p></div>
+     <div><span class="ck">Mérlegelés</span><p>Cserével a fedett Siida a szürkébb napra, a Kaunispää napnyugtája a tisztább napra kerül, de ehhez a husky- és a rénfoglalásnak áthelyezhetőnek kell lennie. A legjobb sarkifény-ablak így is, úgy is kedden van.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Marad a sorrend; csak akkor cseréljetek, ha okt. 31‑én, szombaton az előrejelzés szerint a hétfő egyértelműen derültebb.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Bevásárlás az érkezés estéjén</h4>
+     <div><span class="ck">Lehetőségek</span><p>A <b>Kuukkeli</b> Saariselkäben, 5 percre a kabintól, vagy a <b>K‑Supermarket Ivalo</b>, 10 km‑re a reptértől, a másik irányba.</p></div>
+     <div><span class="ck">Mérlegelés</span><p>A Kuukkeli útba esik, és elég reggelire meg egy egyszerű vacsorára. Ivalóban van hal- és húspult, de kb. 20 perccel több az út. Mindenszentekkor mindkettő ünnepi nyitvatartással mehet.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Érkezéskor a Kuukkeli; a nagybevásárlás hallal az ivalói K‑Supermarketben, hétfőn hazafelé. Ha későn szálltok le, hozzatok magatokkal reggelire valót.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Szaunaextrák</h4>
+     <div><span class="ck">Lehetőségek</span><p><b>Csak az otthoni szauna</b>; vagy mellé a <b>Laanilan Kievari szaunái</b> (kültéri dézsa, léklyuk) a hétfői vacsorával; vagy a <b>Kuurakaltio füstszauna</b> Kiilopäänél.</p></div>
+     <div><span class="ck">Mérlegelés</span><p>Az otthoni ingyenes és privát. A Laanilan 1 km‑re van, és jól megy a vacsorához. A füstszauna a leghagyományosabb; a nyilvános alkalmai hétfőtől szombatig vannak kiírva, így a vasárnapi kiilopääi napon nem.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Csak az otthoni. Ha kiderül, hogy a kabinban nincs szauna, foglaljátok le a Laanilanét.</p></div>
+    </article>
+   </div>
+  </div>
+
+  <div class="chgroup">
+   <h3>Aznap döntsétek el</h3>
+   <p>Ezek időjárásfüggő döntések; a tervben mindkét lehetőség benne van.</p>
+   <div class="choices">
+    <article class="choice">
+     <h4>Vasárnapi túra</h4>
+     <div><span class="ck">Lehetőségek</span><p><b>Kiilopää-csúcs</b> (546 m, kb. 2 km egy irányba, lépcsős) vagy az <b>erdei körök</b> Saariselkäből (Iisakkipää 3 km, kivilágított Aurorapolku 2,1 km).</p></div>
+     <div><span class="ck">Mérlegelés</span><p>A csúcsról nyílik a nagy tunturikilátás, de felhőben értelmetlen, erős szélben pedig nehéz; a körök védett erdőben haladnak.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>A csúcs, ha 09:30‑kor kilátszik a felhőből; különben a körök.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Hétfő délután</h4>
+     <div><span class="ck">Lehetőségek</span><p><b>A Juutua zúgói és az Inari-tó partja</b>, a <b>Sajos</b> (hétköznap; Duodji Shop), vagy a <b>Tuulispää szélfogója</b> tóra néző kilátással.</p></div>
+     <div><span class="ck">Mérlegelés</span><p>A Juutua és a part a tavas-folyós természet. A Sajos fedett számi kultúra. A Tuulispää parkolóját február közepéig nem takarítják le, így a murvás úton múlik.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>A Juutua és a part; a Sajos, ha havas eső esik; a Tuulispää csak akkor, ha járható az út, és van még világosság. Ha a számi farmot választottátok, mindhármat hagyjátok ki.</p></div>
+    </article>
+    <article class="choice">
+     <h4>Sarkifény-éjszakák</h4>
+     <div><span class="ck">Lehetőségek</span><p><b>Maradás a kabinnál</b> vagy <b>autózás egy tiszta folthoz</b> (Kaunispää 12 perc, Kiilopää 15 perc, Ukonjärvi 40 perc).</p></div>
+     <div><span class="ck">Mérlegelés</span><p>Autóval foltos felhőzet alatt is találni tiszta eget, de kell hozzá egy józan sofőr a sötét, rénes utakra.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>Maradjatok otthon, hacsak nem felhős a fejetek fölött és tiszta a közelben. Kedden, a legjobb éjszakán, akár 45 percet is autózzatok. A ma esti sofőrt beszéljétek meg vacsoránál.</p></div>
+    </article>
    </div>
   </div>
  </div>
@@ -422,13 +525,13 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-sat">
    <div class="rail">
-     <p class="date">Szo, okt. 31.</p>
+     <p class="date">Szo, okt. 31.</p>
      <h3 class="word"><span class="sr-only">Szombat, október 31.: </span>Földet érés</h3>
      <p class="light">Sötét, amikor leszálltok. A hold 62%‑os, egész éjjel fent van, kb. 21:00‑ig alacsonyan északon.</p>
    </div>
    <dl class="rows">
      <div class="row"><dt class="k">Este</dt><dd class="v">Leszállás Ivalóban (IVL), autóátvétel: téli gumi, jégkaparó.<span class="note"><span class="nk">Ellenőrizni</span>Járatszámok és időpontok, oda-vissza.</span></dd></div>
-     <div class="row"><dt class="k">Bolt</dt><dd class="v"><span class="tag must">FIX</span>Mindenszentek, finn munkaszüneti nap: nézzétek meg a zárási időket még indulás előtt. A Supermarket Kuukkeli Saariselkä faluban van; az ivalói K‑Supermarket (hal- és húspult) 10 km‑re van a reptértől, a másik irányba.<span class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este.</span></dd></div>
+     <div class="row"><dt class="k">Bolt</dt><dd class="v"><span class="tag must">FIX</span>Mindenszentek, finn munkaszüneti nap: nézzétek meg a zárási időket még indulás előtt. A Supermarket Kuukkeli Saariselkä faluban van; az ivalói K‑Supermarket (hal- és húspult) 10 km‑re van a reptértől, a másik irányba.<span class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este.</span></dd></div>
      <div class="row"><dt class="k">Autóút</dt><dd class="v">Reptér–kabin: 26 km, kb. 25 perc.<span class="note"><span class="nk">Ellenőrizni</span>A bejutás módja és ideje szombat esti érkezésnél.</span></dd></div>
      <div class="row"><dt class="k">Otthon</dt><dd class="v"><span class="tag must">FIX</span>Kapcsoljátok be a szaunát, mielőtt kipakoltok (45–60 perc, mire felfűt). Egyszerű első vacsora.<span class="note"><span class="nk">Ellenőrizni</span>A kabin szaunája és típusa: elektromos vagy fatüzelésű.</span></dd></div>
      <div class="row"><dt class="k">21:00–23:00</dt><dd class="v"><span class="tag if">HA</span>Tiszta ég: nézzetek északra az udvar egy sötét sarkából a szaunakörök között. Ma este nincs sarkifény-autózás: első éjszaka, sötét utak, rének.</dd></div>
@@ -437,7 +540,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-sun">
    <div class="rail">
-     <p class="date">V, nov. 1.</p>
+     <p class="date">V, nov. 1.</p>
      <h3 class="word"><span class="sr-only">Vasárnap, november 1.: </span>Tunturik</h3>
      <p class="light">Nap 08:24–15:22, sosem megy kb. 7° fölé. Sötét 18:45‑től; a félhold 20:05‑kor kel.</p>
    </div>
@@ -455,7 +558,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-mon">
    <div class="rail">
-     <p class="date">H, nov. 2.</p>
+     <p class="date">H, nov. 2.</p>
      <h3 class="word"><span class="sr-only">Hétfő, november 2.: </span>Inari<span class="sr-only">, tavak és helyi konyha</span></h3>
      <p class="light">Nap 08:35–15:14 Inariban. Sötét 18:40‑től; holdkelte 22:37.</p>
    </div>
@@ -478,7 +581,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-tue">
    <div class="rail">
-     <p class="date">K, nov. 3.</p>
+     <p class="date">K, nov. 3.</p>
      <h3 class="word"><span class="sr-only">Kedd, november 3.: </span>Huskyk<span class="sr-only"> és rének</span></h3>
      <p class="light">Nap 08:33–15:13. Sötét 18:36‑tól; holdkelte 00:43 — az út legsötétebb éjszakája.</p>
    </div>
@@ -497,7 +600,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <article class="day" id="d-wed">
    <div class="rail">
-     <p class="date">Sze, nov. 4.</p>
+     <p class="date">Sze, nov. 4.</p>
      <h3 class="word"><span class="sr-only">Szerda, november 4.: </span>Haza</h3>
      <p class="light">Kék fény kb. 07:30‑tól; napkelte 08:37.</p>
    </div>
@@ -514,12 +617,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 <section id="sky" class="night-band">
  <div class="wrap">
   <h2>Égbolt</h2>
-  <p class="h2sub"><strong>Kedd, nov. 3. a legjobb sarkifény-éjszaka:</strong> hat holdmentes sötét óra, 18:36–00:43. A hétfő jó (négy óra), a vasárnap rövid, a szombat holdfényes.</p>
+  <p class="h2sub"><strong>Kedd, nov. 3. a legjobb sarkifény-éjszaka:</strong> hat holdmentes sötét óra, 18:36–00:43. A hétfő jó (négy óra), a vasárnap rövid, a szombat holdfényes.</p>
   <div class="nights" role="list">
-<div class="nrow" role="listitem" id="n-sat"><div class="nlabel">Szo, okt. 31.</div><div class="bar" role="img" aria-label="Napnyugta 15:26, polgári szürkület vége 16:32, sötét 18:45-től. Hold 62%, egész éjjel fent. Nincs holdmentes sötét ablak. Holdfényes: nézzétek, de ne autózzatok."><span class="seg s-day" style="left:0.00%;width:3.61%"></span><span class="seg s-tw" style="left:3.61%;width:27.64%"></span><span class="seg s-night" style="left:31.25%;width:68.75%"></span><span class="moon" style="left:0.00%;width:100.00%" title="Hold fent egész éjjel"></span></div><div class="nnote"><b>Holdfényes:</b> nézzétek, de ne autózzatok. Hold 62%, egész éjjel fent, 21:00‑ig 10° alatt ÉÉK‑en.</div></div>
-<div class="nrow" role="listitem" id="n-sun"><div class="nlabel">V, nov. 1.</div><div class="bar" role="img" aria-label="Napnyugta 15:22, polgári szürkület vége 16:28, sötét 18:42-től. Hold 50%, 20:05-kor kel. Holdmentes sötét ablak 18:42-től kb. 20:30-ig. Rövid."><span class="seg s-day" style="left:0.00%;width:3.06%"></span><span class="seg s-tw" style="left:3.06%;width:27.78%"></span><span class="seg s-night" style="left:30.83%;width:69.17%"></span><span class="moon" style="left:42.36%;width:57.64%" title="Hold fent 20:05-től"></span><span class="win narrow" style="left:30.83%;width:15.00%">18:42–20:30</span></div><div class="nnote"><b>Rövid.</b> <span class="m-only">18:42 – kb. 20:30. </span>Hold 50%, 20:05‑kor kel ÉÉK‑en.</div></div>
-<div class="nrow" role="listitem" id="n-mon"><div class="nlabel">H, nov. 2.</div><div class="bar" role="img" aria-label="Napnyugta 15:17, polgári szürkület vége 16:25, sötét 18:39-től. Hold 39%, 22:37-kor kel. Holdmentes sötét ablak 18:39-től 22:37-ig. Jó."><span class="seg s-day" style="left:0.00%;width:2.36%"></span><span class="seg s-tw" style="left:2.36%;width:28.06%"></span><span class="seg s-night" style="left:30.42%;width:69.58%"></span><span class="moon" style="left:63.47%;width:36.53%" title="Hold fent 22:37-től"></span><span class="win" style="left:30.42%;width:33.06%">18:39–22:37</span></div><div class="nnote"><b>Jó.</b> Hold 39%, 22:37‑kor kel ÉK‑en.</div></div>
-<div class="nrow" role="listitem" id="n-tue"><div class="nlabel">K, nov. 3.</div><div class="bar" role="img" aria-label="Napnyugta 15:13, polgári szürkület vége 16:21, sötét 18:36-tól. Hold 29%, 00:43-kor kel. Holdmentes sötét ablak 18:36-tól 00:43-ig. A legjobb."><span class="seg s-day" style="left:0.00%;width:1.81%"></span><span class="seg s-tw" style="left:1.81%;width:28.19%"></span><span class="seg s-night" style="left:30.00%;width:70.00%"></span><span class="moon" style="left:80.97%;width:19.03%" title="Hold fent 00:43-tól"></span><span class="win" style="left:30.00%;width:50.97%">18:36–00:43</span></div><div class="nnote"><b>A legjobb.</b> Hold 29%, 00:43‑kor kel.</div></div>
+<div class="nrow" role="listitem" id="n-sat"><div class="nlabel">Szo, okt. 31.</div><div class="bar" role="img" aria-label="Napnyugta 15:26, polgári szürkület vége 16:32, sötét 18:45-től. Hold 62%, egész éjjel fent. Nincs holdmentes sötét ablak. Holdfényes: nézzétek, de ne autózzatok."><span class="seg s-day" style="left:0.00%;width:3.61%"></span><span class="seg s-tw" style="left:3.61%;width:27.64%"></span><span class="seg s-night" style="left:31.25%;width:68.75%"></span><span class="moon" style="left:0.00%;width:100.00%" title="Hold fent egész éjjel"></span></div><div class="nnote"><b>Holdfényes:</b> nézzétek, de ne autózzatok. Hold 62%, egész éjjel fent, 21:00‑ig 10° alatt ÉÉK‑en.</div></div>
+<div class="nrow" role="listitem" id="n-sun"><div class="nlabel">V, nov. 1.</div><div class="bar" role="img" aria-label="Napnyugta 15:22, polgári szürkület vége 16:28, sötét 18:42-től. Hold 50%, 20:05-kor kel. Holdmentes sötét ablak 18:42-től kb. 20:30-ig. Rövid."><span class="seg s-day" style="left:0.00%;width:3.06%"></span><span class="seg s-tw" style="left:3.06%;width:27.78%"></span><span class="seg s-night" style="left:30.83%;width:69.17%"></span><span class="moon" style="left:42.36%;width:57.64%" title="Hold fent 20:05-től"></span><span class="win narrow" style="left:30.83%;width:15.00%">18:42–20:30</span></div><div class="nnote"><b>Rövid.</b> <span class="m-only">18:42 – kb. 20:30. </span>Hold 50%, 20:05‑kor kel ÉÉK‑en.</div></div>
+<div class="nrow" role="listitem" id="n-mon"><div class="nlabel">H, nov. 2.</div><div class="bar" role="img" aria-label="Napnyugta 15:17, polgári szürkület vége 16:25, sötét 18:39-től. Hold 39%, 22:37-kor kel. Holdmentes sötét ablak 18:39-től 22:37-ig. Jó."><span class="seg s-day" style="left:0.00%;width:2.36%"></span><span class="seg s-tw" style="left:2.36%;width:28.06%"></span><span class="seg s-night" style="left:30.42%;width:69.58%"></span><span class="moon" style="left:63.47%;width:36.53%" title="Hold fent 22:37-től"></span><span class="win" style="left:30.42%;width:33.06%">18:39–22:37</span></div><div class="nnote"><b>Jó.</b> Hold 39%, 22:37‑kor kel ÉK‑en.</div></div>
+<div class="nrow" role="listitem" id="n-tue"><div class="nlabel">K, nov. 3.</div><div class="bar" role="img" aria-label="Napnyugta 15:13, polgári szürkület vége 16:21, sötét 18:36-tól. Hold 29%, 00:43-kor kel. Holdmentes sötét ablak 18:36-tól 00:43-ig. A legjobb."><span class="seg s-day" style="left:0.00%;width:1.81%"></span><span class="seg s-tw" style="left:1.81%;width:28.19%"></span><span class="seg s-night" style="left:30.00%;width:70.00%"></span><span class="moon" style="left:80.97%;width:19.03%" title="Hold fent 00:43-tól"></span><span class="win" style="left:30.00%;width:50.97%">18:36–00:43</span></div><div class="nnote"><b>A legjobb.</b> Hold 29%, 00:43‑kor kel.</div></div>
 <div class="naxis" aria-hidden="true"><div></div><div class="ticks"><span style="left:0.00%">15:00</span><span style="left:16.67%">17:00</span><span style="left:33.33%">19:00</span><span style="left:50.00%">21:00</span><span style="left:66.67%">23:00</span><span style="left:83.33%">01:00</span><span style="left:100.00%">03:00</span></div><div></div></div>
   </div>
   <div class="legend"><span><i class="l-day"></i>Nappal</span><span><i class="l-tw"></i>Szürkület</span><span><i class="l-night"></i>Sötét (a nap −18° alatt)</span><span><i class="l-moon"></i>Hold fent</span><span><i class="l-win"></i>Holdmentes sötét ablak</span></div>
@@ -528,14 +631,14 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <div class="tblwrap"><table class="tbl">
       <thead><tr><th>Éjszaka</th><th>Napnyugta</th><th>Polgári szürkület vége</th><th>Sötét (a nap −18° alatt)</th><th>Hold</th><th>Holdmentes sötét ablak</th><th>Értékelés</th></tr></thead>
       <tbody>
-        <tr><td class="lead nw">Szo, okt. 31.</td><td data-label="Napnyugta">15:26</td><td data-label="Polgári szürkület vége">16:32</td><td data-label="Sötét (a nap −18° alatt)">18:45</td><td data-label="Hold">62%, egész éjjel fent, 21:00‑ig 10° alatt észak-északkeleten</td><td data-label="Holdmentes sötét ablak">nincs</td><td data-label="Értékelés">Holdfényes: nézzétek, de ne autózzatok</td></tr>
-        <tr><td class="lead nw">V, nov. 1.</td><td data-label="Napnyugta">15:22</td><td data-label="Polgári szürkület vége">16:28</td><td data-label="Sötét (a nap −18° alatt)">18:42</td><td data-label="Hold">50%, 20:05‑kor kel észak-északkeleten</td><td class="nw" data-label="Holdmentes sötét ablak">18:42 – kb. 20:30</td><td data-label="Értékelés">Rövid</td></tr>
-        <tr><td class="lead nw">H, nov. 2.</td><td data-label="Napnyugta">15:17</td><td data-label="Polgári szürkület vége">16:25</td><td data-label="Sötét (a nap −18° alatt)">18:39</td><td data-label="Hold">39%, 22:37‑kor kel északkeleten</td><td class="nw" data-label="Holdmentes sötét ablak">18:39 – 22:37</td><td data-label="Értékelés">Jó</td></tr>
-        <tr><td class="lead nw">K, nov. 3.</td><td data-label="Napnyugta">15:13</td><td data-label="Polgári szürkület vége">16:21</td><td data-label="Sötét (a nap −18° alatt)">18:36</td><td data-label="Hold">29%, 00:43‑kor kel</td><td class="nw" data-label="Holdmentes sötét ablak">18:36 – 00:43</td><td data-label="Értékelés">A legjobb</td></tr>
+        <tr><td class="lead nw">Szo, okt. 31.</td><td data-label="Napnyugta">15:26</td><td data-label="Polgári szürkület vége">16:32</td><td data-label="Sötét (a nap −18° alatt)">18:45</td><td data-label="Hold">62%, egész éjjel fent, 21:00‑ig 10° alatt észak-északkeleten</td><td data-label="Holdmentes sötét ablak">nincs</td><td data-label="Értékelés">Holdfényes: nézzétek, de ne autózzatok</td></tr>
+        <tr><td class="lead nw">V, nov. 1.</td><td data-label="Napnyugta">15:22</td><td data-label="Polgári szürkület vége">16:28</td><td data-label="Sötét (a nap −18° alatt)">18:42</td><td data-label="Hold">50%, 20:05‑kor kel észak-északkeleten</td><td class="nw" data-label="Holdmentes sötét ablak">18:42 – kb. 20:30</td><td data-label="Értékelés">Rövid</td></tr>
+        <tr><td class="lead nw">H, nov. 2.</td><td data-label="Napnyugta">15:17</td><td data-label="Polgári szürkület vége">16:25</td><td data-label="Sötét (a nap −18° alatt)">18:39</td><td data-label="Hold">39%, 22:37‑kor kel északkeleten</td><td class="nw" data-label="Holdmentes sötét ablak">18:39 – 22:37</td><td data-label="Értékelés">Jó</td></tr>
+        <tr><td class="lead nw">K, nov. 3.</td><td data-label="Napnyugta">15:13</td><td data-label="Polgári szürkület vége">16:21</td><td data-label="Sötét (a nap −18° alatt)">18:36</td><td data-label="Hold">29%, 00:43‑kor kel</td><td class="nw" data-label="Holdmentes sötét ablak">18:36 – 00:43</td><td data-label="Értékelés">A legjobb</td></tr>
       </tbody>
     </table></div>
   </details>
-  <p class="small skynote">Az időpontok Saariselkäre vannak számolva, UTC+2; Inariban legfeljebb kb. öt perc az eltérés. Szerda, nov. 4. reggel: a polgári szürkület kezdete 07:28, napkelte 08:37. Az egész út alatt a nap kb. 11:55‑kor, pontosan délen delel, kb. 7°‑on, és délnyugaton nyugszik.</p>
+  <p class="small skynote">Az időpontok Saariselkäre vannak számolva, UTC+2; Inariban legfeljebb kb. öt perc az eltérés. Szerda, nov. 4. reggel: a polgári szürkület kezdete 07:28, napkelte 08:37. Az egész út alatt a nap kb. 11:55‑kor, pontosan délen delel, kb. 7°‑on, és délnyugaton nyugszik.</p>
 
   <h3>Az esti rutin</h3>
   <ol class="ritual">
@@ -724,7 +827,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <tr><td class="lead">Ebéd</td><td data-label="Hol"><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Sarrit</a>, a Siidán belül, Inari</td><td data-label="Mikor">H 12:00; büfé 11–15</td><td data-label="Amit tudni kell">Meleg főétel, salátabár, házi pékáru, desszert és kávé; múzeumi jegy nem kell.<span class="note"><span class="nk">Ellenőrizni</span>A Sarrit téli ebédnapjai.</span></td></tr>
       <tr><td class="lead">Vacsora</td><td data-label="Hol"><a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">Laanilan Kievari</a>, Sateenkaarenpääntie 9</td><td data-label="Mikor">H 18:30; nyitva H–Szo 16–22, vasárnap zárva</td><td data-label="Amit tudni kell">Lapp alapanyagok francia és karjalai vonásokkal; a tűzön sült rénlapocka két személyre a specialitás. Foglaljatok.</td></tr>
       <tr><td class="lead">Kávé vagy ebéd</td><td data-label="Hol">Kaunispään Huippu, a Kaunispää tetején</td><td data-label="Mikor">K, ha nyitva van</td><td data-label="Amit tudni kell">Lapp konyha: rén, maréna, lazac, mocsári szeder.</td></tr>
-      <tr><td class="lead">Nem ezen az úton</td><td data-label="Hol">Aanaar, Wilderness Hotel Juutua, Inari</td><td class="empty" data-label="Mikor">—</td><td data-label="Amit tudni kell">Felújítás miatt zárva 2026. okt. 15. – nov. 22.</td></tr>
+      <tr><td class="lead">Nem ezen az úton</td><td data-label="Hol">Aanaar, Wilderness Hotel Juutua, Inari</td><td class="empty" data-label="Mikor">—</td><td data-label="Amit tudni kell">Felújítás miatt zárva 2026. okt. 15. – nov. 22.</td></tr>
     </tbody>
   </table></div>
 
@@ -732,10 +835,10 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <div class="card">
       <h3>Otthoni menü</h3>
       <dl class="kv">
-        <dt>Szo, okt. 31.</dt><dd>Valami egyszerű a repülés után.</dd>
-        <dt>V, nov. 1.</dt><dd><strong lang="fi">Poronkäristys:</strong> fagyasztott, vékonyra gyalult rén vajban, hagymával sütve, 30–40 percig párolva; vajas püré, vörös áfonya, ecetes uborka.</dd>
-        <dt>H, nov. 2.</dt><dd>Étterem (Laanilan Kievari).</dd>
-        <dt>K, nov. 3.</dt><dd><strong lang="fi">Lohikeitto</strong> (lazacleves krumplival, póréhagymával, tejszínnel és kaporral), vagy vajban sült maréna / sarki szaibling; meleg <span lang="fi">leipäjuusto</span> mocsári szederlekvárral.</dd>
+        <dt>Szo, okt. 31.</dt><dd>Valami egyszerű a repülés után.</dd>
+        <dt>V, nov. 1.</dt><dd><strong lang="fi">Poronkäristys:</strong> fagyasztott, vékonyra gyalult rén vajban, hagymával sütve, 30–40 percig párolva; vajas püré, vörös áfonya, ecetes uborka.</dd>
+        <dt>H, nov. 2.</dt><dd>Étterem (Laanilan Kievari).</dd>
+        <dt>K, nov. 3.</dt><dd><strong lang="fi">Lohikeitto</strong> (lazacleves krumplival, póréhagymával, tejszínnel és kaporral), vagy vajban sült maréna / sarki szaibling; meleg <span lang="fi">leipäjuusto</span> mocsári szederlekvárral.</dd>
       </dl>
     </div>
     <div class="card">
@@ -756,7 +859,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     </tbody>
   </table></div>
   <p class="after">Okt. 31., szombat mindenszentek, így aznap este mindkét bolt ünnepi nyitvatartással mehet.</p>
-  <p class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este.</p>
+  <p class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este.</p>
  </div>
 </section>
 
@@ -792,9 +895,9 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   <h3>Alapadatok</h3>
   <div class="card">
     <dl class="kv facts">
-      <dt>Dátumok</dt><dd>Érkezés okt. 31‑én, szombaton (este), indulás nov. 4‑én, szerdán (reggel): 4 éjszaka, 3 teljes nap.</dd>
+      <dt>Dátumok</dt><dd>Érkezés okt. 31‑én, szombaton (este), indulás nov. 4‑én, szerdán (reggel): 4 éjszaka, 3 teljes nap.</dd>
       <dt>Résztvevők</dt><dd>5 felnőtt: egy pár és három egyedülálló.</dd>
-      <dt>Járatok</dt><dd>Ivalóba (IVL) és vissza.<span class="fl"><span>Oda, szo, okt. 31.:</span><span>járat <span class="ph">—</span> érkezik <span class="ph">—:—</span></span></span><span class="fl"><span>Vissza, sze, nov. 4.:</span><span>járat <span class="ph">—</span> indul <span class="ph">—:—</span></span></span><span class="note"><span class="nk">Ellenőrizni</span>Járatszámok és időpontok, oda-vissza.</span></dd>
+      <dt>Járatok</dt><dd>Ivalóba (IVL) és vissza.<span class="fl"><span>Oda, szo, okt. 31.:</span><span>járat <span class="ph">—</span> érkezik <span class="ph">—:—</span></span></span><span class="fl"><span>Vissza, sze, nov. 4.:</span><span>járat <span class="ph">—</span> indul <span class="ph">—:—</span></span></span><span class="note"><span class="nk">Ellenőrizni</span>Járatszámok és időpontok, oda-vissza.</span></dd>
       <dt>Autó</dt><dd>Bérautó az IVL‑ről, téli gumival (szögessel, ha van).</dd>
       <dt>Kabin</dt><dd>Villa Skaidi I, Jäkälätie 14, 99830 Saariselkä (<a href="https://www.nettimokki.com/en/saariselka/villa-skaidi-i/50416/" target="_blank" rel="noopener">a szállásadó hirdetése</a>); Airbnb-n foglalva, hirdetésszám: <a href="https://www.airbnb.com/rooms/1089668303636405332" target="_blank" rel="noopener">1089668303636405332</a>.<span class="note"><span class="nk">Ellenőrizni</span>Hogy az Airbnb-foglalás tényleg a Villa Skaidi I, Jäkälätie 14. Az Airbnb nem volt olvasható; a hirdetésszám ugyanannak a szállásadónak a Villa Skaidi II‑je mellett szerepel. Ha mégis a Copper Nest, a bázis kb. 3 km‑rel északabbra, a Kaunispää közelébe kerül, a menetidők alig változnak.</span><span class="note"><span class="nk">Ellenőrizni</span>A bejutás módja és ideje szombat esti érkezésnél.</span></dd>
       <dt>Elrendezés</dt><dd>102 m²; két földszinti hálószoba franciaággyal, amely két külön ágyra szedhető szét; galéria két ággyal, csigalépcsőn; két WC; kandalló (a tűzifa benne van az árban); Wi-Fi; beépítetlen erdőre néző, déli fekvésű hátsó terasz; kocsibeálló autófűtő csatlakozóval.</dd>
@@ -802,7 +905,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <dt>Elhelyezkedés</dt><dd>Laanipalo, kb. 2,5 km‑re délre Saariselkä központjától; kivilágított sí- és szabadidőpálya 150 m‑re; bolt 2,5 km; reptér 26 km.</dd>
       <dt>Koordináta</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=68.3975%2C27.4076" target="_blank" rel="noopener">68,3975 É, 27,4076 K</a> (Google Maps)</dd>
       <dt>Autós sugár</dt><dd>Legfeljebb 1 óra egy irányba. Inari és a Siida (kb. 1 óra) a legtávolabbi pont.</dd>
-      <dt>Időzóna</dt><dd>Finn téli idő, UTC+2 (az órákat okt. 25‑én állították vissza).</dd>
+      <dt>Időzóna</dt><dd>Finn téli idő, UTC+2 (az órákat okt. 25‑én állították vissza).</dd>
     </dl>
     <p class="small">Az Airbnb tiltja a gépi olvasást, ezért a kabin adatai ugyanannak a szállásadónak a Nettimökki-hirdetéséből vannak erről a házról. A szaunát nem említi.<span class="note"><span class="nk">Ellenőrizni</span>A kabin szaunája és típusa, az Airbnb-foglaláson.</span></p>
   </div>
@@ -815,9 +918,9 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <li>A sarkifény-autózás szándékosan rövid, minden este egy józan sofőrrel.</li>
     </ul></div>
     <div class="card"><h3>Naptári csapdák</h3><dl class="kv">
-      <dt>Szo, okt. 31.</dt><dd>Mindenszentek, munkaszüneti nap: a boltok ünnepi nyitvatartással mehetnek.</dd>
-      <dt>V, nov. 1.</dt><dd>A Siida és a Laanilan Kievari zárva.</dd>
-      <dt>Az egész út</dt><dd>Az inari Aanaar felújítás miatt nov. 22‑ig zárva.</dd>
+      <dt>Szo, okt. 31.</dt><dd>Mindenszentek, munkaszüneti nap: a boltok ünnepi nyitvatartással mehetnek.</dd>
+      <dt>V, nov. 1.</dt><dd>A Siida és a Laanilan Kievari zárva.</dd>
+      <dt>Az egész út</dt><dd>Az inari Aanaar felújítás miatt nov. 22‑ig zárva.</dd>
       <dt>Az egész út</dt><dd>A kiilopääi parkolás 9–18 között fizetős, EasyParkkal.</dd>
     </dl></div>
     <div class="card"><h3>Időjárás és biztonság</h3><ul class="plain">
@@ -835,14 +938,14 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <div class="card"><h3>Kamera</h3><p>a6100, Samyang 12 mm f/2, Sony 70–350 G, állvány, három vagy több NP‑FW50, tartalék kártyák, zip-zacskók, objektívkendő.</p></div>
   </div>
 
-  <h3>Nyitott kérdések</h3>
+  <h3 id="open">Nyitott kérdések</h3>
   <p class="small">Az első kettő a kabinról szól, ezeket tisztázzátok először; a többit az indulás előtti héten nézzétek meg.</p>
   <ul class="checks">
     <li>Hogy az Airbnb-foglalás tényleg a Villa Skaidi I, Jäkälätie 14 (ha a Copper Nest, a bázis kb. 3 km‑rel északabbra, a Kaunispää közelébe kerül)</li>
     <li>A kabin szaunája és típusa (elektromos vagy fatüzelésű)</li>
     <li>A bejutás módja és ideje szombat esti érkezésnél</li>
     <li>Járatszámok és időpontok, oda-vissza</li>
-    <li>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este</li>
+    <li>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este</li>
     <li>Hogy a Lapland Safaris rénfarm-látogatás november elején is megy-e, vagy melyik számi családi farmot foglaljátok, és mi a címe</li>
     <li>A Husky &amp; Co találkozási pontja: a falubeli iroda vagy a kennel</li>
     <li>A Sarrit téli ebédnapjai</li>
