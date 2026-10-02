@@ -209,6 +209,14 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem}
 .choice .def{border-left:2px solid var(--aur);padding-left:12px}
 .choice .def .ck{color:var(--aur)}
 
+/* photos */
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 0 12px}
+.shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--panel-2)}
+.shot figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:7px 10px 8px;font-size:.85rem;line-height:1.3}
+.shot figcaption span{font-family:var(--mono);font-size:.66rem;color:var(--ink-dim);white-space:nowrap}
+.mapinfo .mi-img{display:block;width:calc(100% + 36px);max-width:none;height:auto;aspect-ratio:4/3;object-fit:cover;margin:-18px -18px 14px;border-radius:11px 11px 0 0;background:var(--panel-2)}
+
 /* map */
 .mapgrid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:20px;align-items:start}
 .mapbox{background:var(--land);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -492,9 +500,9 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     </article>
     <article class="choice">
      <h4>Hétfő délután</h4>
-     <div><span class="ck">Lehetőségek</span><p><b>A Juutua zúgói és az Inari-tó partja</b>, a <b>Sajos</b> (hétköznap; Duodji Shop), vagy a <b>Tuulispää szélfogója</b> tóra néző kilátással.</p></div>
-     <div><span class="ck">Mérlegelés</span><p>A Juutua és a part a tavas-folyós természet. A Sajos fedett számi kultúra. A Tuulispää parkolóját február közepéig nem takarítják le, így a murvás úton múlik.</p></div>
-     <div class="def"><span class="ck">Alapterv</span><p>A Juutua és a part; a Sajos, ha havas eső esik; a Tuulispää csak akkor, ha járható az út, és van még világosság. Ha a számi farmot választottátok, mindhármat hagyjátok ki.</p></div>
+     <div><span class="ck">Lehetőségek</span><p><b>A Juutua zúgói és az Inari-tó partja</b>, a <b>Sajos</b> (hétköznap; Duodji Shop), a <b>Tuulispää szélfogója</b> tóra néző kilátással, vagy az <b>Otsamo</b> a rovajärvi parkolóból (418 m, 3 km egy irányba).</p></div>
+     <div><span class="ck">Mérlegelés</span><p>A Juutua és a part a tavas-folyós természet. A Sajos fedett számi kultúra. A Tuulispää parkolóját február közepéig nem takarítják le, így a murvás úton múlik. Az Otsamóról nyílik az út legszebb tavas kilátása, de a limit fölött van, és csak hómentes talajon járható.</p></div>
+     <div class="def"><span class="ck">Alapterv</span><p>A Juutua és a part; a Sajos, ha havas eső esik; a Tuulispää csak akkor, ha járható az út, és van még világosság. Ha a számi farmot választottátok, mindet hagyjátok ki.</p></div>
     </article>
     <article class="choice">
      <h4>Sarkifény-éjszakák</h4>
@@ -534,6 +542,11 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <h3 class="word"><span class="sr-only">Vasárnap, november 1.: </span>Tunturik</h3>
      <p class="light">Nap 08:24–15:22, sosem megy kb. 7° fölé. Sötét 18:45‑től; a félhold 20:05‑kor kel.</p>
    </div>
+   <div>
+   <div class="shots">
+    <figure class="shot"><img src="/images/lapland/plan/kiilopaa.jpg" alt="Lépcsős pallóösvény a Kiilopää tunturira" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kiilopää</b><span>09:45</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/forest.jpg" alt="Sínyomok a havas erdőben napnyugtakor Kiilopää közelében" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Erdei körök</b><span>B terv</span></figcaption></figure>
+   </div>
    <dl class="rows">
      <div class="row"><dt class="k">09:45</dt><dd class="v"><span class="tag must">FIX</span><strong>Kiilopää (546 m)</strong>, 15 perc autóval. A tunturiközponttól kb. 2 km egy irányba, felújított, lépcsős ösvényen. Jégtüske fel; fent szeles. A parkolás 9–18 között fizetős, EasyParkkal: 1 €/óra, max. 5 €/nap, az első 30 perc ingyenes.</dd></div>
      <div class="row"><dt class="k">B terv</dt><dd class="v"><span class="tag if">HA</span>Felhőben a csúcs, vagy erős a szél: maradjatok a fák között a 3 km‑es Iisakkipää-körön vagy a Saariselkä faluból induló 2,1 km‑es, kivilágított Aurorapolkun.<span class="note"><span class="nk">Ellenőrizni</span>A pontos nemzeti parki kapu, ahonnan az Aurorapolku és az Iisakkipää indul.</span></dd></div>
@@ -544,6 +557,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">FIX</span>Felhőellenőrzés, aztán szauna.</dd></div>
      <div class="row"><dt class="k">18:45–20:30</dt><dd class="v"><span class="tag must">FIX</span>Rövid holdmentes ablak. Figyeljetek az udvarról a körök között; ha otthon felhős, próbáljátok a Kaunispää tetejét (kb. 12 perc).</dd></div>
    </dl>
+   </div>
   </article>
 
   <article class="day" id="d-mon">
@@ -553,11 +567,18 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <p class="light">Nap 08:35–15:14 Inariban. Sötét 18:40‑től; holdkelte 22:37.</p>
    </div>
    <div>
+   <div class="shots">
+    <figure class="shot"><img src="/images/lapland/plan/siida.jpg" alt="A Siida múzeum bejárata télen" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Siida</b><span>10:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/juutua.jpg" alt="A Juutuanjoki Jäniskoski-zúgója a függőhíddal" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>A Juutua zúgói</b><span>13:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/otsamo.jpg" alt="Nappali pihenőkunyhó az Otsamo nyílt csúcsán" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Otsamo</b><span>13:00 · HA</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/sajos.jpg" alt="A Sajos épülete a hóban" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Sajos</b><span>13:00 · RÁADÁS</span></figcaption></figure>
+   </div>
    <dl class="rows">
      <div class="row"><dt class="k">09:00</dt><dd class="v">Autóval Inariba: kb. 71 km, 1 óra, Ivalón át, a tóparti E75‑ön, az Ukonjärvi mellett.</dd></div>
      <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">FIX</span><strong>Siida, a Számi Múzeum.</strong> H–Szo 10–17; felnőtt 18 € (öt főre 90 €). Számoljatok 2 órával. 2026 októberétől a <em>We Who Remain</em> kortárs számi művészeti kiállítás műveit is bemutatja, amely a Kiasmával közösen készült.</dd></div>
      <div class="row"><dt class="k">12:00</dt><dd class="v"><span class="tag must">FIX</span><strong>Helyi konyha, első felvonás:</strong> büféebéd a Siidán belüli Sarritban, 11–15 között (múzeumi jegy nem kell).<span class="note"><span class="nk">Ellenőrizni</span>A Sarrit téli ebédnapjai.</span></dd></div>
      <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag must">FIX</span><strong>A Juutua zúgói és az Inari-tó partja.</strong> A Kittiläntie 156 alatti parkolóból rövid séta a függőhídig; a teljes kör 5,8 km.</dd></div>
+     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag if">HA</span><strong>Otsamo a rovajärvi parkolóból:</strong> 20–25 perc a Siidától, 3 km egy irányba a 418 m‑es csúcsig, kilátással az Inari-tóra; csak hó- és jégmentes talajon; hazafelé kb. 1 óra 20 perc (a limit fölött). Parkolás a Rovajärventie végén (Rovajärventie 765); az utolsó emelkedő helyenként meredek és köves, a nyílt csúcson nappali pihenőkunyhó áll. Kb. 14:15‑re értek fel, és szürkület előtt (16:25) vissza az autónál.<span class="note"><span class="nk">Ellenőrizni</span>Hó vagy jég az ösvényen, és járható-e a Rovajärventie.</span></dd></div>
      <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag fill">RÁADÁS</span><strong>Sajos</strong>, a Számi Parlament és kulturális központ a Siida mellett (hétköznap). A Duodji Shopban számi készítésű kézműves munkákat árulnak.</dd></div>
      <div class="row"><dt class="k">14:15</dt><dd class="v"><span class="tag if">HA</span><strong>Tuulispää</strong> visszafelé: 2,5 km murvás út, majd egy sík, 3 km‑es oda-vissza séta egy tóra néző szélfogóig. Csak ha járható az út.</dd></div>
      <div class="row"><dt class="k">15:14</dt><dd class="v">Napnyugta a tó fölött.</dd></div>
@@ -565,7 +586,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <div class="row"><dt class="k">18:30</dt><dd class="v"><span class="tag must">FIX</span><strong>Helyi konyha, második felvonás:</strong> vacsora a Laanilan Kievariban, 1 km‑re a kabintól (H–Szo 16–22; foglaljatok). A tűzön sült rénlapockát rendeljétek, két személyre.</dd></div>
      <div class="row"><dt class="k">20:30–22:40</dt><dd class="v"><span class="tag must">FIX</span>Holdmentes ablak. Udvar vagy Kaunispää.</dd></div>
    </dl>
-   <p class="daynote"><strong>Számi rénes lehetőség:</strong> egy Inari környéki számi réntartó család kiválthatja a 13:00–15:14 közötti blokkot, de a farmokról hazafelé kb. 1 óra 5–15 perc az út, a limit fölött. Részletek a <a href="#sami">Számi kultúra</a> alatt.<span class="note"><span class="nk">Ellenőrizni</span>Melyik számi családi farmot foglaljátok, és mi a címe.</span></p>
+   <p class="daynote"><strong>Számi rénes lehetőség:</strong> egy Inari környéki számi réntartó család kiválthatja a 13:00–15:14 közötti blokkot, de a farmokról hazafelé kb. 1 óra 5–15 perc az út, a limit fölött. Részletek a <a href="#sami">Számi kultúra</a> alatt. Az Otsamo, a számi farm és a Tuulispää ugyanarra a délutánra esik, úgyhogy válasszatok egyet.<span class="note"><span class="nk">Ellenőrizni</span>Melyik számi családi farmot foglaljátok, és mi a címe.</span></p>
    </div>
   </article>
 
@@ -574,6 +595,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <p class="date">K, nov. 3.</p>
      <h3 class="word"><span class="sr-only">Kedd, november 3.: </span>Huskyk<span class="sr-only"> és rének</span></h3>
      <p class="light">Nap 08:33–15:13. Sötét 18:36‑tól; holdkelte 00:43 — az út legsötétebb éjszakája.</p>
+   </div>
+   <div>
+   <div class="shots">
+    <figure class="shot"><img src="/images/lapland/plan/husky.jpg" alt="Hámba fogott szánhúzó kutyák pihennek a hóban" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Husky &amp; Co</b><span>10:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/reindeer.jpg" alt="Rének és szánok egy inari farmon" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Rénfarm</b><span>12:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/kaunispaa.jpg" alt="Háromszögelési torony a Kaunispää tetején" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kaunispää-torony</b><span>14:00</span></figcaption></figure>
    </div>
    <dl class="rows">
      <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">FIX</span><strong>Husky &amp; Co kennellátogatás:</strong> az iroda 5 percre a kabintól, a kennel 10 perc autóval Saariselkätől. Kb. egy óra 200 huskyval, történetekkel és forró itallal a tűz mellett egy kotában. 2–8 fős csoportok, így mind az öten belefértek egy foglalásba.<span class="note"><span class="nk">Ellenőrizni</span>Találkozási pont: a falubeli iroda vagy a kennel.</span></dd></div>
@@ -586,6 +613,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">FIX</span>Felhőellenőrzés, aztán szauna.</dd></div>
      <div class="row"><dt class="k">18:40–00:40</dt><dd class="v"><span class="tag must">FIX</span>Hat holdmentes óra. Ha otthon befelhősödött, autózzatok akár 45 percet a legtisztább lyukig.</dd></div>
    </dl>
+   </div>
   </article>
 
   <article class="day" id="d-wed">
@@ -880,6 +908,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li>A Sarrit téli ebédnapjai</li>
     <li>A kiilopääi tunturiközpont és a Kuurakaltio füstszauna nyitvatartása azon a héten</li>
     <li>Hóhelyzet az indulás előtti héten: elindultak-e már a kutyaszános szafarik?</li>
+    <li>Otsamo: hó vagy jég az ösvényen, és járható-e a Rovajärventie — az indulás előtti héten nézzétek meg</li>
     <li>A pontos koordináta a nemzeti parki kapuhoz, ahonnan az Aurorapolku és az Iisakkipää indul</li>
   </ul>
  </div>
@@ -922,6 +951,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><span class="when">Bármelyik erdei megálló</span><div><strong>Szibériai szajkók.</strong> Üljetek mozdulatlanul, kész objektívvel; gyorsan érkeznek, szóval 1/2000.</div></li>
     <li><span class="when">Útszélek, keddi farm</span><div><strong>Rének.</strong> A 350 mm‑rel elég messze maradhattok ahhoz, hogy ne zavarjátok el őket; autóból csak rendes pihenőben fotózzatok; a farmon előbb kérdezzétek meg a vendéglátókat.</div></li>
     <li><span class="when">H 13:00</span><div><strong>A Juutua zúgói.</strong> Ha jég képződik a széleken: állvány, 1/4–1 s a sima vízhez, vagy 1/1000 a permet kimerevítéséhez.</div></li>
+    <li><span class="when">H kb. 14:15</span><div><strong>Az Otsamo teteje.</strong> Az Inari-tó és a Muddusjärvi alacsony napfényben, 100–350 mm‑en.</div></li>
     <li><span class="when">V, Kiilopää</span><div><strong>Csúcsgerincek.</strong> Távoli tunturik túrázókkal léptéknek 150–250 mm‑en.</div></li>
     <li><span class="when">H 15:14</span><div><strong>Inari-tó.</strong> Pasztell rétegek napnyugta után; a kék óra kb. egy órán át tart.</div></li>
     <li><span class="when">H 22:37</span><div><strong>Északkeleti horizont.</strong> Bónusz holdkelte a tunturik mögött: 350 mm, állvány, induljatok 1/250 s, f/6,3, ISO 400‑ról.</div></li>
@@ -951,13 +981,14 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><b>Huskyk:</b> <a href="https://musement.com/uk/saariselka/visit-a-husky-farm-in-saariselka-271599" target="_blank" rel="noopener">Husky &amp; Co kennellátogatás</a>; <a href="https://manawa.com/en-GB/activity/finland/saariselka/dog-sledding/self-drive-husky-safari-near-urho-kekkonen-national-park-from-saariselka/13769" target="_blank" rel="noopener">saját vezetésű husky-szafari</a>; <a href="https://laplandnorth.fi/en/experiences/activity/forest-walk-with-a-husky-saariselka-2/" target="_blank" rel="noopener">őszi husky-programok</a></li>
     <li><a href="https://laplandsafaris.com/activitypage?id=94273" target="_blank" rel="noopener">Lapland Safaris rénfarm-látogatás, Saariselkä</a></li>
     <li><b>Réntartó családok:</b> <a href="https://laplandnorth.fi/en/company/angeli-reindeer-farm" target="_blank" rel="noopener">Angeli rénfarm</a>; <a href="https://www.visitfinland.com/en/product/c7d493d9-b4e6-4205-b3d6-e0b4dcd743a8/private-reindeer-farm-visit/" target="_blank" rel="noopener">Angeli privát látogatás</a>; <a href="https://visitfinland.com/en/product/adf3b81b-f374-4deb-8246-68af4e4b12ab/home-visit-at-local-reindeer-herder-family" target="_blank" rel="noopener">Renniina otthoni látogatás</a>; <a href="https://www.uarctic.org/news/2025/3/uarctic-assembly-2025-program-highlight-4-reindeer-farm-visit/" target="_blank" rel="noopener">Inari Reindeer Farm</a></li>
-    <li><a href="https://classic.nationalparks.fi/inari/trails/description" target="_blank" rel="noopener">Inari ösvényei: Juutua, Tuulispää</a></li>
+    <li><b>Inari ösvényei:</b> <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area" target="_blank" rel="noopener">Inari túraterület (Juutua, Tuulispää, Otsamo)</a>; <a href="https://www.luontoon.fi/en/trails/inari-otsamo-riutula-summer-trail-inari-10641-en" target="_blank" rel="noopener">Inari–Otsamo–Riutula ösvény</a></li>
     <li><b>Kiilopää és Saariselkä:</b> <a href="https://laplandnorth.fi/en/about-the-area/kiilopaa" target="_blank" rel="noopener">Kiilopää</a>; <a href="https://www.luontoon.fi/en/news/paid-parking-pilot-starts-at-five-metsahallitus-destinations-on-1-september-2026" target="_blank" rel="noopener">fizetős parkolás Kiilopäänél</a>; <a href="https://www.nationalparks.fi/urhokekkonennp/trails" target="_blank" rel="noopener">Saariselkä ösvényei</a>; <a href="https://laplandtripplanner.com/saariselka-guide/" target="_blank" rel="noopener">Kuurakaltio füstszauna</a></li>
     <li><b>Kaunispää:</b> <a href="https://saariselka.com/en/?p=9337" target="_blank" rel="noopener">Kaunispää</a>; <a href="https://saariselka.com/en/?p=18304" target="_blank" rel="noopener">Kaunispään Huippu</a>; <a href="https://www.travelinmypocket.com/kaunispaa-triangulation-tower-saariselka/" target="_blank" rel="noopener">háromszögelési torony</a></li>
     <li><a href="https://laplandnorth.fi/company/shopping-center-kuukkeli" target="_blank" rel="noopener">Kuukkeli központ</a></li>
     <li><b>Szibériai szajkók:</b> <a href="https://www.outinthenature.com/explore-the-mystical-world-of-the-siberian-jay/" target="_blank" rel="noopener">védettség</a>; <a href="https://finlandnaturally.com/uncategorized/every-mans-best-friend-siberian-jay-meeting-the-soul-bird-in-pallas-yllastunturi-national-park/" target="_blank" rel="noopener">szajkóetetés</a></li>
     <li><a href="https://collections.maa.cam.ac.uk/objects/553273" target="_blank" rel="noopener">Sámi Duodji címke</a></li>
     <li><a href="https://julkaisut.metsa.fi/assets/pdf/lp/Esitteet/ukpuistoeng.pdf" target="_blank" rel="noopener">Az Urho Kekkonen Nemzeti Park prospektusa</a>; <a href="https://avionero.com/New-York_NYC-Ivalo_IVL/weather/november" target="_blank" rel="noopener">Ivalo novemberi időjárása</a></li>
+    <li><b>Fotók</b> (Wikimedia Commons, vágva és átméretezve): <a href="https://commons.wikimedia.org/wiki/File:Kiilopaa_path.jpg" target="_blank" rel="noopener">Kiilopaa path</a> · Kospo75 · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Anochecer_en_Kiilop%C3%A4%C3%A4.jpg" target="_blank" rel="noopener">Anochecer en Kiilopää</a> · Beasai · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:SIIDA_Inari,_Suomi_Finland_2013-03-10_001.jpg" target="_blank" rel="noopener">SIIDA Inari, Suomi Finland 2013-03-10 001</a> · Manfred Werner - Tsui · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:J%C3%A4niskoski_rapids_of_Juutuanjoki_in_Inari,_Lapland,_Finland,_2022_August_-_3.jpg" target="_blank" rel="noopener">Jäniskoski rapids of Juutuanjoki in Inari, Lapland, Finland, 2022 August - 3</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Otsamon_tupa.JPG" target="_blank" rel="noopener">Otsamon tupa</a> · Trogain · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:SAM_2449_Sajos_29JAN2012.jpg" target="_blank" rel="noopener">SAM 2449 Sajos 29JAN2012</a> · Kimberli Mäkäräinen · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sled_dogs_in_Lapland,_Finland.jpg" target="_blank" rel="noopener">Sled dogs in Lapland, Finland</a> · Letizia Barbi · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Reindeer_farm,_Inari,_Suomi_-_Finland_2013-03-10_f.jpg" target="_blank" rel="noopener">Reindeer farm, Inari, Suomi - Finland 2013-03-10 f</a> · Manfred Werner - Tsui · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Kaunisp%C3%A4%C3%A4_triangulation_tower_1.jpg" target="_blank" rel="noopener">Kaunispää triangulation tower 1</a> · Htm · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:View_towards_Levi%C3%A4salmi_of_Ukonj%C3%A4rvi_lake_in_Inari,_Lapland,_Finland,_2021_September.jpg" target="_blank" rel="noopener">View towards Leviäsalmi of Ukonjärvi lake in Inari, Lapland, Finland, 2021 September</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></li>
     <li><b>Térképadatok:</b> <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> 10 m‑es tavak, folyók és utak</li>
   </ul>
  </div>
@@ -979,16 +1010,17 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     {id:'kuukkeli',name:'Kuukkeli központ',tier:'log',tag:'BOLT',lat:68.4199,lon:27.4095,from:'2,5 km, 5 perc',text:'Saariselkä élelmiszerboltja, pékség és Alko.',q:'Kuukkeli Shopping Center Saariselkä',note:'Nyitvatartás okt. 31-én, szombat este (mindenszentek).',z:1,lab:'Kuukkeli',labm:'Kuukkeli',at:'l',atm:'l'},
     {id:'ksm',name:'K-Supermarket Ivalo',tier:'log',tag:'BOLT',lat:68.6555,lon:27.5416,from:'33 km, 30 perc',text:'A környék hal- és húspultja; menjetek korán.',q:'K-Supermarket Ivalo',note:'Nyitvatartás okt. 31-én, szombat este (mindenszentek).',lab:'K-Supermarket Ivalo',labm:'Ivalói bolt',at:'r',atm:'r'},
     {id:'laa',name:'Laanilan Kievari',tier:'must',tag:'FIX',lat:68.4027,lon:27.3916,from:'1 km, 3 perc',text:'Helyi konyhás vacsora, H–Szo 16–22; szaunák előfoglalással.',q:'Laanilan Kievari',z:1,lab:'Laanilan Kievari',labm:'Laanilan',at:'b',atm:'b'},
-    {id:'husky',name:'Husky & Co',tier:'must',tag:'FIX',lat:68.4131,lon:27.4150,from:'2 km, 5 perc',text:'Iroda; a kennel 10 perc autóval. Kb. 1 óra 200 huskyval.',q:'Husky & Co Saariselkä',note:'Találkozási pont: a falubeli iroda vagy a kennel.',z:1,lab:'Husky & Co',labm:'Husky & Co',at:'r',atm:'r'},
-    {id:'lsaf',name:'Lapland Safaris Saariselkä',tier:'must',tag:'FIX',lat:68.4211,lon:27.4251,from:'3 km, 5 perc',text:'A rénfarm-látogatás találkozási pontja.',q:'Lapland Safaris Saariselkä',note:'Hogy a rénfarm-látogatás november elején is megy-e.',z:1,lab:'Lapland Safaris',labm:'Safaris',at:'r',atm:'r'},
-    {id:'kau',name:'Kaunispää-csúcs',tier:'must',tag:'FIX',lat:68.4335,lon:27.4431,from:'7 km, 12 perc',text:'437 m, autóval fel a tetőre; torony, napnyugta, sarki fény; Kaunispään Huippu kávézó.',q:'Kaunispään Huippu',lab:'Kaunispää-csúcs',labm:'Kaunispää',at:'l',atm:'l'},
-    {id:'gate',name:'Nemzeti parki kapu (Aurorapolku, Iisakkipää)',tier:'if',tag:'HA',lat:68.419,lon:27.425,approx:1,from:'3 km, 5 perc',text:'A 2,1 km-es kivilágított kör és a 3 km-es Iisakkipää-kör kezdete.',q:'Aurorapolku Saariselkä',note:'A pontos kapu. Ez a pont csak hozzávetőleges.',z:1,lab:'Parkkapu',labm:'Kapu',at:'r',atm:'r'},
-    {id:'kii',name:'Kiilopää tunturiközpont',tier:'must',tag:'FIX',lat:68.3464,lon:27.4606,from:'14 km, 15 perc',text:'546 m-es csúcs, 2 km egy irányba; fizetős parkolás 9–18.',q:'Kiilopää Fell Centre',note:'A tunturiközpont és a Kuurakaltio füstszauna nyitvatartása azon a héten.',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
-    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'HA',lat:68.7760,lon:27.4457,from:'45 km, 40 perc',text:'Tó az E75 mentén, Ivalótól északra; kék óra és sarkifény-megálló.',q:'Ukonjärvi Inari',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
+    {id:'husky',name:'Husky & Co',tier:'must',tag:'FIX',lat:68.4131,lon:27.4150,from:'2 km, 5 perc',text:'Iroda; a kennel 10 perc autóval. Kb. 1 óra 200 huskyval.',q:'Husky & Co Saariselkä',note:'Találkozási pont: a falubeli iroda vagy a kennel.',z:1,img:'husky',lab:'Husky & Co',labm:'Husky & Co',at:'r',atm:'r'},
+    {id:'lsaf',name:'Lapland Safaris Saariselkä',tier:'must',tag:'FIX',lat:68.4211,lon:27.4251,from:'3 km, 5 perc',text:'A rénfarm-látogatás találkozási pontja.',q:'Lapland Safaris Saariselkä',note:'Hogy a rénfarm-látogatás november elején is megy-e.',z:1,img:'reindeer',lab:'Lapland Safaris',labm:'Safaris',at:'r',atm:'r'},
+    {id:'kau',name:'Kaunispää-csúcs',tier:'must',tag:'FIX',lat:68.4335,lon:27.4431,from:'7 km, 12 perc',text:'437 m, autóval fel a tetőre; torony, napnyugta, sarki fény; Kaunispään Huippu kávézó.',q:'Kaunispään Huippu',img:'kaunispaa',lab:'Kaunispää-csúcs',labm:'Kaunispää',at:'l',atm:'l'},
+    {id:'gate',name:'Nemzeti parki kapu (Aurorapolku, Iisakkipää)',tier:'if',tag:'HA',lat:68.419,lon:27.425,approx:1,from:'3 km, 5 perc',text:'A 2,1 km-es kivilágított kör és a 3 km-es Iisakkipää-kör kezdete.',q:'Aurorapolku Saariselkä',note:'A pontos kapu. Ez a pont csak hozzávetőleges.',z:1,img:'forest',lab:'Parkkapu',labm:'Kapu',at:'r',atm:'r'},
+    {id:'kii',name:'Kiilopää tunturiközpont',tier:'must',tag:'FIX',lat:68.3464,lon:27.4606,from:'14 km, 15 perc',text:'546 m-es csúcs, 2 km egy irányba; fizetős parkolás 9–18.',q:'Kiilopää Fell Centre',note:'A tunturiközpont és a Kuurakaltio füstszauna nyitvatartása azon a héten.',img:'kiilopaa',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
+    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'HA',lat:68.7760,lon:27.4457,from:'45 km, 40 perc',text:'Tó az E75 mentén, Ivalótól északra; kék óra és sarkifény-megálló.',q:'Ukonjärvi Inari',img:'ukonjarvi',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
     {id:'tuu',name:'Tuulispää parkoló',tier:'if',tag:'HA',lat:68.8568,lon:27.1259,from:'67 km, 1 óra',text:'Sík, 3 km-es séta egy tóra néző szélfogóig; murvás bekötőút.',q:'Tuulisjärvi Parking Lot Inari',lab:'Tuulispää',labm:'Tuulispää',at:'r',atm:'r'},
-    {id:'siida',name:'Siida',tier:'must',tag:'FIX',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 óra',text:'Számi Múzeum, H–Szo 10–17; bent a Sarrit, ebédre.',q:'Siida Inari',note:'A Sarrit téli ebédnapjai.',lab:'Siida',labm:'Siida, Sajos',at:'tr',atm:'tr'},
-    {id:'sajos',name:'Sajos',tier:'fill',tag:'RÁADÁS',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 óra',text:'Számi Parlament és kulturális központ; Duodji Shop.',q:'Sajos Inari',lab:'Sajos',labm:'',at:'br',atm:'br'},
-    {id:'juutua',name:'Juutua-ösvény parkoló',tier:'must',tag:'FIX',lat:68.8954,lon:26.9665,from:'73 km, 1 óra',text:'Folyami zúgók és függőhíd; 5,8 km-es kör.',q:'Juutua Nature Trail Inari',lab:'Juutua-ösvény',labm:'Juutua',at:'b',atm:'l'},
+    {id:'siida',name:'Siida',tier:'must',tag:'FIX',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 óra',text:'Számi Múzeum, H–Szo 10–17; bent a Sarrit, ebédre.',q:'Siida Inari',note:'A Sarrit téli ebédnapjai.',img:'siida',lab:'Siida',labm:'Siida, Sajos',at:'tr',atm:'tr'},
+    {id:'sajos',name:'Sajos',tier:'fill',tag:'RÁADÁS',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 óra',text:'Számi Parlament és kulturális központ; Duodji Shop.',q:'Sajos Inari',img:'sajos',lab:'Sajos',labm:'',at:'br',atm:'br'},
+    {id:'juutua',name:'Juutua-ösvény parkoló',tier:'must',tag:'FIX',lat:68.8954,lon:26.9665,from:'73 km, 1 óra',text:'Folyami zúgók és függőhíd; 5,8 km-es kör.',q:'Juutua Nature Trail Inari',img:'juutua',lab:'Juutua-ösvény',labm:'Juutua',at:'tl',atm:'tl'},
+    {id:'otsamo',name:'Otsamo (rovajärvi parkoló)',tier:'if',tag:'HA',lat:68.8873,lon:26.7718,from:'88 km, 1 óra 20 perc, a limit fölött',text:'3 km egy irányba a 418 m-es csúcsig; nappali pihenőkunyhó; kilátás a tavakra; csak hómentes talajon.',q:'Rovajärventie 765, Inari',note:'Hó vagy jég az ösvényen, és járható-e a Rovajärventie.',img:'otsamo',lab:'Otsamo',labm:'Otsamo',at:'br',atm:'br'},
     {id:'irf',name:'Inari Reindeer Farm',tier:'if',tag:'HA',lat:68.8260,lon:26.7745,from:'85 km, 1 óra 10 perc',text:'Számi családi farm; az 1 órás limit fölött.',q:'Inari Reindeer Farm Kittiläntie 1445',lab:'Inari Reindeer Farm',labm:'Rénfarm',at:'tr',atm:'tr'}
   ];
   var NS='http://www.w3.org/2000/svg';
@@ -1028,7 +1060,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   el('path',{'class':'lp-link',d:'M'+(b[0]+b[2])+' '+(b[1]+b[3]/2)+'H'+f[0]},layer);
   el('rect',{'class':'lp-box',x:b[0],y:b[1],width:b[2],height:b[3],rx:3},layer);
   el('text',{'class':'m-area',x:b[0]-6,y:b[1]+b[3]/2+4,'text-anchor':'end'},layer,'Saariselkä');
-  el('text',{'class':'m-area',x:70,y:76,'text-anchor':'end'},layer,'Inari');
+  el('text',{'class':'m-area',x:70,y:70,'text-anchor':'end'},layer,'Inari');
   el('rect',{'class':'lp-bg',x:f[0],y:f[1],width:f[2],height:f[3],rx:8},loupe);
   el('text',{'class':'lp-title',x:f[0]+10,y:f[1]+18},loupe,'SAARISELKÄ KÖZELRŐL');
   el('text',{'class':'m-area',x:420,y:452,'text-anchor':'middle'},loupe,'Saariselkä központja');
@@ -1066,7 +1098,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     var n=active&&nodes[active];
     if(!n){info.innerHTML=DEFAULT;return;}
     var p=n.p,url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q);
-    info.innerHTML='<span class="tag '+p.tier+'">'+p.tag+'</span><h3>'+esc(p.name)+'</h3><p>'+esc(p.text)+'</p>'+
+    info.innerHTML=(p.img?'<img class="mi-img" src="/images/lapland/plan/'+p.img+'.jpg" alt="" width="720" height="540">':'')+'<span class="tag '+p.tier+'">'+p.tag+'</span><h3>'+esc(p.name)+'</h3><p>'+esc(p.text)+'</p>'+
       (p.note?'<p class="note"><span class="nk">Ellenőrizni</span>'+esc(p.note)+'</p>':'')+
       (p.from?'<p class="mi-drive"><span>A kabintól</span><b>'+esc(p.from)+'</b></p>':'')+
       '<p><a class="gmap" href="'+url+'" target="_blank" rel="noopener">Megnyitás a Google Mapsben</a></p>';

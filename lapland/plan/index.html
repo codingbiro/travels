@@ -209,6 +209,14 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem}
 .choice .def{border-left:2px solid var(--aur);padding-left:12px}
 .choice .def .ck{color:var(--aur)}
 
+/* photos */
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 0 12px}
+.shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--panel-2)}
+.shot figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:7px 10px 8px;font-size:.85rem;line-height:1.3}
+.shot figcaption span{font-family:var(--mono);font-size:.66rem;color:var(--ink-dim);white-space:nowrap}
+.mapinfo .mi-img{display:block;width:calc(100% + 36px);max-width:none;height:auto;aspect-ratio:4/3;object-fit:cover;margin:-18px -18px 14px;border-radius:11px 11px 0 0;background:var(--panel-2)}
+
 /* map */
 .mapgrid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:20px;align-items:start}
 .mapbox{background:var(--land);border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -483,9 +491,9 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     </article>
     <article class="choice">
      <h4>Monday afternoon</h4>
-     <div><span class="ck">Options</span><p><b>Juutua rapids and Lake Inari shore</b>, <b>Sajos</b> (weekdays; Duodji Shop), or <b>Tuulispää's lean-to</b> with a lake view.</p></div>
-     <div><span class="ck">Trade-off</span><p>Juutua and the shore are the lake-and-river nature. Sajos is indoors Sámi culture. Tuulispää's parking isn't ploughed until mid-February, so it depends on the gravel road.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Juutua and the shore; Sajos if it's sleeting; Tuulispää only if the road is clear and there's light left. Skip all three if you chose the Sámi farm.</p></div>
+     <div><span class="ck">Options</span><p><b>Juutua rapids and Lake Inari shore</b>, <b>Sajos</b> (weekdays; Duodji Shop), or <b>Tuulispää's lean-to</b> with a lake view, or <b>Otsamo</b> from Rovajärvi (418 m, 3 km each way).</p></div>
+     <div><span class="ck">Trade-off</span><p>Juutua and the shore are the lake-and-river nature. Sajos is indoors Sámi culture. Tuulispää's parking isn't ploughed until mid-February, so it depends on the gravel road. Otsamo is the best lake view of the trip, but over the cap and only on snow-free ground.</p></div>
+     <div class="def"><span class="ck">Default</span><p>Juutua and the shore; Sajos if it's sleeting; Tuulispää only if the road is clear and there's light left. Skip all of them if you chose the Sámi farm.</p></div>
     </article>
     <article class="choice">
      <h4>Aurora nights</h4>
@@ -525,6 +533,11 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <h3 class="word"><span class="sr-only">Sunday 1 November: </span>Fells</h3>
      <p class="light">Sun 08:24–15:22, never higher than about 7°. Dark from 18:45; half moon rises 20:05.</p>
    </div>
+   <div>
+   <div class="shots">
+    <figure class="shot"><img src="/images/lapland/plan/kiilopaa.jpg" alt="Boardwalk with steps up the Kiilopää fell" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kiilopää</b><span>09:45</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/forest.jpg" alt="Ski tracks through snowy forest at sunset near Kiilopää" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Forest loops</b><span>Plan B</span></figcaption></figure>
+   </div>
    <dl class="rows">
      <div class="row"><dt class="k">09:45</dt><dd class="v"><span class="tag must">MUST</span><strong>Kiilopää (546 m)</strong>, 15 min drive. About 2 km each way from the fell centre on a renovated path with stairs. Microspikes on; windy on top. Parking is paid 9–18 via EasyPark: €1 an hour, max €5 a day, first 30 min free.</dd></div>
      <div class="row"><dt class="k">Plan B</dt><dd class="v"><span class="tag if">IF</span>Summit in cloud or strong wind: stay among the trees on the 3 km Iisakkipää loop or the 2.1 km lit Aurorapolku from Saariselkä village.<span class="note"><span class="nk">To confirm</span>The exact national park gate where Aurorapolku and Iisakkipää start.</span></dd></div>
@@ -535,6 +548,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">MUST</span>Cloud check, then sauna.</dd></div>
      <div class="row"><dt class="k">18:45–20:30</dt><dd class="v"><span class="tag must">MUST</span>Short moon-free window. Watch from the yard between rounds; if it's cloudy at home, try Kaunispää top (about 12 min).</dd></div>
    </dl>
+   </div>
   </article>
 
   <article class="day" id="d-mon">
@@ -544,11 +558,18 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <p class="light">Sun 08:35–15:14 in Inari. Dark from 18:40; moon rises 22:37.</p>
    </div>
    <div>
+   <div class="shots">
+    <figure class="shot"><img src="/images/lapland/plan/siida.jpg" alt="Siida museum entrance in winter" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Siida</b><span>10:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/juutua.jpg" alt="Jäniskoski rapids on the Juutuanjoki with the suspension bridge" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Juutua rapids</b><span>13:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/otsamo.jpg" alt="Day-use hut on the open Otsamo summit" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Otsamo</b><span>13:00 · IF</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/sajos.jpg" alt="The Sajos building in the snow" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Sajos</b><span>13:00 · FILL</span></figcaption></figure>
+   </div>
    <dl class="rows">
      <div class="row"><dt class="k">09:00</dt><dd class="v">Drive to Inari: about 71 km, 1 h, via Ivalo and the lakeside E75 past Ukonjärvi.</dd></div>
      <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Siida, the Sámi Museum.</strong> Mon–Sat 10–17; adults €18 (€90 for five). Allow 2 h. From October 2026 it also shows works from <em>We Who Remain</em>, a contemporary Sámi art exhibition made with Kiasma.</dd></div>
      <div class="row"><dt class="k">12:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Local food, part one:</strong> buffet lunch at Sarrit inside Siida, served 11–15 (no museum ticket needed).<span class="note"><span class="nk">To confirm</span>Sarrit's winter lunch days.</span></dd></div>
      <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Juutua rapids and Lake Inari shore.</strong> From the Kittiläntie 156 parking it's a short walk to the suspension bridge; the full loop is 5.8 km.</dd></div>
+     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag if">IF</span><strong>Otsamo from Rovajärvi:</strong> 20–25 min from Siida, 3 km each way to the 418 m top with views over Lake Inari; snow-free ground only; drive home about 1 h 20 (over the cap). Park at the end of Rovajärventie (Rovajärventie 765); the last climb is steep and rocky in places, and the open summit has a day-use hut. On top by about 14:15, back at the car before dusk (16:25).<span class="note"><span class="nk">To confirm</span>Snow or ice on the trail, and whether Rovajärventie is passable.</span></dd></div>
      <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag fill">FILL</span><strong>Sajos</strong>, the Sámi Parliament and cultural centre next to Siida (weekdays). Its Duodji Shop sells Sámi-made handicraft.</dd></div>
      <div class="row"><dt class="k">14:15</dt><dd class="v"><span class="tag if">IF</span><strong>Tuulispää</strong> on the way back: 2.5 km of gravel road, then a flat 3 km round trip to a lean-to with a lake view. Only if the road is passable.</dd></div>
      <div class="row"><dt class="k">15:14</dt><dd class="v">Sunset over the lake.</dd></div>
@@ -556,7 +577,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <div class="row"><dt class="k">18:30</dt><dd class="v"><span class="tag must">MUST</span><strong>Local food, part two:</strong> dinner at Laanilan Kievari, 1 km from the cabin (Mon–Sat 16–22; book). Order the fire-roasted reindeer shoulder for two.</dd></div>
      <div class="row"><dt class="k">20:30–22:40</dt><dd class="v"><span class="tag must">MUST</span>Moon-free window. Yard or Kaunispää.</dd></div>
    </dl>
-   <p class="daynote"><strong>Sámi reindeer option:</strong> a Sámi herding family near Inari can replace the 13:00–15:14 block, but the drive home from those farms is about 1 h 5 – 1 h 15, over the cap. Details in <a href="#sami">Sámi culture</a>.<span class="note"><span class="nk">To confirm</span>Which Sámi family farm you book, and its address.</span></p>
+   <p class="daynote"><strong>Sámi reindeer option:</strong> a Sámi herding family near Inari can replace the 13:00–15:14 block, but the drive home from those farms is about 1 h 5 – 1 h 15, over the cap. Details in <a href="#sami">Sámi culture</a>. Otsamo, the Sámi farm and Tuulispää compete for the same afternoon, so pick one.<span class="note"><span class="nk">To confirm</span>Which Sámi family farm you book, and its address.</span></p>
    </div>
   </article>
 
@@ -565,6 +586,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <p class="date">Tue 3 Nov</p>
      <h3 class="word"><span class="sr-only">Tuesday 3 November: </span>Huskies<span class="sr-only"> and reindeer</span></h3>
      <p class="light">Sun 08:33–15:13. Dark from 18:36; moon rises 00:43 — the darkest night of the trip.</p>
+   </div>
+   <div>
+   <div class="shots">
+    <figure class="shot"><img src="/images/lapland/plan/husky.jpg" alt="Sled dogs in harness resting in the snow" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Husky &amp; Co</b><span>10:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/reindeer.jpg" alt="Reindeer and sleds at a farm in Inari" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Reindeer farm</b><span>12:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/kaunispaa.jpg" alt="Triangulation tower on top of Kaunispää" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kaunispää tower</b><span>14:00</span></figcaption></figure>
    </div>
    <dl class="rows">
      <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Husky &amp; Co kennel visit:</strong> office 5 min from the cabin, kennel a 10 min drive from Saariselkä. About an hour with 200 huskies, stories and a hot drink by the fire in a kota. Groups of 2–8, so all five fit one booking.<span class="note"><span class="nk">To confirm</span>Meeting point: the village office or the kennel.</span></dd></div>
@@ -577,6 +604,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
      <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">MUST</span>Cloud check, then sauna.</dd></div>
      <div class="row"><dt class="k">18:40–00:40</dt><dd class="v"><span class="tag must">MUST</span>Six moon-free hours. If home is clouded in, drive up to 45 min to the clearest hole.</dd></div>
    </dl>
+   </div>
   </article>
 
   <article class="day" id="d-wed">
@@ -871,6 +899,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li>Sarrit's winter lunch days</li>
     <li>Kiilopää fell centre and Kuurakaltio smoke sauna hours that week</li>
     <li>Snow cover the week before: have husky sled safaris started?</li>
+    <li>Otsamo: snow or ice on the trail, and whether Rovajärventie is passable — check the week before</li>
     <li>Exact pin for the national park gate where Aurorapolku and Iisakkipää start</li>
   </ul>
  </div>
@@ -913,6 +942,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><span class="when">Any forest stop</span><div><strong>Siberian jays.</strong> Sit still, lens ready; they arrive fast, so 1/2000.</div></li>
     <li><span class="when">Roadsides, Tue farm</span><div><strong>Reindeer.</strong> 350 mm lets you stay far enough back not to move them; shoot from the car only in a proper lay-by; ask farm hosts first.</div></li>
     <li><span class="when">Mon 13:00</span><div><strong>Juutua rapids.</strong> If ice is forming at the edges: tripod, 1/4–1 s for smooth water, or 1/1000 to freeze spray.</div></li>
+    <li><span class="when">Mon about 14:15</span><div><strong>Otsamo top.</strong> Lake Inari and Muddusjärvi in low sun at 100–350 mm.</div></li>
     <li><span class="when">Sun on Kiilopää</span><div><strong>Summit ridges.</strong> Distant fells with hikers for scale at 150–250 mm.</div></li>
     <li><span class="when">Mon 15:14</span><div><strong>Lake Inari.</strong> Pastel layers after sunset; the blue hour lasts about an hour.</div></li>
     <li><span class="when">Mon 22:37</span><div><strong>North-east horizon.</strong> Bonus moonrise behind the fells: 350 mm, tripod, start at 1/250 s, f/6.3, ISO 400.</div></li>
@@ -942,13 +972,14 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><b>Huskies:</b> <a href="https://musement.com/uk/saariselka/visit-a-husky-farm-in-saariselka-271599" target="_blank" rel="noopener">Husky &amp; Co kennel visit</a>; <a href="https://manawa.com/en-GB/activity/finland/saariselka/dog-sledding/self-drive-husky-safari-near-urho-kekkonen-national-park-from-saariselka/13769" target="_blank" rel="noopener">self-drive husky safari</a>; <a href="https://laplandnorth.fi/en/experiences/activity/forest-walk-with-a-husky-saariselka-2/" target="_blank" rel="noopener">autumn husky programmes</a></li>
     <li><a href="https://laplandsafaris.com/activitypage?id=94273" target="_blank" rel="noopener">Lapland Safaris reindeer farm visit, Saariselkä</a></li>
     <li><b>Herding families:</b> <a href="https://laplandnorth.fi/en/company/angeli-reindeer-farm" target="_blank" rel="noopener">Angeli reindeer farm</a>; <a href="https://www.visitfinland.com/en/product/c7d493d9-b4e6-4205-b3d6-e0b4dcd743a8/private-reindeer-farm-visit/" target="_blank" rel="noopener">Angeli private visit</a>; <a href="https://visitfinland.com/en/product/adf3b81b-f374-4deb-8246-68af4e4b12ab/home-visit-at-local-reindeer-herder-family" target="_blank" rel="noopener">Renniina home visit</a>; <a href="https://www.uarctic.org/news/2025/3/uarctic-assembly-2025-program-highlight-4-reindeer-farm-visit/" target="_blank" rel="noopener">Inari Reindeer Farm</a></li>
-    <li><a href="https://classic.nationalparks.fi/inari/trails/description" target="_blank" rel="noopener">Inari trails: Juutua, Tuulispää</a></li>
+    <li><b>Inari trails:</b> <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area" target="_blank" rel="noopener">Inari Hiking Area (Juutua, Tuulispää, Otsamo)</a>; <a href="https://www.luontoon.fi/en/trails/inari-otsamo-riutula-summer-trail-inari-10641-en" target="_blank" rel="noopener">Inari–Otsamo–Riutula trail</a></li>
     <li><b>Kiilopää and Saariselkä:</b> <a href="https://laplandnorth.fi/en/about-the-area/kiilopaa" target="_blank" rel="noopener">Kiilopää</a>; <a href="https://www.luontoon.fi/en/news/paid-parking-pilot-starts-at-five-metsahallitus-destinations-on-1-september-2026" target="_blank" rel="noopener">Kiilopää paid parking</a>; <a href="https://www.nationalparks.fi/urhokekkonennp/trails" target="_blank" rel="noopener">Saariselkä trails</a>; <a href="https://laplandtripplanner.com/saariselka-guide/" target="_blank" rel="noopener">Kuurakaltio smoke sauna</a></li>
     <li><b>Kaunispää:</b> <a href="https://saariselka.com/en/?p=9337" target="_blank" rel="noopener">Kaunispää</a>; <a href="https://saariselka.com/en/?p=18304" target="_blank" rel="noopener">Kaunispään Huippu</a>; <a href="https://www.travelinmypocket.com/kaunispaa-triangulation-tower-saariselka/" target="_blank" rel="noopener">triangulation tower</a></li>
     <li><a href="https://laplandnorth.fi/company/shopping-center-kuukkeli" target="_blank" rel="noopener">Kuukkeli centre</a></li>
     <li><b>Siberian jays:</b> <a href="https://www.outinthenature.com/explore-the-mystical-world-of-the-siberian-jay/" target="_blank" rel="noopener">status</a>; <a href="https://finlandnaturally.com/uncategorized/every-mans-best-friend-siberian-jay-meeting-the-soul-bird-in-pallas-yllastunturi-national-park/" target="_blank" rel="noopener">feeding jays</a></li>
     <li><a href="https://collections.maa.cam.ac.uk/objects/553273" target="_blank" rel="noopener">Sámi Duodji label</a></li>
     <li><a href="https://julkaisut.metsa.fi/assets/pdf/lp/Esitteet/ukpuistoeng.pdf" target="_blank" rel="noopener">Urho Kekkonen National Park brochure</a>; <a href="https://avionero.com/New-York_NYC-Ivalo_IVL/weather/november" target="_blank" rel="noopener">Ivalo November weather</a></li>
+    <li><b>Photos</b> (Wikimedia Commons, cropped and resized): <a href="https://commons.wikimedia.org/wiki/File:Kiilopaa_path.jpg" target="_blank" rel="noopener">Kiilopaa path</a> · Kospo75 · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Anochecer_en_Kiilop%C3%A4%C3%A4.jpg" target="_blank" rel="noopener">Anochecer en Kiilopää</a> · Beasai · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:SIIDA_Inari,_Suomi_Finland_2013-03-10_001.jpg" target="_blank" rel="noopener">SIIDA Inari, Suomi Finland 2013-03-10 001</a> · Manfred Werner - Tsui · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:J%C3%A4niskoski_rapids_of_Juutuanjoki_in_Inari,_Lapland,_Finland,_2022_August_-_3.jpg" target="_blank" rel="noopener">Jäniskoski rapids of Juutuanjoki in Inari, Lapland, Finland, 2022 August - 3</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Otsamon_tupa.JPG" target="_blank" rel="noopener">Otsamon tupa</a> · Trogain · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:SAM_2449_Sajos_29JAN2012.jpg" target="_blank" rel="noopener">SAM 2449 Sajos 29JAN2012</a> · Kimberli Mäkäräinen · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sled_dogs_in_Lapland,_Finland.jpg" target="_blank" rel="noopener">Sled dogs in Lapland, Finland</a> · Letizia Barbi · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Reindeer_farm,_Inari,_Suomi_-_Finland_2013-03-10_f.jpg" target="_blank" rel="noopener">Reindeer farm, Inari, Suomi - Finland 2013-03-10 f</a> · Manfred Werner - Tsui · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Kaunisp%C3%A4%C3%A4_triangulation_tower_1.jpg" target="_blank" rel="noopener">Kaunispää triangulation tower 1</a> · Htm · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:View_towards_Levi%C3%A4salmi_of_Ukonj%C3%A4rvi_lake_in_Inari,_Lapland,_Finland,_2021_September.jpg" target="_blank" rel="noopener">View towards Leviäsalmi of Ukonjärvi lake in Inari, Lapland, Finland, 2021 September</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></li>
     <li><b>Map data:</b> <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> 10 m lakes, rivers and roads</li>
   </ul>
  </div>
@@ -970,16 +1001,17 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     {id:'kuukkeli',name:'Kuukkeli centre',tier:'log',tag:'SHOP',lat:68.4199,lon:27.4095,from:'2.5 km, 5 min',text:'Saariselkä’s grocery, bakery and Alko.',q:'Kuukkeli Shopping Center Saariselkä',note:'Hours on the evening of Sat 31 Oct, All Saints’ Day.',z:1,lab:'Kuukkeli',labm:'Kuukkeli',at:'l',atm:'l'},
     {id:'ksm',name:'K-Supermarket Ivalo',tier:'log',tag:'SHOP',lat:68.6555,lon:27.5416,from:'33 km, 30 min',text:'The area’s fish and meat counter; go early.',q:'K-Supermarket Ivalo',note:'Hours on the evening of Sat 31 Oct, All Saints’ Day.',lab:'K-Supermarket Ivalo',labm:'Ivalo shop',at:'r',atm:'r'},
     {id:'laa',name:'Laanilan Kievari',tier:'must',tag:'MUST',lat:68.4027,lon:27.3916,from:'1 km, 3 min',text:'Local-food dinner, Mon–Sat 16–22; saunas by reservation.',q:'Laanilan Kievari',z:1,lab:'Laanilan Kievari',labm:'Laanilan',at:'b',atm:'b'},
-    {id:'husky',name:'Husky & Co',tier:'must',tag:'MUST',lat:68.4131,lon:27.4150,from:'2 km, 5 min',text:'Office; the kennel is a 10 min drive. About 1 h with 200 huskies.',q:'Husky & Co Saariselkä',note:'Meeting point: the village office or the kennel.',z:1,lab:'Husky & Co',labm:'Husky & Co',at:'r',atm:'r'},
-    {id:'lsaf',name:'Lapland Safaris Saariselkä',tier:'must',tag:'MUST',lat:68.4211,lon:27.4251,from:'3 km, 5 min',text:'Meeting point for the reindeer farm visit.',q:'Lapland Safaris Saariselkä',note:'That the reindeer farm visit runs in early November.',z:1,lab:'Lapland Safaris',labm:'Safaris',at:'r',atm:'r'},
-    {id:'kau',name:'Kaunispää top',tier:'must',tag:'MUST',lat:68.4335,lon:27.4431,from:'7 km, 12 min',text:'437 m, drive to the top; tower, sunset, aurora; Kaunispään Huippu café.',q:'Kaunispään Huippu',lab:'Kaunispää top',labm:'Kaunispää',at:'l',atm:'l'},
-    {id:'gate',name:'National park gate (Aurorapolku, Iisakkipää)',tier:'if',tag:'IF',lat:68.419,lon:27.425,approx:1,from:'3 km, 5 min',text:'Start of the 2.1 km lit loop and the 3 km Iisakkipää loop.',q:'Aurorapolku Saariselkä',note:'The exact gate. This pin is approximate.',z:1,lab:'Park gate',labm:'Gate',at:'r',atm:'r'},
-    {id:'kii',name:'Kiilopää Fell Centre',tier:'must',tag:'MUST',lat:68.3464,lon:27.4606,from:'14 km, 15 min',text:'546 m summit, 2 km each way; paid parking 9–18.',q:'Kiilopää Fell Centre',note:'Fell centre and Kuurakaltio smoke sauna hours that week.',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
-    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'IF',lat:68.7760,lon:27.4457,from:'45 km, 40 min',text:'Lake on the E75 north of Ivalo; blue hour and aurora stop.',q:'Ukonjärvi Inari',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
+    {id:'husky',name:'Husky & Co',tier:'must',tag:'MUST',lat:68.4131,lon:27.4150,from:'2 km, 5 min',text:'Office; the kennel is a 10 min drive. About 1 h with 200 huskies.',q:'Husky & Co Saariselkä',note:'Meeting point: the village office or the kennel.',z:1,img:'husky',lab:'Husky & Co',labm:'Husky & Co',at:'r',atm:'r'},
+    {id:'lsaf',name:'Lapland Safaris Saariselkä',tier:'must',tag:'MUST',lat:68.4211,lon:27.4251,from:'3 km, 5 min',text:'Meeting point for the reindeer farm visit.',q:'Lapland Safaris Saariselkä',note:'That the reindeer farm visit runs in early November.',z:1,img:'reindeer',lab:'Lapland Safaris',labm:'Safaris',at:'r',atm:'r'},
+    {id:'kau',name:'Kaunispää top',tier:'must',tag:'MUST',lat:68.4335,lon:27.4431,from:'7 km, 12 min',text:'437 m, drive to the top; tower, sunset, aurora; Kaunispään Huippu café.',q:'Kaunispään Huippu',img:'kaunispaa',lab:'Kaunispää top',labm:'Kaunispää',at:'l',atm:'l'},
+    {id:'gate',name:'National park gate (Aurorapolku, Iisakkipää)',tier:'if',tag:'IF',lat:68.419,lon:27.425,approx:1,from:'3 km, 5 min',text:'Start of the 2.1 km lit loop and the 3 km Iisakkipää loop.',q:'Aurorapolku Saariselkä',note:'The exact gate. This pin is approximate.',z:1,img:'forest',lab:'Park gate',labm:'Gate',at:'r',atm:'r'},
+    {id:'kii',name:'Kiilopää Fell Centre',tier:'must',tag:'MUST',lat:68.3464,lon:27.4606,from:'14 km, 15 min',text:'546 m summit, 2 km each way; paid parking 9–18.',q:'Kiilopää Fell Centre',note:'Fell centre and Kuurakaltio smoke sauna hours that week.',img:'kiilopaa',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
+    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'IF',lat:68.7760,lon:27.4457,from:'45 km, 40 min',text:'Lake on the E75 north of Ivalo; blue hour and aurora stop.',q:'Ukonjärvi Inari',img:'ukonjarvi',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
     {id:'tuu',name:'Tuulispää parking',tier:'if',tag:'IF',lat:68.8568,lon:27.1259,from:'67 km, 1 h',text:'Flat 3 km walk to a lean-to with a lake view; gravel access road.',q:'Tuulisjärvi Parking Lot Inari',lab:'Tuulispää',labm:'Tuulispää',at:'r',atm:'r'},
-    {id:'siida',name:'Siida',tier:'must',tag:'MUST',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 h',text:'Sámi Museum, Mon–Sat 10–17; Sarrit lunch inside.',q:'Siida Inari',note:'Sarrit’s winter lunch days.',lab:'Siida',labm:'Siida, Sajos',at:'tr',atm:'tr'},
-    {id:'sajos',name:'Sajos',tier:'fill',tag:'FILL',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 h',text:'Sámi Parliament and cultural centre; Duodji Shop.',q:'Sajos Inari',lab:'Sajos',labm:'',at:'br',atm:'br'},
-    {id:'juutua',name:'Juutua trail parking',tier:'must',tag:'MUST',lat:68.8954,lon:26.9665,from:'73 km, 1 h',text:'River rapids and suspension bridge; 5.8 km loop.',q:'Juutua Nature Trail Inari',lab:'Juutua trail',labm:'Juutua',at:'l',atm:'l'},
+    {id:'siida',name:'Siida',tier:'must',tag:'MUST',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 h',text:'Sámi Museum, Mon–Sat 10–17; Sarrit lunch inside.',q:'Siida Inari',note:'Sarrit’s winter lunch days.',img:'siida',lab:'Siida',labm:'Siida, Sajos',at:'tr',atm:'tr'},
+    {id:'sajos',name:'Sajos',tier:'fill',tag:'FILL',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 h',text:'Sámi Parliament and cultural centre; Duodji Shop.',q:'Sajos Inari',img:'sajos',lab:'Sajos',labm:'',at:'br',atm:'br'},
+    {id:'juutua',name:'Juutua trail parking',tier:'must',tag:'MUST',lat:68.8954,lon:26.9665,from:'73 km, 1 h',text:'River rapids and suspension bridge; 5.8 km loop.',q:'Juutua Nature Trail Inari',img:'juutua',lab:'Juutua trail',labm:'Juutua',at:'tl',atm:'tl'},
+    {id:'otsamo',name:'Otsamo (Rovajärvi parking)',tier:'if',tag:'IF',lat:68.8873,lon:26.7718,from:'88 km, 1 h 20, over the cap',text:'3 km each way to the 418 m top; day-use hut; lake views; snow-free only.',q:'Rovajärventie 765, Inari',note:'Snow or ice on the trail, and whether Rovajärventie is passable.',img:'otsamo',lab:'Otsamo',labm:'Otsamo',at:'br',atm:'br'},
     {id:'irf',name:'Inari Reindeer Farm',tier:'if',tag:'IF',lat:68.8260,lon:26.7745,from:'85 km, 1 h 10',text:'Sámi family farm; over the 1 h cap.',q:'Inari Reindeer Farm Kittiläntie 1445',lab:'Inari Reindeer Farm',labm:'Reindeer farm',at:'tr',atm:'tr'}
   ];
   var NS='http://www.w3.org/2000/svg';
@@ -1019,7 +1051,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   el('path',{'class':'lp-link',d:'M'+(b[0]+b[2])+' '+(b[1]+b[3]/2)+'H'+f[0]},layer);
   el('rect',{'class':'lp-box',x:b[0],y:b[1],width:b[2],height:b[3],rx:3},layer);
   el('text',{'class':'m-area',x:b[0]-6,y:b[1]+b[3]/2+4,'text-anchor':'end'},layer,'Saariselkä');
-  el('text',{'class':'m-area',x:70,y:76,'text-anchor':'end'},layer,'Inari');
+  el('text',{'class':'m-area',x:70,y:70,'text-anchor':'end'},layer,'Inari');
   el('rect',{'class':'lp-bg',x:f[0],y:f[1],width:f[2],height:f[3],rx:8},loupe);
   el('text',{'class':'lp-title',x:f[0]+10,y:f[1]+18},loupe,'SAARISELKÄ CLOSE-UP');
   el('text',{'class':'m-area',x:420,y:452,'text-anchor':'middle'},loupe,'Saariselkä centre');
@@ -1057,7 +1089,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     var n=active&&nodes[active];
     if(!n){info.innerHTML=DEFAULT;return;}
     var p=n.p,url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p.q);
-    info.innerHTML='<span class="tag '+p.tier+'">'+p.tag+'</span><h3>'+esc(p.name)+'</h3><p>'+esc(p.text)+'</p>'+
+    info.innerHTML=(p.img?'<img class="mi-img" src="/images/lapland/plan/'+p.img+'.jpg" alt="" width="720" height="540">':'')+'<span class="tag '+p.tier+'">'+p.tag+'</span><h3>'+esc(p.name)+'</h3><p>'+esc(p.text)+'</p>'+
       (p.note?'<p class="note"><span class="nk">To confirm</span>'+esc(p.note)+'</p>':'')+
       (p.from?'<p class="mi-drive"><span>From the cabin</span><b>'+esc(p.from)+'</b></p>':'')+
       '<p><a class="gmap" href="'+url+'" target="_blank" rel="noopener">Open in Google Maps</a></p>';
