@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>STILL NORTH · Villa Skaidi I, Saariselkä</title>
-<meta name="description" content="Four nights at Villa Skaidi I in Saariselkä, 31 Oct – 4 Nov 2026: day plans, aurora windows, a map of every stop, huskies, Sámi culture, food, sauna and photography.">
+<title>Lapland · Villa Skaidi I, Saariselkä</title>
+<meta name="description" content="Four nights at Villa Skaidi I in Saariselkä, 31 Oct – 4 Nov 2026: the day-by-day plan, aurora windows, a map of every stop, Sámi culture, food, sauna and photography.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="STILL NORTH · Villa Skaidi I, Saariselkä">
+<meta property="og:title" content="Lapland · Villa Skaidi I, Saariselkä">
 <meta property="og:description" content="Four nights at Villa Skaidi I, Saariselkä. Aurora hunt all nights.">
 <meta property="og:url" content="https://travels.birovince.com/lapland/plan/">
 <link rel="alternate" hreflang="en" href="https://travels.birovince.com/lapland/plan/">
@@ -15,7 +15,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="STILL NORTH · Villa Skaidi I, Saariselkä">
+<meta name="twitter:title" content="Lapland · Villa Skaidi I, Saariselkä">
 <meta name="twitter:image" content="https://travels.birovince.com/images/lapland/og-cover.jpg">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
@@ -30,6 +30,7 @@
   --bg:#eef2f6;--panel:#ffffff;--panel-2:#f4f7fa;--line:#d7dee8;
   --ink:#122038;--ink-dim:#56667e;--aur:#097d52;--teal:#0e7874;--violet:#5b45c9;--ember:#b0501e;--ice:#1d6cb0;
   --land:#f7f9fb;--lake:#d3e4f4;--lake-edge:#8fb4d9;--water:#43709c;--road:#9aa7b9;--halo:#f7f9fb;
+  --tn-bg:#0a1220;
   --body-w:400;
   --n-0:#060b13;--n-1:#0a1220;--n-2:#101b2e;--n-line:#1c2a40;--n-ink:#c7d4e4;--n-dim:#7d8ea4;
   --n-aur:#6ef0a8;--n-teal:#43cfc6;--n-violet:#9b7dff;--n-ice:#8fd0ff;--n-ember:#ffb27d;
@@ -46,6 +47,7 @@
     --bg:#060b13;--panel:#0a1220;--panel-2:#101b2e;--line:#1c2a40;
     --ink:#c7d4e4;--ink-dim:#7d8ea4;--aur:#6ef0a8;--teal:#43cfc6;--violet:#9b7dff;--ember:#ffb27d;--ice:#8fd0ff;
     --land:#0a1220;--lake:#0e2440;--lake-edge:#2b5b8c;--water:#6a9acb;--road:#3b4d68;--halo:#0a1220;
+    --tn-bg:#04070d;
     --body-w:300;
   }
 }
@@ -53,15 +55,17 @@
   --bg:#060b13;--panel:#0a1220;--panel-2:#101b2e;--line:#1c2a40;
   --ink:#c7d4e4;--ink-dim:#7d8ea4;--aur:#6ef0a8;--teal:#43cfc6;--violet:#9b7dff;--ember:#ffb27d;--ice:#8fd0ff;
   --land:#0a1220;--lake:#0e2440;--lake-edge:#2b5b8c;--water:#6a9acb;--road:#3b4d68;--halo:#0a1220;
+  --tn-bg:#04070d;
   --body-w:300;
 }
-*,*::before,*::after{box-sizing:inherit}
+/* border-box everywhere: inheriting it stops at the <details> content slot */
+*,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
-html{height:100%;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);-webkit-text-size-adjust:100%}
+html{height:100%;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:var(--body-w);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--teal);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--teal) 40%,transparent)}
 a:hover{color:var(--aur);border-bottom-color:var(--aur)}
-a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--aur);outline-offset:3px;border-radius:4px}
+a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--aur);outline-offset:3px;border-radius:4px}
 strong,b{font-weight:600}
 em{font-style:italic}
 p{margin:0 0 1em;max-width:68ch}
@@ -71,7 +75,7 @@ dd{margin:0}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;overflow:hidden;background:var(--n-0);color:var(--n-ink);padding:88px 0 146px;border-bottom:1px solid var(--n-line)}
+.hero{position:relative;overflow:hidden;background:var(--n-0);color:var(--n-ink);padding:64px 0 118px;border-bottom:1px solid var(--n-line)}
 .hero .aurora{position:absolute;left:-15%;right:-15%;top:-30%;height:125%;pointer-events:none;
   background:
    radial-gradient(38% 42% at 24% 34%,rgba(110,240,168,.30),transparent 70%),
@@ -84,22 +88,38 @@ dd{margin:0}
 .horizon .far{fill:#0b1526}.horizon .near{fill:#08101d}.horizon .lake{fill:#060b13}
 .horizon .glint{stroke:rgba(110,240,168,.28);stroke-width:1.2;fill:none}
 .hero-in{position:relative;z-index:1}
-.hero .crumb{font-size:.9rem;margin:0 0 22px}
+.hero .crumb{font-size:.9rem;margin:0 0 18px}
 .hero .crumb a{color:var(--n-dim);border:0;display:inline-block;padding:10px 0}
 .hero .crumb a:hover{color:var(--n-aur)}
 .hero .when{font-family:var(--mono);font-size:.78rem;color:var(--n-dim);margin:0 0 14px}
-.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,8.6vw,5.4rem);line-height:.95;letter-spacing:-.01em;color:#eaf2ff;margin:0 0 20px}
-.hero .lede{font-size:1.14rem;max-width:34em;color:var(--n-ink);font-weight:300}
-.statline{display:flex;flex-wrap:wrap;gap:6px 22px;margin:20px 0 0;font-size:.92rem;color:var(--n-dim)}
-.statline b{color:var(--n-aur);font-weight:600}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,8.6vw,5.4rem);line-height:.95;letter-spacing:-.01em;color:#eaf2ff;margin:0}
+
+/* five days at a glance */
+.glance{list-style:none;margin:34px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.glance a{display:flex;flex-direction:column;gap:3px;height:100%;padding:12px 13px 13px;border:1px solid var(--n-line);border-radius:12px;background:rgba(10,18,32,.74);color:var(--n-ink);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.glance a:hover{border-color:var(--n-aur);color:var(--n-ink)}
+.g-d{font-family:var(--mono);font-size:.7rem;color:var(--n-dim)}
+.g-w{font-family:var(--disp);font-weight:400;font-size:1rem;line-height:1.2;color:#eaf2ff}
+.g-s{flex:1;font-size:.84rem;line-height:1.38;color:var(--n-dim)}
+.glance .nv{margin-top:8px}
+.glance li.today a{border-color:var(--n-aur);box-shadow:0 0 0 1px var(--n-aur)}
+.glance li.today .g-d::after{content:"Today";margin-left:8px;color:var(--n-aur);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+/* night verdicts: in the glance and on each evening */
+.nv{align-self:flex-start;display:inline-block;font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border-radius:4px;border:1px solid currentColor;white-space:nowrap}
+.nv.v-moon{color:#f1e7c2}.nv.v-short{color:var(--n-dim)}.nv.v-good{color:var(--n-aur)}
+.nv.v-best{color:var(--n-0);background:var(--n-aur);border-color:var(--n-aur)}
 
 /* ---------- NAV ---------- */
 nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav.toc .wrap{display:flex;align-items:center;gap:14px;padding-top:4px;padding-bottom:4px}
-nav.toc .links{display:flex;gap:0 20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;flex:1;min-width:0;font-size:.9rem}
+nav.toc .links{display:flex;align-items:center;gap:0 18px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;flex:1;min-width:0;font-size:.9rem}
 nav.toc .links::-webkit-scrollbar{display:none}
 nav.toc .links a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink-dim);border:0}
-nav.toc .links a:hover{color:var(--ink)}
+nav.toc .links a.dl{font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--ink)}
+nav.toc .links a:hover,nav.toc .links a.dl:hover{color:var(--aur)}
+nav.toc .links a.on{color:var(--aur)}
+nav.toc .sep{flex:none;width:1px;height:18px;background:var(--line)}
 .today-link{flex:none;display:inline-flex;align-items:center;min-height:44px;border:0;color:var(--aur)}
 .today-link>span{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid var(--aur);border-radius:999px}
 nav.toc .lang{flex:none;display:inline-flex;align-items:center;min-height:44px;border:0;color:var(--ink-dim)}
@@ -107,8 +127,7 @@ nav.toc .lang>span{display:inline-flex;align-items:center;min-height:30px;paddin
 nav.toc .lang:hover{color:var(--ink)}
 nav.toc .lang:hover>span{border-color:var(--ink-dim)}
 
-/* ---------- SECTIONS ---------- */
-section{padding:68px 0 10px}
+/* ---------- TYPE ---------- */
 h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.55rem,4vw,2.15rem);line-height:1.15;margin:0 0 8px;color:var(--ink)}
 .h2sub{color:var(--ink-dim);margin:0 0 28px}
 .h2sub strong{color:var(--ink)}
@@ -121,36 +140,87 @@ h4{font-family:var(--body);font-weight:600;font-size:1rem;margin:4px 0 6px}
 .note .nk{font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:7px}
 p.note{margin:6px 0 12px}
 
-/* how it works */
-.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.tiers>div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px 4px}
-.tiers p{margin:8px 0 10px;font-size:.95rem}
-.twocol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 36px}
-ol.rules{counter-reset:r;list-style:none}
-ol.rules li{counter-increment:r;position:relative;padding:0 0 12px 34px}
-ol.rules li::before{content:counter(r);position:absolute;left:0;top:1px;font-family:var(--mono);font-size:.78rem;color:var(--aur);border:1px solid var(--line);border-radius:50%;width:22px;height:22px;display:grid;place-items:center}
-ul.checks{list-style:none}
-ul.checks li{position:relative;padding:0 0 9px 28px}
-ul.checks li::before{content:"";position:absolute;left:2px;top:6px;width:13px;height:13px;border:1.5px solid var(--ink-dim);border-radius:3px}
+/* ---------- DAYS ---------- */
+.days{padding:30px 0 8px}
+.keyline{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;font-size:.88rem;color:var(--ink-dim)}
+.keyline .tag{margin-right:7px}
+.day{position:relative;margin:22px 0 0;padding:26px 28px 24px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.day.today{outline:2px solid var(--aur);outline-offset:4px}
+.dh .date{font-family:var(--mono);font-size:.78rem;color:var(--ink-dim);margin:0}
+.day.today .dh .date::after{content:"Today";display:inline-block;margin-left:10px;font-weight:700;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border-radius:4px;color:var(--panel);background:var(--aur)}
+.dh .word{font-family:var(--disp);font-weight:400;font-size:clamp(1.75rem,5.4vw,2.5rem);line-height:1.05;margin:8px 0 10px;color:var(--ink)}
+.dh .sum{font-size:1.08rem;line-height:1.5;margin:0 0 6px;max-width:44em}
+.dh .light{font-size:.85rem;line-height:1.5;color:var(--ink-dim);margin:0}
+.day .shots{margin:18px 0 0}
 
-/* days */
-.day{display:grid;grid-template-columns:176px minmax(0,1fr);gap:0 30px;padding:30px 0;border-top:1px solid var(--line)}
-.rail .date{font-family:var(--mono);font-size:.78rem;color:var(--ink-dim);margin:0}
-.rail .word{font-family:var(--disp);font-weight:400;font-size:1.75rem;line-height:1.1;margin:6px 0 10px;color:var(--ink)}
-.rail .light{font-size:.84rem;line-height:1.5;color:var(--ink-dim);margin:0}
-.rows{margin:0}
-.row{display:grid;grid-template-columns:104px minmax(0,1fr);gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}
-.rows>.row:last-child{border-bottom:0}
-.k{font-family:var(--mono);font-size:.76rem;color:var(--ink-dim);padding-top:3px}
-.daynote{margin:10px 0 0;padding:10px 14px;border:1px dashed var(--line);border-radius:10px;font-size:.92rem;max-width:none}
-.day.today{outline:2px solid var(--aur);outline-offset:6px;border-radius:12px}
-.day.today .date::after{content:"Today";display:inline-block;margin-left:10px;font-weight:700;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border-radius:4px;color:var(--bg);background:var(--aur)}
+/* the timeline */
+ol.tl{list-style:none;margin:20px 0 0}
+ol.tl>li{position:relative;display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:34px;padding:0 0 16px}
+ol.tl>li::before{content:"";position:absolute;left:100px;top:9px;bottom:-9px;width:2px;background:var(--line)}
+ol.tl>li:last-child::before{display:none}
+ol.tl>li::after{content:"";position:absolute;left:95px;top:5px;width:12px;height:12px;border-radius:50%;border:2px solid var(--ink-dim);background:var(--panel)}
+ol.tl>li.must::after{border-color:var(--aur);background:var(--aur)}
+ol.tl>li.if::after{border-color:var(--ice)}
+ol.tl>li.fill::after{border-color:var(--violet)}
+ol.tl>li.or::after{width:8px;height:8px;left:97px;top:7px;border-width:2px}
+.tl .t{font-family:var(--mono);font-size:.76rem;line-height:1.45;color:var(--ink-dim);text-align:right;padding-top:1px}
+.tl .b{min-width:0;line-height:1.55}
+.tl .b>p{margin:0}
+.tl .what{font-weight:600;color:var(--ink)}
+.tl .meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin-top:6px;font-size:.84rem;line-height:1.4;color:var(--ink-dim)}
+.tl .meta b{font-weight:600;color:var(--ink)}
+a.go{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border:1px solid color-mix(in srgb,var(--teal) 50%,transparent);border-radius:999px;font-size:.8rem;line-height:1}
+a.go::after{content:"\2197";margin-left:5px;font-size:.78rem}
+a.go:hover{border-color:var(--aur)}
+
+/* each day ends with its night */
+.tonight{margin:10px -28px -24px;padding:18px 28px 10px;border-radius:0 0 15px 15px;background:var(--tn-bg);color:var(--n-ink);border-top:1px solid var(--n-line);
+  --line:var(--n-line);--ink:var(--n-ink);--ink-dim:var(--n-dim);--panel:var(--tn-bg);--aur:var(--n-aur);--teal:var(--n-teal);--violet:var(--n-violet);--ice:var(--n-ice);--body-w:300;font-weight:300}
+.tonight .tn-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:0;font-size:.95rem;max-width:none}
+.tn-k{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--n-dim)}
+.tonight ol.tl{margin-top:16px}
+.tonight a.more{color:var(--n-dim);border-bottom-color:var(--n-line);font-size:.84rem}
+
+/* ---------- MORE INFO (collapsible) ---------- */
+.wrap.more-h{padding-top:60px;padding-bottom:18px}
+.more-h h2{margin:0 0 4px}
+.more-h p{color:var(--ink-dim);margin:0}
+details.sec{border-top:1px solid var(--line)}
+details.sec:last-of-type{border-bottom:1px solid var(--line)}
+details.sec>summary{list-style:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary:focus-visible{outline-offset:-2px;border-radius:0}
+.wrap.sum-in{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2px 16px;min-height:68px;padding-top:15px;padding-bottom:15px}
+.sum-in h2{grid-column:1;font-size:clamp(1.12rem,3vw,1.35rem);margin:0}
+.sum-in .teaser{grid-column:1;font-size:.9rem;line-height:1.45;color:var(--ink-dim)}
+.sum-in::after{content:"+";grid-column:2;grid-row:1 / span 2;display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;font-family:var(--mono);font-size:.95rem;color:var(--ink-dim)}
+details.sec[open] .sum-in::after{content:"\2212";color:var(--aur);border-color:var(--aur)}
+details.sec>summary:hover h2{color:var(--aur)}
+.sec-body{padding:8px 0 48px}
+.sec-body>.wrap>h3:first-child,.sec-body>.wrap>.cards:first-child{margin-top:0}
+
+/* packing list: ticks are kept per device */
+ul.packtips{margin:0 0 4px}
+p.packcount{margin:16px 0 14px;font-family:var(--mono);font-size:.76rem;color:var(--ink-dim);max-width:none}
+p.packcount b{color:var(--aur)}
+.cards.packs{align-items:start}
+ul.pack{list-style:none;margin:0 0 10px}
+ul.pack label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;min-height:40px;padding:7px 0;cursor:pointer;font-size:.95rem;line-height:1.45}
+ul.pack li+li label{border-top:1px dashed var(--line)}
+ul.pack input{-webkit-appearance:none;appearance:none;display:grid;place-items:center;width:20px;height:20px;margin:1px 0 0;border:1.5px solid var(--ink-dim);border-radius:5px;background:var(--panel);cursor:pointer}
+ul.pack input::after{content:"";width:10px;height:5px;margin-top:-3px;border:2px solid var(--panel);border-top:0;border-right:0;transform:rotate(-45deg);opacity:0}
+ul.pack input:checked{background:var(--aur);border-color:var(--aur)}
+ul.pack input:checked::after{opacity:1}
+ul.pack input:checked+span{color:var(--ink-dim);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink-dim) 55%,transparent)}
+ul.pack input:focus-visible{outline:2px solid var(--aur);outline-offset:2px}
+ul.pack small{display:block;margin-top:1px;font-size:.84rem;line-height:1.4;color:var(--ink-dim)}
+.card ul.pack+.small{margin:0 0 12px}
 
 /* ---------- NIGHT BAND (sky) ---------- */
 .night-band{background:var(--n-0);color:var(--n-ink);
   --bg:var(--n-0);--panel:var(--n-1);--panel-2:var(--n-2);--line:var(--n-line);--ink:var(--n-ink);--ink-dim:var(--n-dim);
   --aur:var(--n-aur);--teal:var(--n-teal);--violet:var(--n-violet);--ice:var(--n-ice);--ember:var(--n-ember);
-  --body-w:300;font-weight:300;margin-top:60px;padding-bottom:64px;border-top:1px solid var(--n-line);border-bottom:1px solid var(--n-line)}
+  --body-w:300;font-weight:300;padding-top:30px;border-top:1px solid var(--n-line)}
 .nights{display:grid;gap:12px}
 .nrow,.naxis{display:grid;grid-template-columns:86px minmax(0,1fr) 200px;gap:14px;align-items:center}
 .nlabel{font-family:var(--mono);font-size:.76rem;color:var(--n-dim)}
@@ -205,25 +275,15 @@ table.costs{width:100%;border-collapse:collapse;font-size:.94rem}
 .costs .sub{display:block;margin-top:2px;font-size:.8rem;font-weight:400;color:var(--ink-dim)}
 .costs td.zero{color:var(--ink-dim)}
 .costs tfoot th,.costs tfoot td{font-weight:700;border-bottom:0}
+.costs tbody.opt th{font-weight:500}
+.costs tr.grp th{padding-top:16px;font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim)}
 @media (max-width:420px){table.costs{font-size:.9rem}.costs th,.costs td{padding:9px 8px}}
-
-/* choices */
-.chgroup{margin:36px 0 0}
-.chgroup>h3{margin:0 0 6px}
-.chgroup>p{color:var(--ink-dim);margin:0 0 14px;font-size:.95rem}
-.choices{display:grid;gap:12px}
-.choice{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 10px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:4px 22px}
-.choice h4{grid-column:1/-1;margin:0 0 6px;font-size:1.05rem}
-.choice .ck{display:block;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);margin:0 0 4px}
-.choice p{margin:0 0 8px;font-size:.93rem;line-height:1.55}
-.choice .def{border-left:2px solid var(--aur);padding-left:12px}
-.choice .def .ck{color:var(--aur)}
 
 /* photos */
 .shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 0 12px}
 .shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--panel-2)}
-.shot figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:7px 10px 8px;font-size:.85rem;line-height:1.3}
+.shot figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 8px;padding:7px 10px 8px;font-size:.85rem;line-height:1.3}
 .shot figcaption span{font-family:var(--mono);font-size:.66rem;color:var(--ink-dim);white-space:nowrap}
 .mapinfo .mi-img{display:block;width:calc(100% + 36px);max-width:none;height:auto;aspect-ratio:4/3;object-fit:cover;margin:-18px -18px 14px;border-radius:11px 11px 0 0;background:var(--panel-2)}
 
@@ -303,6 +363,9 @@ dl.kv.facts{grid-template-columns:132px minmax(0,1fr);gap:10px 16px}
 ul.plain{list-style:none}
 ul.plain li{position:relative;padding:0 0 10px 18px}
 ul.plain li::before{content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--ink-dim)}
+ul.checks{list-style:none}
+ul.checks li{position:relative;padding:0 0 9px 28px}
+ul.checks li::before{content:"";position:absolute;left:2px;top:6px;width:13px;height:13px;border:1.5px solid var(--ink-dim);border-radius:3px}
 ul.spots{list-style:none;border-top:1px solid var(--line)}
 ul.spots li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
 ul.spots .when{font-family:var(--mono);font-size:.74rem;color:var(--ink-dim);padding-top:3px}
@@ -321,18 +384,27 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 @media (max-width:760px){
   body{font-size:16px}
   .wrap{padding:0 16px}
-  .hero{padding:56px 0 124px}
-  .hero .horizon{height:120px}
-  .tiers,.cards,.cards.three,ol.ritual,.twocol{grid-template-columns:1fr}
+  .hero{padding:40px 0 76px}
+  .hero .horizon{height:92px}
+  .hero .crumb{margin-bottom:12px}
+  .glance{grid-template-columns:1fr;gap:8px;margin-top:26px}
+  .glance a{display:grid;grid-template-columns:64px minmax(0,1fr) auto;grid-template-areas:"d w n" "d s n";align-items:center;gap:1px 12px;padding:10px 12px}
+  .g-d{grid-area:d;align-self:start;padding-top:3px}.g-w{grid-area:w}.g-s{grid-area:s}
+  .glance .nv{grid-area:n;margin:0;align-self:center}
+  .glance li.today .g-d::after{display:block;margin:4px 0 0}
+  .cards,.cards.three,ol.ritual{grid-template-columns:1fr}
   ol.steps{grid-template-columns:1fr 1fr}
-  .day{grid-template-columns:1fr;padding:24px 0}
-  .rail{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;margin-bottom:10px}
-  .rail .word{margin:0;font-size:1.5rem;order:-1}
-  .rail .light{flex-basis:100%}
-  .day.today{outline-offset:4px}
-  .row{grid-template-columns:76px minmax(0,1fr);gap:10px}
+  .day{margin-top:16px;padding:20px 16px 18px;border-radius:14px}
+  .tonight{margin:10px -16px -18px;padding:16px 16px 8px;border-radius:0 0 13px 13px}
+  .day .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:16px -16px 0;padding:0 16px;scrollbar-width:none}
+  .day .shots::-webkit-scrollbar{display:none}
+  .day .shot{flex:0 0 64%;scroll-snap-align:start;scroll-margin-left:16px}
+  ol.tl>li{grid-template-columns:52px minmax(0,1fr);column-gap:30px}
+  ol.tl>li::before{left:66px}
+  ol.tl>li::after{left:61px}
+  ol.tl>li.or::after{left:63px}
+  .tl .t{font-size:.7rem}
   .mapgrid{grid-template-columns:1fr}
-  .choice{grid-template-columns:1fr;gap:6px;padding:14px 16px 8px}
   .mapbox{margin:0 -16px;border-radius:0;border-left:0;border-right:0}
   .mapside{position:static}
   .nrow,.naxis{grid-template-columns:58px minmax(0,1fr)}
@@ -366,7 +438,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   .tbl td[data-label]::before{content:attr(data-label);display:block;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim)}
 }
 @media (max-width:420px){ol.steps{grid-template-columns:1fr}}
-@media print{nav.toc{display:none}.hero{padding:30px 0 40px}.hero .horizon,.hero .aurora{display:none}section{padding-top:28px}}
+@media print{nav.toc{display:none}.hero{padding:30px 0 40px}.hero .horizon,.hero .aurora{display:none}.glance a{background:none}.day{break-inside:avoid-page}}
 </style>
 </head>
 <body>
@@ -382,267 +454,278 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   <div class="wrap hero-in">
     <p class="crumb"><a href="/lapland/">← Lapland</a></p>
     <p class="when">Villa Skaidi I, Saariselkä — 31 Oct to 4 Nov 2026</p>
-    <h1>STILL NORTH</h1>
-    <p class="lede">Fells on Sunday, Inari on Monday, huskies and a smoke sauna on Tuesday, and every evening sauna and the northern lights.</p>
-    <div class="statline"><span><b>4</b> nights</span><span><b>3</b> full days</span><span><b>5</b> people</span><span><b>≤ 1 h</b> drive</span><span><b>aurora hunt</b> all nights</span></div>
+    <h1>LAPLAND</h1>
+    <ol class="glance" aria-label="The five days">
+      <li id="g-sat"><a href="#d-sat"><span class="g-d">Sat 31 Oct</span><span class="g-w">Arrival</span><span class="g-s">Land in Ivalo, shop, first sauna.</span><span class="nv v-moon"><span class="sr-only">Northern lights: </span>Moonlit</span></a></li>
+      <li id="g-sun"><a href="#d-sun"><span class="g-d">Sun 1 Nov</span><span class="g-w">Fells</span><span class="g-s">Kiilopää summit, Kaunispää at sunset.</span><span class="nv v-short"><span class="sr-only">Northern lights: </span>Short window</span></a></li>
+      <li id="g-mon"><a href="#d-mon"><span class="g-d">Mon 2 Nov</span><span class="g-w">Inari</span><span class="g-s">Siida, Lake Inari, dinner out at 18:30.</span><span class="nv v-good"><span class="sr-only">Northern lights: </span>Good chance</span></a></li>
+      <li id="g-tue"><a href="#d-tue"><span class="g-d">Tue 3 Nov</span><span class="g-w">Pielpajärvi</span><span class="g-s">The wilderness church walk, if the trail's clear of snow.</span><span class="nv v-best"><span class="sr-only">Northern lights: </span>Best chance</span></a></li>
+      <li id="g-wed"><a href="#d-wed"><span class="g-d">Wed 4 Nov</span><span class="g-w">Home</span><span class="g-s">Coffee in the blue light, fly out.</span></a></li>
+    </ol>
   </div>
 </header>
 
 <nav class="toc" aria-label="Sections">
   <div class="wrap">
     <a id="todaylink" class="today-link" href="#days" hidden><span>Today</span></a>
-    <div class="links"><a href="#costs">Costs</a><a href="#how">How it works</a><a href="#choices">Choices</a><a href="#days">Days</a><a href="#sky">Aurora</a><a href="#map">Map</a><a href="#sami">Sámi</a><a href="#food">Food</a><a href="#sauna">Sauna</a><a href="#logistics">Logistics</a><a href="#photos">Photos</a><a href="#sources">Sources</a></div>
+    <div class="links"><a class="dl" href="#d-sat">Sat</a><a class="dl" href="#d-sun">Sun</a><a class="dl" href="#d-mon">Mon</a><a class="dl" href="#d-tue">Tue</a><a class="dl" href="#d-wed">Wed</a><span class="sep" aria-hidden="true"></span><a href="#costs">Costs</a><a href="#packing">Packing</a><a href="#sky">Aurora</a><a href="#map">Map</a><a href="#food">Food</a><a href="#sauna">Sauna</a><a href="#sami">Sámi</a><a href="#logistics">Logistics</a><a href="#photos">Photos</a><a href="#sources">Sources</a></div>
     <a class="lang" href="/lapland/plan/hu/" lang="hu" hreflang="hu" title="Magyar változat"><span>HU</span></a>
   </div>
 </nav>
 
 <main>
 
-<!-- ================= COSTS ================= -->
-<section id="costs">
- <div class="wrap">
-  <h2>Costs</h2>
-  <p class="h2sub">Suggested activities and tickets for the five of you. Food, fuel and the cabin aren't included; HUF at 369 to the euro.</p>
-  <div class="tblwrap"><table class="costs">
-    <thead><tr><th scope="col">Activity</th><th scope="col" class="num">Each</th><th scope="col" class="num">Five people</th></tr></thead>
-    <tbody>
-      <tr><th scope="row">Siida, the Sámi Museum<span class="sub">Mon 10:00</span></th><td class="num">€18</td><td class="num">€90<span class="sub">≈ 33,000 HUF</span></td></tr>
-      <tr><th scope="row">Husky &amp; Co kennel visit<span class="sub">Tue 10:00, with transfer</span></th><td class="num">€65</td><td class="num">€325<span class="sub">≈ 120,000 HUF</span></td></tr>
-      <tr><th scope="row">Kuurakaltio smoke sauna<span class="sub">Tue 16:30, Kiilopää</span></th><td class="num">€21</td><td class="num">€105<span class="sub">≈ 39,000 HUF</span></td></tr>
-      <tr><th scope="row">Kiilopää parking<span class="sub">Sun and Tue, at most €5 a day</span></th><td class="num">€2</td><td class="num">€10<span class="sub">≈ 4,000 HUF</span></td></tr>
-      <tr><th scope="row">Reindeer<span class="sub">No farm visit: you'll see them along the roads anyway.</span></th><td class="num zero">€0</td><td class="num zero">€0</td></tr>
-      <tr><th scope="row">Hikes, Juutua rapids, Otsamo, Sajos, the northern lights and the cabin sauna</th><td class="num zero">€0</td><td class="num zero">€0</td></tr>
-    </tbody>
-    <tfoot><tr><th scope="row">Total</th><td class="num">€106</td><td class="num">€530<span class="sub">≈ 196,000 HUF</span></td></tr></tfoot>
-  </table></div>
- </div>
-</section>
-
-<!-- ================= HOW ================= -->
-<section id="how">
- <div class="wrap">
-  <h2>How it works</h2>
-  <p class="h2sub">Each activity has one of three tags:</p>
-  <div class="tiers">
-    <div><span class="tag must">MUST</span><p>The fixed points: book them or keep the time free.</p></div>
-    <div><span class="tag if">MAYBE</span><p>Depends on the weather or snow: decide that morning.</p></div>
-    <div><span class="tag fill">EXTRA</span><p>Only with spare time or bad weather.</p></div>
-  </div>
-  <div class="twocol">
-   <div>
-    <h3>Good to know</h3>
-    <ol class="rules">
-      <li><strong>Monday and Tuesday are interchangeable.</strong> Siida is indoors, so put it on the greyer day.</li>
-      <li><strong>Sunday is an outdoor day,</strong> because Siida and Laanilan Kievari are closed on Sundays.</li>
-      <li><strong>Every evening:</strong> check the cloud forecast, sauna, then watch the sky.</li>
-      <li><strong>No more than an hour's drive each way.</strong> Inari and Siida, about 1 h away, are the farthest stops.</li>
-    </ol>
-   </div>
-   <div>
-    <h3>Book before you fly</h3>
-    <ul class="checks">
-      <li>Husky &amp; Co kennel visit, Tue 3 Nov 10:00, five people</li>
-      <li>Kuurakaltio smoke sauna, Tue 3 Nov 16:30, five people; that week's shifts go on sale on Mon 26 Oct</li>
-      <li>Laanilan Kievari table, Mon 2 Nov 18:30, five people</li>
-      <li>EasyPark app on one phone, for Kiilopää parking</li>
-      <li>Shop closing times for the evening of Sat 31 Oct (All Saints' Day)</li>
-    </ul>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ================= CHOICES ================= -->
-<section id="choices">
- <div class="wrap">
-  <h2>Choices to make</h2>
-  <p class="h2sub">Seven choices are open in the plan: two before you book anything, two the week before and three on the day. Each has a default, so doing nothing still gives a working trip.</p>
-  <p class="small">Facts still to check are under <a href="#open">Still to confirm</a>, not here.</p>
-
-  <div class="chgroup">
-   <h3>Decide before you book</h3>
-   <p>These two drive what you book, so settle them first.</p>
-   <div class="choices">
-    <article class="choice">
-     <h4>Which night for the local-food dinner</h4>
-     <div><span class="ck">Options</span><p>Laanilan Kievari on <b>Monday</b> or <b>Tuesday</b> (closed Sundays).</p></div>
-     <div><span class="ck">Trade-off</span><p>Monday makes one full local-food day with Sarrit's lunch. Tuesday is the darkest night, and dinner 18:30–20:30 eats into its best dark hours.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Monday 18:30, five people; book now.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Huskies</h4>
-     <div><span class="ck">Options</span><p><b>Kennel visit</b> (about 1 h, runs without snow) or the <b>10 km self-drive sled safari</b> (2.5 h, needs snow).</p></div>
-     <div><span class="ck">Trade-off</span><p>The kennel visit is certain. The safari is the bigger experience, but snow may not be down by 3 Nov.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Book the kennel visit; ask Husky &amp; Co to tell you if sled runs start before your date.</p></div>
-    </article>
-   </div>
-  </div>
-
-  <div class="chgroup">
-   <h3>Decide the week before</h3>
-   <p>These depend on the forecast.</p>
-   <div class="choices">
-    <article class="choice">
-     <h4>Day order</h4>
-     <div><span class="ck">Options</span><p>Keep <b>Mon = Inari, Tue = huskies</b>, or <b>swap</b> them on the forecast.</p></div>
-     <div><span class="ck">Trade-off</span><p>Swapping puts indoor Siida on the greyer day and Kaunispää's sunset on the clearer one, but the husky booking must be movable, and smoke sauna tickets can't be changed once bought. Tuesday has the best aurora window either way.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Keep the order; swap only if the forecast on Sat 31 Oct shows Monday clearly brighter.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Arrival-night shopping</h4>
-     <div><span class="ck">Options</span><p><b>Kuukkeli</b> in Saariselkä, 5 min from the cabin, or <b>K‑Supermarket Ivalo</b>, 10 km the other way from the airport.</p></div>
-     <div><span class="ck">Trade-off</span><p>Kuukkeli is on your way and enough for breakfast and an easy dinner. Ivalo has the fish and meat counter but adds about 20 min. Both may keep holiday hours on All Saints' Day.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Kuukkeli on arrival; the big shop with fish at K‑Supermarket Ivalo on Monday's drive home. If you land late, bring breakfast basics.</p></div>
-    </article>
-   </div>
-  </div>
-
-  <div class="chgroup">
-   <h3>Decide on the day</h3>
-   <p>These are weather calls; the plan already holds both options.</p>
-   <div class="choices">
-    <article class="choice">
-     <h4>Sunday hike</h4>
-     <div><span class="ck">Options</span><p><b>Kiilopää summit</b> (546 m, about 2 km each way, stairs) or the <b>forest loops</b> from Saariselkä (Iisakkipää 3 km, lit Aurorapolku 2.1 km).</p></div>
-     <div><span class="ck">Trade-off</span><p>The summit gives the big fell view but is pointless in cloud and hard in strong wind; the loops stay sheltered among trees.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Summit if the top is out of the cloud at 09:30; otherwise the loops.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Monday afternoon</h4>
-     <div><span class="ck">Options</span><p><b>Juutua rapids and Lake Inari shore</b>, <b>Sajos</b> (weekdays; Duodji Shop), or <b>Tuulispää's lean-to</b> with a lake view, or <b>Otsamo</b> from Rovajärvi (418 m, 3 km each way).</p></div>
-     <div><span class="ck">Trade-off</span><p>Juutua and the shore are lake and river scenery; Sajos is indoor Sámi culture. Tuulispää's parking isn't ploughed until mid-February, so it depends on the gravel road. Otsamo is the best lake view of the trip, but more than an hour away and only on snow-free ground.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Juutua and the shore; Sajos if it's sleeting; Tuulispää only if the road is clear and there's light left.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Aurora nights</h4>
-     <div><span class="ck">Options</span><p><b>Stay at the cabin</b> or <b>drive to a clear patch</b> (Kaunispää 12 min, Kiilopää 15 min, Ukonjärvi 40 min).</p></div>
-     <div><span class="ck">Trade-off</span><p>Driving finds clear sky under patchy cloud but needs a sober driver on dark roads with reindeer.</p></div>
-     <div class="def"><span class="ck">Default</span><p>Stay home unless it's cloudy overhead and clear nearby. On Tuesday, the best night, drive up to 45 min. Agree tonight's driver at dinner.</p></div>
-    </article>
-   </div>
-  </div>
- </div>
-</section>
-
 <!-- ================= DAYS ================= -->
-<section id="days">
+<section id="days" class="days">
  <div class="wrap">
-  <h2>Day by day</h2>
-  <p class="h2sub">Monday and Tuesday are interchangeable: put Siida on the greyer day.</p>
+  <h2 class="sr-only">Day by day</h2>
+  <p class="keyline"><span><span class="tag must">MUST</span>the plan</span><span><span class="tag if">MAYBE</span>decide on the day</span><span><span class="tag fill">EXTRA</span>only with time to spare</span></p>
 
   <article class="day" id="d-sat">
-   <div class="rail">
+   <header class="dh">
      <p class="date">Sat 31 Oct</p>
      <h3 class="word"><span class="sr-only">Saturday 31 October: </span>Arrival</h3>
+     <p class="sum">Land in Ivalo, shop on the way, first sauna.</p>
      <p class="light">Dark when you land. Moon 62%, up all night, low in the north until about 21:00.</p>
+   </header>
+   <ol class="tl">
+     <li><span class="t">Evening</span><div class="b"><span class="what">Land at Ivalo (IVL)</span> and pick up the car.</div></li>
+     <li class="must"><span class="t">Shop</span><div class="b"><span class="tag must">MUST</span><span class="what">Supermarket Kuukkeli</span> in Saariselkä village, on your way: enough for breakfast and an easy dinner. It's All Saints' Day, a public holiday, so check closing times before you fly, and bring breakfast basics if you land late.<span class="note"><span class="nk">To confirm</span>Kuukkeli's hours on the evening of Sat 31 Oct.</span><span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kuukkeli%20Shopping%20Center%20Saariselk%C3%A4" target="_blank" rel="noopener">Kuukkeli</a></span></div></li>
+     <li><span class="t">Drive</span><div class="b">Airport to cabin: 26 km, about 25 min. Self check-in, from 16:00.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=J%C3%A4k%C3%A4l%C3%A4tie%2014%2C%2099830%20Saariselk%C3%A4" target="_blank" rel="noopener">Cabin</a></span></div></li>
+     <li class="must"><span class="t">Cabin</span><div class="b"><span class="tag must">MUST</span>Switch the sauna on before unpacking (45–60 min to heat). Easy first dinner.</div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Tonight</span><span class="nv v-moon">Moonlit</span>Moon 62%, up all night.</p>
+     <ol class="tl">
+       <li class="if"><span class="t">21:00–23:00</span><div class="b"><span class="tag if">MAYBE</span>If it's clear, look north from a dark corner of the yard between sauna sessions. No aurora drives tonight: first night, dark roads, reindeer.</div></li>
+     </ol>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">Evening</dt><dd class="v">Land at Ivalo (IVL), pick up the car.</dd></div>
-     <div class="row"><dt class="k">Shop</dt><dd class="v"><span class="tag must">MUST</span>All Saints' Day, a Finnish public holiday: check closing times before you fly. Supermarket Kuukkeli is in Saariselkä village; K‑Supermarket Ivalo (fish and meat counter) is 10 km the other way from the airport.<span class="note"><span class="nk">To confirm</span>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct.</span></dd></div>
-     <div class="row"><dt class="k">Drive</dt><dd class="v">Airport to cabin: 26 km, about 25 min. Self check-in, from 16:00.</dd></div>
-     <div class="row"><dt class="k">Cabin</dt><dd class="v"><span class="tag must">MUST</span>Switch the sauna on before unpacking (45–60 min to heat). Easy first dinner.</dd></div>
-     <div class="row"><dt class="k">21:00–23:00</dt><dd class="v"><span class="tag if">MAYBE</span>If it's clear, look north from a dark corner of the yard between sauna sessions. No aurora drives tonight: first night, dark roads, reindeer.</dd></div>
-   </dl>
   </article>
 
   <article class="day" id="d-sun">
-   <div class="rail">
+   <header class="dh">
      <p class="date">Sun 1 Nov</p>
      <h3 class="word"><span class="sr-only">Sunday 1 November: </span>Fells</h3>
+     <p class="sum">Up Kiilopää if the top is clear, forest loops if it isn't, and Kaunispää for the sunset.</p>
      <p class="light">Sunrise 08:24, sunset 15:22; the sun stays below about 7°. Dark from 18:45; half moon rises 20:05.</p>
-   </div>
-   <div>
+   </header>
    <div class="shots">
     <figure class="shot"><img src="/images/lapland/plan/kiilopaa.jpg" alt="Boardwalk with steps up the Kiilopää fell" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kiilopää</b><span>09:45</span></figcaption></figure>
     <figure class="shot"><img src="/images/lapland/plan/forest.jpg" alt="Ski tracks through snowy forest at sunset near Kiilopää" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Forest loops</b><span>Plan B</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/kaunispaa.jpg" alt="Triangulation tower on top of Kaunispää" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kaunispää tower</b><span>14:45 · MAYBE</span></figcaption></figure>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">09:45</dt><dd class="v"><span class="tag must">MUST</span><strong>Kiilopää (546 m)</strong>, 15 min drive. About 2 km each way from the fell centre on a renovated path with stairs. Microspikes on; windy on top. Parking is paid 9–18 via EasyPark: €1 an hour, max €5 a day, first 30 min free.</dd></div>
-     <div class="row"><dt class="k">Plan B</dt><dd class="v"><span class="tag if">MAYBE</span>Summit in cloud or strong wind: stay among the trees on the 3 km Iisakkipää loop or the 2.1 km lit Aurorapolku from Saariselkä village.<span class="note"><span class="nk">To confirm</span>The exact national park gate where Aurorapolku and Iisakkipää start.</span></dd></div>
-     <div class="row"><dt class="k">12:30</dt><dd class="v">Thermos lunch. The fell centre may run reduced hours before mid-November.<span class="note"><span class="nk">To confirm</span>Kiilopää fell centre hours that week.</span></dd></div>
-     <div class="row"><dt class="k">In the forest</dt><dd class="v">Siberian jays come to people sitting still in old forest. Unsalted crumbs only; they are protected and near threatened in Finland.</dd></div>
-     <div class="row"><dt class="k">15:22</dt><dd class="v">Sunset; blue hour on the drive home.</dd></div>
-     <div class="row"><dt class="k">Dinner</dt><dd class="v">Home: <span lang="fi">poronkäristys</span> (sautéed reindeer), mash, lingonberries.</dd></div>
-     <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">MUST</span>Cloud check, then sauna.</dd></div>
-     <div class="row"><dt class="k">18:45–20:30</dt><dd class="v"><span class="tag must">MUST</span>A short moonless window. Watch from the yard between sauna sessions; if it's cloudy at home, try Kaunispää top (about 12 min).</dd></div>
-   </dl>
+   <ol class="tl">
+     <li class="must"><span class="t">09:45</span><div class="b"><span class="tag must">MUST</span><span class="what">Kiilopää (546 m)</span>, 15 min drive. About 2 km each way from the fell centre on a renovated path with stairs. Microspikes on; windy on top. Go for the summit if the top is out of the cloud at 09:30.<span class="meta"><span>Parking 9–18 via EasyPark: €1 an hour plus a 15% fee, first 30 min free, at most €5.75 a day</span><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kiilop%C3%A4%C3%A4%20Fell%20Centre" target="_blank" rel="noopener">Kiilopää</a></span></div></li>
+     <li class="if or"><span class="t">Plan B</span><div class="b"><span class="tag if">MAYBE</span>Summit in cloud or strong wind: stay among the trees on the 3 km <span class="what">Iisakkipää</span> loop or the 2.1 km lit <span class="what">Aurorapolku</span> from Saariselkä village.<span class="note"><span class="nk">To confirm</span>The exact national park gate where Aurorapolku and Iisakkipää start.</span><span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Aurorapolku%20Saariselk%C3%A4" target="_blank" rel="noopener">Park gate</a></span></div></li>
+     <li><span class="t">12:30</span><div class="b">Thermos lunch: the fell centre is closed for its autumn break until 14 Nov.</div></li>
+     <li><span class="t">In the forest</span><div class="b">Siberian jays come to people sitting still in old forest. Unsalted crumbs only; they are protected and near threatened in Finland.</div></li>
+     <li class="if"><span class="t">14:45</span><div class="b"><span class="tag if">MAYBE</span>If it's clear, <span class="what">Kaunispää (437 m)</span> for the sunset (15:22): drive the winding road to the top, 12 min from the cabin. The tower looks over Urho Kekkonen National Park to the fells on the Russian border.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kaunisp%C3%A4%C3%A4n%20Huippu" target="_blank" rel="noopener">Kaunispää</a></span></div></li>
+     <li><span class="t">Dinner</span><div class="b">Home: <span lang="fi">poronkäristys</span> (sautéed reindeer), mash, lingonberries.</div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Tonight</span><span class="nv v-short">Short window</span>Dark from 18:45; the half moon rises 20:05.</p>
+     <ol class="tl">
+       <li class="must"><span class="t">18:00</span><div class="b"><span class="tag must">MUST</span>Cloud check, then sauna.</div></li>
+       <li class="must"><span class="t">18:45–20:30</span><div class="b"><span class="tag must">MUST</span>A short moonless window. Watch from the yard between sauna sessions; if it's cloudy at home, try Kaunispää top (about 12 min).</div></li>
+     </ol>
    </div>
   </article>
 
   <article class="day" id="d-mon">
-   <div class="rail">
+   <header class="dh">
      <p class="date">Mon 2 Nov</p>
-     <h3 class="word"><span class="sr-only">Monday 2 November: </span>Inari<span class="sr-only">, lakes and local food</span></h3>
+     <h3 class="word"><span class="sr-only">Monday 2 November: </span>Inari<span class="sr-only">, Siida and Lake Inari</span></h3>
+     <p class="sum">Siida, lunch, the shore of Lake Inari, and dinner out at 18:30.</p>
      <p class="light">Sunrise 08:35, sunset 15:14 in Inari. Dark from 18:40; moon rises 22:37.</p>
-   </div>
-   <div>
+   </header>
    <div class="shots">
     <figure class="shot"><img src="/images/lapland/plan/siida-exhibition.jpg" alt="Sámi costumes and objects in Siida's main exhibition" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Siida</b><span>10:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/juutua.jpg" alt="Jäniskoski rapids on the Juutuanjoki with the suspension bridge" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Juutua rapids</b><span>13:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/otsamo.jpg" alt="Day-use hut on the open Otsamo summit" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Otsamo</b><span>13:00 · MAYBE</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/sajos-hall.jpg" alt="The Sámi Parliament's debating hall in Sajos" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Sajos</b><span>13:00 · EXTRA</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/lake-inari.jpg" alt="Calm evening water of Lake Inari at Inari village, with a fell on the far shore" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Lake Inari</b><span>13:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/juutua.jpg" alt="Jäniskoski rapids on the Juutuanjoki with the suspension bridge" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Juutua rapids</b><span>13:30 · EXTRA</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/sajos-hall.jpg" alt="The Sámi Parliament's debating hall in Sajos" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Sajos</b><span>13:30 · EXTRA</span></figcaption></figure>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">09:00</dt><dd class="v">Drive to Inari: about 71 km, 1 h, via Ivalo and the lakeside E75 past Ukonjärvi.</dd></div>
-     <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Siida, the Sámi Museum.</strong> Mon–Sat 10–17; adults €18 (€90 for five). Allow 2 h. From October 2026 it also shows works from <em>We Who Remain</em>, a contemporary Sámi art exhibition made with Kiasma.</dd></div>
-     <div class="row"><dt class="k">12:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Local food, part one:</strong> buffet lunch at Sarrit inside Siida, served 11–15 (no museum ticket needed).<span class="note"><span class="nk">To confirm</span>Sarrit's winter lunch days.</span></dd></div>
-     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Juutua rapids and Lake Inari shore.</strong> From the Kittiläntie 156 parking it's a short walk to the suspension bridge; the full loop is 5.8 km.</dd></div>
-     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag if">MAYBE</span><strong>Otsamo from Rovajärvi:</strong> 20–25 min from Siida, 3 km each way to the 418 m top with views over Lake Inari; snow-free ground only; drive home about 1 h 20 (more than an hour). Park at the end of Rovajärventie (Rovajärventie 765); the last climb is steep and rocky in places, and the open summit has a day-use hut. On top by about 14:15, back at the car before dusk (16:25).<span class="note"><span class="nk">To confirm</span>Snow or ice on the trail, and whether Rovajärventie is passable.</span></dd></div>
-     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag fill">EXTRA</span><strong>Sajos</strong>, the Sámi Parliament and cultural centre next to Siida (weekdays). Its Duodji Shop sells Sámi-made handicraft.</dd></div>
-     <div class="row"><dt class="k">14:15</dt><dd class="v"><span class="tag if">MAYBE</span><strong>Tuulispää</strong> on the way back: 2.5 km of gravel road, then a flat 3 km round trip to a lean-to with a lake view. Only if the road is passable.</dd></div>
-     <div class="row"><dt class="k">15:14</dt><dd class="v">Sunset over the lake.</dd></div>
-     <div class="row"><dt class="k">15:45</dt><dd class="v">Drive home; stop at Ukonjärvi for the blue hour, and at K‑Supermarket Ivalo for fish.</dd></div>
-     <div class="row"><dt class="k">18:30</dt><dd class="v"><span class="tag must">MUST</span><strong>Local food, part two:</strong> dinner at Laanilan Kievari, 1 km from the cabin (Mon–Sat 16–22; book). Order the fire-roasted reindeer shoulder for two.</dd></div>
-     <div class="row"><dt class="k">20:30–22:40</dt><dd class="v"><span class="tag must">MUST</span>Moonless window: the yard or Kaunispää.</dd></div>
-   </dl>
+   <ol class="tl">
+     <li><span class="t">08:50</span><div class="b">Drive to Inari: 71 km, about 1 h 10, via Ivalo and the lakeside E75 past Ukonjärvi.</div></li>
+     <li class="must"><span class="t">10:00</span><div class="b"><span class="tag must">MUST</span><span class="what">Siida, the Sámi Museum.</span> Open Mon–Sat 10–17; allow 2 h. From October 2026 it also shows works from <em>We Who Remain</em>, a contemporary Sámi art exhibition made with Kiasma.<span class="meta"><b>€18 each</b><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Siida%20Inari" target="_blank" rel="noopener">Siida</a></span></div></li>
+     <li class="must"><span class="t">12:00</span><div class="b"><span class="tag must">MUST</span><span class="what">Lunch at Sarrit</span>, the restaurant inside Siida: buffet 11–15, no museum ticket needed.</div></li>
+     <li class="must"><span class="t">13:00</span><div class="b"><span class="tag must">MUST</span><span class="what">Lake Inari</span> from the village harbour, 300 m from Siida, where the summer cruises leave. Stay off any ice: the lake usually freezes in November or December, and new ice won't hold you.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=68.90888%2C27.01925" target="_blank" rel="noopener">Harbour</a></span></div></li>
+     <li class="fill"><span class="t">13:30</span><div class="b"><span class="tag fill">EXTRA</span><span class="what">Juutua rapids:</span> from the Kittiläntie 156 parking it's a short walk to the suspension bridge; the full loop is 5.8 km.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Juutua%20Nature%20Trail%20Inari" target="_blank" rel="noopener">Juutua</a></span></div></li>
+     <li class="fill"><span class="t">13:30</span><div class="b"><span class="tag fill">EXTRA</span><span class="what">Sajos</span>, the Sámi Parliament and cultural centre next to Siida (weekdays). Its Duodji Shop sells Sámi-made handicraft.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Sajos%20Inari" target="_blank" rel="noopener">Sajos</a></span></div></li>
+     <li class="fill"><span class="t">14:15</span><div class="b"><span class="tag fill">EXTRA</span><span class="what">Mutusjärvi</span> (Muddusjärvi), 12 km north of Siida: road 4 runs along its east shore for about 5 km, with a roadside rest area by the water. About 10–15 min each way, so only if there's light and energy left.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=69.00424%2C26.98644" target="_blank" rel="noopener">Rest area</a></span></div></li>
+     <li><span class="t">15:00</span><div class="b">Drive home. Stop at Ukonjärvi for the blue hour, and at K‑Supermarket Ivalo for Tuesday's fish.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Ukonj%C3%A4rvi%20Inari" target="_blank" rel="noopener">Ukonjärvi</a><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=K-Supermarket%20Ivalo" target="_blank" rel="noopener">K‑Supermarket</a></span></div></li>
+     <li class="must"><span class="t">18:30</span><div class="b"><span class="tag must">MUST</span><span class="what">Dinner at Laanilan Kievari</span>, table booked for five, 1 km from the cabin. Order the fire-roasted reindeer shoulder for two.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Laanilan%20Kievari" target="_blank" rel="noopener">Laanilan Kievari</a></span></div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Tonight</span><span class="nv v-good">Good chance</span>Dark from 18:40; the moon rises 22:37.</p>
+     <ol class="tl">
+       <li class="must"><span class="t">20:30–22:40</span><div class="b"><span class="tag must">MUST</span>After dinner, two moonless hours left: sauna and the yard, or Kaunispää top (about 12 min) if it's cloudy at home.</div></li>
+     </ol>
    </div>
   </article>
 
   <article class="day" id="d-tue">
-   <div class="rail">
+   <header class="dh">
      <p class="date">Tue 3 Nov</p>
-     <h3 class="word"><span class="sr-only">Tuesday 3 November: </span>Huskies<span class="sr-only"> and smoke sauna</span></h3>
+     <h3 class="word"><span class="sr-only">Tuesday 3 November: </span>Pielpajärvi</h3>
+     <p class="sum">The walk to the wilderness church if the trail isn't snowed under; an easy day near the cabin if it is.</p>
      <p class="light">Sunrise 08:33, sunset 15:13. Dark from 18:36; moon rises 00:43 — the darkest night of the trip.</p>
-   </div>
-   <div>
+   </header>
    <div class="shots">
-    <figure class="shot"><img src="/images/lapland/plan/husky.jpg" alt="Sled dogs in harness resting in the snow" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Husky &amp; Co</b><span>10:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/kaunispaa.jpg" alt="Triangulation tower on top of Kaunispää" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kaunispää tower</b><span>14:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/smoke-sauna.jpg" alt="A traditional log smoke sauna in the snow in northern Finland" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Smoke sauna</b><span>16:30</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/pielpajarvi-church.jpg" alt="The red-brown log church at Pielpajärvi among autumn birches" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Pielpajärvi church</b><span>08:45 · MAYBE</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/forest.jpg" alt="Ski tracks through snowy forest at sunset near Kiilopää" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Iisakkipää</b><span>Plan B</span></figcaption></figure>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Husky &amp; Co kennel visit:</strong> office 5 min from the cabin, kennel a 10 min drive from Saariselkä. About an hour with 200 huskies, stories and a hot drink by the fire in a kota. Groups of 2–8, so all five fit one booking.<span class="note"><span class="nk">To confirm</span>Meeting point: the village office or the kennel.</span></dd></div>
-     <div class="row"><dt class="k">Upgrade</dt><dd class="v"><span class="tag if">MAYBE</span>Enough snow? Ask whether the 10 km self-drive husky safari (2.5 h) has started.<span class="note"><span class="nk">To confirm</span>Snow cover the week before: have husky sled safaris started?</span></dd></div>
-     <div class="row"><dt class="k">12:00</dt><dd class="v"><span class="tag if">MAYBE</span><strong>Iisakkipää:</strong> a 3 km forest loop from Saariselkä village.</dd></div>
-     <div class="row"><dt class="k">14:00</dt><dd class="v"><span class="tag must">MUST</span><strong>Kaunispää (437 m):</strong> drive the winding road to the top. The tower looks over Urho Kekkonen National Park to the fells on the Russian border.</dd></div>
-     <div class="row"><dt class="k">15:13</dt><dd class="v">Sunset from the tower, the 70–350's best hour.</dd></div>
-     <div class="row"><dt class="k">16:30</dt><dd class="v"><span class="tag must">MUST</span><strong>Kuurakaltio smoke sauna</strong> at Kiilopää Fell Centre, 15 min from the cabin: the 16:30–18:00 public shift, beside a fell stream with a cold plunge. €21 each; pick up the tickets at the main building's reception before the shift. Bring your own towels and swimsuits; renting costs €5 each.<span class="note"><span class="nk">To confirm</span>That it's heated in early November, and the shifts that week.</span></dd></div>
-     <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">MUST</span>Cloud check on the way home.</dd></div>
-     <div class="row"><dt class="k">Dinner</dt><dd class="v">Home: salmon soup or pan-fried whitefish; warm <span lang="fi">leipäjuusto</span> with cloudberry jam.</dd></div>
-     <div class="row"><dt class="k">18:40–00:40</dt><dd class="v"><span class="tag must">MUST</span>Six moonless hours. If it's cloudy at the cabin, drive up to 45 min to the nearest clear patch.</dd></div>
-   </dl>
+   <ol class="tl">
+     <li class="if"><span class="t">Mon evening</span><div class="b"><span class="tag if">MAYBE</span>Decide on the church walk: you'll have seen the snow around Inari that day. Metsähallitus lists it as a snow-free-season trail with no winter maintenance, so go only on bare ground or well-trodden snow, with microspikes.</div></li>
+     <li class="if"><span class="t">07:30</span><div class="b"><span class="tag if">MAYBE</span>Drive to the trail parking on Sarviniementie, 3 km past Siida: 76 km, about 1 h 15, a little over the hour. It's ploughed in winter and has a dry toilet.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=68.921388%2C27.057798" target="_blank" rel="noopener">Trail parking</a></span></div></li>
+     <li class="if"><span class="t">08:45</span><div class="b"><span class="tag if">MAYBE</span><span class="what">Pielpajärvi wilderness church</span>, 4.4 km each way through old pine forest, marked with orange posts; Metsähallitus allows 6 hours. The first kilometre is slow over rocks and roots, the trickiest spots have duckboards, and there are no big climbs. The church was built in 1752–1760 at the Sámi winter village that was then the centre of Inari, and its door is always open.<span class="note"><span class="nk">To confirm</span>The visitor fee: a sign in the porch, €5 according to Finnish Wikipedia.</span><span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=68.951278%2C27.115852" target="_blank" rel="noopener">Church</a></span></div></li>
+     <li class="if"><span class="t">11:30</span><div class="b"><span class="tag if">MAYBE</span>Lunch at the church: the day-use hut has an open fireplace but no water, so bring sausages for the fire and full thermoses.</div></li>
+     <li class="if"><span class="t">14:45</span><div class="b"><span class="tag if">MAYBE</span>Back at the car before sunset (15:13); home by about 16:00.</div></li>
+     <li class="if or"><span class="t">Plan B</span><div class="b"><span class="tag if">MAYBE</span>Snow on the trail, or legs too tired: an easy day near the cabin. Walk the 3 km <span class="what">Iisakkipää</span> loop from Saariselkä village, and drive up <span class="what">Kaunispää</span> for the sunset (15:13) if you skipped it on Sunday.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Aurorapolku%20Saariselk%C3%A4" target="_blank" rel="noopener">Park gate</a><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kaunisp%C3%A4%C3%A4n%20Huippu" target="_blank" rel="noopener">Kaunispää</a></span></div></li>
+     <li><span class="t">Dinner</span><div class="b">Home: salmon soup or pan-fried whitefish; warm <span lang="fi">leipäjuusto</span> with cloudberry jam.</div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Tonight</span><span class="nv v-best">Best chance</span>Six moonless hours, 18:36–00:43.</p>
+     <ol class="tl">
+       <li class="must"><span class="t">18:00</span><div class="b"><span class="tag must">MUST</span>Cloud check, then sauna.</div></li>
+       <li class="must"><span class="t">18:40–00:40</span><div class="b"><span class="tag must">MUST</span>Watch from the yard. If it's cloudy at the cabin, drive up to 45 min to the nearest clear patch; agree tonight's driver at dinner.</div></li>
+     </ol>
    </div>
   </article>
 
   <article class="day" id="d-wed">
-   <div class="rail">
+   <header class="dh">
      <p class="date">Wed 4 Nov</p>
      <h3 class="word"><span class="sr-only">Wednesday 4 November: </span>Home</h3>
+     <p class="sum">Coffee in the blue light, pack, fly out.</p>
      <p class="light">Blue hour from about 07:30; sunrise 08:37.</p>
-   </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">07:30</dt><dd class="v">Coffee outside in the blue light.</dd></div>
-     <div class="row"><dt class="k">Pack</dt><dd class="v">Empty the fridge, leave the sauna clean, check sockets for chargers and camera batteries.</dd></div>
-     <div class="row"><dt class="k">Drive</dt><dd class="v">Cabin to IVL: about 25 min. Add slack for a frosty windscreen and reindeer.</dd></div>
-   </dl>
+   </header>
+   <ol class="tl">
+     <li><span class="t">07:30</span><div class="b">Coffee outside in the blue light.</div></li>
+     <li><span class="t">Pack</span><div class="b">Empty the fridge, leave the sauna clean, check sockets for chargers and camera batteries. Check-out by 11:00.</div></li>
+     <li><span class="t">Drive</span><div class="b">Cabin to IVL: about 25 min. Add slack for a frosty windscreen and reindeer.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Ivalo%20Airport" target="_blank" rel="noopener">Airport</a></span></div></li>
+   </ol>
   </article>
  </div>
 </section>
 
+<!-- ================= MORE INFO ================= -->
+<div class="wrap more-h" id="more">
+  <h2>More info</h2>
+  <p>Costs, packing, the northern lights, the map and the practical stuff. Tap a topic to open it.</p>
+</div>
+
+<!-- ================= COSTS ================= -->
+<details class="sec" id="costs">
+ <summary><div class="wrap sum-in"><h2>Costs</h2><span class="teaser">About €24 each: Siida, a day's parking and the church fee.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Tickets and fees for the five of you. Food, fuel and the cabin aren't included; HUF at 369 to the euro.</p>
+  <div class="tblwrap"><table class="costs">
+    <thead><tr><th scope="col">Activity</th><th scope="col" class="num">Each</th><th scope="col" class="num">Five people</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Siida, the Sámi Museum<span class="sub">Mon</span></th><td class="num">€18</td><td class="num">€90<span class="sub">≈ 33,000 HUF</span></td></tr>
+      <tr><th scope="row">Pielpajärvi church<span class="sub">Tue, if you go: a €5 visitor fee, according to Finnish Wikipedia</span></th><td class="num">€5</td><td class="num">€25<span class="sub">≈ 9,000 HUF</span></td></tr>
+      <tr><th scope="row">Kiilopää parking<span class="sub">Sun, at most €5.75 for the car</span></th><td class="num">€1</td><td class="num">€6<span class="sub">≈ 2,000 HUF</span></td></tr>
+      <tr><th scope="row">Lake Inari, Mutusjärvi, Kaunispää, Juutua rapids, Sajos, the hikes, the northern lights and the cabin sauna</th><td class="num zero">€0</td><td class="num zero">€0</td></tr>
+      <tr><th scope="row">Reindeer<span class="sub">No farm visit: you'll see them along the roads anyway.</span></th><td class="num zero">€0</td><td class="num zero">€0</td></tr>
+    </tbody>
+    <tfoot><tr><th scope="row">Total</th><td class="num">€24</td><td class="num">€121<span class="sub">≈ 45,000 HUF</span></td></tr></tfoot>
+  </table></div>
+  <p class="after small">Not running that week: the Kuurakaltio smoke sauna (closed for the autumn break until 14 Nov) and the €65 husky farm visit (no departures 1–7 Nov). The only husky trip in those days is Husky on Wheels, €130 each, on Sun 1 Nov at 09:30.</p>
+ </div></div>
+</details>
+
+<!-- ================= PACKING ================= -->
+<details class="sec" id="packing">
+ <summary><div class="wrap sum-in"><h2>What to pack</h2><span class="teaser">Clothes and shoes for the cold, per person; tick things off as you pack.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Per person, for four nights. Expect about −3 °C by day and −8 °C at night (the November average), wet snow if it’s around 0 °C, and wind on the fell tops. The aurora nights are the coldest part: you stand still outside for an hour or more.</p>
+  <ul class="plain packtips">
+    <li><strong>Layers, not one thick coat,</strong> and no cotton next to the skin: it stays wet and cold.</li>
+    <li><strong>Feel the cold easily?</strong> Bring the warmest boots and mittens you can, and a second fleece or jumper.</li>
+    <li><strong>No winter clothes at home?</strong> The cabin’s host rents out jackets, trousers, footwear, mittens and snowshoes; ask them before you fly.</li>
+    <li><strong>Pack light:</strong> wear the boots and the bulkiest jacket on the flights.</li>
+  </ul>
+  <p class="packcount" aria-live="polite">Packed: <b id="packcount">0 / 36</b> · ticks are saved on this device only</p>
+  <div class="cards packs">
+    <div class="card">
+     <h3>Clothes</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="top"><span>2 thermal tops, merino wool or synthetic</span></label></li>
+      <li><label><input type="checkbox" data-k="johns"><span>2 pairs of long johns</span></label></li>
+      <li><label><input type="checkbox" data-k="fleece"><span>A fleece or a wool jumper</span></label></li>
+      <li><label><input type="checkbox" data-k="puffy"><span>A warm insulated jacket, down or synthetic</span></label></li>
+      <li><label><input type="checkbox" data-k="shell"><span>A windproof, waterproof shell jacket<small>or one warm winter parka instead of this and the puffy</small></span></label></li>
+      <li><label><input type="checkbox" data-k="skipants"><span>Insulated ski trousers<small>or waterproof over-trousers on top of a warm layer</small></span></label></li>
+      <li><label><input type="checkbox" data-k="trousers"><span>Walking trousers for the day<small>not jeans: wet cotton stays cold</small></span></label></li>
+      <li><label><input type="checkbox" data-k="under"><span>Underwear and T-shirts for five days</span></label></li>
+      <li><label><input type="checkbox" data-k="cabin"><span>Comfy clothes for the cabin, and sleepwear</span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Shoes and socks</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="boots"><span>Warm, waterproof winter boots with a thick, grippy sole<small>half a size up for thick socks; break them in, as Sunday’s and Tuesday’s walks are 4–9 km</small></span></label></li>
+      <li><label><input type="checkbox" data-k="socks"><span>4–5 pairs of thick wool socks</span></label></li>
+      <li><label><input type="checkbox" data-k="spikes"><span>Ice grips or microspikes that fit over the boots</span></label></li>
+      <li><label><input type="checkbox" data-k="gaiters"><span>Gaiters<small>if there’s snow on the trails</small></span></label></li>
+      <li><label><input type="checkbox" data-k="slippers"><span>Slippers or thick socks for the cabin<small>shoes come off at the door in Finland</small></span></label></li>
+      <li><label><input type="checkbox" data-k="flipflops"><span>Flip-flops for stepping out of the sauna</span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Head and hands</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="hat"><span>A warm hat that covers your ears</span></label></li>
+      <li><label><input type="checkbox" data-k="buff"><span>A neck gaiter (buff)</span></label></li>
+      <li><label><input type="checkbox" data-k="balaclava"><span>A balaclava or face mask<small>for the wind on the fell tops</small></span></label></li>
+      <li><label><input type="checkbox" data-k="liners"><span>Thin liner gloves<small>thin enough to work a phone or camera</small></span></label></li>
+      <li><label><input type="checkbox" data-k="mittens"><span>Warm mittens to go over them, and a spare pair<small>mittens are warmer than gloves</small></span></label></li>
+      <li><label><input type="checkbox" data-k="sunglasses"><span>Sunglasses<small>the sun stays low, and snow glares</small></span></label></li>
+      <li><label><input type="checkbox" data-k="lips"><span>Lip balm and a rich hand cream<small>the cold air is dry</small></span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Nights out and the sauna</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="warmers"><span>Hand and toe warmers, a few for each night</span></label></li>
+      <li><label><input type="checkbox" data-k="headlamp"><span>A headlamp with a red light</span></label></li>
+      <li><label><input type="checkbox" data-k="sitpad"><span>A sit pad</span></label></li>
+      <li><label><input type="checkbox" data-k="reflector"><span>A reflector<small>Finnish law says pedestrians should wear one after dark</small></span></label></li>
+      <li><label><input type="checkbox" data-k="swimsuit"><span>A swimsuit<small>if you’d rather wear one in the shared sauna</small></span></label></li>
+     </ul>
+     <p class="small">On the aurora nights wear it all at once: base layer, fleece, puffy, shell, ski trousers, hat and mittens, with warmers in your boots.</p>
+    </div>
+    <div class="card">
+     <h3>In your bag</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="daypack"><span>A small backpack for the walks</span></label></li>
+      <li><label><input type="checkbox" data-k="powerbank"><span>A power bank<small>phones die fast in the cold</small></span></label></li>
+      <li><label><input type="checkbox" data-k="meds"><span>Your own medicines, in your hand luggage</span></label></li>
+      <li><label><input type="checkbox" data-k="poles"><span>Walking poles, if you use them<small>they help on the Kiilopää stairs and the rough church trail, especially going down</small></span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Shared, one lot for the group</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="thermos"><span>Two or three thermoses</span></label></li>
+      <li><label><input type="checkbox" data-k="lighter"><span>A lighter for the campfire</span></label></li>
+      <li><label><input type="checkbox" data-k="firstaid"><span>A small first-aid kit</span></label></li>
+      <li><label><input type="checkbox" data-k="extension"><span>An extension lead for five people’s chargers</span></label></li>
+      <li><label><input type="checkbox" data-k="rubbish"><span>Rubbish bags</span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Camera</h3>
+     <p>a6100, Samyang 12 mm f/2, Sony 70–350 G, tripod, three or more NP‑FW50, spare cards, zip bags, lens cloth.</p>
+    </div>
+  </div>
+ </div></div>
+</details>
+
 <!-- ================= SKY ================= -->
-<section id="sky" class="night-band">
- <div class="wrap">
-  <h2>Northern lights</h2>
+<details class="sec" id="sky">
+ <summary><div class="wrap sum-in"><h2>Northern lights</h2><span class="teaser">Tuesday is the best night; the evening routine and where to watch.</span></div></summary>
+ <div class="sec-body night-band"><div class="wrap">
   <p class="h2sub"><strong>Tuesday 3 Nov is the best aurora night:</strong> six dark, moonless hours, 18:36–00:43. Monday is good (four hours), Sunday short, and Saturday is moonlit.</p>
   <div class="nights" role="list">
 <div class="nrow" role="listitem" id="n-sat"><div class="nlabel">Sat 31 Oct</div><div class="bar" role="img" aria-label="Sunset 15:26, civil dusk 16:32, dark from 18:45. Moon 62%, up all night. No dark, moonless window. Moonlit: look, don&#x27;t drive."><span class="seg s-day" style="left:0.00%;width:3.61%"></span><span class="seg s-tw" style="left:3.61%;width:27.64%"></span><span class="seg s-night" style="left:31.25%;width:68.75%"></span><span class="moon" style="left:0.00%;width:100.00%" title="Moon up all night"></span></div><div class="nnote"><b>Moonlit:</b> look, don't drive. Moon 62%, up all night, under 10° in the NNE until 21:00.</div></div>
@@ -681,18 +764,18 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><span class="when">about 40 min</span><div><strong>Ukonjärvi, E75.</strong> Lake with open sky, about 10 km north of Ivalo. Park only in a proper lay-by.</div></li>
   </ul>
   <p class="small" style="margin-top:12px">Times are from the cabin. Night camera settings are in <a href="#photos">Photography</a>.</p>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= MAP ================= -->
-<section id="map">
- <div class="wrap">
-  <h2>Map</h2>
-  <p class="h2sub">Every stop is within about an hour's drive of the cabin. Tap a point, or pick a place, for details and a Google Maps link.</p>
+<details class="sec" id="map">
+ <summary><div class="wrap sum-in"><h2>Map</h2><span class="teaser">All 14 places, with drive times from the cabin.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Most stops are within an hour's drive of the cabin. Inari is about 1 h 10, and Pielpajärvi and Mutusjärvi, beyond it, about 1 h 15–1 h 20. Tap a point, or pick a place, for details and a Google Maps link.</p>
   <div class="mapgrid">
     <div class="mapbox"><svg id="mapsvg" viewBox="0 0 619 690" role="group" aria-labelledby="maptitle mapdesc">
 <title id="maptitle">Map of the trip area: Saariselkä, Ivalo and Inari</title>
-<desc id="mapdesc">The 15 trip places, from Kiilopää and Saariselkä in the south to Ivalo, Lake Inari and Inari village in the north, with the E75 drawn in green. The five places around the cabin are repeated larger in a Saariselkä close-up.</desc>
+<desc id="mapdesc">The 14 trip places, from Kiilopää and Saariselkä in the south to Ivalo, Lake Inari, Inari village and Pielpajärvi in the north, with the E75 drawn in green. Mutusjärvi, just north of the map, is an arrow on the top edge. The four places around the cabin are repeated larger in a Saariselkä close-up.</desc>
 <defs><clipPath id="mclip"><rect width="619" height="690"/></clipPath></defs>
 <rect class="m-land" width="619" height="690"/>
 <g clip-path="url(#mclip)">
@@ -746,52 +829,26 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 </svg><noscript><p class="small" style="margin:10px 14px">The map's points need JavaScript.</p></noscript></div>
     <aside class="mapside" aria-label="Place details">
       <label class="pick" for="placepick">Pick a place</label>
-      <div class="selwrap"><select id="placepick"><option value="">All 15 places, with drive times…</option></select></div>
+      <div class="selwrap"><select id="placepick"><option value="">All 14 places, with drive times…</option></select></div>
       <div class="mapinfo" id="mapinfo" aria-live="polite"><p>Tap a point on the map or pick a place above. The dashed ring is the cabin; the box beside it is drawn larger in the Saariselkä close-up.</p></div>
       <ul class="mi-key"><li><span class="kdot must"></span>Must</li><li><span class="kdot if"></span>Maybe</li><li><span class="kdot fill"></span>Extra</li><li><span class="kdot base"></span>Cabin</li><li><span class="kdot log"></span>Airport, shops</li><li><span class="kline"></span>E75, drive times</li></ul>
     </aside>
   </div>
-  <p class="small" style="margin-top:14px">Coordinates from Google Maps; drive times are estimates at rural speed limits with no stops.</p>
- </div>
-</section>
-
-<!-- ================= SAMI ================= -->
-<section id="sami">
- <div class="wrap">
-  <h2>Sámi culture</h2>
-  <p class="h2sub">Inari municipality, including Saariselkä and Ivalo, lies in the Sámi homeland, and Inari village is its cultural centre in Finland.</p>
-  <p>Within an hour's drive, Siida and Sajos in Inari are the easiest way in.</p>
-  <div class="cards">
-    <div class="card"><span class="tag must">MUST</span><h3>Siida · Monday</h3><p>The Sámi Museum, European Museum of the Year 2024; since 2025 its exhibitions are run by the Sámi Museum alone. The main exhibition links Sámi culture with northern nature.</p></div>
-    <div class="card"><span class="tag fill">EXTRA</span><h3>Sajos · Monday</h3><p>The Sámi Parliament's building and cultural centre next to Siida, open weekdays. Its Duodji Shop sells Sámi-made handicraft.</p></div>
-    <div class="card"><h3>Juutua trail</h3><p>The only nature trail in the area with signs in Inari Sámi.</p></div>
-    <div class="card"><h3>Three languages</h3><p>Inari Sámi, North Sámi and Skolt Sámi are all spoken here; Siida's website runs in all three. Welcome, in Inari Sámi: <em lang="smn">tiervâpuáttim</em>.</p></div>
-  </div>
-
-  <h3>Reindeer</h3>
-  <p>No farm visit: you'll see reindeer along the roads anyway. The Reindeer Herders' Association calls them a common roadside sight in autumn and early winter, when the herds move between grazing areas.</p>
-
-  <h3>How to be a good guest</h3>
-  <ul class="plain">
-    <li>Ask before photographing people, homes or herders at work.</li>
-    <li>Buy handicraft with the Sámi Duodji label; it guarantees a Sámi maker.</li>
-    <li>Skip costumes and souvenirs that imitate the gákti, the Sámi dress.</li>
-    <li>Every reindeer has an owner. Don't chase, feed or call free-roaming reindeer.</li>
-  </ul>
- </div>
-</section>
+  <p class="small" style="margin-top:14px">Coordinates from Google Maps, Metsähallitus and OpenStreetMap; drive times are estimates at rural speed limits with no stops.</p>
+ </div></div>
+</details>
 
 <!-- ================= FOOD ================= -->
-<section id="food">
- <div class="wrap">
-  <h2>Food</h2>
+<details class="sec" id="food">
+ <summary><div class="wrap sum-in"><h2>Food</h2><span class="teaser">Monday's lunch and dinner out, the home menu and the shops.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
   <p class="h2sub">Monday is the local-food day: buffet lunch at Sarrit in Siida, then dinner at Laanilan Kievari, about 1 km from the cabin. The other dinners are cooked at home.</p>
   <div class="tblwrap"><table class="tbl">
     <thead><tr><th>Meal</th><th>Where</th><th>When</th><th>What to know</th></tr></thead>
     <tbody>
-      <tr><td class="lead">Lunch</td><td data-label="Where"><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Sarrit</a>, inside Siida, Inari</td><td data-label="When">Mon 12:00; buffet 11–15</td><td data-label="What to know">Warm main, salad table, in-house baking, dessert and coffee; no museum ticket needed.<span class="note"><span class="nk">To confirm</span>Sarrit's winter lunch days.</span></td></tr>
-      <tr><td class="lead">Dinner</td><td data-label="Where"><a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">Laanilan Kievari</a>, Sateenkaarenpääntie 9</td><td data-label="When">Mon 18:30; open Mon–Sat 16–22, closed Sunday</td><td data-label="What to know">Lappish ingredients with French and Karelian touches; the fire-roasted reindeer shoulder for two is the signature. Book.</td></tr>
-      <tr><td class="lead">Coffee or lunch</td><td data-label="Where">Kaunispään Huippu, top of Kaunispää</td><td data-label="When">Tue, if open</td><td data-label="What to know">Lappish kitchen: reindeer, whitefish, salmon, cloudberries.</td></tr>
+      <tr><td class="lead">Lunch</td><td data-label="Where"><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Sarrit</a>, inside Siida, Inari</td><td data-label="When">Mon 12:00; buffet 11–15</td><td data-label="What to know">Warm main, salad table, in-house baking, dessert and coffee; no museum ticket needed; open Mon–Sat.</td></tr>
+      <tr><td class="lead">Dinner</td><td data-label="Where"><a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">Laanilan Kievari</a>, Sateenkaarenpääntie 9</td><td data-label="When">Mon 18:30; open Mon–Sat 16–22, closed Sunday</td><td data-label="What to know">Lappish ingredients with French and Karelian touches; the fire-roasted reindeer shoulder for two is the signature. Table booked for five.</td></tr>
+      <tr><td class="lead">Coffee or lunch</td><td data-label="Where">Kaunispään Huippu, top of Kaunispää</td><td data-label="When">Sun, if open</td><td data-label="What to know">Lappish kitchen: reindeer, whitefish, salmon, cloudberries.</td></tr>
       <tr><td class="lead">Closed during our stay</td><td data-label="Where">Aanaar, Wilderness Hotel Juutua, Inari</td><td class="empty" data-label="When">—</td><td data-label="What to know">Closed for renovation 15 Oct – 22 Nov 2026.</td></tr>
     </tbody>
   </table></div>
@@ -825,13 +882,13 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   </table></div>
   <p class="after">Sat 31 Oct is All Saints' Day, so either shop may keep holiday hours that evening.</p>
   <p class="note"><span class="nk">To confirm</span>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct.</p>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= SAUNA ================= -->
-<section id="sauna">
- <div class="wrap">
-  <h2>Sauna</h2>
+<details class="sec" id="sauna">
+ <summary><div class="wrap sum-in"><h2>Sauna</h2><span class="teaser">The cabin sauna, step by step. The smoke sauna is closed that week.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
   <p class="h2sub">Sauna every night at the cabin, and every cool-off doubles as a sky check.</p>
   <ol class="steps">
     <li><strong>Heat.</strong> Switch on 45–60 min ahead; aim for 70–80 °C.</li>
@@ -840,20 +897,48 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><strong>Repeat two or three times.</strong> Water between rounds; nothing stronger if anyone may still drive to an aurora spot.</li>
   </ol>
   <h3>Smoke sauna</h3>
-  <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>Sauna</th><th>Where</th><th>What</th><th>Tag</th></tr></thead>
-    <tbody>
-      <tr><td class="lead">Kuurakaltio smoke sauna</td><td data-label="Where">Kiilopää Fell Centre, 15 min</td><td data-label="What">Traditional smoke sauna beside a fell stream with a cold plunge. Tue 3 Nov, the 16:30–18:00 public shift; public shifts run Mon–Sat. €21 each; bring towels and swimsuits (rental €5 each).</td><td data-label="Tag"><span class="tag must">MUST</span><span class="note"><span class="nk">To confirm</span>That it's heated in early November, and its hours that week.</span></td></tr>
-    </tbody>
-  </table></div>
- </div>
-</section>
+  <p>The Kuurakaltio smoke sauna at Kiilopää Fell Centre is closed for the autumn break and next heated on 14 Nov 2026, so it's out this trip.</p>
+ </div></div>
+</details>
+
+<!-- ================= SAMI ================= -->
+<details class="sec" id="sami">
+ <summary><div class="wrap sum-in"><h2>Sámi culture</h2><span class="teaser">Siida, Sajos, the wilderness church and how to be a good guest.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Inari municipality, including Saariselkä and Ivalo, lies in the Sámi homeland, and Inari village is its cultural centre in Finland.</p>
+  <p>In Inari, Siida and Sajos are the easiest way in, and the Pielpajärvi church stands at an old Sámi winter village.</p>
+  <div class="cards">
+    <div class="card"><span class="tag must">MUST</span><h3>Siida · Monday</h3><p>The Sámi Museum, European Museum of the Year 2024; since 2025 its exhibitions are run by the Sámi Museum alone. The main exhibition links Sámi culture with northern nature.</p></div>
+    <div class="card"><span class="tag fill">EXTRA</span><h3>Sajos · Monday</h3><p>The Sámi Parliament's building and cultural centre next to Siida, open weekdays. Its Duodji Shop sells Sámi-made handicraft.</p></div>
+    <div class="card"><span class="tag if">MAYBE</span><h3>Pielpajärvi church · Tuesday</h3><p>Built in 1752–1760 at a winter village that was then the centre of Inari; Metsähallitus calls the church and its meadow an important Sámi cultural heritage site. Services are held there a few times a year.</p></div>
+    <div class="card"><h3>Juutua trail</h3><p>The only nature trail in the area with signs in Inari Sámi.</p></div>
+    <div class="card"><h3>Three languages</h3><p>Inari Sámi, North Sámi and Skolt Sámi are all spoken here; Siida's website runs in all three. Welcome, in Inari Sámi: <em lang="smn">tiervâpuáttim</em>.</p></div>
+  </div>
+
+  <h3>Reindeer</h3>
+  <p>No farm visit: you'll see reindeer along the roads anyway. The Reindeer Herders' Association calls them a common roadside sight in autumn and early winter, when the herds move between grazing areas.</p>
+
+  <h3>How to be a good guest</h3>
+  <ul class="plain">
+    <li>Ask before photographing people, homes or herders at work.</li>
+    <li>Buy handicraft with the Sámi Duodji label; it guarantees a Sámi maker.</li>
+    <li>Skip costumes and souvenirs that imitate the gákti, the Sámi dress.</li>
+    <li>Every reindeer has an owner. Don't chase, feed or call free-roaming reindeer.</li>
+  </ul>
+ </div></div>
+</details>
 
 <!-- ================= LOGISTICS ================= -->
-<section id="logistics">
- <div class="wrap">
-  <h2>Logistics</h2>
-  <p class="h2sub">The things to book or check before flying are under <a href="#how">How it works</a>; drive times from the cabin are on the <a href="#map">map</a>.</p>
+<details class="sec" id="logistics">
+ <summary><div class="wrap sum-in"><h2>Logistics</h2><span class="teaser">The cabin, driving, weather and what's still open.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Drive times from the cabin are on the <a href="#map">map</a>.</p>
+
+  <h3>Before you fly</h3>
+  <ul class="checks">
+    <li>EasyPark app on one phone, for Kiilopää parking</li>
+    <li>Shop closing times for the evening of Sat 31 Oct (All Saints' Day)</li>
+  </ul>
 
   <h3>Trip facts</h3>
   <div class="card">
@@ -866,7 +951,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <dt>Who sleeps where</dt><dd>Couple in one double, the other double split into two singles, loft for the remaining one or two.</dd>
       <dt>Location</dt><dd>Laanipalo, about 2.5 km south of Saariselkä centre; lit ski and outdoor trail 150 m away; shop 2.5 km; airport 26 km.</dd>
       <dt>Coordinates</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=68.3975%2C27.4076" target="_blank" rel="noopener">68.3975 N, 27.4076 E</a> (Google Maps)</dd>
-      <dt>Driving limit</dt><dd>At most about an hour each way; Inari and Siida (about 1 h) are the farthest.</dd>
+      <dt>Drive times</dt><dd>Most stops are within an hour each way. Inari and Siida are about 1 h 10; Pielpajärvi (Tue, if you go) and Mutusjärvi about 1 h 15–1 h 20.</dd>
       <dt>Time zone</dt><dd>Finnish winter time, UTC+2 (clocks went back 25 Oct).</dd>
     </dl>
   </div>
@@ -882,6 +967,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <dt>Sun 1 Nov</dt><dd>Siida and Laanilan Kievari closed.</dd>
       <dt>Whole trip</dt><dd>Aanaar in Inari closed for renovation until 22 Nov.</dd>
       <dt>Whole trip</dt><dd>Kiilopää parking paid 9–18 via EasyPark.</dd>
+      <dt>Whole trip</dt><dd>Kiilopää Fell Centre and its smoke sauna closed for the autumn break, until 14 Nov.</dd>
     </dl></div>
     <div class="card"><h3>Weather and safety</h3><ul class="plain">
       <li>November averages about −3 °C by day and −8 °C at night and is mostly overcast: cloud, not aurora, is the real gamble.</li>
@@ -891,30 +977,20 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     </ul></div>
   </div>
 
-  <h3>What to bring</h3>
-  <div class="cards three">
-    <div class="card"><h3>Clothing</h3><p>Wool base layer, fleece, down or synthetic puffy, windproof shell, insulated boots, spare wool socks, mittens over liner gloves, hat, neck gaiter.</p></div>
-    <div class="card"><h3>Gear</h3><p>Microspikes for everyone, headlamps with a red mode, thermos, sit pads, lighter, hand warmers, rubbish bag.</p></div>
-    <div class="card"><h3>Camera</h3><p>a6100, Samyang 12 mm f/2, Sony 70–350 G, tripod, three or more NP‑FW50, spare cards, zip bags, lens cloth.</p></div>
-  </div>
-
   <h3 id="open">Still to confirm</h3>
   <ul class="checks">
-      <li>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct</li>
-    <li>Husky &amp; Co meeting point: village office or the kennel</li>
-    <li>Sarrit's winter lunch days</li>
-    <li>Kiilopää fell centre and Kuurakaltio smoke sauna hours that week</li>
-    <li>Snow cover the week before: have husky sled safaris started?</li>
-    <li>Otsamo: snow or ice on the trail, and whether Rovajärventie is passable — check the week before</li>
+    <li>Kuukkeli and K‑Supermarket Ivalo hours on the evening of Sat 31 Oct</li>
+    <li>Snow on the Pielpajärvi trail: you'll see the conditions around Inari on Monday</li>
+    <li>The Pielpajärvi church visitor fee (€5, according to Finnish Wikipedia)</li>
     <li>Exact pin for the national park gate where Aurorapolku and Iisakkipää start</li>
   </ul>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= PHOTOS ================= -->
-<section id="photos">
- <div class="wrap">
-  <h2>Photography</h2>
+<details class="sec" id="photos">
+ <summary><div class="wrap sum-in"><h2>Photography</h2><span class="teaser">Camera settings for the days and the nights.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
   <p class="h2sub">The 70–350 works the days, the 12 mm the nights.</p>
   <p>The sun never climbs above about 7°, so every clear daylight hour is low, raking light — about six and a half of them a day. The Sony 70–350 G works the days (105–525 mm equivalent on the a6100), the Samyang 12 mm f/2 the nights. The a6100 has no in-body stabilisation, so the lens's OSS does all the steadying.</p>
   <div class="cards">
@@ -922,8 +998,8 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <h3>Daylight: a6100 + 70–350 G</h3>
       <dl class="kv">
         <dt>Mode</dt><dd>A or M with Auto ISO capped at 6400; at 350 mm the lens is f/6.3, so let ISO rise rather than shutter speed fall.</dd>
-        <dt>Exposure</dt><dd>1/250 landscapes, 1/500 people and standing reindeer, 1/1000–1/2000 running huskies and jays in flight.</dd>
-        <dt>Focus</dt><dd>AF‑C, Zone or Tracking; Animal Eye AF for the dogs; burst on Hi+.</dd>
+        <dt>Exposure</dt><dd>1/250 landscapes, 1/500 people and standing reindeer, 1/1000–1/2000 jays in flight.</dd>
+        <dt>Focus</dt><dd>AF‑C, Zone or Tracking; burst on Hi+.</dd>
         <dt>Snow</dt><dd>+0.7 to +1.3 EV or the snow goes grey.</dd>
         <dt>Stabilisation</dt><dd>OSS on handheld, off on a tripod.</dd>
         <dt>Other</dt><dd>Minimum focus 1.1–1.5 m: step back when a jay lands close.</dd>
@@ -943,14 +1019,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <h3>Where the 70–350 earns its place</h3>
   <ul class="spots">
-    <li><span class="when">Tue 14:00–15:13</span><div><strong>Kaunispää tower.</strong> Stack the layered fells of the national park at 200–350 mm with the low sun behind them.</div></li>
-    <li><span class="when">Tue 10:00</span><div><strong>Husky &amp; Co.</strong> Dog's eye level, 1/1000 or faster; ask before photographing the guides.</div></li>
+    <li><span class="when">Sun 14:45–15:22</span><div><strong>Kaunispää tower.</strong> Stack the layered fells of the national park at 200–350 mm with the low sun behind them.</div></li>
     <li><span class="when">Any forest stop</span><div><strong>Siberian jays.</strong> Sit still, lens ready; they arrive fast, so 1/2000.</div></li>
     <li><span class="when">Roadsides</span><div><strong>Reindeer.</strong> 350 mm lets you stay far enough back not to move them; shoot from the car only in a proper lay-by.</div></li>
-    <li><span class="when">Mon 13:00</span><div><strong>Juutua rapids.</strong> If ice is forming at the edges: tripod, 1/4–1 s for smooth water, or 1/1000 to freeze spray.</div></li>
-    <li><span class="when">Mon about 14:15</span><div><strong>Otsamo top.</strong> Lake Inari and Muddusjärvi in low sun at 100–350 mm.</div></li>
+    <li><span class="when">Mon 13:30</span><div><strong>Juutua rapids.</strong> If ice is forming at the edges: tripod, 1/4–1 s for smooth water, or 1/1000 to freeze spray.</div></li>
     <li><span class="when">Sun on Kiilopää</span><div><strong>Summit ridges.</strong> Distant fells with hikers for scale at 150–250 mm.</div></li>
-    <li><span class="when">Mon 15:14</span><div><strong>Lake Inari.</strong> Pastel layers after sunset; the blue hour lasts about an hour.</div></li>
+    <li><span class="when">Mon about 15:30</span><div><strong>Ukonjärvi.</strong> Pastel layers after sunset; the blue hour lasts about an hour.</div></li>
     <li><span class="when">Mon 22:37</span><div><strong>North-east horizon.</strong> Bonus moonrise behind the fells: 350 mm, tripod, start at 1/250 s, f/6.3, ISO 400.</div></li>
   </ul>
 
@@ -961,35 +1035,38 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li>Lens hood on all day: with the sun at 7°, it's always close to the frame.</li>
     <li>Phones: night mode catches aurora well if braced on something solid.</li>
   </ul>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= SOURCES ================= -->
-<section id="sources" class="sources">
- <div class="wrap">
-  <h2>Sources</h2>
-  <p class="small">Checked between 25 September and 3 October 2026. Coordinates and shop hours are from Google Maps; sun and moon times were computed with PyEphem for Saariselkä.</p>
+<details class="sec sources" id="sources">
+ <summary><div class="wrap sum-in"><h2>Sources</h2><span class="teaser">Where the facts come from.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="small">Checked between 25 September and 20 October 2026. Coordinates and shop hours are from Google Maps; sun and moon times were computed with PyEphem for Saariselkä.</p>
   <ul>
     <li><b>Cabin:</b> <a href="https://www.nettimokki.com/en/saariselka/villa-skaidi-i/50416/" target="_blank" rel="noopener">Villa Skaidi I on Nettimökki</a>; <a href="https://www.airbnb.com/rooms/1089762495396085624" target="_blank" rel="noopener">Villa Skaidi II on Airbnb</a> (same host)</li>
     <li><b>Siida:</b> <a href="https://siida.fi/en/visitors/" target="_blank" rel="noopener">tickets and opening hours</a>; <a href="https://siida.fi/en/" target="_blank" rel="noopener">We Who Remain</a>; <a href="https://siida.fi/en/about-us/" target="_blank" rel="noopener">about us</a>; <a href="https://www.civitatis.com/en/ivalo/reindeer-farm-visit-inari-sami-museum/" target="_blank" rel="noopener">European Museum of the Year 2024 mention</a></li>
     <li><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Restaurant Sarrit</a></li>
     <li><a href="https://wildernesshoteljuutua.wa.profitroom.com/holiday-packages/juutua-wilderness-adventure-week" target="_blank" rel="noopener">Wilderness Hotel Juutua and Aanaar: renovation closure</a></li>
     <li><b>Laanilan Kievari:</b> <a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">hours</a>; <a href="https://www.inarisaariselka.fi/companies/laanilan-kievari/" target="_blank" rel="noopener">location</a>; <a href="https://laplandnorth.fi/fi/yritys/laanilan-kievari/" target="_blank" rel="noopener">cuisine</a>; <a href="https://www.petitfute.com/v54070-saariselka/c1165-restaurants/c1029-cuisine-regionale/1611791-laanilan-kievari.html?page=8" target="_blank" rel="noopener">reindeer shoulder for two (Petit Futé)</a></li>
-    <li><b>Huskies:</b> <a href="https://musement.com/uk/saariselka/visit-a-husky-farm-in-saariselka-271599" target="_blank" rel="noopener">Husky &amp; Co kennel visit</a>; <a href="https://manawa.com/en-GB/activity/finland/saariselka/dog-sledding/self-drive-husky-safari-near-urho-kekkonen-national-park-from-saariselka/13769" target="_blank" rel="noopener">self-drive husky safari</a>; <a href="https://laplandnorth.fi/en/experiences/activity/forest-walk-with-a-husky-saariselka-2/" target="_blank" rel="noopener">autumn husky programmes</a>; <a href="https://activitybookingsaariselka.fi/husky-farm-visit/" target="_blank" rel="noopener">kennel visit price</a></li>
+    <li><b>Huskies:</b> <a href="https://activitybookingsaariselka.fi/husky-farm-visit/" target="_blank" rel="noopener">husky farm visit</a> and <a href="https://fareharbor.com/embeds/book/wildernesshotel-kieppi/items/680331/calendar/" target="_blank" rel="noopener">its departures</a> (checked 20 October); <a href="https://activitybookingsaariselka.fi/husky-on-wheels/" target="_blank" rel="noopener">Husky on Wheels</a></li>
     <li><a href="https://paliskunnat.fi/py/encountering-reindeer-on-the-roads/" target="_blank" rel="noopener">Reindeer on the roads (Reindeer Herders' Association)</a></li>
-    <li><b>Inari trails:</b> <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area" target="_blank" rel="noopener">Inari Hiking Area (Juutua, Tuulispää, Otsamo)</a>; <a href="https://www.luontoon.fi/en/trails/inari-otsamo-riutula-summer-trail-inari-10641-en" target="_blank" rel="noopener">Inari–Otsamo–Riutula trail</a></li>
-    <li><b>Kiilopää and Saariselkä:</b> <a href="https://laplandnorth.fi/en/about-the-area/kiilopaa" target="_blank" rel="noopener">Kiilopää</a>; <a href="https://www.luontoon.fi/en/news/paid-parking-pilot-starts-at-five-metsahallitus-destinations-on-1-september-2026" target="_blank" rel="noopener">Kiilopää paid parking</a>; <a href="https://www.nationalparks.fi/urhokekkonennp/trails" target="_blank" rel="noopener">Saariselkä trails</a>; <a href="https://laplandtripplanner.com/saariselka-guide/" target="_blank" rel="noopener">Kuurakaltio smoke sauna</a>; <a href="https://kiilopaa.johku.com/en_US/smoke-sauna" target="_blank" rel="noopener">smoke sauna tickets</a></li>
+    <li><b>Inari:</b> <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area" target="_blank" rel="noopener">Inari Hiking Area (Juutua)</a>; <a href="https://www.luontoon.fi/en/trails/the-pielpajarvi-wilderness-church-trail-inari-10637-en" target="_blank" rel="noopener">Pielpajärvi Wilderness Church trail</a>; <a href="https://www.luontoon.fi/en/services/inari-pielpajarvi-polun-lahtopaikka-pysakointialue-parking-61203-en" target="_blank" rel="noopener">its parking</a>; <a href="https://www.luontoon.fi/en/services/pielpajarvi-paivatupa-day-use-hut-76138-en" target="_blank" rel="noopener">the day-use hut</a>; <a href="https://fi.wikipedia.org/wiki/Pielpaj%C3%A4rven_er%C3%A4maakirkko" target="_blank" rel="noopener">the visitor fee (Finnish Wikipedia)</a></li>
+    <li><b>Lake Inari:</b> <a href="https://www.luontoon.fi/en/articles/paddling-on-lake-inarijarvi" target="_blank" rel="noopener">the village harbour</a>; <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area/nature" target="_blank" rel="noopener">when the lake freezes</a></li>
+    <li><b>Mutusjärvi:</b> <a href="https://www.jarviwiki.fi/wiki/Mutusj%C3%A4rvi_(71.241.1.001)" target="_blank" rel="noopener">Finnish lake register</a>; <a href="https://www.openstreetmap.org/relation/2104383" target="_blank" rel="noopener">OpenStreetMap</a> for road 4 along the shore and the rest area</li>
+    <li><b>Kiilopää and Saariselkä:</b> <a href="https://laplandnorth.fi/en/about-the-area/kiilopaa" target="_blank" rel="noopener">Kiilopää</a>; <a href="https://www.luontoon.fi/en/news/paid-parking-pilot-starts-at-five-metsahallitus-destinations-on-1-september-2026" target="_blank" rel="noopener">Kiilopää paid parking</a>; <a href="https://www.nationalparks.fi/urhokekkonennp/trails" target="_blank" rel="noopener">Saariselkä trails</a>; <a href="https://www.kiilopaa.fi/en/opening-hours" target="_blank" rel="noopener">autumn break</a>; <a href="https://www.kiilopaa.fi/kuurakaltio-savusauna-ja-uintipaikka" target="_blank" rel="noopener">Kuurakaltio smoke sauna, next heated 14 Nov</a></li>
     <li><b>Kaunispää:</b> <a href="https://saariselka.com/en/?p=9337" target="_blank" rel="noopener">Kaunispää</a>; <a href="https://saariselka.com/en/?p=18304" target="_blank" rel="noopener">Kaunispään Huippu</a>; <a href="https://www.travelinmypocket.com/kaunispaa-triangulation-tower-saariselka/" target="_blank" rel="noopener">triangulation tower</a></li>
     <li><a href="https://laplandnorth.fi/company/shopping-center-kuukkeli" target="_blank" rel="noopener">Kuukkeli centre</a></li>
     <li><b>Siberian jays:</b> <a href="https://www.outinthenature.com/explore-the-mystical-world-of-the-siberian-jay/" target="_blank" rel="noopener">status</a>; <a href="https://finlandnaturally.com/uncategorized/every-mans-best-friend-siberian-jay-meeting-the-soul-bird-in-pallas-yllastunturi-national-park/" target="_blank" rel="noopener">feeding jays</a></li>
+    <li><a href="https://liikenneturva.fi/?p=3654" target="_blank" rel="noopener">Reflectors after dark (Finnish Road Safety Council)</a>; <a href="https://www.airbnb.com/rooms/1089668303636405332" target="_blank" rel="noopener">winter clothing to rent from the cabin’s host</a></li>
     <li><a href="https://collections.maa.cam.ac.uk/objects/553273" target="_blank" rel="noopener">Sámi Duodji label</a></li>
     <li><a href="https://julkaisut.metsa.fi/assets/pdf/lp/Esitteet/ukpuistoeng.pdf" target="_blank" rel="noopener">Urho Kekkonen National Park brochure</a>; <a href="https://avionero.com/New-York_NYC-Ivalo_IVL/weather/november" target="_blank" rel="noopener">Ivalo November weather</a></li>
-    <li><b>Photos</b> (Wikimedia Commons, cropped and resized): <a href="https://commons.wikimedia.org/wiki/File:Kiilopaa_path.jpg" target="_blank" rel="noopener">Kiilopaa path</a> · Kospo75 · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Anochecer_en_Kiilop%C3%A4%C3%A4.jpg" target="_blank" rel="noopener">Anochecer en Kiilopää</a> · Beasai · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Siidan_uusi_n%C3%A4yttely_3.jpg" target="_blank" rel="noopener">Siidan uusi näyttely 3</a> · Koivunlehti · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:J%C3%A4niskoski_rapids_of_Juutuanjoki_in_Inari,_Lapland,_Finland,_2022_August_-_3.jpg" target="_blank" rel="noopener">Jäniskoski rapids of Juutuanjoki in Inari, Lapland, Finland, 2022 August - 3</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Otsamon_tupa.JPG" target="_blank" rel="noopener">Otsamon tupa</a> · Trogain · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sami_Parliament.jpg" target="_blank" rel="noopener">Sami Parliament</a> · JIP · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sled_dogs_in_Lapland,_Finland.jpg" target="_blank" rel="noopener">Sled dogs in Lapland, Finland</a> · Letizia Barbi · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Kaunisp%C3%A4%C3%A4_triangulation_tower_1.jpg" target="_blank" rel="noopener">Kaunispää triangulation tower 1</a> · Htm · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Smoke_Sauna_(395139052).jpg" target="_blank" rel="noopener">Smoke Sauna (395139052)</a> · Timo Newton-Syms · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:View_towards_Levi%C3%A4salmi_of_Ukonj%C3%A4rvi_lake_in_Inari,_Lapland,_Finland,_2021_September.jpg" target="_blank" rel="noopener">View towards Leviäsalmi of Ukonjärvi lake in Inari, Lapland, Finland, 2021 September</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></li>
+    <li><b>Photos</b> (Wikimedia Commons, cropped and resized): <a href="https://commons.wikimedia.org/wiki/File:Kiilopaa_path.jpg" target="_blank" rel="noopener">Kiilopaa path</a> · Kospo75 · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Anochecer_en_Kiilop%C3%A4%C3%A4.jpg" target="_blank" rel="noopener">Anochecer en Kiilopää</a> · Beasai · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Siidan_uusi_n%C3%A4yttely_3.jpg" target="_blank" rel="noopener">Siidan uusi näyttely 3</a> · Koivunlehti · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:J%C3%A4niskoski_rapids_of_Juutuanjoki_in_Inari,_Lapland,_Finland,_2022_August_-_3.jpg" target="_blank" rel="noopener">Jäniskoski rapids of Juutuanjoki in Inari, Lapland, Finland, 2022 August - 3</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sami_Parliament.jpg" target="_blank" rel="noopener">Sami Parliament</a> · JIP · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Kaunisp%C3%A4%C3%A4_triangulation_tower_1.jpg" target="_blank" rel="noopener">Kaunispää triangulation tower 1</a> · Htm · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:View_towards_Levi%C3%A4salmi_of_Ukonj%C3%A4rvi_lake_in_Inari,_Lapland,_Finland,_2021_September.jpg" target="_blank" rel="noopener">View towards Leviäsalmi of Ukonjärvi lake in Inari, Lapland, Finland, 2021 September</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Pielpaj%C3%A4rven_er%C3%A4maakirkko_2.JPG" target="_blank" rel="noopener">Pielpajärven erämaakirkko 2</a> · Trogain · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Lake_Inari_-_panoramio_(3).jpg" target="_blank" rel="noopener">Lake Inari - panoramio (3)</a> · Tevfik Teker · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a></li>
     <li><a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-huf.en.html" target="_blank" rel="noopener">ECB euro reference rate for HUF</a>: 369.18 on 2 October 2026</li>
     <li><b>Map data:</b> <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> 10 m lakes, rivers and roads</li>
   </ul>
- </div>
-</section>
+ </div></div>
+</details>
 
 </main>
 
@@ -998,25 +1075,25 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
 <script>
 (function(){
-  // The 15 map points. z:1 = drawn in the Saariselkä close-up; ny nudges a dot
-  // (map units, ~110 m each) where two places would sit on top of each other.
+  // The 14 map points. z:1 = drawn in the Saariselkä close-up; ny nudges a dot
+  // (map units, ~110 m each) where two places would sit on top of each other;
+  // edge:1 = north of the map, drawn as an arrow on its top edge.
   // Label placement: at/atm = desktop/phone side (r, l, t, b, tr, br, tl, bl).
   var PLACES=[
     {id:'cabin',name:'Villa Skaidi I',tier:'base',tag:'CABIN',lat:68.3975,lon:27.4076,from:'',text:'Home for four nights in Laanipalo, 2.5 km south of the village.',q:'Jäkälätie 14, 99830 Saariselkä',z:1,lab:'Villa Skaidi I',labm:'Cabin',at:'r',atm:'r'},
     {id:'ivl',name:'Ivalo Airport',tier:'log',tag:'AIRPORT',lat:68.6085,lon:27.4197,from:'26 km, 25 min',text:'Land Sat evening, fly out Wed morning.',q:'Ivalo Airport',lab:'Ivalo Airport',labm:'Airport',at:'l',atm:'l'},
     {id:'kuukkeli',name:'Kuukkeli centre',tier:'log',tag:'SHOP',lat:68.4199,lon:27.4095,from:'2.5 km, 5 min',text:'Saariselkä’s grocery, bakery and Alko.',q:'Kuukkeli Shopping Center Saariselkä',note:'Hours on the evening of Sat 31 Oct, All Saints’ Day.',z:1,lab:'Kuukkeli',labm:'Kuukkeli',at:'l',atm:'l'},
     {id:'ksm',name:'K-Supermarket Ivalo',tier:'log',tag:'SHOP',lat:68.6555,lon:27.5416,from:'33 km, 30 min',text:'The area’s fish and meat counter; go early.',q:'K-Supermarket Ivalo',note:'Hours on the evening of Sat 31 Oct, All Saints’ Day.',lab:'K-Supermarket Ivalo',labm:'Ivalo shop',at:'r',atm:'r'},
-    {id:'laa',name:'Laanilan Kievari',tier:'must',tag:'MUST',lat:68.4027,lon:27.3916,from:'1 km, 3 min',text:'Local-food dinner, Mon–Sat 16–22.',q:'Laanilan Kievari',z:1,lab:'Laanilan Kievari',labm:'Laanilan',at:'b',atm:'b'},
-    {id:'husky',name:'Husky & Co',tier:'must',tag:'MUST',lat:68.4131,lon:27.4150,from:'2 km, 5 min',text:'Office; the kennel is a 10 min drive. About 1 h with 200 huskies.',q:'Husky & Co Saariselkä',note:'Meeting point: the village office or the kennel.',z:1,img:'husky',lab:'Husky & Co',labm:'Husky & Co',at:'r',atm:'r'},
-    {id:'kau',name:'Kaunispää top',tier:'must',tag:'MUST',lat:68.4335,lon:27.4431,from:'7 km, 12 min',text:'437 m, drive to the top; tower, sunset, aurora; Kaunispään Huippu café.',q:'Kaunispään Huippu',img:'kaunispaa',lab:'Kaunispää top',labm:'Kaunispää',at:'l',atm:'l'},
+    {id:'laa',name:'Laanilan Kievari',tier:'must',tag:'MUST',lat:68.4027,lon:27.3916,from:'1 km, 3 min',text:'Dinner on Monday at 18:30; open Mon–Sat 16–22.',q:'Laanilan Kievari',z:1,lab:'Laanilan Kievari',labm:'Laanilan',at:'b',atm:'b'},
+    {id:'kau',name:'Kaunispää top',tier:'if',tag:'MAYBE',lat:68.4335,lon:27.4431,from:'7 km, 12 min',text:'437 m, drive to the top; tower, Sunday’s sunset, aurora; Kaunispään Huippu café.',q:'Kaunispään Huippu',img:'kaunispaa',lab:'Kaunispää top',labm:'Kaunispää',at:'l',atm:'l'},
     {id:'gate',name:'National park gate (Aurorapolku, Iisakkipää)',tier:'if',tag:'MAYBE',lat:68.419,lon:27.425,approx:1,from:'3 km, 5 min',text:'Start of the 2.1 km lit loop and the 3 km Iisakkipää loop.',q:'Aurorapolku Saariselkä',note:'The exact gate. This pin is approximate.',z:1,img:'forest',lab:'Park gate',labm:'Gate',at:'r',atm:'r'},
-    {id:'kii',name:'Kiilopää Fell Centre',tier:'must',tag:'MUST',lat:68.3464,lon:27.4606,from:'14 km, 15 min',text:'546 m summit, 2 km each way; Kuurakaltio smoke sauna Tue 16:30; paid parking 9–18.',q:'Kiilopää Fell Centre',note:'Fell centre and Kuurakaltio smoke sauna hours that week.',img:'kiilopaa',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
-    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'MAYBE',lat:68.7760,lon:27.4457,from:'45 km, 40 min',text:'Lake on the E75 north of Ivalo; blue hour and aurora stop.',q:'Ukonjärvi Inari',img:'ukonjarvi',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
-    {id:'tuu',name:'Tuulispää parking',tier:'if',tag:'MAYBE',lat:68.8568,lon:27.1259,from:'67 km, 1 h',text:'Flat 3 km walk to a lean-to with a lake view; gravel access road.',q:'Tuulisjärvi Parking Lot Inari',lab:'Tuulispää',labm:'Tuulispää',at:'r',atm:'r'},
-    {id:'siida',name:'Siida',tier:'must',tag:'MUST',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 h',text:'Sámi Museum, Mon–Sat 10–17; Sarrit lunch inside.',q:'Siida Inari',note:'Sarrit’s winter lunch days.',img:'siida-exhibition',lab:'Siida',labm:'Siida, Sajos',at:'tr',atm:'tr'},
-    {id:'sajos',name:'Sajos',tier:'fill',tag:'EXTRA',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 h',text:'Sámi Parliament and cultural centre; Duodji Shop.',q:'Sajos Inari',img:'sajos-hall',lab:'Sajos',labm:'',at:'br',atm:'br'},
-    {id:'juutua',name:'Juutua trail parking',tier:'must',tag:'MUST',lat:68.8954,lon:26.9665,from:'73 km, 1 h',text:'River rapids and suspension bridge; 5.8 km loop.',q:'Juutua Nature Trail Inari',img:'juutua',lab:'Juutua trail',labm:'Juutua',at:'tl',atm:'tl'},
-    {id:'otsamo',name:'Otsamo (Rovajärvi parking)',tier:'if',tag:'MAYBE',lat:68.8873,lon:26.7718,from:'88 km, 1 h 20 (over an hour)',text:'3 km each way to the 418 m top; day-use hut; lake views; snow-free only.',q:'Rovajärventie 765, Inari',note:'Snow or ice on the trail, and whether Rovajärventie is passable.',img:'otsamo',lab:'Otsamo',labm:'Otsamo',at:'br',atm:'br'}
+    {id:'kii',name:'Kiilopää Fell Centre',tier:'must',tag:'MUST',lat:68.3464,lon:27.4606,from:'14 km, 15 min',text:'546 m summit, 2 km each way; paid parking 9–18. The fell centre and its smoke sauna are closed until 14 Nov.',q:'Kiilopää Fell Centre',img:'kiilopaa',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
+    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'MAYBE',lat:68.7760,lon:27.4457,from:'45 km, 40 min',text:'Lake on the E75 north of Ivalo; Monday’s blue-hour stop, and an aurora spot.',q:'Ukonjärvi Inari',img:'ukonjarvi',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
+    {id:'siida',name:'Siida',tier:'must',tag:'MUST',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 h 10',text:'Sámi Museum, Mon–Sat 10–17, with Sarrit’s lunch inside; the Lake Inari harbour is 300 m away.',q:'Siida Inari',img:'siida-exhibition',lab:'Siida',labm:'Siida',at:'l',atm:'l'},
+    {id:'sajos',name:'Sajos',tier:'fill',tag:'EXTRA',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 h 10',text:'Sámi Parliament and cultural centre; Duodji Shop.',q:'Sajos Inari',img:'sajos-hall',lab:'Sajos',labm:'',at:'br',atm:'br'},
+    {id:'juutua',name:'Juutua trail parking',tier:'fill',tag:'EXTRA',lat:68.8954,lon:26.9665,from:'73 km, 1 h 10',text:'River rapids and suspension bridge; 5.8 km loop.',q:'Juutua Nature Trail Inari',img:'juutua',lab:'Juutua trail',labm:'Juutua',at:'bl',atm:'bl'},
+    {id:'pielpa',name:'Pielpajärvi trail parking',tier:'if',tag:'MAYBE',lat:68.9214,lon:27.0578,from:'76 km, 1 h 15',text:'4.4 km walk each way to the wilderness church; a snow-free-season trail.',q:'68.921388,27.057798',note:'Snow on the trail.',img:'pielpajarvi-church',lab:'Pielpajärvi',labm:'Pielpajärvi',at:'r',atm:'r'},
+    {id:'mutus',name:'Mutusjärvi rest area',tier:'fill',tag:'EXTRA',lat:69.0042,lon:26.9864,edge:1,from:'86 km, 1 h 20',text:'Road 4 follows the lake’s east shore 12 km north of Siida, just off the top of this map.',q:'69.00424,26.98644',lab:'Mutusjärvi',labm:'Mutusjärvi',at:'r',atm:'r'}
   ];
   var NS='http://www.w3.org/2000/svg';
   // Same projection as the base layers: equirectangular, longitude scaled by cos 68.65°.
@@ -1055,7 +1132,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   el('path',{'class':'lp-link',d:'M'+(b[0]+b[2])+' '+(b[1]+b[3]/2)+'H'+f[0]},layer);
   el('rect',{'class':'lp-box',x:b[0],y:b[1],width:b[2],height:b[3],rx:3},layer);
   el('text',{'class':'m-area',x:b[0]-6,y:b[1]+b[3]/2+4,'text-anchor':'end'},layer,'Saariselkä');
-  el('text',{'class':'m-area',x:70,y:70,'text-anchor':'end'},layer,'Inari');
+  el('text',{'class':'m-area',x:70,y:63,'text-anchor':'end'},layer,'Inari');
   el('rect',{'class':'lp-bg',x:f[0],y:f[1],width:f[2],height:f[3],rx:8},loupe);
   el('text',{'class':'lp-title',x:f[0]+10,y:f[1]+18},loupe,'SAARISELKÄ CLOSE-UP');
   el('text',{'class':'m-area',x:420,y:452,'text-anchor':'middle'},loupe,'Saariselkä centre');
@@ -1066,7 +1143,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   var nodes={};
   PLACES.forEach(function(p){
-    var x=X(p.lon),y=Y(p.lat)+(p.ny||0),host=layer;
+    var x=X(p.lon),y=p.edge?12:Y(p.lat)+(p.ny||0),host=layer;
     if(p.z){
       el('circle',{'class':'mini '+p.tier,cx:x,cy:y,r:2.2},layer);
       x=Z.ox+(x-Z.cx)*Z.s;y=Z.oy+(y-Z.cy)*Z.s;host=loupe;
@@ -1076,7 +1153,8 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       'aria-label':p.name+', '+p.tag.toLowerCase()+(p.id==='cabin'?', the cabin':', '+p.from+' from the cabin')},host);
     el('circle',{'class':'ring',cx:x,cy:y,r:11},g);
     el('circle',{'class':'hit',cx:x,cy:y,r:20},g);
-    el('circle',{'class':'dot',cx:x,cy:y,r:5.5},g);
+    if(p.edge)el('path',{'class':'dot',d:'M'+r1(x)+' '+r1(y-6.5)+'l6.5 11h-13z'},g);
+    else el('circle',{'class':'dot',cx:x,cy:y,r:5.5},g);
     var o=off(p.at,11.5);
     el('text',{'class':'lbl-d',x:x+o[0],y:y+o[1],'text-anchor':o[2]},g,p.lab);
     if(p.labm){o=off(p.atm,18);el('text',{'class':'lbl-m',x:x+o[0],y:y+o[1],'text-anchor':o[2]},g,p.labm);}
@@ -1125,8 +1203,54 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   var id=DAYS[key];if(!id)return;
   var card=document.getElementById('d-'+id),row=document.getElementById('n-'+id),link=document.getElementById('todaylink');
   if(card)card.classList.add('today');
+  var tile=document.getElementById('g-'+id);if(tile)tile.classList.add('today');
   if(row)row.classList.add('today');
   if(link&&card){link.href='#d-'+id;link.hidden=false;}
+})();
+(function(){
+  // The extra info sits in collapsed sections: open the right one when a link
+  // or the address points into it, and open them all for printing.
+  function reveal(id){
+    var el=id&&document.getElementById(id);if(!el)return null;
+    var d=el.tagName==='DETAILS'?el:el.closest('details.sec');
+    if(d&&!d.open)d.open=true;
+    return el;
+  }
+  function fromHash(h){try{return decodeURIComponent(h.slice(1));}catch(e){return '';}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(a)reveal(fromHash(a.getAttribute('href')));
+  });
+  window.addEventListener('hashchange',function(){reveal(fromHash(location.hash));});
+  if(location.hash){var t=reveal(fromHash(location.hash));if(t)setTimeout(function(){t.scrollIntoView();},0);}
+  window.addEventListener('beforeprint',function(){[].forEach.call(document.querySelectorAll('details.sec'),function(d){d.open=true;});});
+
+  // Nav: light up the day you're reading.
+  var links=[].slice.call(document.querySelectorAll('nav.toc a.dl'));
+  if(!('IntersectionObserver' in window)||!links.length)return;
+  var byId={};
+  links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){var a=byId[en.target.id];if(a)a.classList.toggle('on',en.isIntersecting);});
+  },{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(byId).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+})();
+(function(){
+  // Packing list: each phone keeps its own ticks.
+  var KEY='still-north-pack',boxes=[].slice.call(document.querySelectorAll('ul.pack input[data-k]')),out=document.getElementById('packcount');
+  if(!boxes.length)return;
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch(e){}
+  function count(){if(out)out.textContent=boxes.filter(function(b){return b.checked;}).length+' / '+boxes.length;}
+  boxes.forEach(function(b){
+    b.checked=!!saved[b.getAttribute('data-k')];
+    b.addEventListener('change',function(){
+      saved[b.getAttribute('data-k')]=b.checked?1:0;
+      try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}
+      count();
+    });
+  });
+  count();
 })();
 </script>
 <script>

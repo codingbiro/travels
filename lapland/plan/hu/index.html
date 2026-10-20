@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CSENDES ÉSZAK · Villa Skaidi I, Saariselkä</title>
-<meta name="description" content="Négy éjszaka a saariselkäi Villa Skaidi I-ben, 2026. okt. 31. – nov. 4.: napi tervek, sarkifény-ablakok, térkép minden megállóval, huskyk, számi kultúra, konyha, szauna és fotózás.">
+<title>Lappföld · Villa Skaidi I, Saariselkä</title>
+<meta name="description" content="Négy éjszaka a saariselkäi Villa Skaidi I-ben, 2026. okt. 31. – nov. 4.: a terv napról napra, sarkifény-ablakok, térkép minden megállóval, számi kultúra, konyha, szauna és fotózás.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="CSENDES ÉSZAK · Villa Skaidi I, Saariselkä">
+<meta property="og:title" content="Lappföld · Villa Skaidi I, Saariselkä">
 <meta property="og:description" content="Négy éjszaka a saariselkäi Villa Skaidi I-ben. Sarkifény-vadászat minden este.">
 <meta property="og:url" content="https://travels.birovince.com/lapland/plan/hu/">
 <link rel="alternate" hreflang="en" href="https://travels.birovince.com/lapland/plan/">
@@ -15,7 +15,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="CSENDES ÉSZAK · Villa Skaidi I, Saariselkä">
+<meta name="twitter:title" content="Lappföld · Villa Skaidi I, Saariselkä">
 <meta name="twitter:image" content="https://travels.birovince.com/images/lapland/og-cover.jpg">
 <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
@@ -30,6 +30,7 @@
   --bg:#eef2f6;--panel:#ffffff;--panel-2:#f4f7fa;--line:#d7dee8;
   --ink:#122038;--ink-dim:#56667e;--aur:#097d52;--teal:#0e7874;--violet:#5b45c9;--ember:#b0501e;--ice:#1d6cb0;
   --land:#f7f9fb;--lake:#d3e4f4;--lake-edge:#8fb4d9;--water:#43709c;--road:#9aa7b9;--halo:#f7f9fb;
+  --tn-bg:#0a1220;
   --body-w:400;
   --n-0:#060b13;--n-1:#0a1220;--n-2:#101b2e;--n-line:#1c2a40;--n-ink:#c7d4e4;--n-dim:#7d8ea4;
   --n-aur:#6ef0a8;--n-teal:#43cfc6;--n-violet:#9b7dff;--n-ice:#8fd0ff;--n-ember:#ffb27d;
@@ -46,6 +47,7 @@
     --bg:#060b13;--panel:#0a1220;--panel-2:#101b2e;--line:#1c2a40;
     --ink:#c7d4e4;--ink-dim:#7d8ea4;--aur:#6ef0a8;--teal:#43cfc6;--violet:#9b7dff;--ember:#ffb27d;--ice:#8fd0ff;
     --land:#0a1220;--lake:#0e2440;--lake-edge:#2b5b8c;--water:#6a9acb;--road:#3b4d68;--halo:#0a1220;
+    --tn-bg:#04070d;
     --body-w:300;
   }
 }
@@ -53,15 +55,17 @@
   --bg:#060b13;--panel:#0a1220;--panel-2:#101b2e;--line:#1c2a40;
   --ink:#c7d4e4;--ink-dim:#7d8ea4;--aur:#6ef0a8;--teal:#43cfc6;--violet:#9b7dff;--ember:#ffb27d;--ice:#8fd0ff;
   --land:#0a1220;--lake:#0e2440;--lake-edge:#2b5b8c;--water:#6a9acb;--road:#3b4d68;--halo:#0a1220;
+  --tn-bg:#04070d;
   --body-w:300;
 }
-*,*::before,*::after{box-sizing:inherit}
+/* border-box everywhere: inheriting it stops at the <details> content slot */
+*,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
-html{height:100%;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);-webkit-text-size-adjust:100%}
+html{height:100%;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-weight:var(--body-w);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--teal);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--teal) 40%,transparent)}
 a:hover{color:var(--aur);border-bottom-color:var(--aur)}
-a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--aur);outline-offset:3px;border-radius:4px}
+a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--aur);outline-offset:3px;border-radius:4px}
 strong,b{font-weight:600}
 em{font-style:italic}
 p{margin:0 0 1em;max-width:68ch}
@@ -71,7 +75,7 @@ dd{margin:0}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;overflow:hidden;background:var(--n-0);color:var(--n-ink);padding:88px 0 146px;border-bottom:1px solid var(--n-line)}
+.hero{position:relative;overflow:hidden;background:var(--n-0);color:var(--n-ink);padding:64px 0 118px;border-bottom:1px solid var(--n-line)}
 .hero .aurora{position:absolute;left:-15%;right:-15%;top:-30%;height:125%;pointer-events:none;
   background:
    radial-gradient(38% 42% at 24% 34%,rgba(110,240,168,.30),transparent 70%),
@@ -84,22 +88,38 @@ dd{margin:0}
 .horizon .far{fill:#0b1526}.horizon .near{fill:#08101d}.horizon .lake{fill:#060b13}
 .horizon .glint{stroke:rgba(110,240,168,.28);stroke-width:1.2;fill:none}
 .hero-in{position:relative;z-index:1}
-.hero .crumb{font-size:.9rem;margin:0 0 22px}
+.hero .crumb{font-size:.9rem;margin:0 0 18px}
 .hero .crumb a{color:var(--n-dim);border:0;display:inline-block;padding:10px 0}
 .hero .crumb a:hover{color:var(--n-aur)}
 .hero .when{font-family:var(--mono);font-size:.78rem;color:var(--n-dim);margin:0 0 14px}
-.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,8.6vw,5.4rem);line-height:.95;letter-spacing:-.01em;color:#eaf2ff;margin:0 0 20px}
-.hero .lede{font-size:1.14rem;max-width:34em;color:var(--n-ink);font-weight:300}
-.statline{display:flex;flex-wrap:wrap;gap:6px 22px;margin:20px 0 0;font-size:.92rem;color:var(--n-dim)}
-.statline b{color:var(--n-aur);font-weight:600}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.2rem,8.6vw,5.4rem);line-height:.95;letter-spacing:-.01em;color:#eaf2ff;margin:0}
+
+/* five days at a glance */
+.glance{list-style:none;margin:34px 0 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.glance a{display:flex;flex-direction:column;gap:3px;height:100%;padding:12px 13px 13px;border:1px solid var(--n-line);border-radius:12px;background:rgba(10,18,32,.74);color:var(--n-ink);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.glance a:hover{border-color:var(--n-aur);color:var(--n-ink)}
+.g-d{font-family:var(--mono);font-size:.7rem;color:var(--n-dim)}
+.g-w{font-family:var(--disp);font-weight:400;font-size:1rem;line-height:1.2;color:#eaf2ff}
+.g-s{flex:1;font-size:.84rem;line-height:1.38;color:var(--n-dim)}
+.glance .nv{margin-top:8px}
+.glance li.today a{border-color:var(--n-aur);box-shadow:0 0 0 1px var(--n-aur)}
+.glance li.today .g-d::after{content:"Today";margin-left:8px;color:var(--n-aur);font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+
+/* night verdicts: in the glance and on each evening */
+.nv{align-self:flex-start;display:inline-block;font-family:var(--mono);font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border-radius:4px;border:1px solid currentColor;white-space:nowrap}
+.nv.v-moon{color:#f1e7c2}.nv.v-short{color:var(--n-dim)}.nv.v-good{color:var(--n-aur)}
+.nv.v-best{color:var(--n-0);background:var(--n-aur);border-color:var(--n-aur)}
 
 /* ---------- NAV ---------- */
 nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav.toc .wrap{display:flex;align-items:center;gap:14px;padding-top:4px;padding-bottom:4px}
-nav.toc .links{display:flex;gap:0 20px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;flex:1;min-width:0;font-size:.9rem}
+nav.toc .links{display:flex;align-items:center;gap:0 18px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;flex:1;min-width:0;font-size:.9rem}
 nav.toc .links::-webkit-scrollbar{display:none}
 nav.toc .links a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink-dim);border:0}
-nav.toc .links a:hover{color:var(--ink)}
+nav.toc .links a.dl{font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--ink)}
+nav.toc .links a:hover,nav.toc .links a.dl:hover{color:var(--aur)}
+nav.toc .links a.on{color:var(--aur)}
+nav.toc .sep{flex:none;width:1px;height:18px;background:var(--line)}
 .today-link{flex:none;display:inline-flex;align-items:center;min-height:44px;border:0;color:var(--aur)}
 .today-link>span{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid var(--aur);border-radius:999px}
 nav.toc .lang{flex:none;display:inline-flex;align-items:center;min-height:44px;border:0;color:var(--ink-dim)}
@@ -107,8 +127,7 @@ nav.toc .lang>span{display:inline-flex;align-items:center;min-height:30px;paddin
 nav.toc .lang:hover{color:var(--ink)}
 nav.toc .lang:hover>span{border-color:var(--ink-dim)}
 
-/* ---------- SECTIONS ---------- */
-section{padding:68px 0 10px}
+/* ---------- TYPE ---------- */
 h2{font-family:var(--disp);font-weight:400;font-size:clamp(1.55rem,4vw,2.15rem);line-height:1.15;margin:0 0 8px;color:var(--ink)}
 .h2sub{color:var(--ink-dim);margin:0 0 28px}
 .h2sub strong{color:var(--ink)}
@@ -121,36 +140,87 @@ h4{font-family:var(--body);font-weight:600;font-size:1rem;margin:4px 0 6px}
 .note .nk{font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin-right:7px}
 p.note{margin:6px 0 12px}
 
-/* how it works */
-.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.tiers>div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px 4px}
-.tiers p{margin:8px 0 10px;font-size:.95rem}
-.twocol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 36px}
-ol.rules{counter-reset:r;list-style:none}
-ol.rules li{counter-increment:r;position:relative;padding:0 0 12px 34px}
-ol.rules li::before{content:counter(r);position:absolute;left:0;top:1px;font-family:var(--mono);font-size:.78rem;color:var(--aur);border:1px solid var(--line);border-radius:50%;width:22px;height:22px;display:grid;place-items:center}
-ul.checks{list-style:none}
-ul.checks li{position:relative;padding:0 0 9px 28px}
-ul.checks li::before{content:"";position:absolute;left:2px;top:6px;width:13px;height:13px;border:1.5px solid var(--ink-dim);border-radius:3px}
+/* ---------- DAYS ---------- */
+.days{padding:30px 0 8px}
+.keyline{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;font-size:.88rem;color:var(--ink-dim)}
+.keyline .tag{margin-right:7px}
+.day{position:relative;margin:22px 0 0;padding:26px 28px 24px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.day.today{outline:2px solid var(--aur);outline-offset:4px}
+.dh .date{font-family:var(--mono);font-size:.78rem;color:var(--ink-dim);margin:0}
+.day.today .dh .date::after{content:"Today";display:inline-block;margin-left:10px;font-weight:700;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border-radius:4px;color:var(--panel);background:var(--aur)}
+.dh .word{font-family:var(--disp);font-weight:400;font-size:clamp(1.75rem,5.4vw,2.5rem);line-height:1.05;margin:8px 0 10px;color:var(--ink)}
+.dh .sum{font-size:1.08rem;line-height:1.5;margin:0 0 6px;max-width:44em}
+.dh .light{font-size:.85rem;line-height:1.5;color:var(--ink-dim);margin:0}
+.day .shots{margin:18px 0 0}
 
-/* days */
-.day{display:grid;grid-template-columns:176px minmax(0,1fr);gap:0 30px;padding:30px 0;border-top:1px solid var(--line)}
-.rail .date{font-family:var(--mono);font-size:.78rem;color:var(--ink-dim);margin:0}
-.rail .word{font-family:var(--disp);font-weight:400;font-size:1.75rem;line-height:1.1;margin:6px 0 10px;color:var(--ink)}
-.rail .light{font-size:.84rem;line-height:1.5;color:var(--ink-dim);margin:0}
-.rows{margin:0}
-.row{display:grid;grid-template-columns:104px minmax(0,1fr);gap:14px;padding:9px 0;border-bottom:1px dashed var(--line)}
-.rows>.row:last-child{border-bottom:0}
-.k{font-family:var(--mono);font-size:.76rem;color:var(--ink-dim);padding-top:3px}
-.daynote{margin:10px 0 0;padding:10px 14px;border:1px dashed var(--line);border-radius:10px;font-size:.92rem;max-width:none}
-.day.today{outline:2px solid var(--aur);outline-offset:6px;border-radius:12px}
-.day.today .date::after{content:"Today";display:inline-block;margin-left:10px;font-weight:700;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:4px 6px 3px;border-radius:4px;color:var(--bg);background:var(--aur)}
+/* the timeline */
+ol.tl{list-style:none;margin:20px 0 0}
+ol.tl>li{position:relative;display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:34px;padding:0 0 16px}
+ol.tl>li::before{content:"";position:absolute;left:100px;top:9px;bottom:-9px;width:2px;background:var(--line)}
+ol.tl>li:last-child::before{display:none}
+ol.tl>li::after{content:"";position:absolute;left:95px;top:5px;width:12px;height:12px;border-radius:50%;border:2px solid var(--ink-dim);background:var(--panel)}
+ol.tl>li.must::after{border-color:var(--aur);background:var(--aur)}
+ol.tl>li.if::after{border-color:var(--ice)}
+ol.tl>li.fill::after{border-color:var(--violet)}
+ol.tl>li.or::after{width:8px;height:8px;left:97px;top:7px;border-width:2px}
+.tl .t{font-family:var(--mono);font-size:.76rem;line-height:1.45;color:var(--ink-dim);text-align:right;padding-top:1px}
+.tl .b{min-width:0;line-height:1.55}
+.tl .b>p{margin:0}
+.tl .what{font-weight:600;color:var(--ink)}
+.tl .meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin-top:6px;font-size:.84rem;line-height:1.4;color:var(--ink-dim)}
+.tl .meta b{font-weight:600;color:var(--ink)}
+a.go{display:inline-flex;align-items:center;min-height:28px;padding:0 10px;border:1px solid color-mix(in srgb,var(--teal) 50%,transparent);border-radius:999px;font-size:.8rem;line-height:1}
+a.go::after{content:"\2197";margin-left:5px;font-size:.78rem}
+a.go:hover{border-color:var(--aur)}
+
+/* each day ends with its night */
+.tonight{margin:10px -28px -24px;padding:18px 28px 10px;border-radius:0 0 15px 15px;background:var(--tn-bg);color:var(--n-ink);border-top:1px solid var(--n-line);
+  --line:var(--n-line);--ink:var(--n-ink);--ink-dim:var(--n-dim);--panel:var(--tn-bg);--aur:var(--n-aur);--teal:var(--n-teal);--violet:var(--n-violet);--ice:var(--n-ice);--body-w:300;font-weight:300}
+.tonight .tn-h{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:0;font-size:.95rem;max-width:none}
+.tn-k{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--n-dim)}
+.tonight ol.tl{margin-top:16px}
+.tonight a.more{color:var(--n-dim);border-bottom-color:var(--n-line);font-size:.84rem}
+
+/* ---------- MORE INFO (collapsible) ---------- */
+.wrap.more-h{padding-top:60px;padding-bottom:18px}
+.more-h h2{margin:0 0 4px}
+.more-h p{color:var(--ink-dim);margin:0}
+details.sec{border-top:1px solid var(--line)}
+details.sec:last-of-type{border-bottom:1px solid var(--line)}
+details.sec>summary{list-style:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary:focus-visible{outline-offset:-2px;border-radius:0}
+.wrap.sum-in{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:2px 16px;min-height:68px;padding-top:15px;padding-bottom:15px}
+.sum-in h2{grid-column:1;font-size:clamp(1.12rem,3vw,1.35rem);margin:0}
+.sum-in .teaser{grid-column:1;font-size:.9rem;line-height:1.45;color:var(--ink-dim)}
+.sum-in::after{content:"+";grid-column:2;grid-row:1 / span 2;display:grid;place-items:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;font-family:var(--mono);font-size:.95rem;color:var(--ink-dim)}
+details.sec[open] .sum-in::after{content:"\2212";color:var(--aur);border-color:var(--aur)}
+details.sec>summary:hover h2{color:var(--aur)}
+.sec-body{padding:8px 0 48px}
+.sec-body>.wrap>h3:first-child,.sec-body>.wrap>.cards:first-child{margin-top:0}
+
+/* packing list: ticks are kept per device */
+ul.packtips{margin:0 0 4px}
+p.packcount{margin:16px 0 14px;font-family:var(--mono);font-size:.76rem;color:var(--ink-dim);max-width:none}
+p.packcount b{color:var(--aur)}
+.cards.packs{align-items:start}
+ul.pack{list-style:none;margin:0 0 10px}
+ul.pack label{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:start;min-height:40px;padding:7px 0;cursor:pointer;font-size:.95rem;line-height:1.45}
+ul.pack li+li label{border-top:1px dashed var(--line)}
+ul.pack input{-webkit-appearance:none;appearance:none;display:grid;place-items:center;width:20px;height:20px;margin:1px 0 0;border:1.5px solid var(--ink-dim);border-radius:5px;background:var(--panel);cursor:pointer}
+ul.pack input::after{content:"";width:10px;height:5px;margin-top:-3px;border:2px solid var(--panel);border-top:0;border-right:0;transform:rotate(-45deg);opacity:0}
+ul.pack input:checked{background:var(--aur);border-color:var(--aur)}
+ul.pack input:checked::after{opacity:1}
+ul.pack input:checked+span{color:var(--ink-dim);text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink-dim) 55%,transparent)}
+ul.pack input:focus-visible{outline:2px solid var(--aur);outline-offset:2px}
+ul.pack small{display:block;margin-top:1px;font-size:.84rem;line-height:1.4;color:var(--ink-dim)}
+.card ul.pack+.small{margin:0 0 12px}
 
 /* ---------- NIGHT BAND (sky) ---------- */
 .night-band{background:var(--n-0);color:var(--n-ink);
   --bg:var(--n-0);--panel:var(--n-1);--panel-2:var(--n-2);--line:var(--n-line);--ink:var(--n-ink);--ink-dim:var(--n-dim);
   --aur:var(--n-aur);--teal:var(--n-teal);--violet:var(--n-violet);--ice:var(--n-ice);--ember:var(--n-ember);
-  --body-w:300;font-weight:300;margin-top:60px;padding-bottom:64px;border-top:1px solid var(--n-line);border-bottom:1px solid var(--n-line)}
+  --body-w:300;font-weight:300;padding-top:30px;border-top:1px solid var(--n-line)}
 .nights{display:grid;gap:12px}
 .nrow,.naxis{display:grid;grid-template-columns:86px minmax(0,1fr) 200px;gap:14px;align-items:center}
 .nlabel{font-family:var(--mono);font-size:.76rem;color:var(--n-dim)}
@@ -205,25 +275,15 @@ table.costs{width:100%;border-collapse:collapse;font-size:.94rem}
 .costs .sub{display:block;margin-top:2px;font-size:.8rem;font-weight:400;color:var(--ink-dim)}
 .costs td.zero{color:var(--ink-dim)}
 .costs tfoot th,.costs tfoot td{font-weight:700;border-bottom:0}
+.costs tbody.opt th{font-weight:500}
+.costs tr.grp th{padding-top:16px;font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim)}
 @media (max-width:420px){table.costs{font-size:.9rem}.costs th,.costs td{padding:9px 8px}}
-
-/* choices */
-.chgroup{margin:36px 0 0}
-.chgroup>h3{margin:0 0 6px}
-.chgroup>p{color:var(--ink-dim);margin:0 0 14px;font-size:.95rem}
-.choices{display:grid;gap:12px}
-.choice{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 10px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:4px 22px}
-.choice h4{grid-column:1/-1;margin:0 0 6px;font-size:1.05rem}
-.choice .ck{display:block;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);margin:0 0 4px}
-.choice p{margin:0 0 8px;font-size:.93rem;line-height:1.55}
-.choice .def{border-left:2px solid var(--aur);padding-left:12px}
-.choice .def .ck{color:var(--aur)}
 
 /* photos */
 .shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0 0 12px}
 .shot{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .shot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--panel-2)}
-.shot figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:7px 10px 8px;font-size:.85rem;line-height:1.3}
+.shot figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 8px;padding:7px 10px 8px;font-size:.85rem;line-height:1.3}
 .shot figcaption span{font-family:var(--mono);font-size:.66rem;color:var(--ink-dim);white-space:nowrap}
 .mapinfo .mi-img{display:block;width:calc(100% + 36px);max-width:none;height:auto;aspect-ratio:4/3;object-fit:cover;margin:-18px -18px 14px;border-radius:11px 11px 0 0;background:var(--panel-2)}
 
@@ -303,6 +363,9 @@ dl.kv.facts{grid-template-columns:132px minmax(0,1fr);gap:10px 16px}
 ul.plain{list-style:none}
 ul.plain li{position:relative;padding:0 0 10px 18px}
 ul.plain li::before{content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--ink-dim)}
+ul.checks{list-style:none}
+ul.checks li{position:relative;padding:0 0 9px 28px}
+ul.checks li::before{content:"";position:absolute;left:2px;top:6px;width:13px;height:13px;border:1.5px solid var(--ink-dim);border-radius:3px}
 ul.spots{list-style:none;border-top:1px solid var(--line)}
 ul.spots li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
 ul.spots .when{font-family:var(--mono);font-size:.74rem;color:var(--ink-dim);padding-top:3px}
@@ -321,18 +384,27 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 @media (max-width:760px){
   body{font-size:16px}
   .wrap{padding:0 16px}
-  .hero{padding:56px 0 124px}
-  .hero .horizon{height:120px}
-  .tiers,.cards,.cards.three,ol.ritual,.twocol{grid-template-columns:1fr}
+  .hero{padding:40px 0 76px}
+  .hero .horizon{height:92px}
+  .hero .crumb{margin-bottom:12px}
+  .glance{grid-template-columns:1fr;gap:8px;margin-top:26px}
+  .glance a{display:grid;grid-template-columns:64px minmax(0,1fr) auto;grid-template-areas:"d w n" "d s n";align-items:center;gap:1px 12px;padding:10px 12px}
+  .g-d{grid-area:d;align-self:start;padding-top:3px}.g-w{grid-area:w}.g-s{grid-area:s}
+  .glance .nv{grid-area:n;margin:0;align-self:center}
+  .glance li.today .g-d::after{display:block;margin:4px 0 0}
+  .cards,.cards.three,ol.ritual{grid-template-columns:1fr}
   ol.steps{grid-template-columns:1fr 1fr}
-  .day{grid-template-columns:1fr;padding:24px 0}
-  .rail{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;margin-bottom:10px}
-  .rail .word{margin:0;font-size:1.5rem;order:-1}
-  .rail .light{flex-basis:100%}
-  .day.today{outline-offset:4px}
-  .row{grid-template-columns:76px minmax(0,1fr);gap:10px}
+  .day{margin-top:16px;padding:20px 16px 18px;border-radius:14px}
+  .tonight{margin:10px -16px -18px;padding:16px 16px 8px;border-radius:0 0 13px 13px}
+  .day .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:16px -16px 0;padding:0 16px;scrollbar-width:none}
+  .day .shots::-webkit-scrollbar{display:none}
+  .day .shot{flex:0 0 64%;scroll-snap-align:start;scroll-margin-left:16px}
+  ol.tl>li{grid-template-columns:52px minmax(0,1fr);column-gap:30px}
+  ol.tl>li::before{left:66px}
+  ol.tl>li::after{left:61px}
+  ol.tl>li.or::after{left:63px}
+  .tl .t{font-size:.7rem}
   .mapgrid{grid-template-columns:1fr}
-  .choice{grid-template-columns:1fr;gap:6px;padding:14px 16px 8px}
   .mapbox{margin:0 -16px;border-radius:0;border-left:0;border-right:0}
   .mapside{position:static}
   .nrow,.naxis{grid-template-columns:58px minmax(0,1fr)}
@@ -366,15 +438,17 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   .tbl td[data-label]::before{content:attr(data-label);display:block;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim)}
 }
 @media (max-width:420px){ol.steps{grid-template-columns:1fr}}
-@media print{nav.toc{display:none}.hero{padding:30px 0 40px}.hero .horizon,.hero .aurora{display:none}section{padding-top:28px}}
-/* ---------- Hungarian: longer title and date labels ---------- */
-.hero h1{font-size:clamp(1.45rem,7.2vw,4.6rem);line-height:1.02}
+@media print{nav.toc{display:none}.hero{padding:30px 0 40px}.hero .horizon,.hero .aurora{display:none}.glance a{background:none}.day{break-inside:avoid-page}}
+
+/* ---------- Hungarian: longer date labels ---------- */
 .nrow,.naxis{grid-template-columns:104px minmax(0,1fr) 200px}
 .nlabel{white-space:nowrap}
-.day.today .date::after{content:"Ma"}
+.day.today .dh .date::after{content:"Ma"}
+.glance li.today .g-d::after{content:"Ma"}
 .nrow.today .nlabel::after{content:"Ma este"}
 @media (max-width:760px){
   .nrow,.naxis{grid-template-columns:96px minmax(0,1fr)}
+  .glance a{grid-template-columns:72px minmax(0,1fr) auto}
 }
 </style>
 </head>
@@ -391,267 +465,278 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   <div class="wrap hero-in">
     <p class="crumb"><a href="/lapland/">← Lappföld</a></p>
     <p class="when">Villa Skaidi I, Saariselkä — 2026. október 31. – november 4.</p>
-    <h1>CSENDES ÉSZAK</h1>
-    <p class="lede">Vasárnap tunturik, hétfőn Inari, kedden huskyk és füstszauna, esténként pedig szauna és sarkifény-lesés.</p>
-    <div class="statline"><span><b>4</b> éjszaka</span><span><b>3</b> teljes nap</span><span><b>5</b> fő</span><span><b>≤ 1 óra</b> autóút</span><span><b>sarkifény-vadászat</b> minden este</span></div>
+    <h1>LAPPFÖLD</h1>
+    <ol class="glance" aria-label="Az öt nap">
+      <li id="g-sat"><a href="#d-sat"><span class="g-d">Szo, okt. 31.</span><span class="g-w">Érkezés</span><span class="g-s">Leszállás Ivalóban, bevásárlás, az első szauna.</span><span class="nv v-moon"><span class="sr-only">Sarki fény: </span>Holdfényes</span></a></li>
+      <li id="g-sun"><a href="#d-sun"><span class="g-d">V, nov. 1.</span><span class="g-w">Tunturik</span><span class="g-s">Kiilopää-csúcs, naplementekor a Kaunispää.</span><span class="nv v-short"><span class="sr-only">Sarki fény: </span>Rövid ablak</span></a></li>
+      <li id="g-mon"><a href="#d-mon"><span class="g-d">H, nov. 2.</span><span class="g-w">Inari</span><span class="g-s">Siida, az Inari-tó, vacsora 18:30‑kor.</span><span class="nv v-good"><span class="sr-only">Sarki fény: </span>Jó esély</span></a></li>
+      <li id="g-tue"><a href="#d-tue"><span class="g-d">K, nov. 3.</span><span class="g-w">Pielpajärvi</span><span class="g-s">Túra az erdei templomhoz, ha nem havas az ösvény.</span><span class="nv v-best"><span class="sr-only">Sarki fény: </span>Legjobb esély</span></a></li>
+      <li id="g-wed"><a href="#d-wed"><span class="g-d">Sze, nov. 4.</span><span class="g-w">Haza</span><span class="g-s">Kávé a kék fényben, aztán repülés haza.</span></a></li>
+    </ol>
   </div>
 </header>
 
 <nav class="toc" aria-label="Fejezetek">
   <div class="wrap">
     <a id="todaylink" class="today-link" href="#days" hidden><span>Ma</span></a>
-    <div class="links"><a href="#costs">Költségek</a><a href="#how">Alapok</a><a href="#choices">Döntések</a><a href="#days">Napok</a><a href="#sky">Sarki fény</a><a href="#map">Térkép</a><a href="#sami">Számik</a><a href="#food">Konyha</a><a href="#sauna">Szauna</a><a href="#logistics">Tudnivalók</a><a href="#photos">Fotók</a><a href="#sources">Források</a></div>
+    <div class="links"><a class="dl" href="#d-sat">Szo</a><a class="dl" href="#d-sun">V</a><a class="dl" href="#d-mon">H</a><a class="dl" href="#d-tue">K</a><a class="dl" href="#d-wed">Sze</a><span class="sep" aria-hidden="true"></span><a href="#costs">Költségek</a><a href="#packing">Pakolás</a><a href="#sky">Sarki fény</a><a href="#map">Térkép</a><a href="#food">Konyha</a><a href="#sauna">Szauna</a><a href="#sami">Számik</a><a href="#logistics">Tudnivalók</a><a href="#photos">Fotók</a><a href="#sources">Források</a></div>
     <a class="lang" href="/lapland/plan/" lang="en" hreflang="en" title="English version"><span>EN</span></a>
   </div>
 </nav>
 
 <main>
 
-<!-- ================= COSTS ================= -->
-<section id="costs">
- <div class="wrap">
-  <h2>Költségek</h2>
-  <p class="h2sub">A javasolt programok és belépők öt főre. Az étkezés, a benzin és a szállás nincs benne; 1 € = 369 Ft.</p>
-  <div class="tblwrap"><table class="costs">
-    <thead><tr><th scope="col">Program</th><th scope="col" class="num">Fejenként</th><th scope="col" class="num">Öt főre</th></tr></thead>
-    <tbody>
-      <tr><th scope="row">Siida, a Számi Múzeum<span class="sub">H 10:00</span></th><td class="num">18 €</td><td class="num">90 €<span class="sub">≈ 33 000 Ft</span></td></tr>
-      <tr><th scope="row">Husky &amp; Co kennellátogatás<span class="sub">K 10:00, transzferrel</span></th><td class="num">65 €</td><td class="num">325 €<span class="sub">≈ 120 000 Ft</span></td></tr>
-      <tr><th scope="row">Kuurakaltio füstszauna<span class="sub">K 16:30, Kiilopää</span></th><td class="num">21 €</td><td class="num">105 €<span class="sub">≈ 39 000 Ft</span></td></tr>
-      <tr><th scope="row">Parkolás Kiilopäänél<span class="sub">V és K, naponta legfeljebb 5 €</span></th><td class="num">2 €</td><td class="num">10 €<span class="sub">≈ 4000 Ft</span></td></tr>
-      <tr><th scope="row">Rének<span class="sub">Rénfarmra nem mentek: az utak mentén úgyis látni fogjátok őket.</span></th><td class="num zero">0 €</td><td class="num zero">0 €</td></tr>
-      <tr><th scope="row">Túrák, a Juutua zúgói, az Otsamo, a Sajos, a sarki fény és a kabin szaunája</th><td class="num zero">0 €</td><td class="num zero">0 €</td></tr>
-    </tbody>
-    <tfoot><tr><th scope="row">Összesen</th><td class="num">106 €</td><td class="num">530 €<span class="sub">≈ 196 000 Ft</span></td></tr></tfoot>
-  </table></div>
- </div>
-</section>
-
-<!-- ================= HOW ================= -->
-<section id="how">
- <div class="wrap">
-  <h2>Alapok</h2>
-  <p class="h2sub">Minden program kap egy címkét a három közül:</p>
-  <div class="tiers">
-    <div><span class="tag must">BIZTOS</span><p>A fix pontok: foglaljátok le, vagy tartsátok szabadon az időt.</p></div>
-    <div><span class="tag if">TALÁN</span><p>Időjárás- vagy hófüggő: aznap reggel dől el.</p></div>
-    <div><span class="tag fill">RÁADÁS</span><p>Csak ha marad rá időtök, vagy ha rossz az időjárás.</p></div>
-  </div>
-  <div class="twocol">
-   <div>
-    <h3>Jó tudni</h3>
-    <ol class="rules">
-      <li><strong>A hétfő és a kedd felcserélhető.</strong> A Siida beltéri program, ezért a szürkébb napra tegyétek.</li>
-      <li><strong>Vasárnap a szabadban lesztek,</strong> mert a Siida és a Laanilan Kievari vasárnap zárva tart.</li>
-      <li><strong>Minden este ugyanaz a menet:</strong> felhőtérkép, szauna, aztán az ég figyelése.</li>
-      <li><strong>Egy irányba legfeljebb egy óra autózás.</strong> A legmesszebb Inari és a Siida van, kb. 1 órára.</li>
-    </ol>
-   </div>
-   <div>
-    <h3>Foglaljátok le indulás előtt</h3>
-    <ul class="checks">
-      <li>Husky &amp; Co kennellátogatás, kedd, nov. 3. 10:00, öt főre</li>
-      <li>Kuurakaltio füstszauna, kedd, nov. 3. 16:30, öt főre; arra a hétre okt. 26‑án, hétfőn indul a jegyárusítás</li>
-      <li>Asztal a Laanilan Kievariban, hétfő, nov. 2. 18:30, öt főre</li>
-      <li>EasyPark app az egyik telefonon, a kiilopääi parkoláshoz</li>
-      <li>Meddig vannak nyitva a boltok okt. 31‑én, szombat este (mindenszentek)</li>
-    </ul>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ================= CHOICES ================= -->
-<section id="choices">
- <div class="wrap">
-  <h2>Döntések</h2>
-  <p class="h2sub">Hét kérdés vár még döntésre: kettő a foglalások előtt, kettő az indulás előtti héten és három az adott napon. Mindegyiknél van alapterv, így ha nem döntötök, az út akkor is működik.</p>
-  <p class="small">A még ellenőrizendő tények a <a href="#open">Nyitott kérdések</a> alatt vannak, nem itt.</p>
-
-  <div class="chgroup">
-   <h3>Foglalás előtt döntsétek el</h3>
-   <p>Ezektől függ, mit foglaltok, ezért ezeket döntsétek el először.</p>
-   <div class="choices">
-    <article class="choice">
-     <h4>Melyik este legyen a helyi vacsora?</h4>
-     <div><span class="ck">Lehetőségek</span><p>Laanilan Kievari <b>hétfőn</b> vagy <b>kedden</b> (vasárnap zárva).</p></div>
-     <div><span class="ck">Mellette és ellene</span><p>Hétfőn a Sarrit ebédjével együtt egész napos helyi konyhás program lesz belőle. A kedd a legsötétebb éjszaka, és a 18:30–20:30‑as vacsora pont a legjobb sötét időszakba esne.</p></div>
-     <div class="def"><span class="ck">Ha nem döntötök</span><p>Hétfő 18:30, öt főre; foglaljatok most.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Huskyk</h4>
-     <div><span class="ck">Lehetőségek</span><p><b>Kennellátogatás</b> (kb. 1 óra, hó nélkül is megy) vagy a <b>10 km‑es, saját vezetésű kutyaszános szafari</b> (2,5 óra, hó kell hozzá).</p></div>
-     <div><span class="ck">Mellette és ellene</span><p>A kennellátogatás biztos. A szafari a nagyobb élmény, de lehet, hogy nov. 3‑ig nem lesz elég hó.</p></div>
-     <div class="def"><span class="ck">Ha nem döntötök</span><p>Foglaljátok le a kennellátogatást; kérjétek meg a Husky &amp; Co-t, hogy szóljon, ha a szános túrák még az időpontotok előtt elindulnak.</p></div>
-    </article>
-   </div>
-  </div>
-
-  <div class="chgroup">
-   <h3>Az indulás előtti héten döntsétek el</h3>
-   <p>Ezek az előrejelzéstől függenek.</p>
-   <div class="choices">
-    <article class="choice">
-     <h4>A napok sorrendje</h4>
-     <div><span class="ck">Lehetőségek</span><p>Marad a <b>hétfő = Inari, kedd = huskyk</b>, vagy <b>csere</b> az előrejelzés alapján.</p></div>
-     <div><span class="ck">Mellette és ellene</span><p>Csere esetén a beltéri Siida kerül a szürkébb napra, a Kaunispää naplementéje pedig a tisztábbra, de ehhez a husky-foglalást át kell tudni tenni, a füstszaunajegyeket pedig vásárlás után már nem lehet módosítani. A legjobb sarkifény-esély így is, úgy is kedden van.</p></div>
-     <div class="def"><span class="ck">Ha nem döntötök</span><p>Marad a sorrend; csak akkor cseréljetek, ha okt. 31‑én, szombaton az előrejelzés szerint a hétfő egyértelműen derültebb.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Bevásárlás az érkezés estéjén</h4>
-     <div><span class="ck">Lehetőségek</span><p>A <b>Kuukkeli</b> Saariselkäben, 5 percre a kabintól, vagy a <b>K‑Supermarket Ivalo</b>, 10 km‑re a reptértől, a másik irányba.</p></div>
-     <div><span class="ck">Mellette és ellene</span><p>A Kuukkeli útba esik, és elég reggelire meg egy egyszerű vacsorára. Ivalóban van hal- és húspult, de kb. 20 perccel több az út. Mindenszentekkor mindkettő ünnepi nyitvatartással mehet.</p></div>
-     <div class="def"><span class="ck">Ha nem döntötök</span><p>Érkezéskor a Kuukkeli; a nagybevásárlás hallal az ivalói K‑Supermarketben, hétfőn hazafelé. Ha későn szálltok le, hozzatok magatokkal reggelire valót.</p></div>
-    </article>
-   </div>
-  </div>
-
-  <div class="chgroup">
-   <h3>Aznap döntsétek el</h3>
-   <p>Ezek időjárásfüggő döntések; a tervben mindkét lehetőség benne van.</p>
-   <div class="choices">
-    <article class="choice">
-     <h4>Vasárnapi túra</h4>
-     <div><span class="ck">Lehetőségek</span><p><b>Kiilopää-csúcs</b> (546 m, kb. 2 km egy irányba, lépcsős) vagy az <b>erdei körök</b> Saariselkäből (Iisakkipää 3 km, kivilágított Aurorapolku 2,1 km).</p></div>
-     <div><span class="ck">Mellette és ellene</span><p>A csúcsról nyílik a nagy tunturikilátás, de felhőben nincs értelme, erős szélben pedig nehéz; a körök védett erdőben vezetnek.</p></div>
-     <div class="def"><span class="ck">Ha nem döntötök</span><p>A csúcs, ha 09:30‑kor kilátszik a felhőből; különben a körök.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Hétfő délután</h4>
-     <div><span class="ck">Lehetőségek</span><p><b>A Juutua zúgói és az Inari-tó partja</b>, a <b>Sajos</b> (hétköznap; Duodji Shop), a <b>Tuulispää esőbeállója</b> tóra néző kilátással, vagy az <b>Otsamo</b> a rovajärvi parkolóból (418 m, 3 km egy irányba).</p></div>
-     <div><span class="ck">Mellette és ellene</span><p>A Juutua és a tópart vízparti természetjárás, a Sajos beltéri számi kultúra. A Tuulispää parkolóját február közepéig nem takarítják le, így a murvás úton múlik. Az Otsamóról nyílik az út legszebb tavas kilátása, de egy óránál messzebb van, és csak hómentes talajon járható.</p></div>
-     <div class="def"><span class="ck">Ha nem döntötök</span><p>A Juutua és a part; a Sajos, ha havas eső esik; a Tuulispää csak akkor, ha járható az út, és van még világosság.</p></div>
-    </article>
-    <article class="choice">
-     <h4>Sarkifény-éjszakák</h4>
-     <div><span class="ck">Lehetőségek</span><p><b>Maradás a kabinnál</b> vagy <b>autózás egy tiszta folthoz</b> (Kaunispää 12 perc, Kiilopää 15 perc, Ukonjärvi 40 perc).</p></div>
-     <div><span class="ck">Mellette és ellene</span><p>Autóval foltos felhőzet alatt is találni tiszta eget, de kell hozzá egy józan sofőr a sötét, rénes utakra.</p></div>
-     <div class="def"><span class="ck">Ha nem döntötök</span><p>Maradjatok otthon, hacsak nem felhős a fejetek fölött és tiszta a közelben. Kedden, a legjobb éjszakán, akár 45 percet is autózzatok. A ma esti sofőrt beszéljétek meg vacsoránál.</p></div>
-    </article>
-   </div>
-  </div>
- </div>
-</section>
-
 <!-- ================= DAYS ================= -->
-<section id="days">
+<section id="days" class="days">
  <div class="wrap">
-  <h2>Napról napra</h2>
-  <p class="h2sub">A hétfő és a kedd felcserélhető: a Siidát tegyétek a szürkébb napra.</p>
+  <h2 class="sr-only">Napról napra</h2>
+  <p class="keyline"><span><span class="tag must">BIZTOS</span>a terv</span><span><span class="tag if">TALÁN</span>aznap dől el</span><span><span class="tag fill">RÁADÁS</span>csak ha marad rá idő</span></p>
 
   <article class="day" id="d-sat">
-   <div class="rail">
+   <header class="dh">
      <p class="date">Szo, okt. 31.</p>
      <h3 class="word"><span class="sr-only">Szombat, október 31.: </span>Érkezés</h3>
+     <p class="sum">Leszállás Ivalóban, bevásárlás útközben, az első szauna.</p>
      <p class="light">Sötét, amikor leszálltok. A hold 62%‑os, egész éjjel fent van, kb. 21:00‑ig alacsonyan északon.</p>
+   </header>
+   <ol class="tl">
+     <li><span class="t">Este</span><div class="b"><span class="what">Leszállás Ivalóban (IVL)</span>, autóátvétel.</div></li>
+     <li class="must"><span class="t">Bolt</span><div class="b"><span class="tag must">BIZTOS</span>A <span class="what">Supermarket Kuukkeli</span> Saariselkä faluban útba esik, és elég reggelire meg egy egyszerű vacsorára. Mindenszentek van, munkaszüneti nap, ezért indulás előtt nézzétek meg, meddig van nyitva, és ha későn szálltok le, hozzatok magatokkal reggelire valót.<span class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli nyitvatartása okt. 31‑én, szombat este.</span><span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kuukkeli%20Shopping%20Center%20Saariselk%C3%A4" target="_blank" rel="noopener">Kuukkeli</a></span></div></li>
+     <li><span class="t">Autóút</span><div class="b">Reptér–kabin: 26 km, kb. 25 perc. Önálló bejelentkezés, 16:00‑tól.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=J%C3%A4k%C3%A4l%C3%A4tie%2014%2C%2099830%20Saariselk%C3%A4" target="_blank" rel="noopener">Kabin</a></span></div></li>
+     <li class="must"><span class="t">Kabin</span><div class="b"><span class="tag must">BIZTOS</span>Kapcsoljátok be a szaunát, mielőtt kipakoltok (45–60 perc, mire felfűt). Egyszerű első vacsora.</div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Ma este</span><span class="nv v-moon">Holdfényes</span>A hold 62%‑os, egész éjjel fent van.</p>
+     <ol class="tl">
+       <li class="if"><span class="t">21:00–23:00</span><div class="b"><span class="tag if">TALÁN</span>Ha tiszta az ég, két szaunázás között nézzetek északra az udvar legsötétebb sarkából. Ma este ne autózzatok sarki fény után: első éjszaka, sötét utak, rének.</div></li>
+     </ol>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">Este</dt><dd class="v">Leszállás Ivalóban (IVL), autóátvétel.</dd></div>
-     <div class="row"><dt class="k">Bolt</dt><dd class="v"><span class="tag must">BIZTOS</span>Mindenszentek van, Finnországban munkaszüneti nap: indulás előtt nézzétek meg, meddig vannak nyitva a boltok. A Supermarket Kuukkeli Saariselkä faluban van; az ivalói K‑Supermarket (hal- és húspult) 10 km‑re van a reptértől, a másik irányba.<span class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este.</span></dd></div>
-     <div class="row"><dt class="k">Autóút</dt><dd class="v">Reptér–kabin: 26 km, kb. 25 perc. Önálló bejelentkezés, 16:00‑tól.</dd></div>
-     <div class="row"><dt class="k">Kabin</dt><dd class="v"><span class="tag must">BIZTOS</span>Kapcsoljátok be a szaunát, mielőtt kipakoltok (45–60 perc, mire felfűt). Egyszerű első vacsora.</dd></div>
-     <div class="row"><dt class="k">21:00–23:00</dt><dd class="v"><span class="tag if">TALÁN</span>Ha tiszta az ég, két szaunázás között nézzetek északra az udvar legsötétebb sarkából. Ma este ne autózzatok sarki fény után: első éjszaka, sötét utak, rének.</dd></div>
-   </dl>
   </article>
 
   <article class="day" id="d-sun">
-   <div class="rail">
+   <header class="dh">
      <p class="date">V, nov. 1.</p>
      <h3 class="word"><span class="sr-only">Vasárnap, november 1.: </span>Tunturik</h3>
+     <p class="sum">Fel a Kiilopääre, ha tiszta a csúcs, erdei körök, ha nem, naplementére pedig a Kaunispää.</p>
      <p class="light">Napkelte 08:24, napnyugta 15:22; a nap kb. 7°‑nál nem megy magasabbra. Sötét 18:45‑től; a félhold 20:05‑kor kel.</p>
-   </div>
-   <div>
+   </header>
    <div class="shots">
     <figure class="shot"><img src="/images/lapland/plan/kiilopaa.jpg" alt="Lépcsős pallóösvény a Kiilopää tunturira" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kiilopää</b><span>09:45</span></figcaption></figure>
     <figure class="shot"><img src="/images/lapland/plan/forest.jpg" alt="Sínyomok a havas erdőben napnyugtakor Kiilopää közelében" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Erdei körök</b><span>B terv</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/kaunispaa.jpg" alt="Háromszögelési torony a Kaunispää tetején" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kaunispää-torony</b><span>14:45 · TALÁN</span></figcaption></figure>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">09:45</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>Kiilopää (546 m)</strong>, 15 perc autóval. A tunturiközponttól kb. 2 km egy irányba, felújított, lépcsős ösvényen. Vegyétek fel a jégtüskét; fent erős lehet a szél. A parkolás 9–18 között fizetős, EasyParkkal: 1 €/óra, max. 5 €/nap, az első 30 perc ingyenes.</dd></div>
-     <div class="row"><dt class="k">B terv</dt><dd class="v"><span class="tag if">TALÁN</span>Felhőben a csúcs, vagy erős a szél: maradjatok a fák között a 3 km‑es Iisakkipää-körön vagy a Saariselkä faluból induló 2,1 km‑es, kivilágított Aurorapolkun.<span class="note"><span class="nk">Ellenőrizni</span>A pontos nemzeti parki kapu, ahonnan az Aurorapolku és az Iisakkipää indul.</span></dd></div>
-     <div class="row"><dt class="k">12:30</dt><dd class="v">Termoszos ebéd. A tunturiközpont november közepéig csökkentett nyitvatartással mehet.<span class="note"><span class="nk">Ellenőrizni</span>A kiilopääi tunturiközpont nyitvatartása azon a héten.</span></dd></div>
-     <div class="row"><dt class="k">Erdőben</dt><dd class="v">A szibériai szajkók odajönnek ahhoz, aki mozdulatlanul ül az öreg erdőben. Csak sótlan morzsát adjatok; Finnországban védettek és mérsékelten fenyegetettek.</dd></div>
-     <div class="row"><dt class="k">15:22</dt><dd class="v">Napnyugta; kék óra hazafelé.</dd></div>
-     <div class="row"><dt class="k">Vacsora</dt><dd class="v">Otthon: <span lang="fi">poronkäristys</span> (pirított rén), püré, vörös áfonya.</dd></div>
-     <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">BIZTOS</span>Felhőtérkép, aztán szauna.</dd></div>
-     <div class="row"><dt class="k">18:45–20:30</dt><dd class="v"><span class="tag must">BIZTOS</span>Rövid holdtalan időszak. Szaunázás közben figyeljétek az eget az udvarról; ha felhős, próbáljátok a Kaunispää tetejét (kb. 12 perc).</dd></div>
-   </dl>
+   <ol class="tl">
+     <li class="must"><span class="t">09:45</span><div class="b"><span class="tag must">BIZTOS</span><span class="what">Kiilopää (546 m)</span>, 15 perc autóval. A tunturiközponttól kb. 2 km egy irányba, felújított, lépcsős ösvényen. Vegyétek fel a jégtüskét; fent erős lehet a szél. Ha 09:30‑kor kilátszik a csúcs a felhőből, menjetek fel.<span class="meta"><span>Parkolás 9–18 között, EasyParkkal: 1 €/óra plusz 15% díj, az első 30 perc ingyenes, naponta legfeljebb 5,75 €</span><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kiilop%C3%A4%C3%A4%20Fell%20Centre" target="_blank" rel="noopener">Kiilopää</a></span></div></li>
+     <li class="if or"><span class="t">B terv</span><div class="b"><span class="tag if">TALÁN</span>Felhőben a csúcs, vagy erős a szél: maradjatok a fák között a 3 km‑es <span class="what">Iisakkipää</span>-körön vagy a Saariselkä faluból induló 2,1 km‑es, kivilágított <span class="what">Aurorapolkun</span>.<span class="note"><span class="nk">Ellenőrizni</span>A pontos nemzeti parki kapu, ahonnan az Aurorapolku és az Iisakkipää indul.</span><span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Aurorapolku%20Saariselk%C3%A4" target="_blank" rel="noopener">Parkkapu</a></span></div></li>
+     <li><span class="t">12:30</span><div class="b">Termoszos ebéd: a tunturiközpont őszi szünet miatt nov. 14‑ig zárva van.</div></li>
+     <li><span class="t">Erdőben</span><div class="b">A szibériai szajkók odajönnek ahhoz, aki mozdulatlanul ül az öreg erdőben. Csak sótlan morzsát adjatok; Finnországban védettek és mérsékelten fenyegetettek.</div></li>
+     <li class="if"><span class="t">14:45</span><div class="b"><span class="tag if">TALÁN</span>Ha tiszta az ég, a <span class="what">Kaunispää (437 m)</span> a naplementére (15:22): autóval fel a kanyargós úton a tetőre, 12 percre a kabintól. A toronyból az Urho Kekkonen Nemzeti Parkon át az orosz határ menti tunturikig ellátni.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kaunisp%C3%A4%C3%A4n%20Huippu" target="_blank" rel="noopener">Kaunispää</a></span></div></li>
+     <li><span class="t">Vacsora</span><div class="b">Otthon: <span lang="fi">poronkäristys</span> (pirított rén), püré, vörös áfonya.</div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Ma este</span><span class="nv v-short">Rövid ablak</span>Sötét 18:45‑től; a félhold 20:05‑kor kel.</p>
+     <ol class="tl">
+       <li class="must"><span class="t">18:00</span><div class="b"><span class="tag must">BIZTOS</span>Felhőtérkép, aztán szauna.</div></li>
+       <li class="must"><span class="t">18:45–20:30</span><div class="b"><span class="tag must">BIZTOS</span>Rövid holdtalan időszak. Szaunázás közben figyeljétek az eget az udvarról; ha felhős, próbáljátok a Kaunispää tetejét (kb. 12 perc).</div></li>
+     </ol>
    </div>
   </article>
 
   <article class="day" id="d-mon">
-   <div class="rail">
+   <header class="dh">
      <p class="date">H, nov. 2.</p>
-     <h3 class="word"><span class="sr-only">Hétfő, november 2.: </span>Inari<span class="sr-only">, tavak és helyi konyha</span></h3>
+     <h3 class="word"><span class="sr-only">Hétfő, november 2.: </span>Inari<span class="sr-only">, Siida és az Inari-tó</span></h3>
+     <p class="sum">Siida, ebéd, az Inari-tó partja, este 18:30‑kor vacsora étteremben.</p>
      <p class="light">Napkelte 08:35, napnyugta 15:14 Inariban. Sötét 18:40‑től; holdkelte 22:37.</p>
-   </div>
-   <div>
+   </header>
    <div class="shots">
     <figure class="shot"><img src="/images/lapland/plan/siida-exhibition.jpg" alt="Számi viseletek és tárgyak a Siida fő kiállításán" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Siida</b><span>10:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/juutua.jpg" alt="A Juutuanjoki Jäniskoski-zúgója a függőhíddal" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>A Juutua zúgói</b><span>13:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/otsamo.jpg" alt="Nappali pihenőkunyhó az Otsamo nyílt csúcsán" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Otsamo</b><span>13:00 · TALÁN</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/sajos-hall.jpg" alt="A Számi Parlament ülésterme a Sajosban" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Sajos</b><span>13:00 · RÁADÁS</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/lake-inari.jpg" alt="Az Inari-tó csendes esti vize Inari falunál, a túlparton egy tunturival" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Inari-tó</b><span>13:00</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/juutua.jpg" alt="A Juutuanjoki Jäniskoski-zúgója a függőhíddal" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>A Juutua zúgói</b><span>13:30 · RÁADÁS</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/sajos-hall.jpg" alt="A Számi Parlament ülésterme a Sajosban" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Sajos</b><span>13:30 · RÁADÁS</span></figcaption></figure>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">09:00</dt><dd class="v">Autóval Inariba: kb. 71 km, 1 óra, Ivalón át, a tóparti E75‑ön, az Ukonjärvi mellett.</dd></div>
-     <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>Siida, a Számi Múzeum.</strong> H–Szo 10–17; felnőtt 18 € (öt főre 90 €). Számoljatok 2 órával. 2026 októberétől a <em>We Who Remain</em> kortárs számi művészeti kiállítás műveit is bemutatja, amely a Kiasmával közösen készült.</dd></div>
-     <div class="row"><dt class="k">12:00</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>Helyi konyha, első felvonás:</strong> büféebéd a Siidán belüli Sarritban, 11–15 között (múzeumi jegy nem kell).<span class="note"><span class="nk">Ellenőrizni</span>A Sarrit téli ebédnapjai.</span></dd></div>
-     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>A Juutua zúgói és az Inari-tó partja.</strong> A Kittiläntie 156 alatti parkolóból rövid séta a függőhídig; a teljes kör 5,8 km.</dd></div>
-     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag if">TALÁN</span><strong>Otsamo a rovajärvi parkolóból:</strong> 20–25 perc a Siidától, 3 km egy irányba a 418 m‑es csúcsig, kilátással az Inari-tóra; csak hó- és jégmentes talajon; hazafelé kb. 1 óra 20 perc (egy óránál hosszabb). Parkolás a Rovajärventie végén (Rovajärventie 765); az utolsó emelkedő helyenként meredek és köves, a nyílt csúcson nappali pihenőkunyhó áll. Kb. 14:15‑re értek fel, és szürkület előtt (16:25) vissza az autónál.<span class="note"><span class="nk">Ellenőrizni</span>Hó vagy jég az ösvényen, és járható-e a Rovajärventie.</span></dd></div>
-     <div class="row"><dt class="k">13:00</dt><dd class="v"><span class="tag fill">RÁADÁS</span><strong>Sajos</strong>, a Számi Parlament és kulturális központ a Siida mellett (hétköznap). A Duodji Shopban számi készítésű kézműves munkákat árulnak.</dd></div>
-     <div class="row"><dt class="k">14:15</dt><dd class="v"><span class="tag if">TALÁN</span><strong>Tuulispää</strong> visszafelé: 2,5 km murvás út, majd egy sík, 3 km‑es oda-vissza séta egy tóra néző esőbeállóig. Csak ha járható az út.</dd></div>
-     <div class="row"><dt class="k">15:14</dt><dd class="v">Napnyugta a tó fölött.</dd></div>
-     <div class="row"><dt class="k">15:45</dt><dd class="v">Hazafelé megálló az Ukonjärvinél a kék órában, és az ivalói K‑Supermarketben halért.</dd></div>
-     <div class="row"><dt class="k">18:30</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>Helyi konyha, második felvonás:</strong> vacsora a Laanilan Kievariban, 1 km‑re a kabintól (H–Szo 16–22; foglaljatok). A tűzön sült rénlapockát rendeljétek, két személyre.</dd></div>
-     <div class="row"><dt class="k">20:30–22:40</dt><dd class="v"><span class="tag must">BIZTOS</span>Holdtalan időszak: udvar vagy Kaunispää.</dd></div>
-   </dl>
+   <ol class="tl">
+     <li><span class="t">08:50</span><div class="b">Autóval Inariba: 71 km, kb. 1 óra 10 perc, Ivalón át, a tóparti E75‑ön, az Ukonjärvi mellett.</div></li>
+     <li class="must"><span class="t">10:00</span><div class="b"><span class="tag must">BIZTOS</span><span class="what">Siida, a Számi Múzeum.</span> Nyitva H–Szo 10–17; számoljatok 2 órával. 2026 októberétől a <em>We Who Remain</em> kortárs számi művészeti kiállítás műveit is bemutatja, amely a Kiasmával közösen készült.<span class="meta"><b>Fejenként 18 €</b><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Siida%20Inari" target="_blank" rel="noopener">Siida</a></span></div></li>
+     <li class="must"><span class="t">12:00</span><div class="b"><span class="tag must">BIZTOS</span><span class="what">Ebéd a Sarritban</span>, a Siida éttermében: büfé 11–15 között, múzeumi jegy nem kell.</div></li>
+     <li class="must"><span class="t">13:00</span><div class="b"><span class="tag must">BIZTOS</span><span class="what">Az Inari-tó</span> a falu kikötőjéből, 300 m‑re a Siidától, ahonnan nyáron a sétahajók indulnak. A jégre ne menjetek rá: a tó általában novemberben vagy decemberben fagy be, és a friss jég nem tart meg.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=68.90888%2C27.01925" target="_blank" rel="noopener">Kikötő</a></span></div></li>
+     <li class="fill"><span class="t">13:30</span><div class="b"><span class="tag fill">RÁADÁS</span><span class="what">A Juutua zúgói:</span> a Kittiläntie 156 alatti parkolóból rövid séta a függőhídig; a teljes kör 5,8 km.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Juutua%20Nature%20Trail%20Inari" target="_blank" rel="noopener">Juutua</a></span></div></li>
+     <li class="fill"><span class="t">13:30</span><div class="b"><span class="tag fill">RÁADÁS</span><span class="what">Sajos</span>, a Számi Parlament és kulturális központ a Siida mellett (hétköznap). A Duodji Shopban számi készítésű kézműves munkákat árulnak.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Sajos%20Inari" target="_blank" rel="noopener">Sajos</a></span></div></li>
+     <li class="fill"><span class="t">14:15</span><div class="b"><span class="tag fill">RÁADÁS</span><span class="what">Mutusjärvi</span> (Muddusjärvi), 12 km‑re északra a Siidától: a 4‑es út kb. 5 km‑en át a keleti partján fut, a víz mellett egy út menti pihenővel. Egy irányba kb. 10–15 perc, úgyhogy csak akkor, ha marad még világosság és energia.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=69.00424%2C26.98644" target="_blank" rel="noopener">Pihenő</a></span></div></li>
+     <li><span class="t">15:00</span><div class="b">Hazafelé megálló az Ukonjärvinél a kék órában, és az ivalói K‑Supermarketben a keddi halért.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Ukonj%C3%A4rvi%20Inari" target="_blank" rel="noopener">Ukonjärvi</a><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=K-Supermarket%20Ivalo" target="_blank" rel="noopener">K‑Supermarket</a></span></div></li>
+     <li class="must"><span class="t">18:30</span><div class="b"><span class="tag must">BIZTOS</span><span class="what">Vacsora a Laanilan Kievariban</span>, az asztal öt főre le van foglalva, 1 km‑re a kabintól. A tűzön sült rénlapockát rendeljétek, két személyre.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Laanilan%20Kievari" target="_blank" rel="noopener">Laanilan Kievari</a></span></div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Ma este</span><span class="nv v-good">Jó esély</span>Sötét 18:40‑től; a hold 22:37‑kor kel.</p>
+     <ol class="tl">
+       <li class="must"><span class="t">20:30–22:40</span><div class="b"><span class="tag must">BIZTOS</span>Vacsora után még két holdtalan óra: szauna és udvar, vagy ha otthon felhős, a Kaunispää teteje (kb. 12 perc).</div></li>
+     </ol>
    </div>
   </article>
 
   <article class="day" id="d-tue">
-   <div class="rail">
+   <header class="dh">
      <p class="date">K, nov. 3.</p>
-     <h3 class="word"><span class="sr-only">Kedd, november 3.: </span>Huskyk<span class="sr-only"> és füstszauna</span></h3>
+     <h3 class="word"><span class="sr-only">Kedd, november 3.: </span>Pielpajärvi</h3>
+     <p class="sum">Gyalogtúra az erdei templomhoz, ha nem havas az ösvény; ha igen, nyugis nap a kabin környékén.</p>
      <p class="light">Napkelte 08:33, napnyugta 15:13. Sötét 18:36‑tól; holdkelte 00:43 — az út legsötétebb éjszakája.</p>
-   </div>
-   <div>
+   </header>
    <div class="shots">
-    <figure class="shot"><img src="/images/lapland/plan/husky.jpg" alt="Hámba fogott szánhúzó kutyák pihennek a hóban" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Husky &amp; Co</b><span>10:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/kaunispaa.jpg" alt="Háromszögelési torony a Kaunispää tetején" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Kaunispää-torony</b><span>14:00</span></figcaption></figure>
-    <figure class="shot"><img src="/images/lapland/plan/smoke-sauna.jpg" alt="Hagyományos, rönkökből épült füstszauna a hóban, Észak-Finnországban" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Füstszauna</b><span>16:30</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/pielpajarvi-church.jpg" alt="A pielpajärvi vörösbarna fatemplom őszi nyírfák között" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Pielpajärvi templom</b><span>08:45 · TALÁN</span></figcaption></figure>
+    <figure class="shot"><img src="/images/lapland/plan/forest.jpg" alt="Sínyomok a havas erdőben napnyugtakor Kiilopää közelében" width="720" height="540" loading="lazy" decoding="async"><figcaption><b>Iisakkipää</b><span>B terv</span></figcaption></figure>
    </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">10:00</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>Husky &amp; Co kennellátogatás:</strong> az iroda 5 percre a kabintól, a kennel 10 perc autóval Saariselkätől. Kb. egy óra 200 huskyval, történetekkel és forró itallal a tűz mellett egy kotában. 2–8 fős csoportok, így mind az öten belefértek egy foglalásba.<span class="note"><span class="nk">Ellenőrizni</span>Találkozási pont: a falubeli iroda vagy a kennel.</span></dd></div>
-     <div class="row"><dt class="k">Extra</dt><dd class="v"><span class="tag if">TALÁN</span>Van elég hó? Kérdezzétek meg, elindult-e már a 10 km‑es, saját vezetésű husky-szafari (2,5 óra).<span class="note"><span class="nk">Ellenőrizni</span>Hóhelyzet az indulás előtti héten: elindultak-e már a kutyaszános szafarik?</span></dd></div>
-     <div class="row"><dt class="k">12:00</dt><dd class="v"><span class="tag if">TALÁN</span><strong>Iisakkipää:</strong> 3 km‑es erdei kör Saariselkä faluból.</dd></div>
-     <div class="row"><dt class="k">14:00</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>Kaunispää (437 m):</strong> autóval fel a kanyargós úton a tetőre. A toronyból az Urho Kekkonen Nemzeti Parkon át az orosz határ menti tunturikig ellátni.</dd></div>
-     <div class="row"><dt class="k">15:13</dt><dd class="v">Napnyugta a toronyból, a 70–350 legjobb órája.</dd></div>
-     <div class="row"><dt class="k">16:30</dt><dd class="v"><span class="tag must">BIZTOS</span><strong>Kuurakaltio füstszauna</strong> a Kiilopää tunturiközpontban, 15 percre a kabintól: a 16:30–18:00‑as nyilvános alkalom, egy tunturipatak mellett, hideg merüléssel. Fejenként 21 €; a jegyeket az alkalom előtt a főépület recepcióján kell átvenni. Hozzatok saját törölközőt és fürdőruhát; bérelni darabonként 5 €.<span class="note"><span class="nk">Ellenőrizni</span>Hogy november elején be van-e fűtve, és milyen alkalmak vannak azon a héten.</span></dd></div>
-     <div class="row"><dt class="k">18:00</dt><dd class="v"><span class="tag must">BIZTOS</span>Hazafelé nézzétek meg a felhőtérképet.</dd></div>
-     <div class="row"><dt class="k">Vacsora</dt><dd class="v">Otthon: lazacleves vagy vajban sült maréna; meleg <span lang="fi">leipäjuusto</span> mocsári szederlekvárral.</dd></div>
-     <div class="row"><dt class="k">18:40–00:40</dt><dd class="v"><span class="tag must">BIZTOS</span>Hat holdtalan óra. Ha a kabinnál felhős az ég, autózzatok akár 45 percet a legközelebbi tiszta foltig.</dd></div>
-   </dl>
+   <ol class="tl">
+     <li class="if"><span class="t">Hétfő este</span><div class="b"><span class="tag if">TALÁN</span>Döntsétek el, mentek-e a templomhoz: hétfőn Inari környékén látni fogjátok, mekkora a hó. A Metsähallitus szerint az ösvény csak hómentes időszakban járható, és télen nem tartják karban, ezért csak csupasz talajon vagy jól kitaposott havon induljatok, jégtüskével.</div></li>
+     <li class="if"><span class="t">07:30</span><div class="b"><span class="tag if">TALÁN</span>Autóval az ösvény parkolójába a Sarviniementie mentén, 3 km‑rel a Siida után: 76 km, kb. 1 óra 15 perc, kicsit több egy óránál. A parkolót télen is takarítják, és van benne száraz WC.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=68.921388%2C27.057798" target="_blank" rel="noopener">Parkoló</a></span></div></li>
+     <li class="if"><span class="t">08:45</span><div class="b"><span class="tag if">TALÁN</span><span class="what">A pielpajärvi erdei templom</span>, egy irányba 4,4 km öreg fenyvesen át; narancssárga faoszlopok jelzik, a Metsähallitus 6 órát számol rá. Az első kilométer lassú a kövek és gyökerek miatt, a legnehezebb részeken pallók vannak, nagy szintkülönbség nincs. A templom 1752–1760 között épült egy számi téli faluban, amely akkor Inari központja volt, és az ajtaja mindig nyitva van.<span class="note"><span class="nk">Ellenőrizni</span>A látogatói díj: tábla van róla az előtérben, a finn Wikipédia szerint 5 €.</span><span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=68.951278%2C27.115852" target="_blank" rel="noopener">Templom</a></span></div></li>
+     <li class="if"><span class="t">11:30</span><div class="b"><span class="tag if">TALÁN</span>Ebéd a templomnál: a nappali pihenőkunyhóban van nyílt tűzhely, de víz nincs, úgyhogy hozzatok kolbászt a tűzhöz és teli termoszokat.</div></li>
+     <li class="if"><span class="t">14:45</span><div class="b"><span class="tag if">TALÁN</span>Napnyugta (15:13) előtt vissza az autóhoz; kb. 16:00‑ra értek haza.</div></li>
+     <li class="if or"><span class="t">B terv</span><div class="b"><span class="tag if">TALÁN</span>Havas az ösvény, vagy elfáradtatok: nyugis nap a kabin környékén. Járjátok be a 3 km‑es <span class="what">Iisakkipää</span>-kört Saariselkä faluból, és ha vasárnap kimaradt, menjetek fel autóval a <span class="what">Kaunispääre</span> a naplementére (15:13).<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Aurorapolku%20Saariselk%C3%A4" target="_blank" rel="noopener">Parkkapu</a><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Kaunisp%C3%A4%C3%A4n%20Huippu" target="_blank" rel="noopener">Kaunispää</a></span></div></li>
+     <li><span class="t">Vacsora</span><div class="b">Otthon: lazacleves vagy vajban sült maréna; meleg <span lang="fi">leipäjuusto</span> mocsári szederlekvárral.</div></li>
+   </ol>
+   <div class="tonight">
+     <p class="tn-h"><span class="tn-k">Ma este</span><span class="nv v-best">Legjobb esély</span>Hat holdtalan óra, 18:36–00:43.</p>
+     <ol class="tl">
+       <li class="must"><span class="t">18:00</span><div class="b"><span class="tag must">BIZTOS</span>Felhőtérkép, aztán szauna.</div></li>
+       <li class="must"><span class="t">18:40–00:40</span><div class="b"><span class="tag must">BIZTOS</span>Figyeljétek az eget az udvarról. Ha a kabinnál felhős, autózzatok akár 45 percet a legközelebbi tiszta foltig; a ma esti sofőrt beszéljétek meg vacsoránál.</div></li>
+     </ol>
    </div>
   </article>
 
   <article class="day" id="d-wed">
-   <div class="rail">
+   <header class="dh">
      <p class="date">Sze, nov. 4.</p>
      <h3 class="word"><span class="sr-only">Szerda, november 4.: </span>Haza</h3>
+     <p class="sum">Kávé a kék fényben, pakolás, hazarepülés.</p>
      <p class="light">Kék óra kb. 07:30‑tól; napkelte 08:37.</p>
-   </div>
-   <dl class="rows">
-     <div class="row"><dt class="k">07:30</dt><dd class="v">Kávé kint a kék fényben.</dd></div>
-     <div class="row"><dt class="k">Pakolás</dt><dd class="v">Ürítsétek ki a hűtőt, hagyjátok tisztán a szaunát, nézzétek át a konnektorokat a töltők és kameraakkuk miatt.</dd></div>
-     <div class="row"><dt class="k">Autóút</dt><dd class="v">Kabin–IVL: kb. 25 perc. Hagyjatok rá időt a jeges szélvédő és a rének miatt.</dd></div>
-   </dl>
+   </header>
+   <ol class="tl">
+     <li><span class="t">07:30</span><div class="b">Kávé kint a kék fényben.</div></li>
+     <li><span class="t">Pakolás</span><div class="b">Ürítsétek ki a hűtőt, hagyjátok tisztán a szaunát, nézzétek át a konnektorokat a töltők és kameraakkuk miatt. Kijelentkezés 11:00‑ig.</div></li>
+     <li><span class="t">Autóút</span><div class="b">Kabin–IVL: kb. 25 perc. Hagyjatok rá időt a jeges szélvédő és a rének miatt.<span class="meta"><a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=Ivalo%20Airport" target="_blank" rel="noopener">Reptér</a></span></div></li>
+   </ol>
   </article>
  </div>
 </section>
 
+<!-- ================= MORE INFO ================= -->
+<div class="wrap more-h" id="more">
+  <h2>További infók</h2>
+  <p>Költségek, pakolás, sarki fény, térkép és a gyakorlati tudnivalók. Koppints egy témára, hogy kinyisd.</p>
+</div>
+
+<!-- ================= COSTS ================= -->
+<details class="sec" id="costs">
+ <summary><div class="wrap sum-in"><h2>Költségek</h2><span class="teaser">Fejenként kb. 24 €: Siida, egy nap parkolás és a templom díja.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Belépők és díjak öt főre. Az étkezés, a benzin és a szállás nincs benne; 1 € = 369 Ft.</p>
+  <div class="tblwrap"><table class="costs">
+    <thead><tr><th scope="col">Program</th><th scope="col" class="num">Fejenként</th><th scope="col" class="num">Öt főre</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Siida, a Számi Múzeum<span class="sub">H</span></th><td class="num">18 €</td><td class="num">90 €<span class="sub">≈ 33 000 Ft</span></td></tr>
+      <tr><th scope="row">Pielpajärvi templom<span class="sub">K, ha mentek: 5 € látogatói díj a finn Wikipédia szerint</span></th><td class="num">5 €</td><td class="num">25 €<span class="sub">≈ 9000 Ft</span></td></tr>
+      <tr><th scope="row">Parkolás Kiilopäänél<span class="sub">V, legfeljebb 5,75 € az autóra</span></th><td class="num">1 €</td><td class="num">6 €<span class="sub">≈ 2000 Ft</span></td></tr>
+      <tr><th scope="row">Az Inari-tó, a Mutusjärvi, a Kaunispää, a Juutua zúgói, a Sajos, a túrák, a sarki fény és a kabin szaunája</th><td class="num zero">0 €</td><td class="num zero">0 €</td></tr>
+      <tr><th scope="row">Rének<span class="sub">Rénfarmra nem mentek: az utak mentén úgyis látni fogjátok őket.</span></th><td class="num zero">0 €</td><td class="num zero">0 €</td></tr>
+    </tbody>
+    <tfoot><tr><th scope="row">Összesen</th><td class="num">24 €</td><td class="num">121 €<span class="sub">≈ 45 000 Ft</span></td></tr></tfoot>
+  </table></div>
+  <p class="after small">Azon a héten nem működik: a Kuurakaltio füstszauna (őszi szünet miatt nov. 14‑ig zárva) és a 65 €‑s husky-farmlátogatás (nov. 1–7. között nincs időpont). Ezekben a napokban az egyetlen husky-program a Husky on Wheels, fejenként 130 €, nov. 1‑jén, vasárnap 09:30‑kor.</p>
+ </div></div>
+</details>
+
+<!-- ================= PACKING ================= -->
+<details class="sec" id="packing">
+ <summary><div class="wrap sum-in"><h2>Pakolás</h2><span class="teaser">Ruhák és cipők a hidegre, fejenként; pipáljátok ki, amit bepakoltatok.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Fejenként, négy éjszakára. Nappal kb. −3 °C, éjjel −8 °C várható (a novemberi átlag), 0 °C körül vizes hó is eshet, a tunturik tetején pedig fúj a szél. A sarkifény-esték a leghidegebbek: egy órát vagy még tovább álltok egy helyben a szabadban.</p>
+  <ul class="plain packtips">
+    <li><strong>Rétegesen, ne egy vastag kabátban,</strong> és pamut ne legyen közvetlenül a bőrötökön: átnedvesedik, és hideg marad.</li>
+    <li><strong>Hamar fáztok?</strong> A legmelegebb bakancsot és kesztyűt hozzátok, és tegyetek be egy második polárt vagy pulóvert is.</li>
+    <li><strong>Nincs téli ruhátok?</strong> A kabin tulajdonosától bérelhettek kabátot, nadrágot, lábbelit, egyujjas kesztyűt és hótalpat; indulás előtt kérdezzétek meg.</li>
+    <li><strong>Pakoljatok könnyen:</strong> a bakancsot és a legvastagabb kabátot a repülőn viseljétek.</li>
+  </ul>
+  <p class="packcount" aria-live="polite">Bepakolva: <b id="packcount">0 / 36</b> · a pipák csak ezen az eszközön maradnak meg</p>
+  <div class="cards packs">
+    <div class="card">
+     <h3>Ruhák</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="top"><span>2 aláöltözet-felső, merinó gyapjú vagy műszál</span></label></li>
+      <li><label><input type="checkbox" data-k="johns"><span>2 aláöltözet-nadrág</span></label></li>
+      <li><label><input type="checkbox" data-k="fleece"><span>Egy polár vagy gyapjúpulóver</span></label></li>
+      <li><label><input type="checkbox" data-k="puffy"><span>Meleg, bélelt kabát: pehely- vagy műszálas pufi</span></label></li>
+      <li><label><input type="checkbox" data-k="shell"><span>Szélálló, vízálló héjkabát<small>vagy e kettő helyett egy meleg téli parka</small></span></label></li>
+      <li><label><input type="checkbox" data-k="skipants"><span>Bélelt sínadrág<small>vagy vízálló túlnadrág egy meleg réteg fölé</small></span></label></li>
+      <li><label><input type="checkbox" data-k="trousers"><span>Túranadrág napközbenre<small>farmert ne: a vizes pamut hideg marad</small></span></label></li>
+      <li><label><input type="checkbox" data-k="under"><span>Alsónemű és póló öt napra</span></label></li>
+      <li><label><input type="checkbox" data-k="cabin"><span>Kényelmes ruha a kabinba, és pizsama</span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Cipő és zokni</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="boots"><span>Meleg, vízálló téli bakancs vastag, jól tapadó talppal<small>fél számmal nagyobb a vastag zokni miatt; járjátok be, vasárnap és kedden 4–9 km‑t mentek benne</small></span></label></li>
+      <li><label><input type="checkbox" data-k="socks"><span>4–5 pár vastag gyapjúzokni</span></label></li>
+      <li><label><input type="checkbox" data-k="spikes"><span>Jégtüske vagy csúszásgátló, ami ráfér a bakancsra</span></label></li>
+      <li><label><input type="checkbox" data-k="gaiters"><span>Kamásli<small>ha havasak az ösvények</small></span></label></li>
+      <li><label><input type="checkbox" data-k="slippers"><span>Papucs vagy vastag zokni a kabinba<small>Finnországban az ajtóban leveszik a cipőt</small></span></label></li>
+      <li><label><input type="checkbox" data-k="flipflops"><span>Strandpapucs, hogy kiléphessetek a szaunából</span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Fej és kéz</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="hat"><span>Meleg sapka, ami a fület is takarja</span></label></li>
+      <li><label><input type="checkbox" data-k="buff"><span>Csősál (buff)</span></label></li>
+      <li><label><input type="checkbox" data-k="balaclava"><span>Símaszk vagy arcmaszk<small>a szél ellen a tunturik tetején</small></span></label></li>
+      <li><label><input type="checkbox" data-k="liners"><span>Vékony béléskesztyű<small>amiben a telefon és a fényképező is kezelhető</small></span></label></li>
+      <li><label><input type="checkbox" data-k="mittens"><span>Meleg egyujjas kesztyű fölé, és egy tartalék pár<small>az egyujjas melegebb, mint az ujjas</small></span></label></li>
+      <li><label><input type="checkbox" data-k="sunglasses"><span>Napszemüveg<small>a nap alacsonyan jár, a hó vakít</small></span></label></li>
+      <li><label><input type="checkbox" data-k="lips"><span>Ajakbalzsam és zsíros kézkrém<small>a hideg levegő száraz</small></span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Estére és a szaunához</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="warmers"><span>Kéz- és lábujjmelegítő, minden estére néhány</span></label></li>
+      <li><label><input type="checkbox" data-k="headlamp"><span>Fejlámpa piros fénnyel</span></label></li>
+      <li><label><input type="checkbox" data-k="sitpad"><span>Ülőpárna</span></label></li>
+      <li><label><input type="checkbox" data-k="reflector"><span>Fényvisszaverő<small>a finn törvény szerint sötétben a gyalogosok viseljenek ilyet</small></span></label></li>
+      <li><label><input type="checkbox" data-k="swimsuit"><span>Fürdőruha<small>ha a közös szaunában inkább abban lennétek</small></span></label></li>
+     </ul>
+     <p class="small">Sarkifény-estéken vegyetek fel mindent egyszerre: aláöltözet, polár, pufi, héjkabát, sínadrág, sapka és kesztyű, a bakancsba melegítővel.</p>
+    </div>
+    <div class="card">
+     <h3>A hátizsákba</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="daypack"><span>Kis hátizsák a túrákra</span></label></li>
+      <li><label><input type="checkbox" data-k="powerbank"><span>Powerbank<small>a hidegben gyorsan merül a telefon</small></span></label></li>
+      <li><label><input type="checkbox" data-k="meds"><span>Saját gyógyszerek, a kézipoggyászban</span></label></li>
+      <li><label><input type="checkbox" data-k="poles"><span>Túrabot, ha szoktatok használni<small>a Kiilopää lépcsőin és a köves-gyökeres templomi ösvényen sokat segít, főleg lefelé</small></span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Közös, egy adag a csapatnak</h3>
+     <ul class="pack">
+      <li><label><input type="checkbox" data-k="thermos"><span>Két-három termosz</span></label></li>
+      <li><label><input type="checkbox" data-k="lighter"><span>Öngyújtó a tűzhöz</span></label></li>
+      <li><label><input type="checkbox" data-k="firstaid"><span>Kis elsősegélycsomag</span></label></li>
+      <li><label><input type="checkbox" data-k="extension"><span>Hosszabbító öt ember töltőihez</span></label></li>
+      <li><label><input type="checkbox" data-k="rubbish"><span>Szemeteszsákok</span></label></li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Fotós cucc</h3>
+     <p>a6100, Samyang 12 mm f/2, Sony 70–350 G, állvány, három vagy több NP‑FW50, tartalék kártyák, zip-zacskók, objektívkendő.</p>
+    </div>
+  </div>
+ </div></div>
+</details>
+
 <!-- ================= SKY ================= -->
-<section id="sky" class="night-band">
- <div class="wrap">
-  <h2>Sarki fény</h2>
+<details class="sec" id="sky">
+ <summary><div class="wrap sum-in"><h2>Sarki fény</h2><span class="teaser">A kedd a legjobb éjszaka; az esti menet, és hogy honnan nézzétek.</span></div></summary>
+ <div class="sec-body night-band"><div class="wrap">
   <p class="h2sub"><strong>Kedd, nov. 3. a legjobb sarkifény-éjszaka:</strong> hat sötét, holdtalan óra, 18:36–00:43. A hétfő jó (négy óra), a vasárnap rövid, a szombat holdfényes.</p>
   <div class="nights" role="list">
 <div class="nrow" role="listitem" id="n-sat"><div class="nlabel">Szo, okt. 31.</div><div class="bar" role="img" aria-label="Napnyugta 15:26, polgári szürkület vége 16:32, sötét 18:45-től. Hold 62%, egész éjjel fent. Nincs holdtalan sötét időszak. Holdfényes: nézzétek, de ne autózzatok."><span class="seg s-day" style="left:0.00%;width:3.61%"></span><span class="seg s-tw" style="left:3.61%;width:27.64%"></span><span class="seg s-night" style="left:31.25%;width:68.75%"></span><span class="moon" style="left:0.00%;width:100.00%" title="Hold fent egész éjjel"></span></div><div class="nnote"><b>Holdfényes:</b> nézzétek, de ne autózzatok. Hold 62%, egész éjjel fent, 21:00‑ig 10° alatt ÉÉK‑en.</div></div>
@@ -690,18 +775,18 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><span class="when">kb. 40 perc</span><div><strong>Ukonjärvi, E75.</strong> Tó nyílt éggel, kb. 10 km‑re északra Ivalótól. Csak rendes pihenőben parkoljatok.</div></li>
   </ul>
   <p class="small" style="margin-top:12px">Az idők a kabintól értendők. Az éjszakai kamerabeállítások a <a href="#photos">Fotózás</a> alatt.</p>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= MAP ================= -->
-<section id="map">
- <div class="wrap">
-  <h2>Térkép</h2>
-  <p class="h2sub">Minden megálló kb. egyórás autóúton belül van a kabintól. Koppints egy pontra, vagy válassz helyet a részletekért és a Google Maps linkért.</p>
+<details class="sec" id="map">
+ <summary><div class="wrap sum-in"><h2>Térkép</h2><span class="teaser">Mind a 14 hely, menetidővel a kabintól.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">A legtöbb megálló egyórás autóúton belül van a kabintól. Inari kb. 1 óra 10 perc, a mögötte lévő Pielpajärvi és Mutusjärvi kb. 1 óra 15–20 perc. Koppints egy pontra, vagy válassz helyet a részletekért és a Google Maps linkért.</p>
   <div class="mapgrid">
     <div class="mapbox"><svg id="mapsvg" viewBox="0 0 619 690" role="group" aria-labelledby="maptitle mapdesc">
 <title id="maptitle">A környék térképe: Saariselkä, Ivalo és Inari</title>
-<desc id="mapdesc">Az út 15 helye délen Kiilopäätől és Saariselkätől északon Ivalóig, az Inari-tóig és Inari faluig, zölddel az E75. A kabin körüli öt hely nagyobban is látszik a „Saariselkä közelről” kivágatban.</desc>
+<desc id="mapdesc">Az út 14 helye délen Kiilopäätől és Saariselkätől északon Ivalóig, az Inari-tóig, Inari faluig és Pielpajärviig, zölddel az E75. A térképtől kicsit északra eső Mutusjärvit egy nyíl jelzi a felső szélen. A kabin körüli négy hely nagyobban is látszik a „Saariselkä közelről” kivágatban.</desc>
 <defs><clipPath id="mclip"><rect width="619" height="690"/></clipPath></defs>
 <rect class="m-land" width="619" height="690"/>
 <g clip-path="url(#mclip)">
@@ -755,52 +840,26 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 </svg><noscript><p class="small" style="margin:10px 14px">A térkép pontjaihoz JavaScript kell.</p></noscript></div>
     <aside class="mapside" aria-label="A hely részletei">
       <label class="pick" for="placepick">Válassz helyet</label>
-      <div class="selwrap"><select id="placepick"><option value="">Mind a 15 hely, menetidőkkel…</option></select></div>
+      <div class="selwrap"><select id="placepick"><option value="">Mind a 14 hely, menetidőkkel…</option></select></div>
       <div class="mapinfo" id="mapinfo" aria-live="polite"><p>Koppints egy pontra a térképen, vagy válassz fent. A szaggatott kör a kabin; a mellette lévő keret tartalma nagyítva látszik a „Saariselkä közelről” kivágatban.</p></div>
       <ul class="mi-key"><li><span class="kdot must"></span>Biztos</li><li><span class="kdot if"></span>Talán</li><li><span class="kdot fill"></span>Ráadás</li><li><span class="kdot base"></span>Szállás</li><li><span class="kdot log"></span>Reptér, boltok</li><li><span class="kline"></span>E75, menetidők</li></ul>
     </aside>
   </div>
-  <p class="small" style="margin-top:14px">Koordináták a Google Mapsből; a menetidők becslések vidéki sebességhatárokkal, megállás nélkül.</p>
- </div>
-</section>
-
-<!-- ================= SAMI ================= -->
-<section id="sami">
- <div class="wrap">
-  <h2>Számi kultúra</h2>
-  <p class="h2sub">Inari község, Saariselkät és Ivalót is beleértve, a számi őshazán belül fekszik, és Inari falu ennek finnországi kulturális központja.</p>
-  <p>Egy órán belül Inariban a Siida és a Sajos a legjobb belépő a számi kultúrába.</p>
-  <div class="cards">
-    <div class="card"><span class="tag must">BIZTOS</span><h3>Siida · hétfő</h3><p>A Számi Múzeum, 2024‑ben az Év Európai Múzeuma; 2025 óta a kiállításait egyedül a Számi Múzeum viszi. A fő kiállítás a számi kultúrát köti össze az északi természettel.</p></div>
-    <div class="card"><span class="tag fill">RÁADÁS</span><h3>Sajos · hétfő</h3><p>A Számi Parlament épülete és kulturális központja a Siida mellett, hétköznap nyitva. A Duodji Shopban számi készítésű kézműves munkákat árulnak.</p></div>
-    <div class="card"><h3>Juutua-ösvény</h3><p>A környék egyetlen olyan tanösvénye, ahol inari számi feliratok vannak.</p></div>
-    <div class="card"><h3>Három nyelv</h3><p>Az inari számit, az északi számit és a kolta számit is beszélik itt; a Siida honlapja mindhárom nyelven elérhető. Isten hozott, inari számiul: <em lang="smn">tiervâpuáttim</em>.</p></div>
-  </div>
-
-  <h3>Rének</h3>
-  <p>Rénfarmra nem mentek: az utak mentén úgyis látni fogjátok a réneket. A Réntartók Szövetsége szerint ősszel és kora télen gyakran állnak az út szélén, mert ilyenkor vándorolnak a legelők között.</p>
-
-  <h3>Hogyan legyetek jó vendégek</h3>
-  <ul class="plain">
-    <li>Kérdezzetek, mielőtt embereket, otthonokat vagy munka közben a réntartókat fotózzátok.</li>
-    <li>Sámi Duodji címkés kézműves munkát vegyetek; ez garantálja, hogy számi kézműves készítette.</li>
-    <li>Hagyjátok ki azokat a jelmezeket és szuveníreket, amelyek a gáktit, a számi viseletet utánozzák.</li>
-    <li>Minden rénnek van gazdája. Ne kergessétek, ne etessétek és ne hívogassátok a szabadon járó réneket.</li>
-  </ul>
- </div>
-</section>
+  <p class="small" style="margin-top:14px">Koordináták a Google Mapsből, a Metsähallitustól és az OpenStreetMapről; a menetidők becslések vidéki sebességhatárokkal, megállás nélkül.</p>
+ </div></div>
+</details>
 
 <!-- ================= FOOD ================= -->
-<section id="food">
- <div class="wrap">
-  <h2>Konyha</h2>
+<details class="sec" id="food">
+ <summary><div class="wrap sum-in"><h2>Konyha</h2><span class="teaser">A hétfői ebéd és vacsora, az otthoni menü és a boltok.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
   <p class="h2sub">A hétfő a helyi konyha napja: büféebéd a Siidában lévő Sarritban, aztán vacsora a Laanilan Kievariban, kb. 1 km‑re a kabintól. A többi vacsora otthon készül.</p>
   <div class="tblwrap"><table class="tbl">
     <thead><tr><th>Étkezés</th><th>Hol</th><th>Mikor</th><th>Amit tudni kell</th></tr></thead>
     <tbody>
-      <tr><td class="lead">Ebéd</td><td data-label="Hol"><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Sarrit</a>, a Siidán belül, Inari</td><td data-label="Mikor">H 12:00; büfé 11–15</td><td data-label="Amit tudni kell">Meleg főétel, salátabár, házi pékáru, desszert és kávé; múzeumi jegy nem kell.<span class="note"><span class="nk">Ellenőrizni</span>A Sarrit téli ebédnapjai.</span></td></tr>
-      <tr><td class="lead">Vacsora</td><td data-label="Hol"><a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">Laanilan Kievari</a>, Sateenkaarenpääntie 9</td><td data-label="Mikor">H 18:30; nyitva H–Szo 16–22, vasárnap zárva</td><td data-label="Amit tudni kell">Lapp alapanyagok francia és karjalai vonásokkal; a tűzön sült rénlapocka két személyre a specialitás. Foglaljatok.</td></tr>
-      <tr><td class="lead">Kávé vagy ebéd</td><td data-label="Hol">Kaunispään Huippu, a Kaunispää tetején</td><td data-label="Mikor">K, ha nyitva van</td><td data-label="Amit tudni kell">Lapp konyha: rén, maréna, lazac, mocsári szeder.</td></tr>
+      <tr><td class="lead">Ebéd</td><td data-label="Hol"><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Sarrit</a>, a Siidán belül, Inari</td><td data-label="Mikor">H 12:00; büfé 11–15</td><td data-label="Amit tudni kell">Meleg főétel, salátabár, házi pékáru, desszert és kávé; múzeumi jegy nem kell; H–Szo nyitva.</td></tr>
+      <tr><td class="lead">Vacsora</td><td data-label="Hol"><a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">Laanilan Kievari</a>, Sateenkaarenpääntie 9</td><td data-label="Mikor">H 18:30; nyitva H–Szo 16–22, vasárnap zárva</td><td data-label="Amit tudni kell">Lapp alapanyagok francia és karjalai vonásokkal; a tűzön sült rénlapocka két személyre a specialitás. Az asztal öt főre le van foglalva.</td></tr>
+      <tr><td class="lead">Kávé vagy ebéd</td><td data-label="Hol">Kaunispään Huippu, a Kaunispää tetején</td><td data-label="Mikor">V, ha nyitva van</td><td data-label="Amit tudni kell">Lapp konyha: rén, maréna, lazac, mocsári szeder.</td></tr>
       <tr><td class="lead">Az utunk alatt zárva</td><td data-label="Hol">Aanaar, Wilderness Hotel Juutua, Inari</td><td class="empty" data-label="Mikor">—</td><td data-label="Amit tudni kell">Felújítás miatt zárva 2026. okt. 15. – nov. 22.</td></tr>
     </tbody>
   </table></div>
@@ -834,13 +893,13 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   </table></div>
   <p class="after">Okt. 31., szombat mindenszentek, így aznap este mindkét bolt ünnepi nyitvatartással mehet.</p>
   <p class="note"><span class="nk">Ellenőrizni</span>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este.</p>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= SAUNA ================= -->
-<section id="sauna">
- <div class="wrap">
-  <h2>Szauna</h2>
+<details class="sec" id="sauna">
+ <summary><div class="wrap sum-in"><h2>Szauna</h2><span class="teaser">A kabin szaunája lépésről lépésre. A füstszauna azon a héten zárva van.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
   <p class="h2sub">Minden este szauna a kabinban, és amikor kimentek hűlni, az eget is figyelitek.</p>
   <ol class="steps">
     <li><strong>Fűtés.</strong> 45–60 perccel előbb kapcsoljátok be; a cél 70–80 °C.</li>
@@ -849,20 +908,48 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li><strong>Ismétlés kétszer-háromszor.</strong> Víz a menetek között; semmi erősebb, ha valaki még kiautózhat egy sarkifény-helyre.</li>
   </ol>
   <h3>Füstszauna</h3>
-  <div class="tblwrap"><table class="tbl">
-    <thead><tr><th>Szauna</th><th>Hol</th><th>Mi</th><th>Címke</th></tr></thead>
-    <tbody>
-      <tr><td class="lead">Kuurakaltio füstszauna</td><td data-label="Hol">Kiilopää tunturiközpont, 15 perc</td><td data-label="Mi">Hagyományos füstszauna egy tunturipatak mellett, hideg merüléssel. Kedden, nov. 3‑án a 16:30–18:00‑as nyilvános alkalom; nyilvános alkalmak hétfőtől szombatig vannak. Fejenként 21 €; hozzatok törölközőt és fürdőruhát (bérelni darabonként 5 €).</td><td data-label="Címke"><span class="tag must">BIZTOS</span><span class="note"><span class="nk">Ellenőrizni</span>Hogy november elején be van-e fűtve, és mi a nyitvatartása azon a héten.</span></td></tr>
-    </tbody>
-  </table></div>
- </div>
-</section>
+  <p>A kiilopääi Kuurakaltio füstszauna őszi szünet miatt zárva van, legközelebb 2026. nov. 14‑én fűtik be, így ezen az úton kimarad.</p>
+ </div></div>
+</details>
+
+<!-- ================= SAMI ================= -->
+<details class="sec" id="sami">
+ <summary><div class="wrap sum-in"><h2>Számi kultúra</h2><span class="teaser">Siida, Sajos, az erdei templom, és hogyan legyetek jó vendégek.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">Inari község, Saariselkät és Ivalót is beleértve, a számi őshazán belül fekszik, és Inari falu ennek finnországi kulturális központja.</p>
+  <p>Inariban a Siida és a Sajos a legjobb belépő a számi kultúrába, a pielpajärvi templom pedig egy régi számi téli falu helyén áll.</p>
+  <div class="cards">
+    <div class="card"><span class="tag must">BIZTOS</span><h3>Siida · hétfő</h3><p>A Számi Múzeum, 2024‑ben az Év Európai Múzeuma; 2025 óta a kiállításait egyedül a Számi Múzeum viszi. A fő kiállítás a számi kultúrát köti össze az északi természettel.</p></div>
+    <div class="card"><span class="tag fill">RÁADÁS</span><h3>Sajos · hétfő</h3><p>A Számi Parlament épülete és kulturális központja a Siida mellett, hétköznap nyitva. A Duodji Shopban számi készítésű kézműves munkákat árulnak.</p></div>
+    <div class="card"><span class="tag if">TALÁN</span><h3>Pielpajärvi templom · kedd</h3><p>1752–1760 között épült egy téli faluban, amely akkor Inari központja volt; a Metsähallitus szerint a templom és a körülötte lévő rét fontos számi kulturális örökség. Évente néhányszor istentiszteletet is tartanak benne.</p></div>
+    <div class="card"><h3>Juutua-ösvény</h3><p>A környék egyetlen olyan tanösvénye, ahol inari számi feliratok vannak.</p></div>
+    <div class="card"><h3>Három nyelv</h3><p>Az inari számit, az északi számit és a kolta számit is beszélik itt; a Siida honlapja mindhárom nyelven elérhető. Isten hozott, inari számiul: <em lang="smn">tiervâpuáttim</em>.</p></div>
+  </div>
+
+  <h3>Rének</h3>
+  <p>Rénfarmra nem mentek: az utak mentén úgyis látni fogjátok a réneket. A Réntartók Szövetsége szerint ősszel és kora télen gyakran állnak az út szélén, mert ilyenkor vándorolnak a legelők között.</p>
+
+  <h3>Hogyan legyetek jó vendégek</h3>
+  <ul class="plain">
+    <li>Kérdezzetek, mielőtt embereket, otthonokat vagy munka közben a réntartókat fotózzátok.</li>
+    <li>Sámi Duodji címkés kézműves munkát vegyetek; ez garantálja, hogy számi kézműves készítette.</li>
+    <li>Hagyjátok ki azokat a jelmezeket és szuveníreket, amelyek a gáktit, a számi viseletet utánozzák.</li>
+    <li>Minden rénnek van gazdája. Ne kergessétek, ne etessétek és ne hívogassátok a szabadon járó réneket.</li>
+  </ul>
+ </div></div>
+</details>
 
 <!-- ================= LOGISTICS ================= -->
-<section id="logistics">
- <div class="wrap">
-  <h2>Gyakorlati tudnivalók</h2>
-  <p class="h2sub">Az indulás előtti foglalnivalók az <a href="#how">Alapok</a> alatt vannak, a kabintól mért menetidők pedig a <a href="#map">térképen</a>.</p>
+<details class="sec" id="logistics">
+ <summary><div class="wrap sum-in"><h2>Gyakorlati tudnivalók</h2><span class="teaser">A kabin, vezetés, időjárás, és mi nyitott még.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="h2sub">A kabintól mért menetidők a <a href="#map">térképen</a> vannak.</p>
+
+  <h3>Indulás előtt</h3>
+  <ul class="checks">
+    <li>EasyPark app az egyik telefonon, a kiilopääi parkoláshoz</li>
+    <li>Meddig vannak nyitva a boltok okt. 31‑én, szombat este (mindenszentek)</li>
+  </ul>
 
   <h3>Alapadatok</h3>
   <div class="card">
@@ -875,7 +962,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <dt>Ki hol alszik</dt><dd>A pár az egyik franciaágyban, a másik szétszedve két külön ágyra, a galéria a maradék egy vagy két főnek.</dd>
       <dt>Elhelyezkedés</dt><dd>Laanipalo, kb. 2,5 km‑re délre Saariselkä központjától; kivilágított sí- és szabadidőpálya 150 m‑re; bolt 2,5 km; reptér 26 km.</dd>
       <dt>Koordináták</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=68.3975%2C27.4076" target="_blank" rel="noopener">68,3975 É, 27,4076 K</a> (Google Maps)</dd>
-      <dt>Autózás</dt><dd>Egy irányba legfeljebb kb. egy óra; a legmesszebb Inari és a Siida van (kb. 1 óra).</dd>
+      <dt>Menetidők</dt><dd>A legtöbb megálló egy órán belül van. Inari és a Siida kb. 1 óra 10 perc, Pielpajärvi (kedden, ha mentek) és a Mutusjärvi kb. 1 óra 15–20 perc.</dd>
       <dt>Időzóna</dt><dd>Finn téli idő, UTC+2 (az órákat okt. 25‑én állították vissza).</dd>
     </dl>
   </div>
@@ -891,6 +978,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <dt>V, nov. 1.</dt><dd>A Siida és a Laanilan Kievari zárva.</dd>
       <dt>Az egész hét</dt><dd>Az inari Aanaar felújítás miatt nov. 22‑ig zárva.</dd>
       <dt>Az egész hét</dt><dd>A kiilopääi parkolás 9–18 között fizetős, EasyParkkal.</dd>
+      <dt>Az egész hét</dt><dd>A Kiilopää tunturiközpont és a füstszaunája őszi szünet miatt nov. 14‑ig zárva.</dd>
     </dl></div>
     <div class="card"><h3>Időjárás és biztonság</h3><ul class="plain">
       <li>November átlagosan kb. −3 °C nappal és −8 °C éjjel, és többnyire borult: a felhő a valódi kockázat, nem a sarki fény.</li>
@@ -900,30 +988,20 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     </ul></div>
   </div>
 
-  <h3>Mit vigyetek</h3>
-  <div class="cards three">
-    <div class="card"><h3>Ruházat</h3><p>Gyapjú alapréteg, polár, pehely- vagy műszálas pufi, szélálló héj, bélelt csizma, tartalék gyapjúzokni, egyujjas kesztyű a béléskesztyű fölé, sapka, nyakmelegítő.</p></div>
-    <div class="card"><h3>Felszerelés</h3><p>Jégtüske mindenkinek, fejlámpa piros móddal, termosz, ülőpárna, öngyújtó, kézmelegítő, szemeteszsák.</p></div>
-    <div class="card"><h3>Fotós cucc</h3><p>a6100, Samyang 12 mm f/2, Sony 70–350 G, állvány, három vagy több NP‑FW50, tartalék kártyák, zip-zacskók, objektívkendő.</p></div>
-  </div>
-
   <h3 id="open">Nyitott kérdések</h3>
   <ul class="checks">
     <li>A Kuukkeli és az ivalói K‑Supermarket nyitvatartása okt. 31‑én, szombat este</li>
-    <li>A Husky &amp; Co találkozási pontja: a falubeli iroda vagy a kennel</li>
-    <li>A Sarrit téli ebédnapjai</li>
-    <li>A kiilopääi tunturiközpont és a Kuurakaltio füstszauna nyitvatartása azon a héten</li>
-    <li>Hóhelyzet az indulás előtti héten: elindultak-e már a kutyaszános szafarik?</li>
-    <li>Otsamo: hó vagy jég az ösvényen, és járható-e a Rovajärventie — az indulás előtti héten nézzétek meg</li>
+    <li>Hó a pielpajärvi ösvényen: hétfőn Inari környékén látni fogjátok</li>
+    <li>A pielpajärvi templom látogatói díja (a finn Wikipédia szerint 5 €)</li>
     <li>A pontos koordináta a nemzeti parki kapuhoz, ahonnan az Aurorapolku és az Iisakkipää indul</li>
   </ul>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= PHOTOS ================= -->
-<section id="photos">
- <div class="wrap">
-  <h2>Fotózás</h2>
+<details class="sec" id="photos">
+ <summary><div class="wrap sum-in"><h2>Fotózás</h2><span class="teaser">Kamerabeállítások nappalra és éjszakára.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
   <p class="h2sub">Nappal a 70–350, éjjel a 12 mm.</p>
   <p>A nap sosem megy kb. 7° fölé, így minden tiszta nappali óra alacsony, súroló fény — naponta kb. hat és fél ilyen óra van. Nappal a Sony 70–350 G dolgozik (az a6100‑on 105–525 mm‑nek felel meg), éjjel a Samyang 12 mm f/2. Az a6100‑ban nincs beépített stabilizátor, így a stabilizálást teljes egészében az objektív OSS‑e végzi.</p>
   <div class="cards">
@@ -931,8 +1009,8 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       <h3>Nappal: a6100 + 70–350 G</h3>
       <dl class="kv">
         <dt>Mód</dt><dd>A vagy M, Auto ISO 6400‑as felső határral; 350 mm‑en az objektív f/6,3, ezért inkább az ISO menjen fel, mint hogy lassuljon a zár.</dd>
-        <dt>Expozíció</dt><dd>1/250 tájhoz, 1/500 emberekhez és álló rénekhez, 1/1000–1/2000 futó huskykhoz és repülő szajkókhoz.</dd>
-        <dt>Fókusz</dt><dd>AF‑C, Zone vagy Tracking; Animal Eye AF a kutyákhoz; sorozat Hi+-on.</dd>
+        <dt>Expozíció</dt><dd>1/250 tájhoz, 1/500 emberekhez és álló rénekhez, 1/1000–1/2000 repülő szajkókhoz.</dd>
+        <dt>Fókusz</dt><dd>AF‑C, Zone vagy Tracking; sorozat Hi+-on.</dd>
         <dt>Hó</dt><dd>+0,7 és +1,3 EV között, különben szürke lesz a hó.</dd>
         <dt>Stabilizálás</dt><dd>OSS kézből be, állványon ki.</dd>
         <dt>Egyéb</dt><dd>A minimális fókusztávolság 1,1–1,5 m: lépjetek hátra, ha közel száll le egy szajkó.</dd>
@@ -952,14 +1030,12 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   <h3>Ahol megéri cipelni a 70–350‑et</h3>
   <ul class="spots">
-    <li><span class="when">K 14:00–15:13</span><div><strong>Kaunispää-torony.</strong> A nemzeti park egymás mögötti tunturivonulatai 200–350 mm‑en, ellenfényben az alacsony nappal.</div></li>
-    <li><span class="when">K 10:00</span><div><strong>Husky &amp; Co.</strong> Guggoljatok le a kutyák szemmagasságába, 1/1000 vagy gyorsabb; a vezetőket csak engedéllyel fotózzátok.</div></li>
+    <li><span class="when">V 14:45–15:22</span><div><strong>Kaunispää-torony.</strong> A nemzeti park egymás mögötti tunturivonulatai 200–350 mm‑en, ellenfényben az alacsony nappal.</div></li>
     <li><span class="when">Bármelyik erdei megálló</span><div><strong>Szibériai szajkók.</strong> Üljetek mozdulatlanul, kész objektívvel; gyorsan érkeznek, szóval 1/2000.</div></li>
     <li><span class="when">Útszélek</span><div><strong>Rének.</strong> A 350 mm‑rel elég messze maradhattok ahhoz, hogy ne zavarjátok el őket; autóból csak rendes pihenőben fotózzatok.</div></li>
-    <li><span class="when">H 13:00</span><div><strong>A Juutua zúgói.</strong> Ha jég képződik a széleken: állvány, 1/4–1 s a sima vízhez, vagy 1/1000 a permet kimerevítéséhez.</div></li>
-    <li><span class="when">H kb. 14:15</span><div><strong>Az Otsamo teteje.</strong> Az Inari-tó és a Muddusjärvi alacsony napfényben, 100–350 mm‑en.</div></li>
+    <li><span class="when">H 13:30</span><div><strong>A Juutua zúgói.</strong> Ha jég képződik a széleken: állvány, 1/4–1 s a sima vízhez, vagy 1/1000 a permet kimerevítéséhez.</div></li>
     <li><span class="when">V, Kiilopää</span><div><strong>Csúcsgerincek.</strong> Távoli tunturik túrázókkal léptéknek 150–250 mm‑en.</div></li>
-    <li><span class="when">H 15:14</span><div><strong>Inari-tó.</strong> Pasztell rétegek napnyugta után; a kék óra kb. egy órán át tart.</div></li>
+    <li><span class="when">H kb. 15:30</span><div><strong>Ukonjärvi.</strong> Pasztell rétegek napnyugta után; a kék óra kb. egy órán át tart.</div></li>
     <li><span class="when">H 22:37</span><div><strong>Északkeleti horizont.</strong> Bónusz holdkelte a tunturik mögött: 350 mm, állvány, induljatok 1/250 s, f/6,3, ISO 400‑ról.</div></li>
   </ul>
 
@@ -970,35 +1046,38 @@ footer .back{margin:18px 0 0;font-size:.9rem}
     <li>Napellenző egész nap fent: 7°‑on a nap mindig a képkivágás közelében jár.</li>
     <li>Telefonok: az éjszakai mód jól elkapja a sarki fényt, ha valami szilárdhoz támasztjátok.</li>
   </ul>
- </div>
-</section>
+ </div></div>
+</details>
 
 <!-- ================= SOURCES ================= -->
-<section id="sources" class="sources">
- <div class="wrap">
-  <h2>Források</h2>
-  <p class="small">Ellenőrizve 2026. szeptember 25. és október 3. között. A koordináták és a bolti nyitvatartások a Google Mapsből vannak, a nap- és holdidőket PyEphemmel számoltuk Saariselkäre.</p>
+<details class="sec sources" id="sources">
+ <summary><div class="wrap sum-in"><h2>Források</h2><span class="teaser">Honnan vannak az adatok.</span></div></summary>
+ <div class="sec-body"><div class="wrap">
+  <p class="small">Ellenőrizve 2026. szeptember 25. és október 20. között. A koordináták és a bolti nyitvatartások a Google Mapsből vannak, a nap- és holdidőket PyEphemmel számoltuk Saariselkäre.</p>
   <ul>
     <li><b>Kabin:</b> <a href="https://www.nettimokki.com/en/saariselka/villa-skaidi-i/50416/" target="_blank" rel="noopener">Villa Skaidi I a Nettimökkin</a>; <a href="https://www.airbnb.com/rooms/1089762495396085624" target="_blank" rel="noopener">Villa Skaidi II az Airbnb-n</a> (ugyanaz a szállásadó)</li>
     <li><b>Siida:</b> <a href="https://siida.fi/en/visitors/" target="_blank" rel="noopener">jegyek és nyitvatartás</a>; <a href="https://siida.fi/en/" target="_blank" rel="noopener">We Who Remain</a>; <a href="https://siida.fi/en/about-us/" target="_blank" rel="noopener">rólunk</a>; <a href="https://www.civitatis.com/en/ivalo/reindeer-farm-visit-inari-sami-museum/" target="_blank" rel="noopener">az Év Európai Múzeuma 2024 említése</a></li>
     <li><a href="https://siida.fi/en/visitors/restaurant-sarrit/" target="_blank" rel="noopener">Sarrit étterem</a></li>
     <li><a href="https://wildernesshoteljuutua.wa.profitroom.com/holiday-packages/juutua-wilderness-adventure-week" target="_blank" rel="noopener">Wilderness Hotel Juutua és Aanaar: felújítás miatti zárva tartás</a></li>
     <li><b>Laanilan Kievari:</b> <a href="https://www.laanilankievari.fi/" target="_blank" rel="noopener">nyitvatartás</a>; <a href="https://www.inarisaariselka.fi/companies/laanilan-kievari/" target="_blank" rel="noopener">elhelyezkedés</a>; <a href="https://laplandnorth.fi/fi/yritys/laanilan-kievari/" target="_blank" rel="noopener">konyha</a>; <a href="https://www.petitfute.com/v54070-saariselka/c1165-restaurants/c1029-cuisine-regionale/1611791-laanilan-kievari.html?page=8" target="_blank" rel="noopener">rénlapocka két főre (Petit Futé)</a></li>
-    <li><b>Huskyk:</b> <a href="https://musement.com/uk/saariselka/visit-a-husky-farm-in-saariselka-271599" target="_blank" rel="noopener">Husky &amp; Co kennellátogatás</a>; <a href="https://manawa.com/en-GB/activity/finland/saariselka/dog-sledding/self-drive-husky-safari-near-urho-kekkonen-national-park-from-saariselka/13769" target="_blank" rel="noopener">saját vezetésű husky-szafari</a>; <a href="https://laplandnorth.fi/en/experiences/activity/forest-walk-with-a-husky-saariselka-2/" target="_blank" rel="noopener">őszi husky-programok</a>; <a href="https://activitybookingsaariselka.fi/husky-farm-visit/" target="_blank" rel="noopener">a kennellátogatás ára</a></li>
+    <li><b>Huskyk:</b> <a href="https://activitybookingsaariselka.fi/husky-farm-visit/" target="_blank" rel="noopener">husky-farmlátogatás</a> és <a href="https://fareharbor.com/embeds/book/wildernesshotel-kieppi/items/680331/calendar/" target="_blank" rel="noopener">az időpontjai</a> (október 20‑án nézve); <a href="https://activitybookingsaariselka.fi/husky-on-wheels/" target="_blank" rel="noopener">Husky on Wheels</a></li>
     <li><a href="https://paliskunnat.fi/py/encountering-reindeer-on-the-roads/" target="_blank" rel="noopener">Rének az utakon (Réntartók Szövetsége)</a></li>
-    <li><b>Inari ösvényei:</b> <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area" target="_blank" rel="noopener">Inari túraterület (Juutua, Tuulispää, Otsamo)</a>; <a href="https://www.luontoon.fi/en/trails/inari-otsamo-riutula-summer-trail-inari-10641-en" target="_blank" rel="noopener">Inari–Otsamo–Riutula ösvény</a></li>
-    <li><b>Kiilopää és Saariselkä:</b> <a href="https://laplandnorth.fi/en/about-the-area/kiilopaa" target="_blank" rel="noopener">Kiilopää</a>; <a href="https://www.luontoon.fi/en/news/paid-parking-pilot-starts-at-five-metsahallitus-destinations-on-1-september-2026" target="_blank" rel="noopener">fizetős parkolás Kiilopäänél</a>; <a href="https://www.nationalparks.fi/urhokekkonennp/trails" target="_blank" rel="noopener">Saariselkä ösvényei</a>; <a href="https://laplandtripplanner.com/saariselka-guide/" target="_blank" rel="noopener">Kuurakaltio füstszauna</a>; <a href="https://kiilopaa.johku.com/en_US/smoke-sauna" target="_blank" rel="noopener">füstszaunajegyek</a></li>
+    <li><b>Inari:</b> <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area" target="_blank" rel="noopener">Inari túraterület (Juutua)</a>; <a href="https://www.luontoon.fi/fi/reitit/pielpajarvi-eramaakirkko-polku-inari-pielpajarvi-inari-10637" target="_blank" rel="noopener">a pielpajärvi erdei templom ösvénye</a>; <a href="https://www.luontoon.fi/en/services/inari-pielpajarvi-polun-lahtopaikka-pysakointialue-parking-61203-en" target="_blank" rel="noopener">a parkolója</a>; <a href="https://www.luontoon.fi/en/services/pielpajarvi-paivatupa-day-use-hut-76138-en" target="_blank" rel="noopener">a nappali pihenőkunyhó</a>; <a href="https://fi.wikipedia.org/wiki/Pielpaj%C3%A4rven_er%C3%A4maakirkko" target="_blank" rel="noopener">a látogatói díj (finn Wikipédia)</a></li>
+    <li><b>Inari-tó:</b> <a href="https://www.luontoon.fi/en/articles/paddling-on-lake-inarijarvi" target="_blank" rel="noopener">a falu kikötője</a>; <a href="https://www.luontoon.fi/en/destinations/inari-hiking-area/nature" target="_blank" rel="noopener">mikor fagy be a tó</a></li>
+    <li><b>Mutusjärvi:</b> <a href="https://www.jarviwiki.fi/wiki/Mutusj%C3%A4rvi_(71.241.1.001)" target="_blank" rel="noopener">a finn tónyilvántartás</a>; <a href="https://www.openstreetmap.org/relation/2104383" target="_blank" rel="noopener">OpenStreetMap</a> a parti 4‑es úthoz és a pihenőhöz</li>
+    <li><b>Kiilopää és Saariselkä:</b> <a href="https://laplandnorth.fi/en/about-the-area/kiilopaa" target="_blank" rel="noopener">Kiilopää</a>; <a href="https://www.luontoon.fi/en/news/paid-parking-pilot-starts-at-five-metsahallitus-destinations-on-1-september-2026" target="_blank" rel="noopener">fizetős parkolás Kiilopäänél</a>; <a href="https://www.nationalparks.fi/urhokekkonennp/trails" target="_blank" rel="noopener">Saariselkä ösvényei</a>; <a href="https://www.kiilopaa.fi/en/opening-hours" target="_blank" rel="noopener">őszi szünet</a>; <a href="https://www.kiilopaa.fi/kuurakaltio-savusauna-ja-uintipaikka" target="_blank" rel="noopener">Kuurakaltio füstszauna, legközelebb nov. 14‑én</a></li>
     <li><b>Kaunispää:</b> <a href="https://saariselka.com/en/?p=9337" target="_blank" rel="noopener">Kaunispää</a>; <a href="https://saariselka.com/en/?p=18304" target="_blank" rel="noopener">Kaunispään Huippu</a>; <a href="https://www.travelinmypocket.com/kaunispaa-triangulation-tower-saariselka/" target="_blank" rel="noopener">háromszögelési torony</a></li>
     <li><a href="https://laplandnorth.fi/company/shopping-center-kuukkeli" target="_blank" rel="noopener">Kuukkeli központ</a></li>
     <li><b>Szibériai szajkók:</b> <a href="https://www.outinthenature.com/explore-the-mystical-world-of-the-siberian-jay/" target="_blank" rel="noopener">védettség</a>; <a href="https://finlandnaturally.com/uncategorized/every-mans-best-friend-siberian-jay-meeting-the-soul-bird-in-pallas-yllastunturi-national-park/" target="_blank" rel="noopener">szajkóetetés</a></li>
+    <li><a href="https://liikenneturva.fi/?p=3654" target="_blank" rel="noopener">Fényvisszaverő sötétben (finn Közlekedésbiztonsági Tanács)</a>; <a href="https://www.airbnb.com/rooms/1089668303636405332" target="_blank" rel="noopener">téli ruha bérelhető a kabin tulajdonosától</a></li>
     <li><a href="https://collections.maa.cam.ac.uk/objects/553273" target="_blank" rel="noopener">Sámi Duodji címke</a></li>
     <li><a href="https://julkaisut.metsa.fi/assets/pdf/lp/Esitteet/ukpuistoeng.pdf" target="_blank" rel="noopener">Az Urho Kekkonen Nemzeti Park prospektusa</a>; <a href="https://avionero.com/New-York_NYC-Ivalo_IVL/weather/november" target="_blank" rel="noopener">Ivalo novemberi időjárása</a></li>
-    <li><b>Fotók</b> (Wikimedia Commons, vágva és átméretezve): <a href="https://commons.wikimedia.org/wiki/File:Kiilopaa_path.jpg" target="_blank" rel="noopener">Kiilopaa path</a> · Kospo75 · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Anochecer_en_Kiilop%C3%A4%C3%A4.jpg" target="_blank" rel="noopener">Anochecer en Kiilopää</a> · Beasai · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Siidan_uusi_n%C3%A4yttely_3.jpg" target="_blank" rel="noopener">Siidan uusi näyttely 3</a> · Koivunlehti · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:J%C3%A4niskoski_rapids_of_Juutuanjoki_in_Inari,_Lapland,_Finland,_2022_August_-_3.jpg" target="_blank" rel="noopener">Jäniskoski rapids of Juutuanjoki in Inari, Lapland, Finland, 2022 August - 3</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Otsamon_tupa.JPG" target="_blank" rel="noopener">Otsamon tupa</a> · Trogain · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sami_Parliament.jpg" target="_blank" rel="noopener">Sami Parliament</a> · JIP · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sled_dogs_in_Lapland,_Finland.jpg" target="_blank" rel="noopener">Sled dogs in Lapland, Finland</a> · Letizia Barbi · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Kaunisp%C3%A4%C3%A4_triangulation_tower_1.jpg" target="_blank" rel="noopener">Kaunispää triangulation tower 1</a> · Htm · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Smoke_Sauna_(395139052).jpg" target="_blank" rel="noopener">Smoke Sauna (395139052)</a> · Timo Newton-Syms · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>; <a href="https://commons.wikimedia.org/wiki/File:View_towards_Levi%C3%A4salmi_of_Ukonj%C3%A4rvi_lake_in_Inari,_Lapland,_Finland,_2021_September.jpg" target="_blank" rel="noopener">View towards Leviäsalmi of Ukonjärvi lake in Inari, Lapland, Finland, 2021 September</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></li>
-    <li><a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-huf.en.html" target="_blank" rel="noopener">Az EKB forint-referenciaárfolyama</a>: 369,18 Ft 2026. október 2‑án</li>
+    <li><b>Fotók</b> (Wikimedia Commons, vágva és átméretezve): <a href="https://commons.wikimedia.org/wiki/File:Kiilopaa_path.jpg" target="_blank" rel="noopener">Kiilopaa path</a> · Kospo75 · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Anochecer_en_Kiilop%C3%A4%C3%A4.jpg" target="_blank" rel="noopener">Anochecer en Kiilopää</a> · Beasai · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Siidan_uusi_n%C3%A4yttely_3.jpg" target="_blank" rel="noopener">Siidan uusi näyttely 3</a> · Koivunlehti · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:J%C3%A4niskoski_rapids_of_Juutuanjoki_in_Inari,_Lapland,_Finland,_2022_August_-_3.jpg" target="_blank" rel="noopener">Jäniskoski rapids of Juutuanjoki in Inari, Lapland, Finland, 2022 August - 3</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Sami_Parliament.jpg" target="_blank" rel="noopener">Sami Parliament</a> · JIP · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Kaunisp%C3%A4%C3%A4_triangulation_tower_1.jpg" target="_blank" rel="noopener">Kaunispää triangulation tower 1</a> · Htm · <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:View_towards_Levi%C3%A4salmi_of_Ukonj%C3%A4rvi_lake_in_Inari,_Lapland,_Finland,_2021_September.jpg" target="_blank" rel="noopener">View towards Leviäsalmi of Ukonjärvi lake in Inari, Lapland, Finland, 2021 September</a> · Ximonic (Simo Räsänen) · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Pielpaj%C3%A4rven_er%C3%A4maakirkko_2.JPG" target="_blank" rel="noopener">Pielpajärven erämaakirkko 2</a> · Trogain · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>; <a href="https://commons.wikimedia.org/wiki/File:Lake_Inari_-_panoramio_(3).jpg" target="_blank" rel="noopener">Lake Inari - panoramio (3)</a> · Tevfik Teker · <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a></li>
+    <li><a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-huf.en.html" target="_blank" rel="noopener">Az EKB forint-referenciaárfolyama</a>: 369,18 Ft 2026. október 2‑án</li>
     <li><b>Térképadatok:</b> <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> 10 m‑es tavak, folyók és utak</li>
   </ul>
- </div>
-</section>
+ </div></div>
+</details>
 
 </main>
 
@@ -1007,25 +1086,25 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
 <script>
 (function(){
-  // A térkép 15 pontja. z:1 = a „Saariselkä közelről” kivágatban is megjelenik; ny eltolja a pontot
-  // (térképegység, kb. 110 m), ahol két hely egymásra kerülne.
+  // A térkép 14 pontja. z:1 = a „Saariselkä közelről” kivágatban is megjelenik; ny eltolja a pontot
+  // (térképegység, kb. 110 m), ahol két hely egymásra kerülne; edge:1 = a térképtől északra,
+  // nyíl jelzi a felső szélen.
   // Feliratok helye: at/atm = asztali/telefonos oldal (r, l, t, b, tr, br, tl, bl).
   var PLACES=[
     {id:'cabin',name:'Villa Skaidi I',tier:'base',tag:'SZÁLLÁS',lat:68.3975,lon:27.4076,from:'',text:'Négy éjszakára az otthonotok Laanipalón, 2,5 km-re délre a falutól.',q:'Jäkälätie 14, 99830 Saariselkä',z:1,lab:'Villa Skaidi I',labm:'Kabin',at:'r',atm:'r'},
     {id:'ivl',name:'Ivalói repülőtér',tier:'log',tag:'REPTÉR',lat:68.6085,lon:27.4197,from:'26 km, 25 perc',text:'Leszállás szombat este, indulás szerda reggel.',q:'Ivalo Airport',lab:'Ivalói reptér',labm:'Reptér',at:'l',atm:'l'},
     {id:'kuukkeli',name:'Kuukkeli központ',tier:'log',tag:'BOLT',lat:68.4199,lon:27.4095,from:'2,5 km, 5 perc',text:'Saariselkä élelmiszerboltja, pékség és Alko.',q:'Kuukkeli Shopping Center Saariselkä',note:'Nyitvatartás okt. 31-én, szombat este (mindenszentek).',z:1,lab:'Kuukkeli',labm:'Kuukkeli',at:'l',atm:'l'},
     {id:'ksm',name:'K-Supermarket Ivalo',tier:'log',tag:'BOLT',lat:68.6555,lon:27.5416,from:'33 km, 30 perc',text:'A környék hal- és húspultja; menjetek korán.',q:'K-Supermarket Ivalo',note:'Nyitvatartás okt. 31-én, szombat este (mindenszentek).',lab:'K-Supermarket Ivalo',labm:'Ivalói bolt',at:'r',atm:'r'},
-    {id:'laa',name:'Laanilan Kievari',tier:'must',tag:'BIZTOS',lat:68.4027,lon:27.3916,from:'1 km, 3 perc',text:'Helyi konyhás vacsora, H–Szo 16–22.',q:'Laanilan Kievari',z:1,lab:'Laanilan Kievari',labm:'Laanilan',at:'b',atm:'b'},
-    {id:'husky',name:'Husky & Co',tier:'must',tag:'BIZTOS',lat:68.4131,lon:27.4150,from:'2 km, 5 perc',text:'Iroda; a kennel 10 perc autóval. Kb. 1 óra 200 huskyval.',q:'Husky & Co Saariselkä',note:'Találkozási pont: a falubeli iroda vagy a kennel.',z:1,img:'husky',lab:'Husky & Co',labm:'Husky & Co',at:'r',atm:'r'},
-    {id:'kau',name:'Kaunispää-csúcs',tier:'must',tag:'BIZTOS',lat:68.4335,lon:27.4431,from:'7 km, 12 perc',text:'437 m, autóval fel a tetőre; torony, napnyugta, sarki fény; Kaunispään Huippu kávézó.',q:'Kaunispään Huippu',img:'kaunispaa',lab:'Kaunispää-csúcs',labm:'Kaunispää',at:'l',atm:'l'},
+    {id:'laa',name:'Laanilan Kievari',tier:'must',tag:'BIZTOS',lat:68.4027,lon:27.3916,from:'1 km, 3 perc',text:'Vacsora hétfőn 18:30-kor; nyitva H–Szo 16–22.',q:'Laanilan Kievari',z:1,lab:'Laanilan Kievari',labm:'Laanilan',at:'b',atm:'b'},
+    {id:'kau',name:'Kaunispää-csúcs',tier:'if',tag:'TALÁN',lat:68.4335,lon:27.4431,from:'7 km, 12 perc',text:'437 m, autóval fel a tetőre; torony, vasárnapi naplemente, sarki fény; Kaunispään Huippu kávézó.',q:'Kaunispään Huippu',img:'kaunispaa',lab:'Kaunispää-csúcs',labm:'Kaunispää',at:'l',atm:'l'},
     {id:'gate',name:'Nemzeti parki kapu (Aurorapolku, Iisakkipää)',tier:'if',tag:'TALÁN',lat:68.419,lon:27.425,approx:1,from:'3 km, 5 perc',text:'A 2,1 km-es kivilágított kör és a 3 km-es Iisakkipää-kör kezdete.',q:'Aurorapolku Saariselkä',note:'A pontos kapu. Ez a pont csak hozzávetőleges.',z:1,img:'forest',lab:'Parkkapu',labm:'Kapu',at:'r',atm:'r'},
-    {id:'kii',name:'Kiilopää tunturiközpont',tier:'must',tag:'BIZTOS',lat:68.3464,lon:27.4606,from:'14 km, 15 perc',text:'546 m-es csúcs, 2 km egy irányba; Kuurakaltio füstszauna K 16:30; fizetős parkolás 9–18.',q:'Kiilopää Fell Centre',note:'A tunturiközpont és a Kuurakaltio füstszauna nyitvatartása azon a héten.',img:'kiilopaa',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
-    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'TALÁN',lat:68.7760,lon:27.4457,from:'45 km, 40 perc',text:'Tó az E75 mentén, Ivalótól északra; kék óra és sarkifény-megálló.',q:'Ukonjärvi Inari',img:'ukonjarvi',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
-    {id:'tuu',name:'Tuulispää parkoló',tier:'if',tag:'TALÁN',lat:68.8568,lon:27.1259,from:'67 km, 1 óra',text:'Sík, 3 km-es séta egy tóra néző esőbeállóig; murvás bekötőút.',q:'Tuulisjärvi Parking Lot Inari',lab:'Tuulispää',labm:'Tuulispää',at:'r',atm:'r'},
-    {id:'siida',name:'Siida',tier:'must',tag:'BIZTOS',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 óra',text:'Számi Múzeum, H–Szo 10–17; benne a Sarrit étterem.',q:'Siida Inari',note:'A Sarrit téli ebédnapjai.',img:'siida-exhibition',lab:'Siida',labm:'Siida, Sajos',at:'tr',atm:'tr'},
-    {id:'sajos',name:'Sajos',tier:'fill',tag:'RÁADÁS',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 óra',text:'Számi Parlament és kulturális központ; Duodji Shop.',q:'Sajos Inari',img:'sajos-hall',lab:'Sajos',labm:'',at:'br',atm:'br'},
-    {id:'juutua',name:'Juutua-ösvény parkoló',tier:'must',tag:'BIZTOS',lat:68.8954,lon:26.9665,from:'73 km, 1 óra',text:'Folyami zúgók és függőhíd; 5,8 km-es kör.',q:'Juutua Nature Trail Inari',img:'juutua',lab:'Juutua-ösvény',labm:'Juutua',at:'tl',atm:'tl'},
-    {id:'otsamo',name:'Otsamo (rovajärvi parkoló)',tier:'if',tag:'TALÁN',lat:68.8873,lon:26.7718,from:'88 km, 1 óra 20 perc (egy óránál messzebb)',text:'3 km egy irányba a 418 m-es csúcsig; nappali pihenőkunyhó; kilátás a tavakra; csak hómentes talajon.',q:'Rovajärventie 765, Inari',note:'Hó vagy jég az ösvényen, és járható-e a Rovajärventie.',img:'otsamo',lab:'Otsamo',labm:'Otsamo',at:'br',atm:'br'}
+    {id:'kii',name:'Kiilopää tunturiközpont',tier:'must',tag:'BIZTOS',lat:68.3464,lon:27.4606,from:'14 km, 15 perc',text:'546 m-es csúcs, 2 km egy irányba; fizetős parkolás 9–18. A tunturiközpont és a füstszauna nov. 14-ig zárva.',q:'Kiilopää Fell Centre',img:'kiilopaa',lab:'Kiilopää',labm:'Kiilopää',at:'r',atm:'r'},
+    {id:'ukon',name:'Ukonjärvi',tier:'if',tag:'TALÁN',lat:68.7760,lon:27.4457,from:'45 km, 40 perc',text:'Tó az E75 mentén, Ivalótól északra; hétfőn kék órás megálló, és sarkifény-hely.',q:'Ukonjärvi Inari',img:'ukonjarvi',lab:'Ukonjärvi',labm:'Ukonjärvi',at:'r',atm:'r'},
+    {id:'siida',name:'Siida',tier:'must',tag:'BIZTOS',lat:68.9108,lon:27.0137,ny:-3,from:'71 km, 1 óra 10 perc',text:'Számi Múzeum, H–Szo 10–17, benne a Sarrit étterem; 300 m-re az Inari-tó kikötője.',q:'Siida Inari',img:'siida-exhibition',lab:'Siida',labm:'Siida',at:'l',atm:'l'},
+    {id:'sajos',name:'Sajos',tier:'fill',tag:'RÁADÁS',lat:68.9077,lon:27.0130,ny:3,from:'71 km, 1 óra 10 perc',text:'Számi Parlament és kulturális központ; Duodji Shop.',q:'Sajos Inari',img:'sajos-hall',lab:'Sajos',labm:'',at:'br',atm:'br'},
+    {id:'juutua',name:'Juutua-ösvény parkoló',tier:'fill',tag:'RÁADÁS',lat:68.8954,lon:26.9665,from:'73 km, 1 óra 10 perc',text:'Folyami zúgók és függőhíd; 5,8 km-es kör.',q:'Juutua Nature Trail Inari',img:'juutua',lab:'Juutua-ösvény',labm:'Juutua',at:'bl',atm:'bl'},
+    {id:'pielpa',name:'Pielpajärvi, az ösvény parkolója',tier:'if',tag:'TALÁN',lat:68.9214,lon:27.0578,from:'76 km, 1 óra 15 perc',text:'Egy irányba 4,4 km gyalog az erdei templomig; csak hómentes időszakban járható.',q:'68.921388,27.057798',note:'Hó az ösvényen.',img:'pielpajarvi-church',lab:'Pielpajärvi',labm:'Pielpajärvi',at:'r',atm:'r'},
+    {id:'mutus',name:'Mutusjärvi, út menti pihenő',tier:'fill',tag:'RÁADÁS',lat:69.0042,lon:26.9864,edge:1,from:'86 km, 1 óra 20 perc',text:'A 4-es út a tó keleti partján fut, 12 km-re északra a Siidától, épp a térkép felső szélén túl.',q:'69.00424,26.98644',lab:'Mutusjärvi',labm:'Mutusjärvi',at:'r',atm:'r'}
   ];
   var NS='http://www.w3.org/2000/svg';
   // Ugyanaz a vetület, mint az alaprétegeké: egyenközű, a hosszúság cos 68,65°-kal skálázva.
@@ -1064,7 +1143,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   el('path',{'class':'lp-link',d:'M'+(b[0]+b[2])+' '+(b[1]+b[3]/2)+'H'+f[0]},layer);
   el('rect',{'class':'lp-box',x:b[0],y:b[1],width:b[2],height:b[3],rx:3},layer);
   el('text',{'class':'m-area',x:b[0]-6,y:b[1]+b[3]/2+4,'text-anchor':'end'},layer,'Saariselkä');
-  el('text',{'class':'m-area',x:70,y:70,'text-anchor':'end'},layer,'Inari');
+  el('text',{'class':'m-area',x:70,y:63,'text-anchor':'end'},layer,'Inari');
   el('rect',{'class':'lp-bg',x:f[0],y:f[1],width:f[2],height:f[3],rx:8},loupe);
   el('text',{'class':'lp-title',x:f[0]+10,y:f[1]+18},loupe,'SAARISELKÄ KÖZELRŐL');
   el('text',{'class':'m-area',x:420,y:452,'text-anchor':'middle'},loupe,'Saariselkä központja');
@@ -1075,7 +1154,7 @@ footer .back{margin:18px 0 0;font-size:.9rem}
 
   var nodes={};
   PLACES.forEach(function(p){
-    var x=X(p.lon),y=Y(p.lat)+(p.ny||0),host=layer;
+    var x=X(p.lon),y=p.edge?12:Y(p.lat)+(p.ny||0),host=layer;
     if(p.z){
       el('circle',{'class':'mini '+p.tier,cx:x,cy:y,r:2.2},layer);
       x=Z.ox+(x-Z.cx)*Z.s;y=Z.oy+(y-Z.cy)*Z.s;host=loupe;
@@ -1085,7 +1164,8 @@ footer .back{margin:18px 0 0;font-size:.9rem}
       'aria-label':p.name+', '+p.tag.toLowerCase()+(p.id==='cabin'?', a kabin':', '+p.from+' a kabintól')},host);
     el('circle',{'class':'ring',cx:x,cy:y,r:11},g);
     el('circle',{'class':'hit',cx:x,cy:y,r:20},g);
-    el('circle',{'class':'dot',cx:x,cy:y,r:5.5},g);
+    if(p.edge)el('path',{'class':'dot',d:'M'+r1(x)+' '+r1(y-6.5)+'l6.5 11h-13z'},g);
+    else el('circle',{'class':'dot',cx:x,cy:y,r:5.5},g);
     var o=off(p.at,11.5);
     el('text',{'class':'lbl-d',x:x+o[0],y:y+o[1],'text-anchor':o[2]},g,p.lab);
     if(p.labm){o=off(p.atm,18);el('text',{'class':'lbl-m',x:x+o[0],y:y+o[1],'text-anchor':o[2]},g,p.labm);}
@@ -1134,8 +1214,54 @@ footer .back{margin:18px 0 0;font-size:.9rem}
   var id=DAYS[key];if(!id)return;
   var card=document.getElementById('d-'+id),row=document.getElementById('n-'+id),link=document.getElementById('todaylink');
   if(card)card.classList.add('today');
+  var tile=document.getElementById('g-'+id);if(tile)tile.classList.add('today');
   if(row)row.classList.add('today');
   if(link&&card){link.href='#d-'+id;link.hidden=false;}
+})();
+(function(){
+  // The extra info sits in collapsed sections: open the right one when a link
+  // or the address points into it, and open them all for printing.
+  function reveal(id){
+    var el=id&&document.getElementById(id);if(!el)return null;
+    var d=el.tagName==='DETAILS'?el:el.closest('details.sec');
+    if(d&&!d.open)d.open=true;
+    return el;
+  }
+  function fromHash(h){try{return decodeURIComponent(h.slice(1));}catch(e){return '';}}
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(a)reveal(fromHash(a.getAttribute('href')));
+  });
+  window.addEventListener('hashchange',function(){reveal(fromHash(location.hash));});
+  if(location.hash){var t=reveal(fromHash(location.hash));if(t)setTimeout(function(){t.scrollIntoView();},0);}
+  window.addEventListener('beforeprint',function(){[].forEach.call(document.querySelectorAll('details.sec'),function(d){d.open=true;});});
+
+  // Nav: light up the day you're reading.
+  var links=[].slice.call(document.querySelectorAll('nav.toc a.dl'));
+  if(!('IntersectionObserver' in window)||!links.length)return;
+  var byId={};
+  links.forEach(function(a){byId[a.getAttribute('href').slice(1)]=a;});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){var a=byId[en.target.id];if(a)a.classList.toggle('on',en.isIntersecting);});
+  },{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(byId).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+})();
+(function(){
+  // Packing list: each phone keeps its own ticks.
+  var KEY='still-north-pack',boxes=[].slice.call(document.querySelectorAll('ul.pack input[data-k]')),out=document.getElementById('packcount');
+  if(!boxes.length)return;
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY))||{};}catch(e){}
+  function count(){if(out)out.textContent=boxes.filter(function(b){return b.checked;}).length+' / '+boxes.length;}
+  boxes.forEach(function(b){
+    b.checked=!!saved[b.getAttribute('data-k')];
+    b.addEventListener('change',function(){
+      saved[b.getAttribute('data-k')]=b.checked?1:0;
+      try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}
+      count();
+    });
+  });
+  count();
 })();
 </script>
 <script>
