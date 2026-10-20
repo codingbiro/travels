@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#060b13">
+<title>Not found · TRAVELS</title>
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<script>
+// Lapland pages retired on 20 Oct 2026 forward to where their content lives now,
+// so links in old chats keep working.
+(function(){
+  var to = {
+    '/lapland/report/': '/lapland/research/',
+    '/lapland/fox/': '/lapland/',
+    '/lapland/fox/hu/': '/lapland/',
+    '/lapland/north/': '/lapland/plan/',
+    '/lapland/north/hu/': '/lapland/plan/hu/'
+  };
+  var p = location.pathname.replace(/index\.html$/, '');
+  if (p.slice(-1) !== '/') p += '/';
+  var t = to[p];
+  if (t) location.replace(t.indexOf('#') < 0 ? t + location.hash : t);
+})();
+</script>
+<style>
+  :root{color-scheme:dark}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 16px;background:#060b13;color:#c7d4e4;font:300 17px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif}
+  main{max-width:34em}
+  h1{margin:0 0 8px;font-size:1.4rem;font-weight:600;color:#eef4fb}
+  p{margin:0 0 18px}
+  a{color:#43cfc6;text-decoration:none;border-bottom:1px solid rgba(67,207,198,.35)}
+  a:hover{color:#6ef0a8;border-color:#6ef0a8}
+</style>
+</head>
+<body>
+<main>
+  <h1>Nothing here</h1>
+  <p>This page doesn't exist, or it has moved.</p>
+  <p><a href="/">All trips →</a></p>
+</main>
+</body>
+</html>
